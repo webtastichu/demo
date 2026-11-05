@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Szabó Autóvillamosság Pécs – autóvillamosság és műszeres diagnosztika</title>
+<meta name="description" content="Autóvillamossági javítás és műszeres diagnosztika Pécsen, az Eozin utcában, több mint 25 éve. Hibakód olvasás és törlés, légzsák, ABS, központi zárak, indítómotor, generátor. Hívás: 06 20 942 5103.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://webtastichu.github.io/demo/szaboautovillamossag/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Szabó Autóvillamosság – autóvillamosság és diagnosztika Pécsen">
+<meta property="og:description" content="Világít a motor-, a légzsák- vagy az ABS-lámpa? Műszeres diagnosztika és autóvillamossági javítás Pécsen, az Eozin u. 10.-ben.">
+<meta property="og:url" content="https://webtastichu.github.io/demo/szaboautovillamossag/">
+<meta property="og:image" content="https://webtastichu.github.io/demo/szaboautovillamossag/kepek/munkak/munka-01.webp">
+<meta property="og:locale" content="hu_HU">
+<meta name="theme-color" content="#14171B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314171B'/%3E%3Cpath d='M18 4 8 18h7l-2 10 10-14h-7z' fill='%23F2A900'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Szabó Autóvillamosság",
+  "description": "Autóvillamossági javítás és műszeres gépjármű-diagnosztika Pécsen: hibakód olvasás és törlés, légzsák, ABS, klíma diagnosztika, központi zárak, indítómotor, generátor, akkumulátor, szervizintervallum nullázás.",
+  "url": "https://webtastichu.github.io/demo/szaboautovillamossag/",
+  "telephone": "+36209425103",
+  "email": "szjoevill@gmail.com",
+  "image": "https://webtastichu.github.io/demo/szaboautovillamossag/kepek/munkak/munka-01.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Eozin u. 10.",
+    "postalCode": "7630",
+    "addressLocality": "Pécs",
+    "addressCountry": "HU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.0768132, "longitude": 18.2531463 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  }],
+  "areaServed": "Pécs"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Milyen autókat tudnak diagnosztizálni?","acceptedAnswer":{"@type":"Answer","text":"A francia típusokat (Peugeot, Citroën, Renault) Dec Supercan műszerrel gyári szinten, a Volkswagen-csoport típusait a VAG-COM gyári programmal, a távol-keleti autókat G-scan műszerrel. Az olasz autók, az Opel, a Ford és a Rover teljes körű diagnosztizálását is vállaljuk."}},
+    {"@type":"Question","name":"Ki tudják olvasni és törölni a hibakódot?","acceptedAnswer":{"@type":"Answer","text":"Igen. Műszeres diagnosztikával kiolvassuk a hibakódot, megkeressük az okát, és a javítás után töröljük."}},
+    {"@type":"Question","name":"A kulcsos központi zárat át lehet alakítani távirányítósra?","acceptedAnswer":{"@type":"Answer","text":"Igen, központizár-vezérlő beépítésével ez szinte minden típusba megoldható. Nem csak kényelmesebb: a kulcs és az ajtózárak sem kopnak, aminek a cseréje elég költséges."}},
+    {"@type":"Question","name":"Nullázzák a szervizintervallumot?","acceptedAnswer":{"@type":"Answer","text":"Igen, a szervizintervallum nullázását is vállaljuk."}},
+    {"@type":"Question","name":"Mikor vannak nyitva?","acceptedAnswer":{"@type":"Answer","text":"Hétfőtől péntekig 8 és 17 óra között. Szombaton és vasárnap zárva vagyunk."}},
+    {"@type":"Question","name":"Kell előre időpontot kérni?","acceptedAnswer":{"@type":"Answer","text":"Érdemes előtte telefonálni a 06 20 942 5103-as számon: elmondja, mi a gond, és megbeszéljük, mikor tudja hozni az autót."}}
+  ]
+}
+</script>
+<style>
+:root{
+  --grafit:#14171B; --panel:#1E2329; --panel2:#262C33; --vonal:#2F363E;
+  --borostyan:#F2A900; --borostyan-sot:#C98C00; --piros:#E5372B; --zold:#3DBE6B;
+  --vilagos:#EEF1F4; --feher:#fff; --tinta:#15181C; --halk:#5B6470; --halk-sot:#9AA4AF;
+  --max:1200px; --kerek:14px;
+  --fej:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--fej) + 12px)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;font-size:17px;line-height:1.6;color:var(--tinta);background:var(--feher);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-stretch:116%;font-weight:800;line-height:1.08;letter-spacing:-.015em;margin:0}
+h1{font-size:60px}
+h2{font-size:45px}
+h3{font-size:21px;font-stretch:108%;font-weight:700;line-height:1.25;letter-spacing:0}
+p{margin:0 0 1em}
+.belso{max-width:var(--max);margin:0 auto;padding-left:20px;padding-right:20px}
+.szelso{padding-left:max(20px, calc((100% - var(--max)) / 2 + 20px));padding-right:max(20px, calc((100% - var(--max)) / 2 + 20px))}
+.ugras{position:absolute;left:-999px;top:8px;background:var(--borostyan);color:var(--tinta);padding:10px 16px;border-radius:8px;z-index:100;font-weight:700}
+.ugras:focus{left:12px}
+:focus-visible{outline:3px solid var(--borostyan);outline-offset:3px;border-radius:6px}
+
+/* gombok */
+.gomb{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:999px;font:inherit;font-weight:700;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}
+.gomb svg{width:20px;height:20px;flex:none}
+.gomb-fo{background:var(--borostyan);color:var(--tinta)}
+.gomb-fo:hover{background:#FFBE1F}
+.gomb-ko{border-color:#4A535D;color:#fff;background:transparent}
+.gomb-ko:hover{border-color:var(--borostyan)}
+.gomb-sot{background:var(--tinta);color:#fff}
+.gomb-sot:hover{background:#2B3138}
+
+/* fejléc */
+header.fejlec{position:sticky;top:0;z-index:50;background:rgba(20,23,27,.96);backdrop-filter:blur(8px);border-bottom:1px solid #22272D}
+.fejlec .belso{display:flex;align-items:center;gap:24px;height:var(--fej)}
+.marka{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;margin-right:auto}
+.marka-jel{width:38px;height:38px;border-radius:10px;background:var(--panel2);display:grid;place-items:center;flex:none}
+.marka-jel svg{width:20px;height:20px}
+.marka b{display:block;font-stretch:116%;font-weight:800;font-size:18px;line-height:1.1}
+.marka small{display:block;color:var(--halk-sot);font-size:13px;line-height:1.2}
+nav.menu ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav.menu a{color:#D5DBE1;text-decoration:none;font-weight:500;font-size:16px;white-space:nowrap}
+nav.menu a:hover{color:var(--borostyan)}
+.fej-hivas{min-height:46px;padding:0 20px;font-size:16px}
+.menu-gomb{display:none;width:46px;height:46px;border-radius:12px;border:1px solid #39414A;background:transparent;color:#fff;cursor:pointer;place-items:center}
+.menu-gomb svg{width:22px;height:22px}
+
+/* nyitókép */
+.nyito{background:var(--grafit);color:#fff;position:relative;overflow:hidden}
+.nyito::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 70% at 78% 45%, rgba(242,169,0,.10), transparent 70%);pointer-events:none}
+.nyito-racs{position:relative;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);gap:40px;align-items:center;padding-top:64px;padding-bottom:120px}
+.nyito-hely{display:flex;align-items:center;gap:10px;color:#C7CED5;font-size:16px;margin-bottom:22px}
+.allapot{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 10px;border-radius:999px;background:var(--panel2);font-size:14px;font-weight:600;color:#fff}
+.allapot i{width:9px;height:9px;border-radius:50%;background:var(--halk-sot)}
+.allapot.nyitva i{background:var(--zold);box-shadow:0 0 0 4px rgba(61,190,107,.18)}
+.nyito h1{max-width:19ch}
+.nyito .lead{font-size:20px;color:#D5DBE1;max-width:34em;margin:22px 0 30px}
+.nyito-gombok{display:flex;flex-wrap:wrap;gap:12px}
+.ertekeles{display:flex;align-items:center;gap:12px;margin-top:30px;color:#C7CED5;font-size:15px}
+.ertekeles b{font-size:26px;color:#fff;font-stretch:116%}
+.csillagok{color:var(--borostyan);letter-spacing:2px;font-size:17px}
+
+/* műszeregység */
+.muszer{position:relative}
+.muszer svg.egyseg{width:100%;height:auto;display:block;filter:drop-shadow(0 30px 60px rgba(0,0,0,.45))}
+.lampa{cursor:pointer}
+.lampa .ikon{fill:#3A424B;transition:fill .25s, filter .25s}
+.lampa:hover .ikon,.lampa:focus-visible .ikon{fill:#7C8792}
+.lampa.ég.sarga .ikon{fill:var(--borostyan);filter:drop-shadow(0 0 6px rgba(242,169,0,.85))}
+.lampa.ég.piros .ikon{fill:var(--piros);filter:drop-shadow(0 0 6px rgba(229,55,43,.85))}
+.lampa:focus{outline:none}
+.lampa:focus-visible .keret{stroke:var(--borostyan)}
+.lampa .keret{fill:transparent;stroke:transparent;stroke-width:2}
+.muszer-felirat{text-align:center;color:var(--halk-sot);font-size:14px;margin-top:6px}
+.mutato{transform-origin:0 0;transition:transform 1.4s cubic-bezier(.3,.7,.2,1)}
+
+/* infósáv */
+.infosav{position:relative;z-index:2;margin-top:-62px}
+.infosav-racs{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(20,23,27,.16);overflow:hidden}
+.info{display:flex;gap:16px;align-items:flex-start;padding:24px 26px;text-decoration:none}
+.info + .info{border-left:1px solid #E3E7EB}
+.info svg{width:26px;height:26px;flex:none;color:var(--borostyan-sot);margin-top:2px}
+.info b{display:block;font-size:17px}
+.info span{display:block;color:var(--halk);font-size:15px;line-height:1.45}
+a.info:hover b{text-decoration:underline}
+
+/* szakaszok */
+.szakasz{padding-top:110px;padding-bottom:110px}
+.szakasz-fej{max-width:720px;margin-bottom:48px}
+.szakasz-fej p{color:var(--halk);font-size:19px;margin-top:18px}
+
+/* húzóelem */
+.hiba{padding-top:96px}
+.hiba-racs{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:28px;align-items:start}
+.tunetek{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tunet{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:18px;border-radius:16px;border:1px solid #DCE1E6;background:#fff;font:inherit;text-align:left;cursor:pointer;color:var(--tinta);transition:border-color .15s, background .15s}
+.tunet:hover{border-color:#B9C1C9}
+.tunet .tikon{width:52px;height:52px;border-radius:12px;background:var(--grafit);display:grid;place-items:center}
+.tunet .tikon svg{width:32px;height:32px;fill:#4A535D;transition:fill .2s,filter .2s}
+.tunet b{font-size:16px;line-height:1.3;font-weight:700}
+.tunet[aria-pressed="true"]{border-color:var(--tinta);background:var(--vilagos);box-shadow:inset 0 0 0 1px var(--tinta)}
+.tunet[aria-pressed="true"] .tikon svg.sarga{fill:var(--borostyan);filter:drop-shadow(0 0 5px rgba(242,169,0,.8))}
+.tunet[aria-pressed="true"] .tikon svg.piros{fill:var(--piros);filter:drop-shadow(0 0 5px rgba(229,55,43,.8))}
+.tunet[aria-pressed="true"] .tikon svg.feher{fill:#fff}
+.reszlet{position:sticky;top:calc(var(--fej) + 20px);background:var(--grafit);color:#fff;border-radius:20px;padding:34px;min-height:100%}
+.reszlet-fej{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+.reszlet-fej .tikon{width:64px;height:64px;border-radius:14px;background:var(--panel2);display:grid;place-items:center;flex:none}
+.reszlet-fej .tikon svg{width:40px;height:40px}
+.reszlet h3{font-size:26px;font-stretch:116%;font-weight:800}
+.reszlet .szin{font-size:14px;color:var(--halk-sot);margin-top:4px}
+.reszlet h4{margin:22px 0 6px;font-size:15px;font-weight:700;color:var(--borostyan)}
+.reszlet p{color:#D5DBE1;margin:0}
+.reszlet ul{margin:0;padding-left:20px;color:#D5DBE1}
+.reszlet .gombok{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.reszlet .megj{font-size:13px;color:var(--halk-sot);margin-top:18px}
+
+/* szolgáltatások */
+.szolg{background:var(--vilagos)}
+.szolg-racs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.foto-kartya{margin:0;border-radius:20px;overflow:hidden;background:var(--grafit);color:#fff}
+.foto-kartya img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.foto-kartya figcaption{padding:18px 22px;font-size:15px;color:#C7CED5}
+.szolg-lista{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.szolg-lista li{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:24px 0;border-top:1px solid #D3D9DF}
+.szolg-lista li:last-child{border-bottom:1px solid #D3D9DF}
+.szolg-lista svg{width:48px;height:48px;padding:11px;border-radius:12px;background:#fff;color:var(--tinta)}
+.szolg-lista p{margin:6px 0 0;color:var(--halk)}
+
+/* műszerek és márkák */
+.marka-sav{background:var(--grafit);color:#fff}
+.marka-sav .szakasz-fej p{color:#C7CED5}
+.muszer-racs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.muszer-kartya{background:var(--panel);border:1px solid var(--vonal);border-radius:18px;padding:26px;display:flex;flex-direction:column}
+.muszer-kartya h3{font-size:22px}
+.muszer-kartya .mire{color:var(--borostyan);font-weight:600;font-size:15px;margin:6px 0 14px}
+.muszer-kartya p{color:#C7CED5;font-size:16px}
+.chipek{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:8px}
+.chip{padding:5px 12px;border-radius:999px;background:var(--panel2);border:1px solid var(--vonal);font-size:14px;color:#E3E8EC;transition:background .2s,color .2s,border-color .2s}
+.chip.talalat{background:var(--borostyan);color:var(--tinta);border-color:var(--borostyan);font-weight:700}
+.muszer-also{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:18px;margin-top:18px}
+.kereso{background:var(--panel);border:1px solid var(--vonal);border-radius:18px;padding:26px}
+.kereso label{display:block;font-weight:700;font-size:19px;margin-bottom:12px}
+.kereso input{width:100%;height:54px;border-radius:12px;border:1px solid #3A424B;background:var(--grafit);color:#fff;font:inherit;padding:0 16px}
+.kereso input::placeholder{color:#7C8792}
+.kereso .valasz{margin:14px 0 0;color:#D5DBE1;min-height:3.2em}
+.kereso .valasz b{color:var(--borostyan)}
+.tobbi{color:#C7CED5;font-size:16px;margin-top:14px}
+.foto-par{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.foto-par img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.foto-par figcaption{grid-column:1/-1;color:var(--halk-sot);font-size:14px}
+
+/* rólunk + vélemények */
+.rolunk-racs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
+.rolunk .bemut{font-size:20px;line-height:1.55;margin-top:22px}
+.pipak{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:12px}
+.pipak li{display:flex;gap:12px;align-items:flex-start}
+.pipak svg{width:22px;height:22px;flex:none;color:var(--borostyan-sot);margin-top:3px}
+.velemeny-fo{background:var(--vilagos);border-radius:20px;padding:30px}
+.osszeg{display:flex;align-items:center;gap:18px;padding-bottom:22px;border-bottom:1px solid #D3D9DF;margin-bottom:22px}
+.osszeg .szam{font-size:64px;font-weight:800;font-stretch:118%;line-height:1}
+.osszeg .csillagok{font-size:20px}
+.osszeg span{display:block;color:var(--halk);font-size:15px}
+blockquote{margin:0 0 22px;font-size:18px;line-height:1.55}
+blockquote:last-of-type{margin-bottom:0}
+blockquote footer{font-size:14px;color:var(--halk);margin-top:6px}
+.google-link{display:inline-block;margin-top:22px;font-weight:600}
+
+/* időpontkérő */
+.idopont{background:var(--grafit);color:#fff}
+.idopont-racs{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.idopont .szakasz-fej p{color:#C7CED5}
+.hivo{display:flex;align-items:center;gap:16px;background:var(--panel);border:1px solid var(--vonal);border-radius:18px;padding:22px;text-decoration:none;margin-top:10px}
+.hivo svg{width:44px;height:44px;padding:10px;border-radius:12px;background:var(--borostyan);color:var(--tinta);flex:none}
+.hivo b{display:block;font-size:24px;font-stretch:116%}
+.hivo span{color:#C7CED5;font-size:15px}
+.hivo:hover b{color:var(--borostyan)}
+form.urlap{background:#fff;color:var(--tinta);border-radius:20px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mezo{display:flex;flex-direction:column;gap:6px}
+.mezo.teljes{grid-column:1/-1}
+.mezo label{font-weight:600;font-size:15px}
+.mezo input,.mezo textarea{font:inherit;font-size:16px;border:1px solid #C8D0D7;border-radius:12px;padding:13px 14px;background:#fff;color:var(--tinta)}
+.mezo textarea{min-height:120px;resize:vertical}
+.mezo input:focus,.mezo textarea:focus{border-color:var(--tinta);outline:2px solid var(--borostyan);outline-offset:1px}
+.urlap-also{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px}
+.urlap-also small{color:var(--halk);font-size:14px;flex:1;min-width:220px}
+.uzenet{grid-column:1/-1;margin:0;padding:14px 16px;border-radius:12px;background:#E9F7EE;color:#1D5A33;font-weight:600;display:none}
+.uzenet.lathato{display:block}
+
+/* GYIK */
+.gyik-racs{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:start}
+details{border-top:1px solid #D3D9DF}
+details:last-child{border-bottom:1px solid #D3D9DF}
+summary{cursor:pointer;list-style:none;padding:22px 44px 22px 0;font-weight:700;font-size:19px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:6px;top:50%;width:12px;height:12px;border-right:2.5px solid var(--tinta);border-bottom:2.5px solid var(--tinta);transform:translateY(-70%) rotate(45deg);transition:transform .2s}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{color:var(--halk);margin:-6px 0 22px;max-width:62ch}
+
+/* kapcsolat */
+.kapcsolat{display:grid;grid-template-columns:1fr 1fr;background:var(--vilagos)}
+.kapcsolat-adatok{padding-top:90px;padding-bottom:90px;padding-right:48px;padding-left:max(20px, calc(100% - var(--max) / 2 + 20px))}
+.adat-lista{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:22px}
+.adat-lista li{display:grid;grid-template-columns:28px 1fr;gap:14px}
+.adat-lista svg{width:24px;height:24px;color:var(--borostyan-sot);margin-top:2px}
+.adat-lista b{display:block}
+.adat-lista span,.adat-lista a{color:var(--halk)}
+.adat-lista a{text-decoration:underline;text-underline-offset:3px}
+.kapcsolat-gombok{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.terkep{min-height:520px;background:#D9DEE3}
+.terkep iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+
+/* lábléc */
+footer.lablec{background:var(--grafit);color:#C7CED5;padding-top:72px;padding-bottom:40px;font-size:16px}
+.lablec-racs{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.lablec h3{color:#fff;font-size:17px;margin-bottom:14px}
+.lablec ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lablec a{text-decoration:none}
+.lablec a:hover{color:var(--borostyan)}
+.lablec .marka{margin-bottom:16px}
+.lablec-also{border-top:1px solid #2A3037;margin-top:48px;padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:#8B95A0}
+
+.bemutato-jel{position:fixed;left:12px;bottom:12px;z-index:60;background:rgba(20,23,27,.86);color:#fff;font-size:12px;padding:6px 10px;border-radius:8px;pointer-events:none}
+
+/* reszponzív */
+@media (max-width:1080px){
+  nav.menu{position:fixed;left:0;right:0;top:var(--fej);background:#fff;padding:12px 20px 22px;box-shadow:0 20px 40px rgba(0,0,0,.25);display:none}
+  nav.menu.nyitva{display:block}
+  nav.menu ul{flex-direction:column;gap:0}
+  nav.menu a{display:block;color:var(--tinta);padding:14px 0;border-bottom:1px solid #E3E7EB;font-size:18px}
+  .menu-gomb{display:grid}
+  .nyito-racs{grid-template-columns:1fr;gap:20px;padding-bottom:110px}
+  .muszer{max-width:560px}
+  .hiba-racs,.szolg-racs,.rolunk-racs,.idopont-racs,.gyik-racs{grid-template-columns:1fr;gap:36px}
+  .reszlet{position:static}
+  .muszer-racs{grid-template-columns:1fr 1fr}
+  .muszer-also{grid-template-columns:1fr}
+  .lablec-racs{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  :root{--fej:64px}
+  body{font-size:16px}
+  h1{font-size:38px;font-stretch:100%}
+  h2{font-size:31px;font-stretch:104%}
+  .nyito-hely{flex-wrap:wrap;gap:8px 12px;font-size:15px}
+  .reszlet h3{font-size:21px;font-stretch:104%}
+  .muszer-felirat{font-size:13px}
+  .marka small{display:none}
+  .marka b{font-size:16px}
+  .fej-hivas{width:46px;min-height:46px;padding:0;justify-content:center}
+  .fej-hivas span{display:none}
+  .nyito-racs{padding-top:34px;padding-bottom:96px}
+  .nyito .lead{font-size:18px}
+  .nyito-gombok .gomb{flex:1 1 auto;justify-content:center}
+  .infosav{margin-top:-56px}
+  .infosav-racs{grid-template-columns:1fr}
+  .info + .info{border-left:0;border-top:1px solid #E3E7EB}
+  .info{padding:18px 20px}
+  .szakasz{padding-top:72px;padding-bottom:72px}
+  .hiba{padding-top:64px}
+  .szakasz-fej{margin-bottom:30px}
+  .szakasz-fej p{font-size:17px}
+  .tunetek{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:42%;grid-template-rows:auto auto;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-right:-20px;padding-right:20px}
+  .tunet{scroll-snap-align:start;padding:14px}
+  .tunet .tikon{width:46px;height:46px}
+  .tunet b{font-size:15px}
+  .reszlet{padding:24px}
+  .reszlet h3{font-size:22px}
+  .muszer-racs{grid-template-columns:1fr}
+  form.urlap{grid-template-columns:1fr;padding:22px}
+  .kapcsolat{grid-template-columns:1fr}
+  .kapcsolat-adatok{padding:64px 20px}
+  .terkep,.terkep iframe{min-height:360px}
+  .lablec-racs{grid-template-columns:1fr}
+  .osszeg .szam{font-size:52px}
+  .velemeny-fo{padding:22px}
+  .hiba-racs{gap:20px}
+}
+</style>
+</head>
+<body>
+<a class="ugras" href="#tartalom">Ugrás a tartalomhoz</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- műszerfal-szimbólumok (általános, szabványos jelképek egyszerűsített rajza) -->
+    <symbol id="i-motor" viewBox="0 0 64 64"><path d="M14 22h8v-4h14v4h6l6 6h4v-6h4v20h-4v-6h-4v8l-6 6H22l-4-4h-4v-6h-4v8H6V24h4v6h4z"/></symbol>
+    <symbol id="i-legzsak" viewBox="0 0 64 64"><circle cx="24" cy="12" r="6"/><path d="M18 22h10l6 14h10a3 3 0 0 1 0 6H30l-4-8v20h-8V30l-4 12h-4l4-14z"/><circle cx="48" cy="22" r="10"/></symbol>
+    <symbol id="i-abs" viewBox="0 0 64 64"><path d="M32 10a22 22 0 1 1 0 44 22 22 0 0 1 0-44zm0 5a17 17 0 1 0 0 34 17 17 0 0 0 0-34z"/><path d="M9 14a30 30 0 0 0 0 36l-4 3a35 35 0 0 1 0-42zM55 14l4-3a35 35 0 0 1 0 42l-4-3a30 30 0 0 0 0-36z"/><text x="32" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="15">ABS</text></symbol>
+    <symbol id="i-akku" viewBox="0 0 64 64"><path d="M14 18h8v-4h6v4h8v-4h6v4h8a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H14a4 4 0 0 1-4-4V22a4 4 0 0 1 4-4zm4 14v4h10v-4zm22-4v4h-4v4h4v4h4v-4h4v-4h-4v-4z"/></symbol>
+    <symbol id="i-indito" viewBox="0 0 64 64"><path d="M30 6h4v12h-4zM14.4 12.2l2.8-2.8 8.5 8.5-2.8 2.8zM46.8 9.4l2.8 2.8-8.5 8.5-2.8-2.8zM32 22a18 18 0 1 1 0 36 18 18 0 0 1 0-36zm0 5a13 13 0 1 0 0 26 13 13 0 0 0 0-26zm-2 4h4v12h-4zm0 15h4v4h-4z"/></symbol>
+    <symbol id="i-izzo" viewBox="0 0 64 64"><path d="M32 8a17 17 0 0 1 10 30.7V46H22v-7.3A17 17 0 0 1 32 8zm-8 42h16v4H24zm3 6h10v3H27zM30 18v13h4V18zm0 16v4h4v-4z"/></symbol>
+    <symbol id="i-zar" viewBox="0 0 64 64"><path d="M40 8a14 14 0 1 1-12.5 20.3L8 48v8h10v-6h6v-6h6l3-3A14 14 0 0 1 40 8zm4 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></symbol>
+    <symbol id="i-ablak" viewBox="0 0 64 64"><path d="M8 50 22 14h34v36zm8-5h35V19H25.5zM40 24l8 9h-5v8h-6v-8h-5z"/></symbol>
+    <symbol id="i-szerviz" viewBox="0 0 64 64"><path d="M46 8a12 12 0 0 0-11.6 15.1L10 47.5a4.2 4.2 0 0 0 6 6l24.4-24.4A12 12 0 0 0 56 18l-7 7-7-3-3-7 7-7z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-hely" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 4.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5z"/></symbol>
+    <symbol id="i-ora" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm-1 3h2v5.4l3.6 2.1-1 1.7L11 13.6z"/></symbol>
+    <symbol id="i-level" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.4V17h16V7.4l-8 5.3z"/></symbol>
+    <symbol id="i-pipa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm4.3 6.3L10.5 14l-2.8-2.8-1.4 1.4 4.2 4.2 7.2-7.1z"/></symbol>
+    <symbol id="i-villam" viewBox="0 0 24 24"><path d="M13.5 2 4 14h6.5L9 22l11-13h-7z"/></symbol>
+  </defs>
+</svg>
+
+<header class="fejlec">
+  <div class="belso">
+    <a class="marka" href="#" aria-label="Szabó Autóvillamosság – az oldal teteje">
+      <span class="marka-jel"><svg fill="#F2A900"><use href="#i-villam"/></svg></span>
+      <span><b>Szabó Autóvillamosság</b><small>Pécs, Eozin u. 10.</small></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Fő menü">
+      <ul>
+        <li><a href="#mi-a-gond">Mi a gond?</a></li>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#markak">Márkák</a></li>
+        <li><a href="#velemenyek">Vélemények</a></li>
+        <li><a href="#kapcsolat">Kapcsolat</a></li>
+      </ul>
+    </nav>
+    <a class="gomb gomb-fo fej-hivas" href="tel:+36209425103" aria-label="Hívás: 06 20 942 5103"><svg><use href="#i-tel"/></svg><span>06 20 942 5103</span></a>
+    <button class="menu-gomb" type="button" aria-controls="menu" aria-expanded="false" aria-label="Menü megnyitása">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="tartalom">
+<section class="nyito" aria-labelledby="fo-cim">
+  <div class="nyito-racs szelso">
+    <div>
+      <div class="nyito-hely"><span class="allapot" id="allapot"><i></i><span>Nyitvatartás H–P 8–17</span></span> <span>Pécsen több mint 25 éve</span></div>
+      <h1 id="fo-cim">Autóvillamosság és diagnosztika Pécsen</h1>
+      <p class="lead">Ha világít a motor-, a légzsák- vagy az ABS-lámpa, keressen bizalommal. Gyári szintű műszerrel kiolvassuk a hibakódot, megkeressük az okát, és megjavítjuk.</p>
+      <div class="nyito-gombok">
+        <a class="gomb gomb-fo" href="tel:+36209425103"><svg><use href="#i-tel"/></svg>Hívás most</a>
+        <a class="gomb gomb-ko" href="#mi-a-gond">Melyik lámpa világít?</a>
+      </div>
+      <div class="ertekeles"><b>4,7</b><span class="csillagok" aria-hidden="true">★★★★★</span><span>151 Google-vélemény</span></div>
+    </div>
+
+    <div class="muszer">
+      <svg class="egyseg" viewBox="0 0 560 300" role="group" aria-label="Műszerfal figyelmeztető lámpákkal – kattintson arra, amelyik az Ön autóján világít">
+        <defs>
+          <radialGradient id="g-lap" cx="50%" cy="40%" r="70%"><stop offset="0" stop-color="#262C33"/><stop offset="1" stop-color="#181B20"/></radialGradient>
+          <radialGradient id="g-ora" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#1D2228"/><stop offset="1" stop-color="#101317"/></radialGradient>
+        </defs>
+        <rect x="6" y="10" width="548" height="280" rx="120" fill="url(#g-lap)" stroke="#2F363E" stroke-width="2"/>
+        <!-- fordulatszámmérő -->
+        <g transform="translate(140 150)">
+          <circle r="108" fill="url(#g-ora)" stroke="#353D46" stroke-width="2"/>
+          <g id="skala-bal" stroke="#7C8792" stroke-width="2"></g>
+          <g font-family="Archivo, sans-serif" font-size="13" fill="#9AA4AF" text-anchor="middle" id="szam-bal"></g>
+          <text y="44" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" fill="#7C8792">× 1000/min</text>
+          <g class="mutato" id="mutato-bal" transform="rotate(-135)"><path d="M-3 0 L0 -88 L3 0 Z" fill="#F2A900"/></g>
+          <circle r="10" fill="#2B3138" stroke="#4A535D"/>
+        </g>
+        <!-- sebességmérő -->
+        <g transform="translate(420 150)">
+          <circle r="108" fill="url(#g-ora)" stroke="#353D46" stroke-width="2"/>
+          <g id="skala-jobb" stroke="#7C8792" stroke-width="2"></g>
+          <g font-family="Archivo, sans-serif" font-size="13" fill="#9AA4AF" text-anchor="middle" id="szam-jobb"></g>
+          <text y="44" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" fill="#7C8792">km/h</text>
+          <g class="mutato" id="mutato-jobb" transform="rotate(-135)"><path d="M-3 0 L0 -88 L3 0 Z" fill="#F2A900"/></g>
+          <circle r="10" fill="#2B3138" stroke="#4A535D"/>
+        </g>
+        <!-- lámpák középen -->
+        <g id="lampak">
+          <g class="lampa sarga" data-tunet="motor" tabindex="0" role="button" aria-label="Motorhiba-lámpa"><rect class="keret" x="252" y="62" width="56" height="44" rx="10"/><svg class="ikon" x="260" y="64" width="40" height="40"><use href="#i-motor"/></svg></g>
+          <g class="lampa piros" data-tunet="legzsak" tabindex="0" role="button" aria-label="Légzsák-lámpa"><rect class="keret" x="252" y="110" width="56" height="44" rx="10"/><svg class="ikon" x="260" y="112" width="40" height="40"><use href="#i-legzsak"/></svg></g>
+          <g class="lampa sarga" data-tunet="abs" tabindex="0" role="button" aria-label="ABS-lámpa"><rect class="keret" x="252" y="158" width="56" height="44" rx="10"/><svg class="ikon" x="260" y="160" width="40" height="40"><use href="#i-abs"/></svg></g>
+          <g class="lampa piros" data-tunet="akku" tabindex="0" role="button" aria-label="Töltés- és akkumulátorlámpa"><rect class="keret" x="252" y="206" width="56" height="44" rx="10"/><svg class="ikon" x="260" y="208" width="40" height="40"><use href="#i-akku"/></svg></g>
+        </g>
+      </svg>
+      <p class="muszer-felirat">Kattintson arra a lámpára, amelyik az Ön autóján világít.</p>
+    </div>
+  </div>
+</section>
+
+<div class="infosav belso">
+  <div class="infosav-racs">
+    <div class="info"><svg><use href="#i-ora"/></svg><div><b id="info-nyitva">Hétfő–péntek 8–17</b><span>Szombaton és vasárnap zárva</span></div></div>
+    <a class="info" href="https://www.google.com/maps/dir/?api=1&destination=Szab%C3%B3+Aut%C3%B3villamoss%C3%A1g%2C+P%C3%A9cs%2C+Eozin+u.+10." target="_blank" rel="noopener"><svg><use href="#i-hely"/></svg><div><b>7630 Pécs, Eozin u. 10.</b><span>Útvonaltervezés a Google Térképpel</span></div></a>
+    <a class="info" href="tel:+36209425103"><svg><use href="#i-tel"/></svg><div><b>06 20 942 5103</b><span>Vezetékes: 72/213-525</span></div></a>
+  </div>
+</div>
+
+<section class="szakasz hiba" id="mi-a-gond" aria-labelledby="hiba-cim">
+  <div class="belso">
+    <div class="szakasz-fej">
+      <h2 id="hiba-cim">Melyik lámpa világít, vagy mi a gond?</h2>
+      <p>Válassza ki, mit tapasztal. Megmutatjuk, mit jelezhet, mit tudunk tenni vele, és egy gombbal beírjuk az időpontkérőbe.</p>
+    </div>
+    <div class="hiba-racs">
+      <div class="tunetek" role="group" aria-label="Tünetek">
+        <button class="tunet" type="button" data-tunet="motor" aria-pressed="true"><span class="tikon"><svg class="sarga"><use href="#i-motor"/></svg></span><b>Motorhiba-lámpa</b></button>
+        <button class="tunet" type="button" data-tunet="legzsak" aria-pressed="false"><span class="tikon"><svg class="piros"><use href="#i-legzsak"/></svg></span><b>Légzsák-lámpa</b></button>
+        <button class="tunet" type="button" data-tunet="abs" aria-pressed="false"><span class="tikon"><svg class="sarga"><use href="#i-abs"/></svg></span><b>ABS-lámpa</b></button>
+        <button class="tunet" type="button" data-tunet="akku" aria-pressed="false"><span class="tikon"><svg class="piros"><use href="#i-akku"/></svg></span><b>Akkumulátor­lámpa, nem tölt</b></button>
+        <button class="tunet" type="button" data-tunet="indito" aria-pressed="false"><span class="tikon"><svg class="feher"><use href="#i-indito"/></svg></span><b>Nem indul, nehezen indul</b></button>
+        <button class="tunet" type="button" data-tunet="izzo" aria-pressed="false"><span class="tikon"><svg class="sarga"><use href="#i-izzo"/></svg></span><b>Világítás, féklámpa</b></button>
+        <button class="tunet" type="button" data-tunet="zar" aria-pressed="false"><span class="tikon"><svg class="feher"><use href="#i-zar"/></svg></span><b>Központi zár, távirányító</b></button>
+        <button class="tunet" type="button" data-tunet="ablak" aria-pressed="false"><span class="tikon"><svg class="feher"><use href="#i-ablak"/></svg></span><b>Ablakemelő</b></button>
+        <button class="tunet" type="button" data-tunet="szerviz" aria-pressed="false"><span class="tikon"><svg class="sarga"><use href="#i-szerviz"/></svg></span><b>Szerviz­intervallum</b></button>
+      </div>
+
+      <div class="reszlet" aria-live="polite">
+        <div class="reszlet-fej">
+          <span class="tikon"><svg id="r-ikon" fill="#F2A900"><use href="#i-motor"/></svg></span>
+          <div><h3 id="r-cim">Motorhiba-lámpa</h3><div class="szin" id="r-szin">Sárga vagy borostyán lámpa</div></div>
+        </div>
+        <h4>Mit jelezhet?</h4>
+        <p id="r-mit"></p>
+        <h4>Amit vállalunk</h4>
+        <ul id="r-vallal"></ul>
+        <div class="gombok">
+          <a class="gomb gomb-fo" href="#idopont" id="r-kuld">Ezzel jövök, időpontot kérek</a>
+          <a class="gomb gomb-ko" href="tel:+36209425103"><svg><use href="#i-tel"/></svg>Hívás</a>
+        </div>
+        <p class="megj">Az okot csak a műszeres vizsgálat mutatja meg biztosan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="szakasz szolg" id="szolgaltatasok" aria-labelledby="szolg-cim">
+  <div class="belso">
+    <div class="szolg-racs">
+      <div>
+        <div class="szakasz-fej">
+          <h2 id="szolg-cim">Amivel foglalkozunk</h2>
+          <p>Autóvillamossági javítás és műszeres gépjármű-diagnosztika egy pécsi műhelyben, az Eozin utcában.</p>
+        </div>
+        <figure class="foto-kartya">
+          <img src="kepek/munkak/munka-01.webp" width="471" height="354" loading="lazy" alt="Laptopos diagnosztikai program csatlakoztatva egy autóhoz a Szabó Autóvillamosság műhelyében">
+          <figcaption>Gyári diagnosztikai program egy ügyfél autóján, a műhelyben.</figcaption>
+        </figure>
+      </div>
+      <ul class="szolg-lista">
+        <li><svg viewBox="0 0 64 64" fill="currentColor"><use href="#i-motor"/></svg><div><h3>Műszeres diagnosztika</h3><p>Hibakód olvasás és törlés. Motor, légzsák, ABS és klíma diagnosztika, programozás – gyári szintű műszerekkel.</p></div></li>
+        <li><svg viewBox="0 0 64 64" fill="currentColor"><use href="#i-akku"/></svg><div><h3>Autóvillamossági javítás</h3><p>Indítómotor, generátor, akkumulátor, világítás és a gépjármű teljes elektromos rendszere.</p></div></li>
+        <li><svg viewBox="0 0 64 64" fill="currentColor"><use href="#i-zar"/></svg><div><h3>Központi zárak</h3><p>Kulcsos és távirányítós központi zárak beszerelése, gyári vagy utólagos zárak javítása. Központizár-vezérlővel a kulcsos zár szinte minden típusban távirányítóssá alakítható – így a kulcs és az ajtózárak sem kopnak.</p></div></li>
+        <li><svg viewBox="0 0 64 64" fill="currentColor"><use href="#i-ablak"/></svg><div><h3>Komfortelektronika, ablakemelő</h3><p>Elektromos ablakemelők és a kényelmi funkciók hibáinak javítása.</p></div></li>
+        <li><svg viewBox="0 0 64 64" fill="currentColor"><use href="#i-szerviz"/></svg><div><h3>Szervizintervallum nullázás</h3><p>A szerviz után nullázzuk a szervizintervallum-kijelzést.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="szakasz marka-sav" id="markak" aria-labelledby="marka-cim">
+  <div class="belso">
+    <div class="szakasz-fej">
+      <h2 id="marka-cim">A márkájához való műszerrel dolgozunk</h2>
+      <p>Egy általános hibakódolvasó sokszor csak a felszínt látja. Mi márkacsoportonként gyári szintű műszert használunk.</p>
+    </div>
+    <div class="muszer-racs">
+      <div class="muszer-kartya" data-csoport="dec">
+        <h3>Dec Supercan</h3>
+        <div class="mire">Francia típusok, gyári szinten</div>
+        <p>Ha világít a motor-, a légzsák- vagy az ABS-lámpa.</p>
+        <div class="chipek"><span class="chip">Peugeot</span><span class="chip">Citroën</span><span class="chip">Renault</span></div>
+      </div>
+      <div class="muszer-kartya" data-csoport="vag">
+        <h3>VAG-COM</h3>
+        <div class="mire">Volkswagen-csoport, gyári programmal</div>
+        <p>A régebbi, még nem OBD csatlakozós típusokat is meg tudjuk vizsgálni.</p>
+        <div class="chipek"><span class="chip">Volkswagen</span><span class="chip">Audi</span><span class="chip">Seat</span><span class="chip">Škoda</span></div>
+      </div>
+      <div class="muszer-kartya" data-csoport="gscan">
+        <h3>G-scan</h3>
+        <div class="mire">Távol-keleti, ázsiai típusok</div>
+        <p>Motor, légzsák, ABS és klíma diagnosztika, hibatörlés, programozás.</p>
+        <div class="chipek"><span class="chip">Chevrolet</span><span class="chip">Daewoo</span><span class="chip">Honda</span><span class="chip">Hyundai</span><span class="chip">Isuzu</span><span class="chip">Kia</span><span class="chip">Mazda</span><span class="chip">Mitsubishi</span><span class="chip">Nissan</span><span class="chip">SsangYong</span><span class="chip">Subaru</span><span class="chip">Suzuki</span><span class="chip">Toyota</span></div>
+      </div>
+    </div>
+    <div class="muszer-also">
+      <div class="kereso">
+        <label for="marka-be">Milyen autója van?</label>
+        <input id="marka-be" type="text" list="marka-lista" placeholder="Például: Opel, Kia, Peugeot" autocomplete="off">
+        <datalist id="marka-lista"></datalist>
+        <p class="valasz" id="marka-valasz" aria-live="polite">Írja be a márkát, és megmutatjuk, melyik műszerrel vizsgáljuk.</p>
+        <p class="tobbi">Az olasz autók, az Opel, a Ford és a Rover teljes körű diagnosztizálását is vállaljuk.</p>
+      </div>
+      <figure class="foto-par">
+        <img src="kepek/munkak/munka-04.webp" width="471" height="354" loading="lazy" alt="G-scan diagnosztikai műszer csatlakoztatva egy autóhoz, az ülésen">
+        <img src="kepek/munkak/munka-03.webp" width="471" height="354" loading="lazy" alt="A G-scan kijelzője élő motoradatokkal: akkumulátorfeszültség, hőmérséklet, fordulatszám">
+        <figcaption>A G-scan műszer munka közben: élő adatok a motorvezérlőből.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="szakasz rolunk" id="velemenyek" aria-labelledby="rolunk-cim">
+  <div class="belso rolunk-racs">
+    <div>
+      <h2 id="rolunk-cim">Egy műhely, ahol elmondják, mi miért romlott el</h2>
+      <p class="bemut">Pécsett több mint 25 éve foglalkozunk autóvillamossággal. Arra törekszünk, hogy ügyfeleink a legnagyobb elégedettséggel távozzanak, és a jövőben is problémájukkal hozzánk forduljanak.</p>
+      <p>Ügyfeleink leggyakrabban ezt írják rólunk:</p>
+      <ul class="pipak">
+        <li><svg><use href="#i-pipa"/></svg><span>gyorsan kapnak időpontot, sürgős esetben akár soron kívül;</span></li>
+        <li><svg><use href="#i-pipa"/></svg><span>rendezett, tiszta műhely, az autó sérülés és olajfolt nélkül kerül vissza;</span></li>
+        <li><svg><use href="#i-pipa"/></svg><span>a hibát elmagyarázzuk, és ha van, alternatívát is ajánlunk;</span></li>
+        <li><svg><use href="#i-pipa"/></svg><span>korrekt, méltányos ár.</span></li>
+      </ul>
+    </div>
+    <div class="velemeny-fo">
+      <div class="osszeg">
+        <div class="szam">4,7</div>
+        <div><span class="csillagok" aria-label="4,7 az 5-ből">★★★★★</span><span>151 vélemény a Google-on</span></div>
+      </div>
+      <blockquote>„Patika műhely, rendezett környezet, tiszta szerelőruha! Alternatívákat kínál a Mester. Elmondja, mi miért, ok-okozat. Nem lehúzós.”<footer>Google-vélemény</footer></blockquote>
+      <blockquote>„Pénteki telefonbeszélgetésünkkor hétfőre adott időpontot, miközben más szerelők jó két héttel később lettek volna hajlandóak csak fogadni.”<footer>Google-vélemény</footer></blockquote>
+      <blockquote>„Az autóm ablakelektronikai hibáját gyorsan és precízen megoldotta. Ár-érték arányban is teljesen korrekt.”<footer>Google-vélemény</footer></blockquote>
+      <a class="google-link" href="https://www.google.com/maps/search/?api=1&query=Szab%C3%B3+Aut%C3%B3villamoss%C3%A1g+P%C3%A9cs+Eozin+u.+10." target="_blank" rel="noopener">Összes vélemény a Google-on</a>
+    </div>
+  </div>
+</section>
+
+<section class="szakasz idopont" id="idopont" aria-labelledby="idopont-cim">
+  <div class="belso idopont-racs">
+    <div>
+      <div class="szakasz-fej">
+        <h2 id="idopont-cim">Időpontkérés visszahívással</h2>
+        <p>Írja le röviden, mi a gond és milyen autóról van szó. Visszahívjuk, és megbeszéljük, mikor tudja hozni. Ez még nem foglalás, és nem jár kötelezettséggel.</p>
+      </div>
+      <a class="hivo" href="tel:+36209425103"><svg><use href="#i-tel"/></svg><div><b>06 20 942 5103</b><span>Gyorsabb, ha most felhív: hétfőtől péntekig 8–17 óráig</span></div></a>
+    </div>
+    <form class="urlap" id="urlap" novalidate>
+      <div class="mezo"><label for="u-nev">Név</label><input id="u-nev" name="nev" autocomplete="name" required></div>
+      <div class="mezo"><label for="u-tel">Telefonszám</label><input id="u-tel" name="telefon" type="tel" autocomplete="tel" required></div>
+      <div class="mezo teljes"><label for="u-auto">Autó (márka, típus, évjárat)</label><input id="u-auto" name="auto" placeholder="Például: Opel Astra H, 2008"></div>
+      <div class="mezo teljes"><label for="u-gond">Mi a gond?</label><textarea id="u-gond" name="gond" placeholder="Például: világít a motorhiba-lámpa, és rángat gyorsításkor."></textarea></div>
+      <div class="urlap-also">
+        <button class="gomb gomb-sot" type="submit">Visszahívást kérek</button>
+        <small>Ez egy bemutató oldal, az űrlap most nem küld üzenetet.</small>
+      </div>
+      <p class="uzenet" id="uzenet" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<section class="szakasz" id="gyik" aria-labelledby="gyik-cim">
+  <div class="belso gyik-racs">
+    <div class="szakasz-fej">
+      <h2 id="gyik-cim">Gyakori kérdések</h2>
+      <p>Ha nem találja a válaszát, hívjon nyugodtan.</p>
+    </div>
+    <div>
+      <details><summary>Milyen autókat tudnak diagnosztizálni?</summary><p>A francia típusokat (Peugeot, Citroën, Renault) Dec Supercan műszerrel gyári szinten, a Volkswagen-csoport típusait a VAG-COM gyári programmal, a távol-keleti autókat G-scan műszerrel. Az olasz autók, az Opel, a Ford és a Rover teljes körű diagnosztizálását is vállaljuk.</p></details>
+      <details><summary>Ki tudják olvasni és törölni a hibakódot?</summary><p>Igen. Műszeres diagnosztikával kiolvassuk a hibakódot, megkeressük az okát, és a javítás után töröljük.</p></details>
+      <details><summary>A kulcsos központi zárat át lehet alakítani távirányítósra?</summary><p>Igen, központizár-vezérlő beépítésével ez szinte minden típusba megoldható. Nem csak kényelmesebb: a kulcs és az ajtózárak sem kopnak, aminek a cseréje elég költséges.</p></details>
+      <details><summary>Nullázzák a szervizintervallumot?</summary><p>Igen, a szervizintervallum nullázását is vállaljuk.</p></details>
+      <details><summary>Mikor vannak nyitva?</summary><p>Hétfőtől péntekig 8 és 17 óra között. Szombaton és vasárnap zárva vagyunk.</p></details>
+      <details><summary>Kell előre időpontot kérni?</summary><p>Érdemes előtte telefonálni a 06 20 942 5103-as számon: elmondja, mi a gond, és megbeszéljük, mikor tudja hozni az autót.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="kapcsolat" id="kapcsolat" aria-labelledby="kapcsolat-cim">
+  <div class="kapcsolat-adatok">
+    <h2 id="kapcsolat-cim">Itt talál minket</h2>
+    <ul class="adat-lista">
+      <li><svg><use href="#i-hely"/></svg><div><b>7630 Pécs, Eozin u. 10.</b><span>Kerekesszékkel megközelíthető bejárat és parkoló</span></div></li>
+      <li><svg><use href="#i-tel"/></svg><div><b><a href="tel:+36209425103">06 20 942 5103</a></b><span>Vezetékes: <a href="tel:+3672213525">72/213-525</a></span></div></li>
+      <li><svg><use href="#i-level"/></svg><div><b>E-mail</b><a href="mailto:szjoevill@gmail.com">szjoevill@gmail.com</a></div></li>
+      <li><svg><use href="#i-ora"/></svg><div><b>Hétfő–péntek 8–17</b><span>Szombat, vasárnap zárva</span></div></li>
+    </ul>
+    <div class="kapcsolat-gombok">
+      <a class="gomb gomb-fo" href="tel:+36209425103"><svg><use href="#i-tel"/></svg>Hívás most</a>
+      <a class="gomb gomb-sot" href="https://www.google.com/maps/dir/?api=1&destination=Szab%C3%B3+Aut%C3%B3villamoss%C3%A1g%2C+P%C3%A9cs%2C+Eozin+u.+10." target="_blank" rel="noopener">Útvonaltervezés</a>
+    </div>
+  </div>
+  <div class="terkep">
+    <iframe title="Szabó Autóvillamosság a térképen – 7630 Pécs, Eozin u. 10." src="https://maps.google.com/maps?q=Szab%C3%B3%20Aut%C3%B3villamoss%C3%A1g%2C%20P%C3%A9cs%2C%20Eozin%20u.%2010.&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer class="lablec szelso">
+  <div class="lablec-racs">
+    <div>
+      <a class="marka" href="#"><span class="marka-jel"><svg fill="#F2A900"><use href="#i-villam"/></svg></span><span><b>Szabó Autóvillamosság</b></span></a>
+      <p>Autóvillamossági javítás és műszeres diagnosztika Pécsen, több mint 25 éve.</p>
+    </div>
+    <div>
+      <h3>Elérhetőség</h3>
+      <ul>
+        <li>7630 Pécs, Eozin u. 10.</li>
+        <li><a href="tel:+36209425103">06 20 942 5103</a></li>
+        <li><a href="tel:+3672213525">72/213-525</a></li>
+        <li><a href="mailto:szjoevill@gmail.com">szjoevill@gmail.com</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Nyitvatartás</h3>
+      <ul><li>Hétfő–péntek: 8–17</li><li>Szombat: zárva</li><li>Vasárnap: zárva</li></ul>
+    </div>
+    <div>
+      <h3>Az oldalon</h3>
+      <ul>
+        <li><a href="#mi-a-gond">Mi a gond?</a></li>
+        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+        <li><a href="#markak">Márkák</a></li>
+        <li><a href="#idopont">Időpontkérés</a></li>
+        <li><a href="#gyik">Gyakori kérdések</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="lablec-also"><span>© 2026 Szabó Autóvillamosság</span><span>Pécs, Eozin u. 10.</span></div>
+</footer>
+
+<div class="bemutato-jel">Bemutató terv – Webtastic</div>
+
+<script>
+(() => {
+  // --- tünetek (a „Mit jelezhet?” szövegek általános tájékoztatók, a Webtastic saját szövegei; az „Amit vállalunk” a cég saját anyagaiból) ---
+  const T = {
+    motor:  {cim:'Motorhiba-lámpa', szin:'Sárga vagy borostyán lámpa', ikon:'i-motor', fill:'#F2A900',
+      mit:'A motorvezérlő hibát tárolt: például egy érzékelő, a gyújtás vagy a keverékképzés hibáját. Az autó gyakran megy tovább, de lehet, hogy kisebb teljesítménnyel vagy többet fogyaszt.',
+      vallal:['műszeres diagnosztika, hibakód kiolvasása','a hiba okának megkeresése és javítása','a hibakód törlése a javítás után']},
+    legzsak:{cim:'Légzsák-lámpa', szin:'Piros lámpa', ikon:'i-legzsak', fill:'#E5372B',
+      mit:'A légzsákrendszer hibát jelez, például egy csatlakozó, az ülés alatti vezeték vagy egy érzékelő miatt. Amíg világít, a légzsák lehet, hogy baleset esetén sem nyílik ki.',
+      vallal:['légzsák-diagnosztika','a hiba okának megkeresése és javítása','hibatörlés']},
+    abs:    {cim:'ABS-lámpa', szin:'Sárga vagy borostyán lámpa', ikon:'i-abs', fill:'#F2A900',
+      mit:'A blokkolásgátló rendszer hibát tárolt, gyakran egy kerékfordulat-érzékelő vagy annak vezetéke miatt. A fék általában működik, de az ABS nem segít vészfékezésnél.',
+      vallal:['ABS-diagnosztika','az érzékelő vagy a vezeték hibájának megkeresése','hibatörlés a javítás után']},
+    akku:   {cim:'Akkumulátorlámpa, nem tölt', szin:'Piros lámpa', ikon:'i-akku', fill:'#E5372B',
+      mit:'A töltés nem megfelelő: a generátor nem tölt, vagy az akkumulátorral, a kábelekkel van gond. Ha menet közben gyullad fel, az autó lemerülhet és leállhat.',
+      vallal:['a generátor és a töltés ellenőrzése','generátor javítása','akkumulátor vizsgálata']},
+    indito: {cim:'Nem indul, nehezen indul', szin:'Nincs lámpa, csak kattog vagy lassan forgat', ikon:'i-indito', fill:'#FFFFFF',
+      mit:'Gyakran a gyenge akkumulátor, az indítómotor vagy egy rossz csatlakozás okozza.',
+      vallal:['az akkumulátor és a töltés ellenőrzése','indítómotor javítása','a vezetékek, csatlakozások átvizsgálása']},
+    izzo:   {cim:'Világítás, féklámpa', szin:'Izzóhiba-jelzés vagy nem világít egy lámpa', ikon:'i-izzo', fill:'#F2A900',
+      mit:'Kiégett izzó, de gyakran vezeték-, csatlakozó- vagy kapcsolóhiba is lehet, ha az izzócsere nem segít.',
+      vallal:['a világítás és a féklámpák hibáinak javítása','a vezetékek és kapcsolók átvizsgálása']},
+    zar:    {cim:'Központi zár, távirányító', szin:'Nem nyit, nem zár, vagy nincs távirányító', ikon:'i-zar', fill:'#FFFFFF',
+      mit:'A zárszerkezet, a vezérlő vagy a vezeték hibája. Kulcsos zárnál a távirányító utólag is beépíthető.',
+      vallal:['gyári vagy utólagos központi zárak javítása','kulcsos és távirányítós zárak beszerelése','központizár-vezérlő beépítése: a kulcs és az ajtózárak sem kopnak']},
+    ablak:  {cim:'Ablakemelő', szin:'Lassan megy, megáll vagy nem mozdul', ikon:'i-ablak', fill:'#FFFFFF',
+      mit:'Lehet a motor, a kapcsoló vagy a vezeték hibája, néha az ajtóban megtört kábel.',
+      vallal:['elektromos ablakemelők javítása','komfortelektronikai hibák keresése']},
+    szerviz:{cim:'Szervizintervallum', szin:'Csavarkulcs vagy „Service” jelzés', ikon:'i-szerviz', fill:'#F2A900',
+      mit:'Az autó jelzi, hogy esedékes a szerviz. Ha a szerviz megvolt, a kijelzőt nullázni kell.',
+      vallal:['szervizintervallum nullázása']}
+  };
+  const gombok = [...document.querySelectorAll('.tunet')];
+  const lampak = [...document.querySelectorAll('.lampa')];
+  const $ = id => document.getElementById(id);
+  let aktiv = 'motor';
+  function valaszt(k, gorget){
+    const t = T[k]; if(!t) return; aktiv = k;
+    gombok.forEach(g => g.setAttribute('aria-pressed', g.dataset.tunet === k ? 'true' : 'false'));
+    lampak.forEach(l => l.classList.toggle('ég', l.dataset.tunet === k));
+    $('r-cim').textContent = t.cim; $('r-szin').textContent = t.szin; $('r-mit').textContent = t.mit;
+    $('r-ikon').innerHTML = '<use href="#' + t.ikon + '"/>'; $('r-ikon').setAttribute('fill', t.fill);
+    $('r-vallal').innerHTML = t.vallal.map(v => '<li>' + v + '</li>').join('');
+    if(gorget) document.getElementById('mi-a-gond').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }
+  gombok.forEach(g => g.addEventListener('click', () => valaszt(g.dataset.tunet)));
+  lampak.forEach(l => {
+    l.addEventListener('click', () => valaszt(l.dataset.tunet, true));
+    l.addEventListener('keydown', e => { if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); valaszt(l.dataset.tunet, true); }});
+  });
+  $('r-kuld').addEventListener('click', () => {
+    const mezo = $('u-gond');
+    const sor = T[aktiv].cim + ': ';
+    if(!mezo.value.startsWith(sor)) mezo.value = sor + mezo.value.replace(/^[^:]*: /, '');
+    setTimeout(() => mezo.focus({preventScroll:true}), 500);
+  });
+  valaszt('motor');
+
+  // --- műszeregység: skálák és egyszeri „gyújtásráadás” ---
+  function skala(gId, nId, max, lepes){
+    const g = $(gId), n = $(nId); let s = '', t = '';
+    for(let i = 0; i <= max; i += lepes/2){
+      const a = (-135 + 270 * i / max) * Math.PI / 180, nagy = i % lepes === 0;
+      const r1 = nagy ? 86 : 92, r2 = 100;
+      s += `<line x1="${(Math.sin(a)*r1).toFixed(1)}" y1="${(-Math.cos(a)*r1).toFixed(1)}" x2="${(Math.sin(a)*r2).toFixed(1)}" y2="${(-Math.cos(a)*r2).toFixed(1)}"${nagy?'':' stroke-opacity=".5"'}/>`;
+      if(nagy) t += `<text x="${(Math.sin(a)*70).toFixed(1)}" y="${(-Math.cos(a)*70+4).toFixed(1)}">${i}</text>`;
+    }
+    g.innerHTML = s; n.innerHTML = t;
+  }
+  skala('skala-bal','szam-bal', 8, 1); skala('skala-jobb','szam-jobb', 240, 40);
+  const lassu = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!lassu){
+    lampak.forEach(l => l.classList.add('ég'));
+    requestAnimationFrame(() => { $('mutato-bal').setAttribute('transform','rotate(135)'); $('mutato-jobb').setAttribute('transform','rotate(135)'); });
+    setTimeout(() => {
+      $('mutato-bal').setAttribute('transform','rotate(-108)'); $('mutato-jobb').setAttribute('transform','rotate(-135)');
+      lampak.forEach(l => l.classList.toggle('ég', l.dataset.tunet === aktiv));
+    }, 1500);
+  } else {
+    $('mutato-bal').setAttribute('transform','rotate(-108)');
+  }
+  // CSS-átmenet az SVG transform attribútumon nem fut minden böngészőben, ezért style-lal is
+  ['mutato-bal','mutato-jobb'].forEach(id => { const m = $(id); new MutationObserver(() => { m.style.transform = m.getAttribute('transform').replace('rotate(','rotate(').replace(')','deg)'); }).observe(m,{attributes:true,attributeFilter:['transform']}); });
+
+  // --- élő nyitvatartás (Europe/Budapest) ---
+  try {
+    const most = new Date(new Date().toLocaleString('en-US', {timeZone:'Europe/Budapest'}));
+    const nap = most.getDay(), perc = most.getHours()*60 + most.getMinutes();
+    const nyitva = nap >= 1 && nap <= 5 && perc >= 480 && perc < 1020;
+    const a = $('allapot'); a.classList.toggle('nyitva', nyitva);
+    a.querySelector('span').textContent = nyitva ? 'Most nyitva, 17 óráig' : (nap >= 1 && nap <= 5 && perc < 480 ? 'Most zárva, ma 8-kor nyitunk' : 'Most zárva, hétfő–péntek 8–17');
+  } catch(e) {}
+
+  // --- márkakereső ---
+  const M = {dec:['Peugeot','Citroën','Citroen','Renault'], vag:['Volkswagen','VW','Audi','Seat','Škoda','Skoda'],
+    gscan:['Chevrolet','Daewoo','Honda','Hyundai','Isuzu','Kia','Mazda','Mitsubishi','Nissan','SsangYong','Subaru','Suzuki','Toyota'],
+    teljes:['Fiat','Alfa Romeo','Lancia','Opel','Ford','Rover']};
+  const NEV = {dec:'a Dec Supercan műszerrel, gyári szinten', vag:'a VAG-COM gyári programmal', gscan:'a G-scan műszerrel', teljes:'teljes körű diagnosztikával'};
+  const mind = [...new Set(Object.values(M).flat())].filter(m => !['VW','Citroen','Skoda'].includes(m));
+  $('marka-lista').innerHTML = mind.map(m => `<option value="${m}">`).join('');
+  const norm = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim();
+  $('marka-be').addEventListener('input', e => {
+    const q = norm(e.target.value); const v = $('marka-valasz');
+    document.querySelectorAll('.chip').forEach(c => c.classList.toggle('talalat', q.length > 1 && norm(c.textContent).startsWith(q)));
+    if(q.length < 2){ v.textContent = 'Írja be a márkát, és megmutatjuk, melyik műszerrel vizsgáljuk.'; return; }
+    let cs = null, talalt = null;
+    for(const k in M){ const x = M[k].find(m => norm(m).startsWith(q)); if(x){ cs = k; talalt = x; break; } }
+    v.innerHTML = cs ? `<b>${talalt}:</b> igen, ${NEV[cs]} vizsgáljuk.` : 'Ezt a márkát nem soroltuk fel külön. Hívjon, és megmondjuk, tudunk-e segíteni: <a href="tel:+36209425103">06 20 942 5103</a>.';
+  });
+
+  // --- űrlap (bemutató: nem küld) ---
+  $('urlap').addEventListener('submit', e => {
+    e.preventDefault();
+    const u = $('uzenet'), nev = $('u-nev').value.trim(), tel = $('u-tel').value.trim();
+    u.textContent = (!nev || !tel) ? 'Adja meg a nevét és a telefonszámát, hogy vissza tudjuk hívni.' : 'Köszönjük! Ez egy bemutató oldal, ezért az üzenet most nem ment el. Az élő oldalon innen hívnánk vissza.';
+    u.style.background = (!nev || !tel) ? '#FDECEA' : ''; u.style.color = (!nev || !tel) ? '#8A1F17' : '';
+    u.classList.add('lathato');
+  });
+
+  // --- mobil menü ---
+  const mg = document.querySelector('.menu-gomb'), menu = $('menu');
+  const zar = () => { menu.classList.remove('nyitva'); mg.setAttribute('aria-expanded','false'); mg.setAttribute('aria-label','Menü megnyitása'); };
+  mg.addEventListener('click', () => { const ny = menu.classList.toggle('nyitva'); mg.setAttribute('aria-expanded', ny); mg.setAttribute('aria-label', ny ? 'Menü bezárása' : 'Menü megnyitása'); });
+  menu.addEventListener('click', e => { if(e.target.closest('a')) zar(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape') zar(); });
+  document.addEventListener('click', e => { if(menu.classList.contains('nyitva') && !menu.contains(e.target) && !mg.contains(e.target)) zar(); });
+})();
+</script>
+</body>
+</html>
