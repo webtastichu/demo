@@ -175,7 +175,7 @@ a.csik-elem:hover b{text-decoration:underline}
 .szerviz li b{display:block; font-weight:600}
 .szerviz li span{display:block; color:var(--halk); font-size:15px; line-height:1.45}
 
-/* ---------- vizsga-naptár (húzóelem) ---------- */
+/* ---------- vizsgára készülés (húzóelem) ---------- */
 .naptar{background:var(--aszfalt); color:#fff}
 .naptar .belso{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:64px; align-items:center}
 .naptar h2{margin-bottom:18px}
@@ -184,24 +184,27 @@ a.csik-elem:hover b{text-decoration:underline}
 .egycim svg{width:28px; height:28px; color:var(--lime); flex:none}
 .egycim p{color:#D6D9DD; font-size:16px}
 .eszkoz{background:#fff; color:var(--szoveg); border-radius:28px; padding:34px; box-shadow:0 0 0 8px rgba(168,198,40,.18)}
-.eszkoz label{display:block; font-weight:600; margin-bottom:8px}
-.eszkoz .sugo{color:var(--halk); font-size:14.5px; margin-top:8px}
-.datum-sor{display:flex; gap:12px; flex-wrap:wrap}
-.datum-sor input{flex:1 1 200px; min-width:0}
 input, select, textarea{font:inherit; font-size:16px; width:100%; padding:13px 15px; border:1.5px solid #C9CEC0; border-radius:12px; background:#fff; color:var(--szoveg)}
 input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-mely); box-shadow:0 0 0 3px rgba(168,198,40,.35)}
-.eredmeny{margin-top:26px; border-top:1px solid var(--vonal); padding-top:24px}
-.eredmeny[hidden]{display:none}
-.szamlalo{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
-.szamlalo strong{font-family:var(--cim); font-weight:800; font-size:64px; line-height:1; letter-spacing:-.03em}
-.szamlalo span{font-family:var(--cim); font-weight:600; font-size:20px}
-.allapot{display:inline-block; margin-top:14px; padding:6px 14px; border-radius:999px; font-weight:600; font-size:14.5px}
-.allapot.bo{background:var(--lime-halvany); color:var(--lime-mely)}
-.allapot.most{background:#FFE9A8; color:#6B4A00}
-.allapot.lejart{background:#FBD5D2; color:#8A1C12}
-.eredmeny p.magyar{margin-top:12px; color:var(--halk)}
-.eredmeny .gombsor{margin-top:20px}
-.ures{margin-top:22px; padding:18px 20px; border-radius:16px; background:var(--vilagos); color:var(--halk); font-size:15.5px}
+.fulek{display:flex; gap:6px; padding:5px; background:var(--vilagos); border-radius:999px; margin-bottom:24px; overflow-x:auto; scrollbar-width:none}
+.fulek::-webkit-scrollbar{display:none}
+.ful{flex:1 0 auto; font:inherit; font-weight:600; font-size:15px; padding:10px 16px; border:0; border-radius:999px; background:transparent; color:var(--halk); cursor:pointer; white-space:nowrap}
+.ful[aria-selected="true"]{background:var(--aszfalt); color:#fff}
+.ful:focus-visible{outline:3px solid var(--lime); outline-offset:2px}
+.fulpanel[hidden]{display:none}
+.fulpanel > p.halk{color:var(--halk); font-size:15px; margin-bottom:14px}
+.ellenor{list-style:none; padding:0; margin:0; display:grid; gap:8px}
+.ellenor label{display:flex; gap:14px; align-items:flex-start; padding:12px 14px; border-radius:14px; border:1.5px solid var(--vonal); cursor:pointer; transition:border-color .15s, background .15s}
+.ellenor input{width:20px; height:20px; padding:0; flex:none; margin-top:2px; accent-color:var(--lime-mely)}
+.ellenor b{display:block; font-size:16px}
+.ellenor span{display:block; color:var(--halk); font-size:14.5px; line-height:1.45}
+.ellenor label:has(input:checked){border-color:var(--lime-mely); background:var(--lime-halvany)}
+.atnezes{margin-top:18px; display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.atnezes p{color:var(--halk); font-size:14.5px; flex:1 1 220px}
+.iratlista{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+.iratlista li{display:flex; gap:12px; align-items:flex-start}
+.iratlista svg{width:22px; height:22px; color:var(--lime-mely); flex:none; margin-top:2px}
+.forras{margin-top:16px; color:var(--halk); font-size:13.5px}
 
 /* ---------- rólunk ---------- */
 .rolunk .belso{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,6fr); gap:64px; align-items:center}
@@ -304,6 +307,7 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
   .rolunk figure{max-width:460px}
 }
 @media (max-width:760px){
+  .ful{padding:10px 14px}
   :root{--fej:64px}
   body{font-size:16.5px}
   h1{font-size:38px}
@@ -352,7 +356,7 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
     <nav class="fomenu" aria-label="Főmenü">
       <ul>
         <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
-        <li><a href="#vizsga">Műszaki lejárat</a></li>
+        <li><a href="#vizsga">Vizsgára készülés</a></li>
         <li><a href="#rolunk">Rólunk</a></li>
         <li><a href="#velemenyek">Vélemények</a></li>
         <li><a href="#kapcsolat">Kapcsolat</a></li>
@@ -368,7 +372,7 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
     <div class="menu-panel" id="menu-panel">
       <ul>
         <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
-        <li><a href="#vizsga">Mikor jár le a műszakija?</a></li>
+        <li><a href="#vizsga">Átmegy a műszakin?</a></li>
         <li><a href="#rolunk">Rólunk</a></li>
         <li><a href="#velemenyek">Vélemények</a></li>
         <li><a href="#idopont">Időpontkérés</a></li>
@@ -430,7 +434,7 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
           <article class="vizsga">
             <h3>Műszaki vizsga</h3>
             <p>Személyautók időszakos műszaki vizsgája Komlón. A vizsgát Bálint végzi.</p>
-            <a href="#vizsga">Mikor jár le az enyém?</a>
+            <a href="#vizsga">Átmegy az autóm?</a>
           </article>
           <article class="vizsga">
             <h3>Eredetiségvizsga</h3>
@@ -459,27 +463,55 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
   <section class="naptar szakasz" id="vizsga" aria-labelledby="vizsga-cim">
     <div class="belso">
       <div>
-        <h2 id="vizsga-cim">Mikor jár le a műszakija?</h2>
-        <p class="bevezeto">Írja be a forgalmi engedélyben szereplő lejárati dátumot. Megmutatjuk, mennyi ideje van még, és egy gombbal időpontot kérhet vagy emlékeztetőt tehet a naptárába.</p>
+        <h2 id="vizsga-cim">Átmegy az autója a műszakin?</h2>
+        <p class="bevezeto">A legtöbb autó apróságon bukik el: egy kiégett izzón, egy kopott gumin. Nézze át otthon, mi szokott a vizsgán gondot okozni, és jelölje be, ami gyanús. Azt a vizsga előtt átnézzük és megjavítjuk.</p>
         <div class="egycim">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
           <p>Ha a vizsga előtt javítani kell, ugyanitt megcsináljuk: a szerviz és a vizsgaállomás egy címen van.</p>
         </div>
       </div>
       <div class="eszkoz">
-        <label for="lejarat">A műszaki vizsga érvényessége</label>
-        <div class="datum-sor">
-          <input type="date" id="lejarat" name="lejarat">
+        <div class="fulek" role="tablist" aria-label="Felkészülés a vizsgára">
+          <button class="ful" role="tab" id="ful-1" aria-controls="panel-1" aria-selected="true" type="button">Mit néznek?</button>
+          <button class="ful" role="tab" id="ful-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" type="button">Mit hozzon?</button>
+          <button class="ful" role="tab" id="ful-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" type="button">Eredetvizsga</button>
         </div>
-        <p class="sugo">A forgalmi engedélyben a „Műszaki érvényesség” mezőben találja.</p>
-        <div class="ures" id="naptar-ures">Adja meg a dátumot, és itt látja, mennyi ideje maradt.</div>
-        <div class="eredmeny" id="naptar-eredmeny" hidden aria-live="polite">
-          <div class="szamlalo"><strong id="napok">0</strong><span id="napok-felirat">nap van hátra</span></div>
-          <span class="allapot" id="allapot"></span>
-          <p class="magyar" id="tanacs"></p>
-          <div class="gombsor">
-            <button class="gomb gomb-sotet" type="button" id="erre-idopont">Erre időpontot kérek</button>
-            <button class="gomb gomb-keret" type="button" id="naptarba">Emlékeztető a naptárba</button>
+        <div class="fulpanel" role="tabpanel" id="panel-1" aria-labelledby="ful-1">
+          <p class="halk">Jelölje be, amiben nem biztos:</p>
+          <ul class="ellenor">
+            <li><label><input type="checkbox" value="világítás"><div><b>Világítás</b><span>Ég minden lámpa? Tompított, távolsági, féklámpa, index, tolatólámpa, rendszámtábla-világítás.</span></div></label></li>
+            <li><label><input type="checkbox" value="gumik"><div><b>Gumik</b><span>A mintázat legalább 1,6 mm mély? Nincs rajta dudor vagy vágás?</span></div></label></li>
+            <li><label><input type="checkbox" value="fék"><div><b>Fék</b><span>Félrehúz fékezéskor, csikorog, vagy a kézifék nem tartja meg az autót?</span></div></label></li>
+            <li><label><input type="checkbox" value="futómű, kormány"><div><b>Futómű és kormány</b><span>Kotyog, zörög az úthibákon, vagy húz egyik irányba az autó?</span></div></label></li>
+            <li><label><input type="checkbox" value="kipufogó"><div><b>Kipufogó</b><span>Hangosabb a szokásosnál, vagy erősen füstöl?</span></div></label></li>
+            <li><label><input type="checkbox" value="hibajelző lámpa"><div><b>Hibajelző lámpa</b><span>Világít valami a műszerfalon, például a motor-, az ABS- vagy a légzsáklámpa?</span></div></label></li>
+            <li><label><input type="checkbox" value="szélvédő, ablaktörlő"><div><b>Szélvédő és ablaktörlő</b><span>Van repedés a szélvédőn? Rendesen töröl és mos az ablaktörlő?</span></div></label></li>
+          </ul>
+          <div class="atnezes">
+            <button class="gomb gomb-sotet" type="button" id="atnezes-gomb">Vizsga előtti átnézést kérek</button>
+            <p id="atnezes-szoveg" aria-live="polite">Ha semmit nem jelöl, az egész autót átnézzük.</p>
+          </div>
+          <p class="forras">Általános tájékoztató, nem teljes lista: a vizsgán ennél több mindent ellenőriznek.</p>
+        </div>
+        <div class="fulpanel" role="tabpanel" id="panel-2" aria-labelledby="ful-2" hidden>
+          <p class="halk">A műszaki vizsgára hozza magával:</p>
+          <ul class="iratlista">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>A forgalmi engedélyt.</b> Ha elveszett, a hatósági bizonyítványt.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Adásvételi szerződést vagy számlát,</b> ha a forgalmi engedélyben még nem Ön szerepel tulajdonosként vagy üzembentartóként.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Érvényes kötelező biztosítást.</b> A vizsgán ellenőrzik, hogy van-e fedezet.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Magát az autót,</b> mert a vizsgán be kell mutatni.</div></li>
+          </ul>
+          <p class="forras">Forrás: a kormányhivatal tájékoztatója a járművek időszakos műszaki vizsgájáról.</p>
+        </div>
+        <div class="fulpanel" role="tabpanel" id="panel-3" aria-labelledby="ful-3" hidden>
+          <p class="halk">Eredetiségvizsgát jellemzően akkor kérnek, ha:</p>
+          <ul class="iratlista">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Használt autót vett,</b> és át kell íratnia a saját nevére.</div></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><div><b>Külföldről hozott be autót,</b> és forgalomba kell helyeztetnie.</div></li>
+          </ul>
+          <p class="halk" style="margin-top:16px">Vannak kivételek, például öröklésnél. Hogy az Ön esetében kell-e, és mit hozzon, telefonon megmondjuk.</p>
+          <div class="atnezes">
+            <a class="gomb gomb-sotet" href="tel:+36205491385">Hívás: +36 20 549 1385</a>
           </div>
         </div>
       </div>
@@ -652,7 +684,7 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
       <h3>Oldalak</h3>
       <ul>
         <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
-        <li><a href="#vizsga">Műszaki lejárat</a></li>
+        <li><a href="#vizsga">Vizsgára készülés</a></li>
         <li><a href="#rolunk">Rólunk</a></li>
         <li><a href="#idopont">Időpontkérés</a></li>
         <li><a href="https://www.facebook.com/p/Bubi-Aut%C3%B3szerviz-Vizsgacentrum-100064099151605/" target="_blank" rel="noopener">Facebook</a></li>
@@ -691,49 +723,32 @@ input:focus, select:focus, textarea:focus{outline:none; border-color:var(--lime-
   var sor=document.querySelector('#nyitvatartas tr[data-nap="'+nap+'"]'); if(sor) sor.classList.add('ma');
   document.getElementById('ev').textContent=most.getFullYear();
 
-  /* műszaki lejárat (húzóelem) */
-  var input=document.getElementById('lejarat'), ered=document.getElementById('naptar-eredmeny'), ures=document.getElementById('naptar-ures');
-  var napEl=document.getElementById('napok'), felirat=document.getElementById('napok-felirat'), allapot=document.getElementById('allapot'), tanacs=document.getElementById('tanacs');
-  var lejarat=null;
-  function datumHu(d){return d.getFullYear()+'. '+String(d.getMonth()+1).padStart(2,'0')+'. '+String(d.getDate()).padStart(2,'0')+'.';}
-  function frissit(){
-    if(!input.value){ered.hidden=true; ures.hidden=false; lejarat=null; return;}
-    var r=input.value.split('-'); lejarat=new Date(+r[0],+r[1]-1,+r[2]);
-    var ma=new Date(); ma.setHours(0,0,0,0);
-    var kul=Math.round((lejarat-ma)/86400000);
-    ures.hidden=true; ered.hidden=false;
-    if(kul>60){ napEl.textContent=kul; felirat.textContent='nap van hátra'; allapot.className='allapot bo'; allapot.textContent='Bőven van ideje';
-      tanacs.textContent='A lejárat '+datumHu(lejarat)+' Tegyen emlékeztetőt a naptárába: egy hónappal előtte szólunk, hogy hívjon minket.'; }
-    else if(kul>=0){ napEl.textContent=kul; felirat.textContent=kul===0?'nap: ma jár le':'nap van hátra'; allapot.className='allapot most'; allapot.textContent='Most érdemes bejelentkezni';
-      tanacs.textContent='A lejárat '+datumHu(lejarat)+' Kérjen időpontot most, hogy ha a vizsga előtt javítani kell valamit, legyen rá idő.'; }
-    else { napEl.textContent=Math.abs(kul); felirat.textContent='napja lejárt'; allapot.className='allapot lejart'; allapot.textContent='Lejárt';
-      tanacs.textContent='Lejárt műszaki vizsgával az autóval nem szabad közlekedni. Hívjon minket, és megbeszéljük, mikor hozza be.'; }
+  /* vizsgára készülés (húzóelem): fülek + ellenőrzőlista → időpontkérő */
+  var fulek=[].slice.call(document.querySelectorAll('.ful'));
+  function valt(f, fokusz){
+    fulek.forEach(function(x){ var sel=x===f; x.setAttribute('aria-selected',sel?'true':'false'); x.tabIndex=sel?0:-1; document.getElementById(x.getAttribute('aria-controls')).hidden=!sel; });
+    if(fokusz) f.focus();
   }
-  input.addEventListener('change',frissit); input.addEventListener('input',frissit);
-
+  fulek.forEach(function(f,k){
+    f.addEventListener('click',function(){valt(f);});
+    f.addEventListener('keydown',function(e){
+      var u=null; if(e.key==='ArrowRight') u=fulek[(k+1)%fulek.length]; else if(e.key==='ArrowLeft') u=fulek[(k-1+fulek.length)%fulek.length]; else if(e.key==='Home') u=fulek[0]; else if(e.key==='End') u=fulek[fulek.length-1];
+      if(u){ e.preventDefault(); valt(u,true); }
+    });
+  });
+  var pipak=[].slice.call(document.querySelectorAll('.ellenor input')), atSzoveg=document.getElementById('atnezes-szoveg');
+  function jeloltek(){ return pipak.filter(function(x){return x.checked;}).map(function(x){return x.value;}); }
+  pipak.forEach(function(x){ x.addEventListener('change',function(){
+    var j=jeloltek(); atSzoveg.textContent=j.length?('Megjelölve: '+j.join(', ')+'. Ezt beírjuk az időpontkérésbe.'):'Ha semmit nem jelöl, az egész autót átnézzük.';
+  }); });
   var szolg=document.getElementById('szolg'), megj=document.getElementById('megj');
-  document.getElementById('erre-idopont').addEventListener('click',function(){
+  document.getElementById('atnezes-gomb').addEventListener('click',function(){
     szolg.value='Műszaki vizsga';
-    if(lejarat){ var s='A műszakim lejár: '+datumHu(lejarat); if(megj.value.indexOf(s)===-1) megj.value=(megj.value?megj.value+'\n':'')+s; }
+    var j=jeloltek(), s='Vizsga előtti átnézést kérek'+(j.length?(', ezt nézzék meg: '+j.join(', ')):'')+'.';
+    var regi=megj.value.split('\n').filter(function(sor){return sor.indexOf('Vizsga előtti átnézést kérek')!==0;}).join('\n').trim();
+    megj.value=(regi?regi+'\n':'')+s;
     document.getElementById('idopont').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
     setTimeout(function(){document.getElementById('nev').focus({preventScroll:true});},450);
-  });
-  document.getElementById('naptarba').addEventListener('click',function(){
-    if(!lejarat) return;
-    var e=new Date(lejarat); e.setDate(e.getDate()-30);
-    var ma=new Date(); if(e<ma){ e=new Date(ma); e.setDate(e.getDate()+1); }
-    function d(x){return x.getFullYear()+String(x.getMonth()+1).padStart(2,'0')+String(x.getDate()).padStart(2,'0');}
-    var v=new Date(e); v.setDate(v.getDate()+1);
-    var ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Bubi Autoszerviz//Muszaki emlekezteto//HU','BEGIN:VEVENT',
-      'UID:'+Date.now()+'@bubiautoszerviz','DTSTAMP:'+new Date().toISOString().replace(/[-:]/g,'').slice(0,15)+'Z',
-      'DTSTART;VALUE=DATE:'+d(e),'DTEND;VALUE=DATE:'+d(v),
-      'SUMMARY:Műszaki vizsga – bejelentkezés a Bubi Autószervizbe',
-      'DESCRIPTION:A műszaki vizsga '+datumHu(lejarat)+' lejár. Bejelentkezés: +36 20 549 1385\\, Komló\\, Bartók Béla u. 28.',
-      'LOCATION:Bubi Autószerviz\\, 7300 Komló\\, Bartók Béla u. 28.',
-      'BEGIN:VALARM','TRIGGER:PT9H','ACTION:DISPLAY','DESCRIPTION:Műszaki vizsga – hívja a Bubi Autószervizt','END:VALARM',
-      'END:VEVENT','END:VCALENDAR'].join('\r\n');
-    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([ics],{type:'text/calendar;charset=utf-8'})); a.download='muszaki-vizsga-emlekezteto.ics';
-    document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove();},500);
   });
 
   /* űrlap (bemutató: nem küld) */
