@@ -94,7 +94,7 @@ img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--piros);outline-offset:3px;border-radius:6px}
 h1,h2,h3{font-weight:600;margin:0;line-height:1;letter-spacing:-.035em}
-h2{font-size:clamp(2.2rem,4.6vw,3.7rem)}
+h2{font-size:clamp(1.95rem,3.3vw,2.8rem);line-height:1.05}
 h3{font-size:1.45rem;letter-spacing:-.02em;line-height:1.15}
 p{margin:0 0 1em}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
@@ -181,7 +181,7 @@ p{margin:0 0 1em}
   linear-gradient(0deg,rgba(11,12,15,.7) 0%,rgba(11,12,15,0) 38%),
   linear-gradient(180deg,rgba(11,12,15,.45) 0%,rgba(11,12,15,0) 22%)}
 .hs-tartalom{position:relative;z-index:2;color:#fff;box-sizing:content-box;padding:112px 20px 84px max(20px,calc((100% - var(--max))/2 + 20px));max-width:700px;animation:be .8s .15s cubic-bezier(.2,.7,.2,1) both}
-.hs-tartalom h1{font-size:clamp(2.6rem,5.4vw,4.8rem);line-height:.98;letter-spacing:-.045em;max-width:10em}
+.hs-tartalom h1{font-size:clamp(2.4rem,4.5vw,3.85rem);line-height:1;letter-spacing:-.04em;max-width:11em}
 .hs-tartalom .bevezeto{font-size:1.2rem;color:#E4E6EA;max-width:32em;margin:22px 0 30px}
 .hs-tartalom .gombok{display:flex;flex-wrap:wrap;gap:10px}
 .hs-chip{display:inline-flex;align-items:center;gap:10px;margin:0 0 22px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.92rem}
@@ -236,7 +236,7 @@ section{padding:clamp(64px,8vw,104px) 0}
 .pontok img{width:100%;border-radius:var(--r-kozep)}
 .pont{position:absolute;transform:translate(-50%,-50%);width:34px;height:34px;border-radius:50%;background:var(--panel);color:var(--tinta);font:600 .95rem/34px var(--betu);text-align:center;box-shadow:0 0 0 4px rgba(211,33,44,.35),0 4px 14px rgba(0,0,0,.25);transition:transform .2s,background .2s,color .2s}
 .pont.aktiv{background:var(--piros);color:#fff;transform:translate(-50%,-50%) scale(1.15)}
-.meretre h3{font-size:clamp(1.6rem,2.6vw,2.1rem);margin-bottom:10px}
+.meretre h3{font-size:clamp(1.45rem,2vw,1.75rem);margin-bottom:10px}
 .pontlista{list-style:none;padding:0;margin:20px 0;counter-reset:p}
 .pontlista li{counter-increment:p;position:relative;padding:14px 0 14px 48px;border-top:1px solid var(--vonal)}
 .pontlista li::before{content:counter(p);position:absolute;left:0;top:12px;width:32px;height:32px;border-radius:50%;background:var(--piros-halvany);color:var(--piros);font:600 .9rem/32px var(--betu);text-align:center}
@@ -286,6 +286,9 @@ section{padding:clamp(64px,8vw,104px) 0}
 /* Folyamat */
 .lepesek{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;padding:0;margin:0;counter-reset:l}
 .lepesek li{counter-increment:l;padding:30px;display:flex;flex-direction:column;gap:10px}
+/* szélről szélre fehér sáv, hogy megtörje az azonos hátterű szakaszok sorát */
+.menet-sav{background:var(--panel)}
+.menet-sav .lepesek li{background:var(--hatter)}
 .lepesek li::before{content:counter(l);font-size:4.4rem;font-weight:600;letter-spacing:-.06em;line-height:1;color:var(--vonal);margin-bottom:26px}
 .lepesek p{margin:0;color:#3C3F45}
 @media (max-width:760px){.lepesek{grid-template-columns:1fr}.lepesek li::before{font-size:3rem;margin-bottom:8px}}
@@ -361,22 +364,22 @@ textarea{min-height:100px;resize:vertical}
 .zaro .gombok{display:flex;flex-wrap:wrap;gap:10px}
 
 /* Kapcsolat */
-/* szélről szélre térkép, rajta jobb oldalt lebegő kártya (bal fent szabadon marad a Google adatlapja) */
-.kapcsolat-sav{position:relative;padding:0;min-height:600px;display:flex;align-items:center}
-.terkep-hatter{position:absolute;inset:0;background:var(--vonal)}
+/* szélről szélre, kettéosztva: bal oldalt fehér háttéren az adatok (a lap tartalmi vonalában), jobb oldalt a térkép a sáv széléig */
+.kapcsolat-sav{padding:0;display:grid;grid-template-columns:1fr 1fr;background:var(--panel)}
+.kapcs-wrap{grid-column:1;grid-row:1}
+.terkep-hatter{grid-column:2;grid-row:1;position:relative;min-height:520px;background:var(--vonal)}
 .terkep-hatter iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75)}
-.kapcs-wrap{position:relative;width:100%;display:flex;justify-content:flex-end;pointer-events:none}
-.adatok{pointer-events:auto;width:min(460px,100%);margin:56px 0;padding:clamp(26px,3vw,40px);box-shadow:0 24px 60px rgba(22,23,26,.2)}
+/* a % itt a fél képernyős oszlop szélessége, ezért 100% - max/2 adja a lap tartalmi vonalát */
+.kapcsolat-sav .adatok{background:transparent;border-radius:0;overflow:visible;padding:clamp(56px,7vw,96px) clamp(28px,4vw,64px) clamp(56px,7vw,96px) max(20px,calc(100% - var(--max) / 2 + 20px))}
 .adatok dl{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:14px 24px}
 .adatok dt{color:var(--halk)}
 .adatok dd{margin:0;font-weight:500}
 .adatok dd a{text-decoration:none;border-bottom:1px solid var(--vonal)}
 .adatok dd a:hover{border-color:var(--piros)}
 @media (max-width:900px){
-  .kapcsolat-sav{flex-direction:column;align-items:stretch;min-height:0}
-  .kapcs-wrap{order:1;display:block;padding-top:14px}
-  .adatok{width:100%;margin:0 0 14px;box-shadow:none}
-  .terkep-hatter{position:relative;order:2;height:340px}
+  .kapcsolat-sav{grid-template-columns:1fr}
+  .terkep-hatter{grid-column:1;grid-row:2;min-height:340px}
+  .kapcsolat-sav .adatok{padding:48px 20px 40px}
 }
 @media (max-width:520px){.adatok dl{grid-template-columns:1fr;gap:2px}.adatok dt{font-size:.85rem;margin-top:12px}}
 
@@ -425,7 +428,7 @@ textarea{min-height:100px;resize:vertical}
     </picture>
     <div class="hs-tartalom">
       <p class="hs-chip"><span class="csillagok" aria-hidden="true">★★★★★</span> 4,7 (83 Google-vélemény)</p>
-      <h1 id="h1">Méretre szabott üléshuzat Pécsen</h1>
+      <h1 id="h1">Méretre szabott, egyedi üléshuzat Pécsen</h1>
       <p class="bevezeto">Eredeti autókárpit anyagból varrunk huzatot bármilyen autó üléseire, és gyerekülést is áthúzunk. Válasszon a szövetmintáinkból, a többit bízza ránk.</p>
       <div class="gombok">
         <a class="gomb gomb-piros" href="#anyagok">Anyagot választok</a>
@@ -561,7 +564,7 @@ textarea{min-height:100px;resize:vertical}
   </div>
 </section>
 
-<section aria-labelledby="h-menet" style="padding-top:0">
+<section class="menet-sav" aria-labelledby="h-menet">
   <div class="wrap">
     <div class="fej"><h2 id="h-menet">Így készül az új huzat</h2></div>
     <ol class="lepesek">
@@ -572,7 +575,7 @@ textarea{min-height:100px;resize:vertical}
   </div>
 </section>
 
-<section id="munkak" aria-labelledby="h-munkak" style="padding-top:0">
+<section id="munkak" aria-labelledby="h-munkak">
   <div class="wrap">
     <div class="fej">
       <h2 id="h-munkak">Munkáink</h2>
@@ -674,7 +677,7 @@ textarea{min-height:100px;resize:vertical}
   <div class="terkep-hatter">
     <iframe title="A Kincses Car-Pitt műhely helye a térképen: Pécs, Siklósi út 2." src="https://maps.google.com/maps?q=Kincses%20Car-Pitt%20Aut%C3%B3%20%C3%9Cl%C3%A9shuzat%2C%20P%C3%A9cs%2C%20Sikl%C3%B3si%20%C3%BAt%202&z=15&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
-  <div class="wrap kapcs-wrap">
+  <div class="kapcs-wrap">
     <div class="csempe adatok">
       <h2 id="h-kapcs">Kapcsolat</h2>
       <dl>
