@@ -8,13 +8,13 @@
 <meta name="description" content="Kisállat-gyógyászat Pécsen, a Kovácstelepen: megelőzés, belgyógyászat, sebészet és ortopédia, szülészet. Röntgen, doppler ultrahang, endoszkóp és labor helyben. Rendelés hétköznap 8–10 és 15–19 óráig.">
 <meta name="theme-color" content="#0E3640">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%231D6577'/%3E%3Cpath d='M18.5 5.5l3-1.6v6.4l-5 4.2c-3 2.6-3.2 7.6.2 12' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<link rel="canonical" href="https://webtastichu.github.io/demo/bluedog/">
+<link rel="canonical" href="https://bemutato.webtastic.hu/bluedog/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="hu_HU">
 <meta property="og:title" content="Blue Dog Állatorvosi Rendelő – kisállat-gyógyászat Pécsen, 1996 óta">
 <meta property="og:description" content="Megelőzés, belgyógyászat, sebészet, ortopédia és szülészet. Röntgen, ultrahang, endoszkóp és labor egy épületben. Pécs, Ürögi fasor 4.">
-<meta property="og:url" content="https://webtastichu.github.io/demo/bluedog/">
-<meta property="og:image" content="https://webtastichu.github.io/demo/bluedog/kepek/og.jpg">
+<meta property="og:url" content="https://bemutato.webtastic.hu/bluedog/">
+<meta property="og:image" content="https://bemutato.webtastic.hu/bluedog/kepek/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,8 +24,8 @@
   "@type": "VeterinaryCare",
   "name": "Blue Dog Állatorvosi Rendelő",
   "description": "Kisállat-gyógyászati rendelő Pécsen 1996 óta: megelőzés, belgyógyászat, lágy- és csontsebészet, szülészet, röntgen, doppler ultrahang, endoszkópia és laborvizsgálatok.",
-  "url": "https://webtastichu.github.io/demo/bluedog/",
-  "image": "https://webtastichu.github.io/demo/bluedog/kepek/og.jpg",
+  "url": "https://bemutato.webtastic.hu/bluedog/",
+  "image": "https://bemutato.webtastic.hu/bluedog/kepek/og.jpg",
   "telephone": "+3672256321",
   "foundingDate": "1996",
   "address": {"@type": "PostalAddress", "streetAddress": "Ürögi fasor 4.", "addressLocality": "Pécs", "postalCode": "7634", "addressCountry": "HU"},
@@ -820,7 +820,7 @@ textarea{min-height:90px;resize:vertical}
   document.querySelectorAll('input[name="allat"]').forEach(function(x){x.addEventListener("change",szamol)});
   szamol();
   function ics(d){return d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+String(d.getDate()).padStart(2,"0")+"T"+String(d.getHours()).padStart(2,"0")+String(d.getMinutes()).padStart(2,"0")+"00"}
-  function esemeny(k,nev,leiras,i){var v=new Date(k.getTime()+15*60000);return ["BEGIN:VEVENT","UID:bluedog-"+ics(k)+"-"+i+"@webtastichu.github.io","DTSTAMP:"+ics(new Date()),"DTSTART:"+ics(k),"DTEND:"+ics(v),"SUMMARY:"+nev,"DESCRIPTION:"+leiras,"BEGIN:VALARM","TRIGGER:-PT30M","ACTION:DISPLAY","DESCRIPTION:"+nev,"END:VALARM","END:VEVENT"].join("\r\n")}
+  function esemeny(k,nev,leiras,i){var v=new Date(k.getTime()+15*60000);return ["BEGIN:VEVENT","UID:bluedog-"+ics(k)+"-"+i+"@bemutato.webtastic.hu","DTSTAMP:"+ics(new Date()),"DTSTART:"+ics(k),"DTEND:"+ics(v),"SUMMARY:"+nev,"DESCRIPTION:"+leiras,"BEGIN:VALARM","TRIGGER:-PT30M","ACTION:DISPLAY","DESCRIPTION:"+nev,"END:VALARM","END:VEVENT"].join("\r\n")}
   document.getElementById("fk-naptar").addEventListener("click",function(){
     var T=mutet(), allat=document.querySelector('input[name="allat"]:checked').value, ev=[];
     if(allat!=="ragcsalo"){
