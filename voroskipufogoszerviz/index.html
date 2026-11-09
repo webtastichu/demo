@@ -92,14 +92,18 @@ nav a:hover{color:var(--sarga)}
 .idopont{background:var(--sarga);padding-left:var(--szel);padding-right:var(--szel);padding-top:22px;padding-bottom:24px}
 #idopont{scroll-margin-top:72px}
 .idopont-sor{display:grid;grid-template-columns:minmax(0,1.42fr) minmax(0,1.5fr);gap:14px 30px;align-items:end}
-.idopont h2{font-size:24px;line-height:1.1;margin-bottom:9px}
+.idopont-fej{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;margin-bottom:9px}
+.idopont h2{font-size:24px;line-height:1.1}
+.idopont-fej p{font-size:15px;font-weight:600}
 .valaszt{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
 .valaszt span{position:relative;display:flex}
 .valaszt input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
-.valaszt label{display:flex;align-items:center;justify-content:center;width:100%;min-height:47px;margin:0;padding:5px 12px;text-align:center;cursor:pointer;color:var(--fekete);background:#fff;font-weight:700;font-size:15px;line-height:1.15;clip-path:var(--ferde)}
+.valaszt label{display:flex;align-items:center;gap:7px;width:100%;min-height:47px;margin:0;padding:5px 8px;cursor:pointer;color:var(--fekete);background:#fff;border:2px solid var(--fekete);font-weight:700;font-size:15px;line-height:1.15}
+.valaszt label::before{content:"";flex:none;width:16px;height:16px;border:2px solid var(--fekete);border-radius:50%;background:#fff}
 .valaszt label:hover{background:#FFF6B8}
 .valaszt input:checked+label{background:var(--fekete);color:#fff}
-.valaszt input:focus-visible+label{outline:3px solid var(--piros);outline-offset:-3px}
+.valaszt input:checked+label::before{border-color:#fff;background:var(--sarga);box-shadow:inset 0 0 0 2px var(--fekete)}
+.valaszt input:focus-visible+label{outline:3px solid var(--piros);outline-offset:2px}
 .mezok{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:8px;align-items:end}
 label.cimke{display:block;font-size:14px;font-weight:700;line-height:1.2}
 .mezok input{font:500 16px/1.3 var(--torzs);color:var(--fekete);width:100%;height:47px;background:#fff;border:2px solid var(--fekete);padding:0 10px;margin-top:5px;border-radius:0}
@@ -113,9 +117,9 @@ label.cimke{display:block;font-size:14px;font-weight:700;line-height:1.2}
 
 /* tünetválasztó */
 .tunetek{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
-.tunetek button{font:600 16px/1.25 var(--torzs);color:var(--fekete);background:var(--vilagos);border:0;cursor:pointer;padding:12px 24px;clip-path:var(--ferde)}
-.tunetek button:hover{background:#E2E4E7}
-.tunetek button[aria-pressed="true"]{background:var(--piros);color:#fff}
+.tunetek button{font:600 16px/1.25 var(--torzs);color:var(--fekete);background:#fff;border:2px solid var(--fekete);cursor:pointer;padding:11px 18px}
+.tunetek button:hover{background:var(--vilagos)}
+.tunetek button[aria-pressed="true"]{background:var(--piros);border-color:var(--piros);color:#fff}
 .rendszer{margin-top:26px;background:var(--vilagos);padding:24px 26px 10px}
 .rendszer svg{display:block;width:100%;height:auto}
 .resz{fill:#C5CAD0;stroke:#5B6168;stroke-width:2.5}
@@ -264,7 +268,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #C99700;outline-offset:3px;ba
   .felirat{display:none}
   .resz-g.aktiv .felirat{display:block;font-size:34px}
   .tunetek{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:22px}
-  .tunetek button{font-size:15px;line-height:1.2;padding:9px 16px;min-height:56px}
+  .tunetek button{font-size:15px;line-height:1.2;padding:9px 12px;min-height:56px}
   .eredmeny-szoveg{padding:26px 20px 30px}
   .eredmeny h3{font-size:25px}
   .eredmeny figure{height:230px}
@@ -328,9 +332,9 @@ body.minta-lathato [data-minta]{outline:2px dashed #C99700;outline-offset:3px;ba
   <form id="idopont">
     <div class="idopont-sor">
       <div>
-        <h2 id="idopont-cim">Miben segíthetünk?</h2>
-        <div class="valaszt" role="radiogroup" aria-labelledby="idopont-cim">
-          <span><input type="radio" name="szolg" id="s-jav" value="Javítás" checked><label for="s-jav">Javítás</label></span>
+        <div class="idopont-fej"><h2 id="idopont-cim">Miben segíthetünk?</h2><p id="idopont-al">Válasszon egyet:</p></div>
+        <div class="valaszt" role="radiogroup" aria-labelledby="idopont-cim idopont-al" aria-required="true">
+          <span><input type="radio" name="szolg" id="s-jav" value="Javítás" required><label for="s-jav">Javítás</label></span>
           <span><input type="radio" name="szolg" id="s-csere" value="Csere"><label for="s-csere">Csere</label></span>
           <span><input type="radio" name="szolg" id="s-at" value="Átalakítás"><label for="s-at">Átalakítás</label></span>
           <span><input type="radio" name="szolg" id="s-alv" value="Alvázvédelem"><label for="s-alv">Alvázvédelem</label></span>
