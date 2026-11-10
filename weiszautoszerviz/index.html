@@ -347,13 +347,8 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
         </label>
         <label>Név<input name="nev" autocomplete="name" required></label>
         <label>Telefonszám<input name="tel" type="tel" autocomplete="tel" required></label>
-        <label>Autó típusa<input name="auto" placeholder="pl. Opel Astra, 2012"></label>
-        <label>Mikor jönne?
-          <select name="mikor"><option>Amint lehet</option><option>Ezen a héten</option><option>Jövő héten</option><option>Később, egyeztessünk</option></select>
-        </label>
-        <label class="teljes">Megjegyzés<textarea name="uzenet" placeholder="Pl. mikor jár le a vizsga, mit tapasztal az autón"></textarea></label>
         <div class="teljes kuld">
-          <button class="gomb" type="submit">Időpontot kérek</button>
+          <button class="gomb" type="submit">Visszahívást kérek</button>
           <p class="megj">Visszahívjuk, és egyeztetjük a napot. Ez egy bemutató oldal: az űrlap nem küld üzenetet.</p>
         </div>
         <p class="teljes uzenet" role="status" id="urlap-allapot"></p>
@@ -500,8 +495,8 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
   var ugyek={
     vizsga:{c:'Műszaki vizsga',l:'Helyben vizsgáztatjuk az autót. Ha a vizsga előtt javítás kell, azt is itt elvégezzük, így nem kell két helyre vinnie.',h:['a forgalmi engedélyt','az autót tisztán, működő világítással','ha volt, az előző vizsga hibalistáját']},
     eredet:{c:'Eredetiségvizsgálat',l:'Helyben, soron kívül végezzük. Indulás előtt érdemes telefonálni, hogy biztosan fogadni tudjuk.',h:['a forgalmi engedélyt és a törzskönyvet','a személyi igazolványát (ha nem Ön a tulajdonos, meghatalmazást)','az adásvételi szerződést','külföldről hozott autónál a külföldi okmányokat']},
-    hiba:{c:'Javítás',l:'Márkafüggetlen szervizként bármilyen márkájú autó meghibásodását javítjuk. Írja le röviden, mit tapasztal, és visszahívjuk.',h:['a forgalmi engedélyt','a hiba leírását: mikor jelentkezik, mióta','ha világít a műszerfalon jelzőlámpa, egy fotót róla']},
-    szerviz:{c:'Karbantartás, szerviz',l:'Rendszeres karbantartás bármilyen márkájú autón, és ha a műszaki vizsga is közeleg, egy időpontban elintézhető.',h:['a forgalmi engedélyt','a szervizkönyvet, ha van','a kilométeróra állását (az űrlapba is beírhatja)']},
+    hiba:{c:'Javítás',l:'Márkafüggetlen szervizként bármilyen márkájú autó meghibásodását javítjuk. Hagyja meg a számát, és a visszahíváskor elmondhatja, mit tapasztal.',h:['a forgalmi engedélyt','a hiba leírását: mikor jelentkezik, mióta','ha világít a műszerfalon jelzőlámpa, egy fotót róla']},
+    szerviz:{c:'Karbantartás, szerviz',l:'Rendszeres karbantartás bármilyen márkájú autón, és ha a műszaki vizsga is közeleg, egy időpontban elintézhető.',h:['a forgalmi engedélyt','a szervizkönyvet, ha van','a kilométeróra állását']},
     villany:{c:'Autóvillamosság',l:'Elektromos hibák felderítése és javítása, a szerelőműhellyel egy helyen.',h:['a forgalmi engedélyt','a hiba leírását: mi nem működik, és mikor jelentkezik']},
     muanyag:{c:'Műanyag javítás',l:'Sérült műanyag karosszériaelemek, például lökhárítók javítása. Egy fotó alapján telefonon is tudunk tájékoztatni.',h:['a forgalmi engedélyt','a sérült elemet az autón (vagy leszerelve)']},
     alkatresz:{c:'Alkatrész-beszerzés',l:'A szükséges alkatrészt mi szerezzük be, és ha kéri, be is szereljük.',h:['a forgalmi engedélyt (a pontos alkatrészhez az alvázszám kell)','ha megvan, a régi alkatrészt vagy a cikkszámát']}
