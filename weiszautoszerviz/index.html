@@ -13,10 +13,10 @@
 <meta property="og:description" content="Javítás, karbantartás, műszaki vizsga és eredetiségvizsgálat egy helyen, Pécsváradon.">
 <meta property="og:url" content="https://bemutato.webtastic.hu/weiszautoszerviz/">
 <meta property="og:image" content="https://bemutato.webtastic.hu/weiszautoszerviz/kepek/hero-szeles.webp">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23F0DC8E'/%3E%3Ctext x='32' y='46' font-family='Arial' font-weight='900' font-size='40' text-anchor='middle' fill='%231F339A'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232347E6'/%3E%3Ctext x='32' y='45' font-family='Arial' font-weight='900' font-size='38' text-anchor='middle' fill='%23fff'%3EW%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,600..800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700;800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="kepek/hero-szeles.webp" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="kepek/hero-szeles-mobil.webp" media="(max-width: 760px)" fetchpriority="high">
 <script type="application/ld+json">
@@ -33,52 +33,57 @@
 </script>
 <style>
 :root{
-  --kek:#1F339A; --kek-sotet:#14215F; --ej:#0F1638;
-  --sarga:#F0DC8E; --sarga-2:#FAF3D9; --sarga-3:#F6EBC0;
-  --tinta:#191B24; --szurke:#565B6B; --vonal:#E4DCC2; --feher:#fff;
-  --max:1200px; --szel:20px; --fej:76px;
-  --cim:'Archivo',system-ui,sans-serif; --szoveg:'Source Sans 3',system-ui,sans-serif;
+  --kek:#2347E6; --kek-s:#1A36B8; --ej:#0B1226; --ej-2:#121B36;
+  --tinta:#10131C; --szurke:#5A6273; --szurke-v:#9AA3B8;
+  --hatter:#F4F6FA; --vonal:#E2E6EE; --feher:#fff; --kek-halvany:#EAF0FF;
+  --max:1200px; --szel:20px; --fej:76px; --r:14px;
+  --cim:'Schibsted Grotesk',system-ui,sans-serif; --szoveg:'Onest',system-ui,sans-serif;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;font-family:var(--szoveg);font-size:18px;line-height:1.6;color:var(--tinta);background:var(--feher)}
+body{margin:0;font-family:var(--szoveg);font-size:17.5px;line-height:1.6;color:var(--tinta);background:var(--feher)}
 img{max-width:100%;height:auto;display:block}
 figure{margin:0}
 a{color:var(--kek)}
-h1,h2,h3{font-family:var(--cim);font-stretch:112%;line-height:1.08;margin:0;letter-spacing:-.01em;color:var(--kek-sotet)}
-h2{font-size:45px;font-weight:800}
-h3{font-size:22px;font-weight:700}
+h1,h2,h3{font-family:var(--cim);line-height:1.05;margin:0;letter-spacing:-.03em;font-weight:800}
+h2{font-size:45px}
+h3{font-size:21px;letter-spacing:-.015em;font-weight:700}
 p{margin:0 0 1em}
 .belso{max-width:var(--max);margin:0 auto;padding-left:var(--szel);padding-right:var(--szel)}
 .szelso{padding-left:max(var(--szel),calc((100% - var(--max))/2 + var(--szel)));padding-right:max(var(--szel),calc((100% - var(--max))/2 + var(--szel)))}
 section[id]{scroll-margin-top:var(--fej)}
-:focus-visible{outline:3px solid #E0A400;outline-offset:2px}
+:focus-visible{outline:3px solid #7FA0FF;outline-offset:2px}
 .ugras{position:absolute;left:-9999px;top:8px;background:var(--kek);color:#fff;padding:10px 16px;z-index:100}
 .ugras:focus{left:8px}
+.rejtett{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cimke{display:inline-block;font-weight:600;font-size:15px;color:var(--kek);background:var(--kek-halvany);padding:6px 12px;border-radius:99px;margin-bottom:16px}
 
-/* gombok: szögletes, mint a cégtábla */
-.gomb{display:inline-flex;align-items:center;gap:10px;font-family:var(--cim);font-stretch:108%;font-weight:700;font-size:17px;text-decoration:none;padding:15px 24px;border-radius:2px;border:2px solid var(--kek);background:var(--kek);color:#fff;white-space:nowrap;cursor:pointer;line-height:1.1}
-.gomb:hover{background:var(--kek-sotet);border-color:var(--kek-sotet)}
-.gomb.ures{background:transparent;color:var(--kek-sotet)}
-.gomb.ures:hover{background:var(--kek-sotet);color:#fff}
+.gomb{display:inline-flex;align-items:center;gap:10px;font-family:var(--cim);font-weight:700;font-size:16.5px;text-decoration:none;padding:15px 24px;border-radius:12px;border:0;background:var(--kek);color:#fff;white-space:nowrap;cursor:pointer;line-height:1.1;box-shadow:0 8px 22px rgba(35,71,230,.28);transition:background .15s,transform .15s}
+.gomb:hover{background:var(--kek-s);transform:translateY(-1px)}
+.gomb.uveg{background:rgba(255,255,255,.12);box-shadow:none;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px)}
+.gomb.uveg:hover{background:rgba(255,255,255,.22)}
+.gomb.halk{background:var(--kek-halvany);color:var(--kek-s);box-shadow:none}
+.gomb.halk:hover{background:#DCE5FF}
 .gomb svg{width:18px;height:18px;flex:none}
 
 /* fejléc */
-header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--vonal);padding:0 max(var(--szel),calc((100% - var(--max))/2 + var(--szel)))}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--vonal);padding:0 max(var(--szel),calc((100% - var(--max))/2 + var(--szel)))}
 .fej-sor{display:flex;align-items:center;gap:24px;height:var(--fej)}
-.marka{display:flex;flex-direction:column;text-decoration:none;color:var(--kek-sotet);margin-right:auto;line-height:1.05}
-.marka b{font-family:var(--cim);font-stretch:118%;font-weight:800;font-size:22px;letter-spacing:-.01em}
-.marka span{font-size:13.5px;color:var(--szurke);margin-top:3px}
-nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
-nav a{text-decoration:none;color:var(--tinta);font-weight:600;font-size:16.5px;white-space:nowrap}
+.marka{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--tinta);margin-right:auto}
+.jel{width:42px;height:42px;border-radius:11px;background:var(--kek);color:#fff;display:grid;place-items:center;font-family:var(--cim);font-weight:800;font-size:22px;flex:none}
+.marka span{display:flex;flex-direction:column;line-height:1.1}
+.marka b{font-family:var(--cim);font-weight:800;font-size:19px;letter-spacing:-.02em}
+.marka small{font-size:13px;color:var(--szurke);margin-top:2px}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;color:var(--tinta);font-weight:500;font-size:16px;white-space:nowrap}
 nav a:hover{color:var(--kek)}
-.fej-hivas{padding:12px 18px;font-size:16px}
-.menu-gomb{display:none;background:none;border:2px solid var(--kek-sotet);border-radius:2px;width:46px;height:46px;cursor:pointer;color:var(--kek-sotet)}
+.fej-hivas{padding:12px 18px;font-size:15.5px;box-shadow:none}
+.menu-gomb{display:none;background:var(--hatter);border:0;border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--tinta)}
 .menu-gomb svg{width:22px;height:22px}
 @media (max-width:1080px){
   .menu-gomb{display:inline-flex;align-items:center;justify-content:center;order:3}
-  nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--vonal);box-shadow:0 14px 30px rgba(15,22,56,.12);display:none}
+  nav{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--vonal);box-shadow:0 18px 34px rgba(11,18,38,.14);display:none}
   nav.lenyitva{display:block}
   nav ul{flex-direction:column;gap:0;padding:8px max(var(--szel),calc((100% - var(--max))/2 + var(--szel)))}
   nav a{display:block;padding:14px 0;border-bottom:1px solid var(--vonal);font-size:18px}
@@ -87,160 +92,170 @@ nav a:hover{color:var(--kek)}
 }
 @media (max-width:760px){
   :root{--fej:66px}
+  h2{font-size:31px}
   .fej-hivas{width:46px;height:46px;padding:0;justify-content:center}
   .fej-hivas span{display:none}
-  .marka b{font-size:19px}
-  .marka span{font-size:12.5px}
+  .jel{width:38px;height:38px;font-size:20px}
+  .marka b{font-size:17.5px}
+  .marka small{font-size:12.5px}
+  .marka{gap:10px}
 }
 
-/* nyitókép: fotó + cégtábla-színű tábla */
-.nyito{position:relative;background:var(--ej)}
-.nyito-kep{position:relative;height:min(78vh,720px);min-height:520px;overflow:hidden}
-.nyito-kep img{width:100%;height:100%;object-fit:cover;object-position:50% 55%;filter:saturate(.9) contrast(1.02)}
-.nyito-kep::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,22,56,.55) 0%,rgba(15,22,56,.15) 45%,rgba(15,22,56,0) 70%),linear-gradient(0deg,rgba(15,22,56,.35),rgba(15,22,56,0) 40%)}
-.tabla{position:absolute;left:max(var(--szel),calc((100% - var(--max))/2 + var(--szel)));bottom:0;width:min(700px,60%);background:var(--sarga);padding:40px 44px 36px;z-index:2}
-.tabla .hely{display:block;font-weight:700;color:var(--kek);font-size:17px;margin-bottom:12px}
-.tabla h1{font-size:60px;font-weight:800;font-stretch:100%;color:var(--kek-sotet)}
-.tabla p.al{font-size:19px;margin:18px 0 26px;color:#2A2B33}
-.tabla .gombok{display:flex;flex-wrap:wrap;gap:12px}
-.tabla .gomb.ures{border-color:var(--kek-sotet)}
-.soron{display:flex;align-items:center;gap:10px;margin-top:22px;padding-top:18px;border-top:2px solid rgba(20,33,95,.18);font-weight:700;color:var(--kek-sotet);font-size:17px}
-.soron svg{width:22px;height:22px;flex:none}
-@media (max-width:1080px){.tabla{width:min(620px,72%)}.tabla h1{font-size:50px}}
+/* nyitókép */
+.nyito{position:relative;background:var(--ej);color:#fff;overflow:hidden}
+.nyito-kep{position:absolute;inset:0}
+.nyito-kep img{width:100%;height:100%;object-fit:cover;object-position:60% 55%;filter:saturate(.85) brightness(.9)}
+.nyito-kep::after{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(11,18,38,.97) 0%,rgba(11,18,38,.9) 32%,rgba(11,18,38,.45) 60%,rgba(11,18,38,.1) 85%),linear-gradient(0deg,rgba(11,18,38,.75) 0%,rgba(11,18,38,0) 40%),linear-gradient(95deg,rgba(35,71,230,.18),rgba(35,71,230,0) 60%)}
+.nyito-tart{position:relative;z-index:2;min-height:min(78vh,700px);display:flex;flex-direction:column;justify-content:center;padding-top:70px;padding-bottom:150px}
+.nyito-tart > *{max-width:620px}
+.nyito .hely{display:inline-flex;align-items:center;gap:8px;font-size:15.5px;font-weight:500;color:#D7DEF5;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);padding:7px 14px;border-radius:99px;margin-bottom:22px;width:max-content}
+.nyito .hely i{width:8px;height:8px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 4px rgba(74,222,128,.2)}
+.nyito h1{font-size:60px;color:#fff}
+.nyito .al{font-size:19px;color:#C9D1E8;margin:22px 0 30px;max-width:540px}
+.nyito .gombok{display:flex;flex-wrap:wrap;gap:12px}
+.erveles{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;font-size:15.5px;color:#C9D1E8}
+.erveles span{display:inline-flex;align-items:center;gap:8px}
+.erveles svg{width:18px;height:18px;color:#7FA0FF;flex:none}
 @media (max-width:760px){
   .nyito{display:flex;flex-direction:column}
-  .tabla{position:relative;width:auto;left:auto;order:1;padding:30px var(--szel) 30px}
-  .tabla h1{font-size:clamp(28px,8.6vw,34px);font-stretch:100%}
-  .tabla p.al{font-size:17.5px}
-  .tabla .gombok .gomb{flex:1 1 auto;justify-content:center}
-  .nyito-kep{order:2;height:300px;min-height:0}
-  .nyito-kep::after{background:linear-gradient(180deg,var(--sarga) 0%,rgba(240,220,142,0) 22%)}
+  .nyito-kep{position:relative;order:2;height:260px;margin-top:-40px}
+  .nyito-kep::after{background:linear-gradient(180deg,#0B1226 0%,rgba(11,18,38,.25) 45%,rgba(11,18,38,0) 100%)}
+  .nyito-tart{order:1;min-height:0;padding-top:36px;padding-bottom:20px}
+  .nyito h1{font-size:clamp(30px,9.2vw,38px)}
+  .nyito .al{font-size:17px}
+  .nyito .gombok .gomb{flex:1 1 auto;justify-content:center}
+  .erveles{flex-direction:column;gap:8px;margin-top:24px}
 }
 
-/* ügyintéző (húzóelem) */
-.intezo{background:var(--sarga-2);padding-top:90px;padding-bottom:96px}
-.intezo-fej{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:end;margin-bottom:38px}
-.intezo-fej p{margin:0;color:var(--szurke);font-size:19px}
-.intezo-test{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;align-items:start}
-.valaszto{display:flex;flex-direction:column;gap:10px}
-.valaszto-cim{font-weight:700;color:var(--kek-sotet);margin-bottom:4px}
-.valaszt{display:flex;align-items:center;gap:14px;text-align:left;width:100%;font:inherit;font-size:17.5px;font-weight:600;color:var(--tinta);background:#fff;border:2px solid var(--vonal);border-radius:2px;padding:14px 16px;min-height:58px;cursor:pointer}
-.valaszt:hover{border-color:var(--kek)}
-.valaszt .jel{width:22px;height:22px;border:2px solid #8A8FA0;border-radius:50%;flex:none;position:relative}
-.valaszt[aria-pressed="true"]{border-color:var(--kek);background:#EEF0FA}
-.valaszt[aria-pressed="true"] .jel{border-color:var(--kek)}
-.valaszt[aria-pressed="true"] .jel::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--kek)}
-.lap{background:#fff;border:2px solid var(--kek-sotet);border-radius:2px}
-.lap-fej{background:var(--kek-sotet);color:#fff;padding:22px 28px}
-.lap-fej h3{color:#fff;font-size:26px}
-.lap-fej p{margin:8px 0 0;color:#D9DDF3;font-size:17px}
-.lap-test{padding:24px 28px 28px}
-.hozza{margin:0 0 22px;padding:18px 20px;background:var(--sarga-2);border-left:5px solid var(--sarga)}
-.hozza b{display:block;color:var(--kek-sotet);margin-bottom:6px}
-.hozza ul{margin:0;padding-left:20px}
-.hozza li{margin:2px 0}
+/* ügyintéző: a nyitóképre lógó kártya */
+.intezo{position:relative;z-index:3;margin-top:-110px;padding-bottom:96px}
+.intezo-kartya{background:#fff;border-radius:22px;box-shadow:0 30px 70px rgba(11,18,38,.16),0 2px 6px rgba(11,18,38,.06);padding:38px 40px 40px}
+.intezo-fej{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:10px 40px;margin-bottom:24px}
+.intezo-fej h2{font-size:38px}
+.intezo-fej p{margin:0;color:var(--szurke);max-width:440px}
+.valaszto{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.valaszt{display:inline-flex;align-items:center;gap:9px;font:inherit;font-size:16px;font-weight:500;color:var(--tinta);background:var(--hatter);border:1.5px solid transparent;border-radius:12px;padding:11px 16px;min-height:48px;cursor:pointer}
+.valaszt:hover{border-color:#C4CEE6}
+.valaszt svg{width:20px;height:20px;color:var(--kek);flex:none}
+.valaszt[aria-pressed="true"]{background:var(--kek);color:#fff}
+.valaszt[aria-pressed="true"] svg{color:#fff}
+.intezo-test{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:26px;align-items:start}
+.info{background:var(--ej);color:#fff;border-radius:var(--r);padding:26px 26px 28px}
+.info h3{color:#fff;font-size:24px}
+.info > p{color:#C9D1E8;margin:10px 0 20px}
+.info b{display:block;font-family:var(--cim);font-size:15px;color:#9FB5FF;margin-bottom:10px;font-weight:700}
+.info ul{list-style:none;margin:0;padding:0}
+.info li{position:relative;padding:9px 0 9px 32px;border-top:1px solid rgba(255,255,255,.1)}
+.info li::before{content:"";position:absolute;left:2px;top:13px;width:18px;height:18px;border-radius:6px;background:var(--kek) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/12px no-repeat}
 .urlap{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.urlap label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15.5px;color:var(--kek-sotet)}
+.urlap label{display:flex;flex-direction:column;gap:6px;font-weight:500;font-size:15px;color:#2A3040}
 .urlap .teljes{grid-column:1/-1}
-.urlap input,.urlap select,.urlap textarea{font:inherit;font-size:17px;border:2px solid var(--vonal);border-radius:2px;padding:12px 13px;background:#fff;color:var(--tinta);min-height:52px;width:100%}
-.urlap input:focus,.urlap select:focus,.urlap textarea:focus{border-color:var(--kek);outline:none}
-.urlap textarea{min-height:92px;resize:vertical}
-.urlap .kuld{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
-.halk{font-size:14.5px;color:var(--szurke);margin:0}
-.uzenet{font-weight:600;color:#1C6B34}
-@media (max-width:900px){
-  .intezo-fej,.intezo-test{grid-template-columns:minmax(0,1fr)}
-  .intezo-fej{gap:14px}
-}
+.urlap input,.urlap select,.urlap textarea{font:inherit;font-size:16.5px;border:1.5px solid var(--vonal);border-radius:12px;padding:12px 14px;background:#fff;color:var(--tinta);min-height:52px;width:100%}
+.urlap input:focus,.urlap select:focus,.urlap textarea:focus{border-color:var(--kek);outline:none;box-shadow:0 0 0 4px rgba(35,71,230,.12)}
+.urlap textarea{min-height:88px;resize:vertical}
+.kuld{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.megj{font-size:14px;color:var(--szurke);margin:0}
+.uzenet{font-weight:600;color:#16803C;margin:0}
+@media (max-width:900px){.intezo-test{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:760px){
-  .intezo{padding-top:64px;padding-bottom:70px}
+  .intezo{margin-top:0;padding-top:0;padding-left:0;padding-right:0;padding-bottom:64px}
+  .intezo-kartya{border-radius:0;box-shadow:none;padding:44px var(--szel) 10px}
+  .intezo-fej h2{font-size:31px}
   .urlap{grid-template-columns:minmax(0,1fr)}
-  .lap-fej,.lap-test{padding-left:18px;padding-right:18px}
-  .valaszt{font-size:17px}
+  .valaszt{font-size:15.5px;padding:10px 13px}
 }
 
 /* szolgáltatások */
-.szolg{padding-top:96px;padding-bottom:96px}
-.szolg-racs{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px}
-.szolg-racs .bal p{color:var(--szurke);font-size:19px;margin-top:18px}
-.szolg-lista{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
-.szolg-lista li{padding:22px 0;border-top:2px solid var(--kek-sotet)}
-.szolg-lista h3{font-size:22px}
-.szolg-lista p{margin:6px 0 0;color:var(--szurke);font-size:17px}
-@media (max-width:900px){.szolg-racs{grid-template-columns:minmax(0,1fr);gap:28px}}
-@media (max-width:600px){.szolg-lista{grid-template-columns:minmax(0,1fr)}.szolg{padding-top:64px;padding-bottom:64px}}
+.szolg{background:var(--hatter);padding-top:96px;padding-bottom:96px}
+.szolg-fej{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px 40px;margin-bottom:40px}
+.szolg-fej p{margin:0;color:var(--szurke);max-width:460px;font-size:18px}
+.szolg-racs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.szolg-racs article{background:#fff;border-radius:var(--r);padding:28px 26px;border:1px solid var(--vonal)}
+.szolg-racs .ik{width:48px;height:48px;border-radius:12px;background:var(--kek-halvany);color:var(--kek);display:grid;place-items:center;margin-bottom:18px}
+.szolg-racs .ik svg{width:24px;height:24px}
+.szolg-racs p{margin:8px 0 0;color:var(--szurke);font-size:16.5px}
+.szolg-racs article.fo{background:var(--kek);border-color:var(--kek);color:#fff}
+.szolg-racs article.fo .ik{background:rgba(255,255,255,.16);color:#fff}
+.szolg-racs article.fo p{color:#DCE4FF}
+@media (max-width:960px){.szolg-racs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.szolg-racs{grid-template-columns:minmax(0,1fr)}.szolg{padding-top:64px;padding-bottom:64px}}
 
-/* ügyintézés sáv */
-.sav{background:var(--kek-sotet);color:#fff;padding-top:90px;padding-bottom:90px}
-.sav-racs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center}
-.sav blockquote{margin:0;font-family:var(--cim);font-stretch:104%;font-weight:600;font-size:30px;line-height:1.3;color:#fff}
-.sav blockquote::before{content:"„";display:block;font-size:80px;line-height:.6;color:var(--sarga);margin-bottom:6px}
-.sav .forras{margin-top:20px;color:#BFC6EA;font-size:16.5px}
-.ertek{background:var(--kek);padding:30px 32px;border-top:6px solid var(--sarga)}
-.ertek .szam{font-family:var(--cim);font-weight:800;font-size:58px;line-height:1;color:#fff}
-.ertek .szam small{font-size:22px;color:var(--sarga);margin-left:8px}
-.ertek p{margin:12px 0 0;color:#E4E7F7}
-.ertek q{display:block;margin-top:18px;font-size:19px;color:#fff}
-@media (max-width:900px){.sav-racs{grid-template-columns:minmax(0,1fr);gap:32px}.sav blockquote{font-size:24px}}
+/* ügyintézés + értékelés */
+.sav{background:#fff;padding-top:96px;padding-bottom:96px}
+.sav-racs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:center}
+.sav blockquote{margin:0;font-family:var(--cim);font-weight:700;font-size:31px;line-height:1.28;letter-spacing:-.02em}
+.sav blockquote em{font-style:normal;color:var(--kek)}
+.sav .forras{margin-top:18px;color:var(--szurke)}
+.ertek{background:var(--ej);color:#fff;border-radius:22px;padding:32px}
+.ertek .szam{display:flex;align-items:baseline;gap:12px;font-family:var(--cim);font-weight:800;font-size:64px;line-height:1;letter-spacing:-.04em}
+.ertek .szam span{font-size:20px;color:#FFC94A;letter-spacing:2px}
+.ertek p{margin:10px 0 0;color:#C9D1E8}
+.ertek q{display:block;margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:19px;color:#fff}
+@media (max-width:900px){.sav-racs{grid-template-columns:minmax(0,1fr);gap:28px}.sav blockquote{font-size:24px}}
 @media (max-width:760px){.sav{padding-top:64px;padding-bottom:64px}}
 
 /* hol vagyunk */
-.hol{padding-top:96px;padding-bottom:96px}
-.hol-racs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:start}
-.hol figure img{width:100%;border:1px solid var(--vonal)}
-.hol figcaption{font-size:15px;color:var(--szurke);margin-top:10px}
-.hol .szoveg p{font-size:19px}
-.nyitva{width:100%;border-collapse:collapse;margin-top:8px;font-size:17px}
-.nyitva th,.nyitva td{text-align:left;padding:10px 0;border-bottom:1px solid var(--vonal)}
+.hol{background:var(--hatter);padding-top:96px;padding-bottom:96px}
+.hol-racs{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:center}
+.hol figure{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--vonal)}
+.hol figcaption{font-size:14.5px;color:var(--szurke);padding:12px 16px}
+.hol .szoveg > p{font-size:18.5px;color:#2A3040}
+.nyitva{width:100%;border-collapse:collapse;margin-top:6px;font-size:16.5px;background:#fff;border-radius:var(--r);overflow:hidden}
+.nyitva th,.nyitva td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--vonal);font-weight:500}
 .nyitva td{text-align:right}
+.nyitva tr:last-child th,.nyitva tr:last-child td{border-bottom:0}
 .nyitva tr.ma th,.nyitva tr.ma td{color:var(--kek);font-weight:700}
-.allapot{display:inline-block;margin-top:14px;font-weight:700;padding:6px 12px;background:var(--sarga-3);color:var(--kek-sotet)}
+.allapot{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-weight:600;font-size:15.5px}
+.allapot i{width:9px;height:9px;border-radius:50%;background:#9AA3B8}
+.allapot.nyitott i{background:#22C55E;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
 @media (max-width:900px){.hol-racs{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:760px){.hol{padding-top:64px;padding-bottom:64px}}
 
 /* gyik */
-.gyik{background:var(--sarga-2);padding-top:90px;padding-bottom:90px}
+.gyik{background:#fff;padding-top:96px;padding-bottom:96px}
 .gyik-racs{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:56px}
-details{border-bottom:2px solid var(--vonal);padding:4px 0}
-details:first-child{border-top:2px solid var(--vonal)}
-summary{cursor:pointer;list-style:none;font-family:var(--cim);font-stretch:104%;font-weight:700;font-size:20px;color:var(--kek-sotet);padding:16px 40px 16px 0;position:relative}
+.gyik-racs .bal p{color:var(--szurke);margin-top:16px}
+details{border:1px solid var(--vonal);border-radius:var(--r);margin-bottom:10px;padding:0 22px;background:#fff}
+details[open]{background:var(--hatter);border-color:transparent}
+summary{cursor:pointer;list-style:none;font-family:var(--cim);font-weight:700;font-size:19px;padding:18px 44px 18px 0;position:relative;letter-spacing:-.01em}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:4px;top:10px;font-size:30px;color:var(--kek)}
-details[open] summary::after{content:"–"}
-details p{margin:0 0 18px;color:#33363F}
+summary::after{content:"+";position:absolute;right:0;top:13px;width:30px;height:30px;border-radius:9px;background:var(--kek-halvany);color:var(--kek);display:grid;place-items:center;font-size:21px}
+details[open] summary::after{content:"–";background:var(--kek);color:#fff}
+details p{margin:0;padding-bottom:20px;color:#2A3040}
 @media (max-width:900px){.gyik-racs{grid-template-columns:minmax(0,1fr);gap:24px}}
 @media (max-width:760px){.gyik{padding-top:64px;padding-bottom:64px}}
 
 /* kapcsolat */
-.kapcsolat{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--vonal)}
+.kapcsolat{display:grid;grid-template-columns:1fr 1fr;background:var(--hatter)}
 .kapcs-adat{padding:80px var(--szel) 80px max(var(--szel),calc(100% - var(--max)/2 + var(--szel)))}
 .kapcs-adat h2{margin-bottom:26px}
-.kapcs-adat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:18px}
-.kapcs-adat dt{font-weight:700;color:var(--kek-sotet)}
-.kapcs-adat dd{margin:0}
+.kapcs-adat dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 24px;font-size:17.5px}
+.kapcs-adat dt{font-weight:600;color:var(--szurke)}
+.kapcs-adat dd{margin:0;font-weight:500}
+.kapcs-adat dd a{color:var(--tinta);text-decoration-color:var(--kek);text-underline-offset:3px}
 .kapcs-adat .gombok{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.terkep{min-height:460px;background:#E9E6DB}
+.terkep{min-height:460px;background:#E3E7EF}
 .terkep iframe{width:100%;height:100%;min-height:460px;border:0;display:block}
 @media (max-width:900px){.kapcsolat{grid-template-columns:minmax(0,1fr)}.kapcs-adat{padding:60px var(--szel)}.terkep,.terkep iframe{min-height:340px}}
 @media (max-width:480px){.kapcs-adat dl{grid-template-columns:minmax(0,1fr);gap:2px}.kapcs-adat dd{margin-bottom:10px}}
 
 /* lábléc */
-footer{background:var(--ej);color:#C9CDE0;padding-top:64px;padding-bottom:84px;font-size:16.5px}
+footer{background:var(--ej);color:#AEB7CE;padding-top:64px;padding-bottom:84px;font-size:16px}
 .lab-racs{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:40px}
-footer h3{color:#fff;font-size:18px;margin-bottom:12px}
+footer h3{color:#fff;font-size:17px;margin-bottom:12px}
 footer a{color:#fff;text-decoration:none}
-footer a:hover{text-decoration:underline}
+footer a:hover{color:#9FB5FF}
 footer ul{list-style:none;margin:0;padding:0}
 footer li{margin:6px 0}
-.lab-marka{font-family:var(--cim);font-stretch:118%;font-weight:800;font-size:24px;color:#fff;margin-bottom:10px}
-.lab-also{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14.5px;color:#9EA4C2}
+.lab-marka{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.lab-marka b{font-family:var(--cim);font-weight:800;font-size:21px;color:#fff;letter-spacing:-.02em}
+.lab-also{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:14px;color:#8590AA}
 @media (max-width:900px){.lab-racs{grid-template-columns:minmax(0,1fr)}}
 
-/* bemutató jelzés + mintatartalom */
-.demo-jel{position:fixed;left:12px;bottom:10px;z-index:60;display:flex;align-items:center;gap:8px;background:rgba(15,22,56,.88);color:#fff;font-size:12.5px;padding:5px 6px 5px 11px;border-radius:2px;height:32px}
-.demo-jel button{font:inherit;font-size:12px;background:transparent;color:#fff;border:1px dashed #F0DC8E;border-radius:2px;padding:3px 8px;cursor:pointer;height:24px}
-.demo-jel button[aria-pressed="true"]{background:#F0DC8E;color:#0F1638}
-body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;background:rgba(255,213,0,.12)}
+.demo-jel{position:fixed;left:12px;bottom:10px;z-index:60;display:flex;align-items:center;gap:8px;background:rgba(11,18,38,.9);color:#fff;font-size:12.5px;padding:5px 6px 5px 11px;border-radius:9px;height:32px}
+.demo-jel button{font:inherit;font-size:12px;background:transparent;color:#fff;border:1px dashed #9FB5FF;border-radius:6px;padding:3px 8px;cursor:pointer;height:24px}
+.demo-jel button[aria-pressed="true"]{background:#FFE36A;border-color:#FFE36A;color:#0B1226}
+body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;background:rgba(255,213,0,.14)}
 </style>
 </head>
 <body>
@@ -249,8 +264,8 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
 <header>
   <div class="fej-sor">
     <a class="marka" href="#" aria-label="Weisz Autószerviz – az oldal teteje">
-      <b>Weisz Autószerviz</b>
-      <span>Pécsvárad · szerviz és műszaki vizsga</span>
+      <span class="jel" aria-hidden="true">W</span>
+      <span><b>Weisz Autószerviz</b><small>Pécsvárad · szerviz, vizsga</small></span>
     </a>
     <nav id="fomenu" aria-label="Főmenü">
       <ul>
@@ -262,7 +277,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
       </ul>
     </nav>
     <button class="menu-gomb" type="button" aria-controls="fomenu" aria-expanded="false" aria-label="Menü megnyitása">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <a class="gomb fej-hivas" href="tel:+3672465819" aria-label="Hívás: 06 72 465 819">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
@@ -279,120 +294,116 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
       <img src="kepek/hero-szeles.webp" width="1920" height="1280" alt="Szerelő egy emelőn álló autó motorterén dolgozik egy világos műhelyben" fetchpriority="high">
     </picture>
   </div>
-  <div class="tabla">
+  <div class="nyito-tart szelso">
     <span class="hely">Pécsvárad, Erzsébeti út 8.</span>
     <h1 id="fo-cim">Műszaki vizsga és márkafüggetlen autójavítás Pécsváradon</h1>
     <p class="al">Javítás, karbantartás és műszaki vizsgáztatás egy helyen – az ezzel járó ügyintézést is magunkra vállaljuk.</p>
     <div class="gombok">
       <a class="gomb" href="#intezzuk">Időpontot kérek</a>
-      <a class="gomb ures" href="tel:+3672465819">Hívás: 06 72 465 819</a>
+      <a class="gomb uveg" href="tel:+3672465819">Hívás: 06 72 465 819</a>
     </div>
-    <div class="soron">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M8.5 12l2.4 2.4 4.6-4.8"/></svg>
-      Eredetiségvizsgálat helyben, soron kívül
+    <div class="erveles">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.6-7 9-4-1.4-7-4.5-7-9V6z"/><path d="M8.5 12l2.4 2.4 4.6-4.8"/></svg>Eredetiségvizsgálat helyben, soron kívül</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Hétköznap 8–17</span>
     </div>
   </div>
 </section>
 
 <section id="intezzuk" class="intezo szelso" aria-labelledby="intezo-cim">
-  <div class="intezo-fej">
-    <h2 id="intezo-cim">Mit intézzünk el az autójával?</h2>
-    <p>Válassza ki, miért jönne: megmutatjuk, mit hozzon magával, és rögtön kérhet időpontot. Visszahívjuk, és egyeztetjük a napot.</p>
-  </div>
-  <div class="intezo-test">
-    <div class="valaszto" role="group" aria-label="Miért jönne?">
-      <div class="valaszto-cim">Miért jönne?</div>
-      <button type="button" class="valaszt" data-ugy="vizsga" aria-pressed="true"><span class="jel" aria-hidden="true"></span>Lejár a műszaki vizsga</button>
-      <button type="button" class="valaszt" data-ugy="eredet" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Autót vett: eredetiségvizsgálat</button>
-      <button type="button" class="valaszt" data-ugy="hiba" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Hibát jelez, javítani kell</button>
-      <button type="button" class="valaszt" data-ugy="szerviz" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Karbantartás, szerviz</button>
-      <button type="button" class="valaszt" data-ugy="villany" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Elektromos hiba</button>
-      <button type="button" class="valaszt" data-ugy="muanyag" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Sérült műanyag elem</button>
-      <button type="button" class="valaszt" data-ugy="alkatresz" aria-pressed="false"><span class="jel" aria-hidden="true"></span>Alkatrész kellene</button>
+  <div class="intezo-kartya">
+    <div class="intezo-fej">
+      <h2 id="intezo-cim">Mit intézzünk el az autójával?</h2>
+      <p>Válassza ki, miért jönne: megmutatjuk, mit hozzon magával, és rögtön kérhet időpontot.</p>
     </div>
-    <div class="lap" aria-live="polite">
-      <div class="lap-fej">
+    <div class="valaszto" role="group" aria-label="Miért jönne?">
+      <button type="button" class="valaszt" data-ugy="vizsga" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg>Lejár a műszaki vizsga</button>
+      <button type="button" class="valaszt" data-ugy="eredet" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg>Eredetiségvizsgálat</button>
+      <button type="button" class="valaszt" data-ugy="hiba" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg>Javítás</button>
+      <button type="button" class="valaszt" data-ugy="szerviz" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l4 2M17 3v4h4"/></svg>Karbantartás, szerviz</button>
+      <button type="button" class="valaszt" data-ugy="villany" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>Elektromos hiba</button>
+      <button type="button" class="valaszt" data-ugy="muanyag" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15h18v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M5 15l2-6h10l2 6"/></svg>Műanyag elem</button>
+      <button type="button" class="valaszt" data-ugy="alkatresz" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>Alkatrész</button>
+    </div>
+    <div class="intezo-test">
+      <div class="info" aria-live="polite">
         <h3 id="ugy-cim">Műszaki vizsga</h3>
         <p id="ugy-leiras" data-minta>Helyben vizsgáztatjuk az autót. Ha a vizsga előtt javítás kell, azt is itt elvégezzük, így nem kell két helyre vinnie.</p>
-      </div>
-      <div class="lap-test">
-        <div class="hozza" data-minta>
-          <b>Ezt hozza magával:</b>
+        <div data-minta>
+          <b>Ezt hozza magával</b>
           <ul id="ugy-lista"><li>a forgalmi engedélyt</li><li>az autót tisztán, működő világítással</li><li>ha volt, az előző vizsga hibalistáját</li></ul>
         </div>
-        <form class="urlap" id="urlap" novalidate>
-          <label class="teljes">Miben segíthetünk?
-            <select name="ugy" id="ugy-mezo">
-              <option value="vizsga">Műszaki vizsga</option>
-              <option value="eredet">Eredetiségvizsgálat</option>
-              <option value="hiba">Javítás</option>
-              <option value="szerviz">Karbantartás, szerviz</option>
-              <option value="villany">Autóvillamosság</option>
-              <option value="muanyag">Műanyag javítás</option>
-              <option value="alkatresz">Alkatrész-beszerzés</option>
-            </select>
-          </label>
-          <label>Név<input name="nev" autocomplete="name" required></label>
-          <label>Telefonszám<input name="tel" type="tel" autocomplete="tel" required></label>
-          <label>Autó típusa<input name="auto" placeholder="pl. Opel Astra, 2012"></label>
-          <label>Mikor jönne?
-            <select name="mikor"><option>Amint lehet</option><option>Ezen a héten</option><option>Jövő héten</option><option>Később, egyeztessünk</option></select>
-          </label>
-          <label class="teljes">Megjegyzés<textarea name="uzenet" placeholder="Pl. mikor jár le a vizsga, mit tapasztal az autón"></textarea></label>
-          <div class="teljes kuld">
-            <button class="gomb" type="submit">Időpontot kérek</button>
-            <p class="halk">Ez egy bemutató oldal: az űrlap nem küld üzenetet.</p>
-          </div>
-          <p class="teljes uzenet" role="status" id="urlap-allapot"></p>
-        </form>
       </div>
+      <form class="urlap" id="urlap" novalidate>
+        <label class="teljes">Miben segíthetünk?
+          <select name="ugy" id="ugy-mezo">
+            <option value="vizsga">Műszaki vizsga</option>
+            <option value="eredet">Eredetiségvizsgálat</option>
+            <option value="hiba">Javítás</option>
+            <option value="szerviz">Karbantartás, szerviz</option>
+            <option value="villany">Autóvillamosság</option>
+            <option value="muanyag">Műanyag javítás</option>
+            <option value="alkatresz">Alkatrész-beszerzés</option>
+          </select>
+        </label>
+        <label>Név<input name="nev" autocomplete="name" required></label>
+        <label>Telefonszám<input name="tel" type="tel" autocomplete="tel" required></label>
+        <label>Autó típusa<input name="auto" placeholder="pl. Opel Astra, 2012"></label>
+        <label>Mikor jönne?
+          <select name="mikor"><option>Amint lehet</option><option>Ezen a héten</option><option>Jövő héten</option><option>Később, egyeztessünk</option></select>
+        </label>
+        <label class="teljes">Megjegyzés<textarea name="uzenet" placeholder="Pl. mikor jár le a vizsga, mit tapasztal az autón"></textarea></label>
+        <div class="teljes kuld">
+          <button class="gomb" type="submit">Időpontot kérek</button>
+          <p class="megj">Visszahívjuk, és egyeztetjük a napot. Ez egy bemutató oldal: az űrlap nem küld üzenetet.</p>
+        </div>
+        <p class="teljes uzenet" role="status" id="urlap-allapot"></p>
+      </form>
     </div>
   </div>
 </section>
 
-<section id="szolgaltatasok" class="szolg" aria-labelledby="szolg-cim">
-  <div class="belso szolg-racs">
-    <div class="bal">
-      <h2 id="szolg-cim">Amit egy helyen elintézünk</h2>
-      <p>„Célunk a hozzánk érkező gépjármű tulajdonosok minden járművükkel kapcsolatos igényének kielégítése!”</p>
-      <a class="gomb ures" href="#intezzuk">Időpontot kérek</a>
-    </div>
-    <ul class="szolg-lista">
-      <li><h3>Márkafüggetlen javítás és szerviz</h3><p>Meghibásodás javítása és rendszeres karbantartás, bármilyen márkájú autón.</p></li>
-      <li><h3>Műszaki vizsgáztatás</h3><p>Helyben, a javítással egy épületben.</p></li>
-      <li><h3>Eredetiségvizsgálat</h3><p>Helyben, soron kívül.</p></li>
-      <li><h3>Autóvillamosság</h3><p data-minta>Elektromos hibák felderítése és javítása.</p></li>
-      <li><h3>Műanyag javítás</h3><p data-minta>Sérült műanyag karosszériaelemek, például lökhárítók javítása.</p></li>
-      <li><h3>Alkatrész-beszerzés</h3><p data-minta>A javításhoz szükséges alkatrészt mi szerezzük be.</p></li>
-    </ul>
+<section id="szolgaltatasok" class="szolg szelso" aria-labelledby="szolg-cim">
+  <div class="szolg-fej">
+    <div><span class="cimke">Szolgáltatások</span><h2 id="szolg-cim">Amit egy helyen elintézünk</h2></div>
+    <p>„Célunk a hozzánk érkező gépjármű tulajdonosok minden járművükkel kapcsolatos igényének kielégítése!”</p>
+  </div>
+  <div class="szolg-racs">
+    <article class="fo"><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3 17.8V21h3.2l6.3-6.3a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.6-.6-.6-2.6z"/></svg></div><h3>Márkafüggetlen javítás és szerviz</h3><p>Meghibásodás javítása és rendszeres karbantartás, bármilyen márkájú autón.</p></article>
+    <article><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 12l3 3 5-6"/></svg></div><h3>Műszaki vizsgáztatás</h3><p>Helyben, a javítással egy épületben.</p></article>
+    <article><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></svg></div><h3>Eredetiségvizsgálat</h3><p>Helyben, soron kívül.</p></article>
+    <article><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Autóvillamosság</h3><p data-minta>Elektromos hibák felderítése és javítása.</p></article>
+    <article><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 15h18v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M5 15l2-6h10l2 6"/></svg></div><h3>Műanyag javítás</h3><p data-minta>Sérült műanyag karosszériaelemek, például lökhárítók javítása.</p></article>
+    <article><div class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div><h3>Alkatrész-beszerzés</h3><p data-minta>A javításhoz szükséges alkatrészt mi szerezzük be.</p></article>
   </div>
 </section>
 
 <section class="sav szelso" aria-labelledby="sav-cim">
-  <h2 id="sav-cim" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Az ügyintézést is vállaljuk</h2>
+  <h2 id="sav-cim" class="rejtett">Az ügyintézést is vállaljuk</h2>
   <div class="sav-racs">
     <div>
-      <blockquote>A gépjárművek bármely problémáival kapcsolatos ügyek intézését, illetve az ezzel járó adminisztrációs és egyéb felmerülő részletek lebonyolítását is magunkra vállaljuk. Ezzel Ön pénzt, időt és energiát takaríthat meg.</blockquote>
+      <span class="cimke">Ügyintézés is</span>
+      <blockquote>A gépjárművek bármely problémáival kapcsolatos ügyek intézését, az adminisztrációs és egyéb felmerülő részletek lebonyolítását is magunkra vállaljuk. <em>Ezzel Ön pénzt, időt és energiát takaríthat meg.</em></blockquote>
       <p class="forras">Weisz Autószerviz, Pécsvárad</p>
     </div>
     <div class="ertek">
-      <div class="szam">4,3<small>★ a Google-on</small></div>
-      <p>46 ügyfél értékelése alapján</p>
+      <div class="szam">4,3 <span aria-hidden="true">★★★★</span></div>
+      <p>46 értékelés a Google-on</p>
       <q>Ajánlom mindenki számára a szervizt.</q>
-      <p>– egy ügyfél a Google-on, aki alapos átnézést és javítást kapott</p>
+      <p>– egy ügyfél, aki alapos átnézést és javítást kapott</p>
     </div>
   </div>
 </section>
 
-<section id="hol" class="hol" aria-labelledby="hol-cim">
-  <div class="belso hol-racs">
+<section id="hol" class="hol szelso" aria-labelledby="hol-cim">
+  <div class="hol-racs">
     <figure>
       <img src="kepek/munkak/munka-01.webp" width="840" height="240" loading="lazy" alt="A Weisz Autószerviz sárga épülete Pécsváradon, a homlokzaton kék felirattal és telefonszámokkal">
       <figcaption>A sárga épület, a homlokzaton a kék Weisz Autószerviz felirattal.</figcaption>
     </figure>
     <div class="szoveg">
+      <span class="cimke">Hol vagyunk</span>
       <h2 id="hol-cim">Hol talál minket?</h2>
-      <p>Pécsváradon, az Erzsébeti út 8. alatt, a 6-os főút közelében.</p>
+      <p style="margin-top:16px">Pécsváradon, az Erzsébeti út 8. alatt, a 6-os főút közelében.</p>
       <table class="nyitva" aria-label="Nyitvatartás">
         <tr data-nap="1"><th>Hétfő</th><td>8–12, 13–17</td></tr>
         <tr data-nap="2"><th>Kedd</th><td>8–12, 13–17</td></tr>
@@ -401,14 +412,18 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
         <tr data-nap="5"><th>Péntek</th><td>8–12, 13–17</td></tr>
         <tr data-nap="6"><th>Szombat–vasárnap</th><td>Zárva</td></tr>
       </table>
-      <span class="allapot" id="allapot">Hétköznap 8 és 17 óra között</span>
+      <span class="allapot" id="allapot"><i aria-hidden="true"></i><span>Hétköznap 8 és 17 óra között</span></span>
     </div>
   </div>
 </section>
 
 <section id="gyik" class="gyik szelso" aria-labelledby="gyik-cim">
   <div class="gyik-racs">
-    <h2 id="gyik-cim">Gyakori kérdések</h2>
+    <div class="bal">
+      <span class="cimke">Kérdések</span>
+      <h2 id="gyik-cim">Gyakori kérdések</h2>
+      <p>Ha nem találja a választ, hívjon: <a href="tel:+3672465819">06 72 465 819</a>.</p>
+    </div>
     <div>
       <details open><summary>Milyen márkájú autókat javítanak?</summary><p>Márkafüggetlen szerviz vagyunk: bármilyen márkájú személyautó javítását, karbantartását és műszaki vizsgáztatását vállaljuk.</p></details>
       <details><summary>Meg lehet csinálni egy helyen a javítást és a műszaki vizsgát?</summary><p>Igen. A javítást, a karbantartást és a műszaki vizsgáztatást is helyben végezzük, az ezzel járó ügyintézést pedig magunkra vállaljuk.</p></details>
@@ -430,7 +445,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
     </dl>
     <div class="gombok">
       <a class="gomb" href="tel:+3672465819">Hívás most</a>
-      <a class="gomb ures" href="https://www.google.com/maps/dir/?api=1&amp;destination=Weisz+Aut%C3%B3szerviz%2C+P%C3%A9csv%C3%A1rad%2C+Erzs%C3%A9beti+%C3%BAt+8" target="_blank" rel="noopener">Útvonaltervezés</a>
+      <a class="gomb halk" href="https://www.google.com/maps/dir/?api=1&amp;destination=Weisz+Aut%C3%B3szerviz%2C+P%C3%A9csv%C3%A1rad%2C+Erzs%C3%A9beti+%C3%BAt+8" target="_blank" rel="noopener">Útvonaltervezés</a>
     </div>
   </div>
   <div class="terkep">
@@ -442,7 +457,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
 <footer class="szelso">
   <div class="lab-racs">
     <div>
-      <div class="lab-marka">Weisz Autószerviz</div>
+      <div class="lab-marka"><span class="jel" aria-hidden="true">W</span><b>Weisz Autószerviz</b></div>
       <p>Márkafüggetlen gépjárműjavítás és szerviz, műszaki vizsgáztatás és eredetiségvizsgálat Pécsváradon.</p>
     </div>
     <div>
@@ -475,7 +490,6 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
 
 <script>
 (function(){
-  // menü
   var gomb=document.querySelector('.menu-gomb'), menu=document.getElementById('fomenu');
   function zar(){menu.classList.remove('lenyitva');gomb.setAttribute('aria-expanded','false');gomb.setAttribute('aria-label','Menü megnyitása');}
   gomb.addEventListener('click',function(e){e.stopPropagation();var nyit=!menu.classList.contains('lenyitva');menu.classList.toggle('lenyitva',nyit);gomb.setAttribute('aria-expanded',String(nyit));gomb.setAttribute('aria-label',nyit?'Menü bezárása':'Menü megnyitása');});
@@ -483,7 +497,6 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
   document.addEventListener('click',function(e){if(!e.target.closest('header'))zar();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')zar();});
 
-  // ügyintéző
   var ugyek={
     vizsga:{c:'Műszaki vizsga',l:'Helyben vizsgáztatjuk az autót. Ha a vizsga előtt javítás kell, azt is itt elvégezzük, így nem kell két helyre vinnie.',h:['a forgalmi engedélyt','az autót tisztán, működő világítással','ha volt, az előző vizsga hibalistáját']},
     eredet:{c:'Eredetiségvizsgálat',l:'Helyben, soron kívül végezzük. Indulás előtt érdemes telefonálni, hogy biztosan fogadni tudjuk.',h:['a forgalmi engedélyt és a törzskönyvet','a személyi igazolványát (ha nem Ön a tulajdonos, meghatalmazást)','az adásvételi szerződést','külföldről hozott autónál a külföldi okmányokat']},
@@ -506,22 +519,19 @@ body.minta-be [data-minta]{outline:2px dashed #E0A400;outline-offset:3px;backgro
   gombok.forEach(function(g){g.addEventListener('click',function(){valaszt(g.dataset.ugy);});});
   mezo.addEventListener('change',function(){valaszt(mezo.value,true);});
 
-  // űrlap (bemutató: nem küld)
   document.getElementById('urlap').addEventListener('submit',function(e){
     e.preventDefault();
     document.getElementById('urlap-allapot').textContent='Köszönjük! Ez egy bemutató oldal, ezért az üzenet nem ment el. Az éles oldalon itt kapja meg a visszaigazolást.';
   });
 
-  // nyitvatartás: mai nap és állapot
   var most=new Date(), nap=most.getDay(), perc=most.getHours()*60+most.getMinutes();
   var sor=document.querySelector('.nyitva tr[data-nap="'+(nap===0?6:Math.min(nap,6))+'"]'); if(sor)sor.classList.add('ma');
   var hetkoznap=nap>=1&&nap<=5, nyitva=hetkoznap&&((perc>=480&&perc<720)||(perc>=780&&perc<1020));
-  var all=document.getElementById('allapot');
-  if(nyitva) all.textContent='Most nyitva';
-  else if(hetkoznap&&perc>=720&&perc<780) all.textContent='Ebédszünet, 13 órakor nyitunk';
-  else all.textContent='Most zárva – hétköznap 8 órától várjuk';
+  var all=document.getElementById('allapot'), szov=all.querySelector('span');
+  if(nyitva){szov.textContent='Most nyitva';all.classList.add('nyitott');}
+  else if(hetkoznap&&perc>=720&&perc<780) szov.textContent='Ebédszünet, 13 órakor nyitunk';
+  else szov.textContent='Most zárva – hétköznap 8 órától várjuk';
 
-  // mintatartalom kapcsoló
   var mg=document.getElementById('minta-gomb');
   function minta(be){document.body.classList.toggle('minta-be',be);mg.setAttribute('aria-pressed',String(be));}
   mg.addEventListener('click',function(){minta(mg.getAttribute('aria-pressed')!=='true');});
