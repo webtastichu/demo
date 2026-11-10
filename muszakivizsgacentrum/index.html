@@ -34,7 +34,7 @@
 <style>
 :root{
   --fekete:#0F1012; --grafit:#191B1F; --acel:#26292F; --vonal-s:#34373E;
-  --sarga:#FFE100; --sarga-s:#E5CB00; --kod:#F2F1EC; --feher:#fff;
+  --sarga:#FFE100; --sarga-s:#E5CB00; --piros:#D7262F; --piros-s:#B81E26; --piros-v:#EF3B44; --kod:#F2F1EC; --feher:#fff;
   --tinta:#141517; --szurke:#62666E; --szurke-v:#A7ACB5; --vonal:#DEDCD3;
   --max:1200px; --szel:20px; --fej:78px;
   --cim:'Space Grotesk',system-ui,sans-serif; --szoveg:'Chivo',system-ui,sans-serif;
@@ -72,7 +72,7 @@ header{position:sticky;top:0;z-index:50;background:var(--fekete);color:#fff;bord
 .marka{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;color:#fff}
 .marka img{width:50px;height:50px}
 .marka span{display:flex;flex-direction:column;line-height:1.08}
-.marka b{font-family:var(--cim);font-size:20px;letter-spacing:-.02em}
+.marka b{font-family:var(--cim);font-size:20px;letter-spacing:-.02em;color:var(--piros-v)}
 .marka small{font-size:13px;color:var(--szurke-v);margin-top:3px}
 nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
 nav a{text-decoration:none;color:#E9EAEC;font-weight:600;font-size:16px;white-space:nowrap}
@@ -126,19 +126,20 @@ nav a:hover{color:var(--sarga)}
 }
 
 /* vonalak (közvetlen számok) */
-.vonalak{background:#fff;border-bottom:1px solid var(--vonal)}
+.vonalak{background:var(--piros);color:#fff}
 .vonal-racs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
-.vonal-racs a{display:flex;gap:16px;align-items:center;padding:26px 24px;text-decoration:none;border-left:1px solid var(--vonal)}
+.vonal-racs a{display:flex;gap:16px;align-items:center;padding:26px 24px;text-decoration:none;color:#fff;border-left:1px solid rgba(255,255,255,.28)}
 .vonal-racs a:first-child{border-left:0;padding-left:0}
 .vonal-racs a:hover b{text-decoration:underline}
-.ikon{width:48px;height:48px;border-radius:12px;background:var(--sarga);display:grid;place-items:center;flex:none}
+.ikon{width:48px;height:48px;border-radius:12px;background:#fff;display:grid;place-items:center;flex:none}
+.ikon svg{stroke:var(--piros)}
 .ikon svg{width:22px;height:22px}
-.vonal-racs span{display:flex;flex-direction:column;line-height:1.3}
-.vonal-racs small{color:var(--szurke);font-size:15px}
+.vonal-racs span:not(.ikon){display:flex;flex-direction:column;line-height:1.3}
+.vonal-racs small{color:rgba(255,255,255,.88);font-size:15px}
 .vonal-racs b{font-family:var(--cim);font-size:21px;white-space:nowrap}
 @media (max-width:900px){
   .vonal-racs{grid-template-columns:minmax(0,1fr)}
-  .vonal-racs a{border-left:0;border-top:1px solid var(--vonal);padding:18px 0}
+  .vonal-racs a{border-left:0;border-top:1px solid rgba(255,255,255,.28);padding:18px 0}
   .vonal-racs a:first-child{border-top:0}
 }
 
@@ -151,8 +152,8 @@ nav a:hover{color:var(--sarga)}
 .valaszt{display:inline-flex;align-items:center;gap:10px;font:inherit;font-size:17px;font-weight:600;color:var(--tinta);background:#fff;border:2px solid var(--vonal);border-radius:12px;padding:12px 18px;min-height:54px;cursor:pointer}
 .valaszt:hover{border-color:var(--tinta)}
 .valaszt svg{width:30px;height:22px;flex:none}
-.valaszt[aria-pressed="true"]{background:var(--tinta);border-color:var(--tinta);color:#fff}
-.valaszt[aria-pressed="true"] svg{color:var(--sarga)}
+.valaszt[aria-pressed="true"]{background:var(--piros);border-color:var(--piros);color:#fff}
+.valaszt[aria-pressed="true"] svg{color:#fff}
 .jarmu-test{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:28px;align-items:start}
 .eredmeny{background:var(--grafit);color:#fff;border-radius:16px;padding:30px}
 .eredmeny h3{font-size:28px;color:#fff}
@@ -209,8 +210,8 @@ nav a:hover{color:var(--sarga)}
 .ido{list-style:none;margin:0;padding:0;border-left:3px solid var(--tinta)}
 .ido li{position:relative;padding:0 0 30px 30px}
 .ido li:last-child{padding-bottom:0}
-.ido li::before{content:"";position:absolute;left:-10px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--sarga);border:3px solid var(--tinta)}
-.ido .ev{font-family:var(--cim);font-weight:700;font-size:30px;line-height:1}
+.ido li::before{content:"";position:absolute;left:-10px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--piros);border:3px solid var(--tinta)}
+.ido .ev{font-family:var(--cim);font-weight:700;font-size:30px;line-height:1;color:var(--piros)}
 .ido p{margin:8px 0 0;color:#2E3036}
 .napelem{margin-top:34px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;background:var(--kod);border-radius:16px;padding:22px 24px}
 .napelem b{font-family:var(--cim);font-size:34px;line-height:1}
