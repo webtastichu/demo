@@ -26,7 +26,7 @@
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"Milyen autókat javítanak?","acceptedAnswer":{"@type":"Answer","text":"Márkafüggetlenül vállalunk karosszériajavítást és autófényezést, bármilyen márkájú személyautóra."}},
 {"@type":"Question","name":"Intézik a biztosítóval a kárt?","acceptedAnswer":{"@type":"Answer","text":"Igen, teljes körű biztosítási ügyintézést vállalunk: karambolos javításnál a biztosítóval a kapcsolattartást is mi végezzük."}},
-{"@type":"Question","name":"Hogyan kérhetek árajánlatot?","acceptedAnswer":{"@type":"Answer","text":"Küldjön fotót a sérülésről az oldal ajánlatkérőjén, vagy hívjon minket a +36 30 957 8258-as számon. A pontos ajánlathoz az autót a műhelyben is megnézzük."}},
+{"@type":"Question","name":"Hogyan kérhetek árajánlatot?","acceptedAnswer":{"@type":"Answer","text":"Kérjen visszahívást az oldal űrlapján, vagy hívjon minket a +36 30 957 8258-as számon. A pontos ajánlathoz az autót a műhelyben megnézzük."}},
 {"@type":"Question","name":"Mennyi ideig tart a javítás?","acceptedAnswer":{"@type":"Answer","text":"A javítás ideje a sérülés mértékétől és az alkatrészektől függ; a felmérés után megmondjuk, mikorra készül el az autó."}},
 {"@type":"Question","name":"Mikor vannak nyitva?","acceptedAnswer":{"@type":"Answer","text":"Hétfőtől péntekig 8:00–12:00 és 13:00–16:30 között, hétvégén zárva."}}]}
 </script>
@@ -116,6 +116,10 @@ nav a:hover{color:var(--piros)}
 .csempe[aria-pressed="true"]{border-color:var(--piros);box-shadow:0 0 0 3px rgba(14,107,120,.16)}
 .utmutato{background:#fff;border-radius:18px;padding:28px 30px;border:1px solid var(--vonal)}
 .utmutato[hidden]{display:none}
+.pipak{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px}
+.pipak li{position:relative;padding-left:28px;font-size:16px}
+.pipak li::before{content:"";position:absolute;left:0;top:4px;width:18px;height:18px;border-radius:50%;background:var(--piros) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5'%3E%3Cpath d='M6 12l4 4 8-8'/%3E%3C/svg%3E") center/12px no-repeat}
+.tipp{margin:0;font-size:15px;color:var(--halvany)}
 .utmutato h3{margin-bottom:14px}
 .ket-lista{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 .ket-lista h4{margin:0 0 8px;font:700 15px/1.3 "Plus Jakarta Sans",sans-serif;color:var(--piros)}
@@ -233,6 +237,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
   .csempek{grid-template-columns:minmax(0,1fr)}
   .csempe{min-height:0}
   .ket-lista{grid-template-columns:minmax(0,1fr);gap:16px}
+  .pipak{grid-template-columns:minmax(0,1fr)}
   .urlap{position:static;padding:26px 20px}
   .minta-racs{grid-template-columns:minmax(0,1fr)}
   .kapcsolat{grid-template-columns:minmax(0,1fr)}
@@ -294,7 +299,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
         <a href="#karugy" data-eset="sajat"><b>Saját költség</b>horpadás, karc</a>
       </div>
       <div class="gyors-lab">
-        <a class="gomb gomb-piros" href="#ajanlat">Fotót küldök a sérülésről</a>
+        <a class="gomb gomb-piros" href="#ajanlat">Visszahívást kérek</a>
         <a class="telszoveg" href="tel:+36309578258">vagy hívjon: <span>+36 30 957 8258</span></a>
       </div>
     </div>
@@ -318,45 +323,40 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
   <div class="belso">
     <div class="fej">
       <h2 id="karugy-cim">Megsérült az autó? Nézzük meg, ki fizeti a javítást</h2>
-      <p>Válassza ki, milyen kárról van szó: megmutatjuk, mire lesz szükség, és mit intézünk el Ön helyett. Utána küldjön egy fotót, és jelentkezünk az ajánlattal.</p>
+      <p>Biztosítós kárnál a papírmunkát mi visszük. Válassza ki, milyen kárról van szó: megmutatjuk, mit érdemes előkészíteni, és munkaidőben visszahívjuk.</p>
     </div>
     <div class="fizeto">
       <div>
-        <p class="valaszto-cim" id="valaszto-cim">Válasszon egyet:</p>
-        <div class="csempek" role="group" aria-labelledby="valaszto-cim">
-          <button class="csempe" type="button" data-eset="kgfb" aria-pressed="false"><b>Valaki nekem jött</b><small>A vétkes fél kötelező biztosítója fizet</small></button>
-          <button class="csempe" type="button" data-eset="casco" aria-pressed="false"><b>Van CASCO-m</b><small>A saját casco-biztosításomra javíttatnám</small></button>
-          <button class="csempe" type="button" data-eset="sajat" aria-pressed="false"><b>Saját költségen</b><small>Horpadás, karc, fényezés biztosító nélkül</small></button>
-        </div>
         <div class="utmutato" id="ut-alap">
-          <h3>Bármelyiket választja, az első lépés ugyanaz</h3>
-          <p data-minta>Egy fotó a sérülésről sokat elárul: ebből előzetes képet kapunk a javításról, a pontos ajánlathoz pedig az autót a műhelyben is megnézzük. Biztosítós kárnál a papírmunkát is átvesszük.</p>
+          <h3>Ezt intézzük el Ön helyett</h3>
+          <ul class="pipak" data-minta><li>a kapcsolattartást a biztosítóval</li><li>a kárfelmérés egyeztetését</li><li>a javítást és a fényezést</li><li>az elszámolást a biztosítóval</li></ul>
+          <p class="tipp">Válassza ki az űrlapon a kár típusát, és itt megmutatjuk, mit érdemes előkészíteni.</p>
         </div>
         <div class="utmutato" id="ut-kgfb" hidden>
           <h3>A vétkes fél biztosítója fizet</h3>
           <div class="ket-lista">
-            <div><h4>Ezt hozza vagy küldje</h4><ul data-minta><li>a kitöltött és mindkét fél által aláírt baleseti bejelentőt</li><li>a vétkes fél biztosítójának nevét és a kárszámot, ha már van</li><li>a forgalmi engedélyt</li><li>fotókat a sérülésről és a helyszínről</li></ul></div>
+            <div><h4>Ezt készítse elő</h4><ul data-minta><li>a kitöltött és mindkét fél által aláírt baleseti bejelentőt</li><li>a vétkes fél biztosítójának nevét és a kárszámot, ha már van</li><li>a forgalmi engedélyt</li><li>ha van, fotókat a helyszínről</li></ul></div>
             <div><h4>Ezt intézzük mi</h4><ul data-minta><li>a kapcsolattartást a biztosítóval</li><li>a kárfelmérés egyeztetését</li><li>a javítást és a fényezést</li><li>az elszámolást a biztosítóval</li></ul></div>
           </div>
         </div>
         <div class="utmutato" id="ut-casco" hidden>
           <h3>A saját CASCO-ja fizet</h3>
           <div class="ket-lista">
-            <div><h4>Ezt hozza vagy küldje</h4><ul data-minta><li>a casco-kötvény adatait (biztosító, kötvényszám)</li><li>a kárszámot, ha a kárt már bejelentette</li><li>a forgalmi engedélyt</li><li>fotókat a sérülésről</li></ul></div>
+            <div><h4>Ezt készítse elő</h4><ul data-minta><li>a casco-kötvény adatait (biztosító, kötvényszám)</li><li>a kárszámot, ha a kárt már bejelentette</li><li>a forgalmi engedélyt</li></ul></div>
             <div><h4>Ezt intézzük mi</h4><ul data-minta><li>a kárbejelentés utáni ügyintézést</li><li>a kárfelmérés egyeztetését</li><li>a javítást és a fényezést</li><li>az elszámolást a biztosítóval</li></ul></div>
           </div>
         </div>
         <div class="utmutato" id="ut-sajat" hidden>
           <h3>Biztosító nélkül, saját költségen</h3>
           <div class="ket-lista">
-            <div><h4>Ezt küldje</h4><ul data-minta><li>2–3 fotót a sérülésről, közelről és távolabbról</li><li>az autó típusát és évjáratát</li><li>ha tudja, a gyári színkódot (az ajtófélfán vagy a csomagtartóban lévő matricán)</li></ul></div>
-            <div><h4>Ezt kapja</h4><ul data-minta><li>előzetes tájékoztatást a fotók alapján</li><li>pontos ajánlatot a műhelyben tartott felmérés után</li><li>javítást, fényezést, polírozást egy helyen</li></ul></div>
+            <div><h4>Ezt készítse elő</h4><ul data-minta><li>az autó típusát és évjáratát</li><li>ha tudja, a gyári színkódot (az ajtófélfán vagy a csomagtartóban lévő matricán)</li></ul></div>
+            <div><h4>Ezt kapja</h4><ul data-minta><li>visszahívást munkaidőben</li><li>pontos ajánlatot a műhelyben tartott felmérés után</li><li>javítást, fényezést, polírozást egy helyen</li></ul></div>
           </div>
         </div>
       </div>
       <form class="urlap" id="ajanlat" novalidate>
-        <h3>Ajánlatkérés fotóval</h3>
-        <p>Munkaidőben visszahívjuk, és megbeszéljük a következő lépést.</p>
+        <h3>Kérjen visszahívást</h3>
+        <p>Munkaidőben visszahívjuk, és megbeszéljük, mikor nézzük meg az autót.</p>
         <label class="mezo"><span>Milyen kárról van szó?</span>
           <select name="eset" id="eset">
             <option value="">Válasszon…</option>
@@ -368,8 +368,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
         </label>
         <label class="mezo"><span>Név</span><input name="nev" autocomplete="name" required></label>
         <label class="mezo"><span>Telefonszám</span><input name="tel" type="tel" autocomplete="tel" inputmode="tel" required></label>
-        <label class="mezo"><span>Fotók a sérülésről</span><input name="foto" type="file" accept="image/*" multiple></label>
-        <button class="gomb gomb-piros" type="submit">Ajánlatot kérek</button>
+        <button class="gomb gomb-piros" type="submit">Visszahívást kérek</button>
         <p class="halk">Ez egy bemutató oldal: az űrlap nem küld el semmit.</p>
         <p class="allapot" role="status" aria-live="polite"></p>
       </form>
@@ -436,12 +435,12 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
       <h2 id="muhely-cim">Így megy a javítás</h2>
       <p>Pécsen, az Álmos utca 3. alatt dolgozunk. Több mint 30 év tapasztalattal javítunk karambolos és sérült autókat, bármilyen márkát.</p>
       <ol class="lepesek" data-minta>
-        <li><b>Fotó vagy telefon</b><span>Küldjön képet a sérülésről, vagy hívjon minket.</span></li>
+        <li><b>Visszahívás vagy telefon</b><span>Kérjen visszahívást az oldalon, vagy hívjon minket.</span></li>
         <li><b>Felmérés és ajánlat</b><span>A műhelyben megnézzük az autót, és megmondjuk, mi kell hozzá.</span></li>
         <li><b>Ügyintézés a biztosítóval</b><span>Biztosítós kárnál a papírmunkát átvesszük.</span></li>
         <li><b>Javítás, fényezés, átadás</b><span>Elkészül a javítás, és szólunk, mikor viheti az autót.</span></li>
       </ol>
-      <a class="gomb gomb-piros" href="#ajanlat">Ajánlatot kérek</a>
+      <a class="gomb gomb-piros" href="#ajanlat">Visszahívást kérek</a>
     </div>
   </div>
 </section>
@@ -451,7 +450,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
     <h2 id="gyik-cim">Gyakori kérdések</h2>
     <details><summary>Milyen autókat javítanak?</summary><p>Márkafüggetlenül vállalunk karosszériajavítást és autófényezést, bármilyen márkájú személyautóra.</p></details>
     <details><summary>Intézik a biztosítóval a kárt?</summary><p>Igen, teljes körű biztosítási ügyintézést vállalunk: karambolos javításnál a biztosítóval a kapcsolattartást is mi végezzük.</p></details>
-    <details><summary>Hogyan kérhetek árajánlatot?</summary><p>Küldjön fotót a sérülésről az oldal ajánlatkérőjén, vagy hívjon minket a +36 30 957 8258-as számon. A pontos ajánlathoz az autót a műhelyben is megnézzük.</p></details>
+    <details><summary>Hogyan kérhetek árajánlatot?</summary><p>Kérjen visszahívást az oldal űrlapján, vagy hívjon minket a +36 30 957 8258-as számon. A pontos ajánlathoz az autót a műhelyben megnézzük.</p></details>
     <details><summary>Mennyi ideig tart a javítás?</summary><p data-minta>A javítás ideje a sérülés mértékétől és az alkatrészektől függ; a felmérés után megmondjuk, mikorra készül el az autó.</p></details>
     <details><summary>Mikor vannak nyitva?</summary><p>Hétfőtől péntekig 8:00–12:00 és 13:00–16:30 között, hétvégén zárva.</p></details>
   </div>
@@ -520,7 +519,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
   sel.addEventListener('change',function(){if(['kgfb','casco','sajat'].indexOf(sel.value)>-1)valaszt(sel.value)});
 
   var f=document.getElementById('ajanlat');
-  f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.allapot').textContent='Köszönjük! Ez egy bemutató oldal, ezért az ajánlatkérés nem lett elküldve – élesben itt jelezné az oldal, hogy hamarosan visszahívjuk.'});
+  f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.allapot').textContent='Köszönjük! Ez egy bemutató oldal, ezért a visszahíváskérés nem lett elküldve – élesben itt jelezné az oldal, hogy hamarosan visszahívjuk.'});
 
   var k=document.getElementById('minta-kapcsolo');
   function minta(be){document.body.classList.toggle('minta-lathato',be);k.setAttribute('aria-pressed',be?'true':'false')}
