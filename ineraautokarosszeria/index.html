@@ -141,30 +141,42 @@ nav a:hover{color:var(--piros)}
 .szolg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
 .kartya{background:#fff;border:1px solid var(--vonal);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
 .kartya img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.kartya .ikon{height:auto;aspect-ratio:4/3;background:var(--ko);display:grid;place-items:center}
-.kartya .ikon svg{width:64px;height:64px;color:var(--piros)}
 .kartya div{padding:20px 22px 24px}
 .kartya p{font-size:15.5px;color:var(--halvany);margin:0}
 
 /* színek sáv */
 .szinek{background:var(--tinta);color:#fff;padding-left:var(--szel);padding-right:var(--szel)}
-.szinek .fej p{color:#B7C2CE}
+.szin-fej{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:44px}
+.szin-fej h2{margin-bottom:10px}
+.szin-fej p{color:#B7C9CD;font-size:18px;margin:0}
+.osszesito{flex:none;display:flex;align-items:center;gap:16px;background:var(--tinta2);border:1px solid #1C4954;border-radius:18px;padding:16px 22px}
+.osszesito b{font:800 44px/1 "Plus Jakarta Sans",sans-serif;color:#fff}
+.osszesito span{font-size:14.5px;color:#B7C9CD;line-height:1.4}
 .minta-racs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .szin{border-radius:22px;overflow:hidden;background:var(--tinta2);border:1px solid #1C4954;display:flex;flex-direction:column}
-.festek{height:150px;position:relative}
+.festek{height:120px;position:relative}
 .festek::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.0) 30%,rgba(255,255,255,.35) 46%,rgba(255,255,255,0) 60%)}
+.festek small{position:absolute;left:18px;bottom:12px;z-index:1;font-size:12.5px;font-weight:700;letter-spacing:.02em;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.85);color:var(--tinta)}
 .f1{background:radial-gradient(120% 140% at 30% 20%,#E3354A 0%,#A3111F 45%,#4E0610 100%)}
 .f2{background:radial-gradient(120% 140% at 30% 20%,#FFFFFF 0%,#EDEAE4 40%,#C9C5BD 100%)}
 .f3{background:radial-gradient(120% 140% at 30% 20%,#56616D 0%,#2B333C 50%,#11161B 100%)}
-.szin div.szoveg{padding:22px 24px 26px}
-.szin blockquote{margin:0 0 12px;font-size:17px;line-height:1.5}
-.szin cite{font-style:normal;font-size:14px;color:#9AA8B6}
-.ertekeles{display:flex;align-items:center;gap:14px;margin-top:34px;color:#C9D2DC}
-.ertekeles b{font:800 34px/1 "Plus Jakarta Sans",sans-serif;color:#fff}
+.szin .szoveg{padding:24px 26px 24px;display:flex;flex-direction:column;justify-content:space-between;flex:1;gap:18px}
+.szin blockquote{margin:0;font-size:18px;line-height:1.5}
+.szin blockquote::before{content:"„";display:block;font:800 48px/.6 "Plus Jakarta Sans",sans-serif;color:var(--borostyan);margin-bottom:10px}
+.kontextus{margin:10px 0 0;font-size:15px;color:#B7C9CD}
+.szin cite{font-style:normal;font-size:14px;color:#9FB4B9;border-top:1px solid #1C4954;padding-top:14px;display:flex;flex-wrap:wrap;gap:6px 12px;justify-content:space-between}
+.szin cite .csillag{font-size:13px}
 
 /* műhely */
-.muhely{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.muhely{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:44px;align-items:center}
 .muhely figure img{border-radius:20px;width:100%}
+.nagyit{display:block;position:relative;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:20px}
+.nagyit .jel{position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(12,43,51,.86);color:#fff;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px}
+.nagyit .jel svg{width:16px;height:16px}
+dialog.kepnezo{border:0;padding:0;background:transparent;max-width:min(1100px,96vw)}
+dialog.kepnezo::backdrop{background:rgba(6,20,24,.86)}
+dialog.kepnezo img{width:100%;height:auto;border-radius:14px}
+dialog.kepnezo button{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--tinta);font-size:24px;cursor:pointer}
 .muhely figcaption{font-size:14px;color:var(--halvany);margin-top:10px}
 .lepesek{list-style:none;margin:26px 0 0;padding:0;counter-reset:l}
 .lepesek li{counter-increment:l;position:relative;padding:0 0 18px 58px}
@@ -181,14 +193,20 @@ summary::after{content:"+";font-size:24px;line-height:1;color:var(--piros)}
 details[open] summary::after{content:"–"}
 details p{padding:0 24px 20px;margin:0;color:var(--halvany)}
 
-/* kapcsolat */
-.kapcsolat{display:grid;grid-template-columns:1fr 1fr;background:var(--ko)}
-.kapcsolat-adat{padding:88px 48px 88px max(20px,calc(100% - var(--max)/2 + 20px))}
-.kapcsolat-adat dl{margin:28px 0 30px;display:grid;grid-template-columns:max-content 1fr;gap:12px 22px}
-.kapcsolat-adat dt{font-weight:600;color:var(--tinta)}
-.kapcsolat-adat dd{margin:0}
-.kapcsolat-adat dd a{color:var(--piros);font-weight:600}
-.kapcsolat iframe{width:100%;height:100%;min-height:460px;border:0;display:block;filter:grayscale(.3)}
+/* kapcsolat: szélről szélre térkép, rajta adatkártya */
+.kapcsolat{position:relative;min-height:600px;background:#E4ECEE}
+.kapcsolat{overflow:hidden}
+.kapcsolat iframe{position:absolute;top:-250px;left:0;width:132%;height:calc(100% + 250px);border:0;display:block}
+.kapcsolat-kartya{position:relative;z-index:2;margin-left:max(20px,calc((100% - var(--max))/2 + 20px));top:64px;width:min(480px,calc(100% - 40px));background:#fff;border-radius:24px;box-shadow:0 30px 60px rgba(12,43,51,.22);padding:34px 34px 30px}
+.kapcsolat-kartya .gomb{padding:0 20px}
+.kapcsolat-kartya h2{font-size:34px;margin-bottom:6px}
+.kapcsolat-kartya>p{color:var(--halvany);margin-bottom:18px}
+.kapcsolat-kartya dl{margin:0 0 24px;display:grid;grid-template-columns:max-content 1fr;gap:10px 18px;font-size:16px}
+.kapcsolat-kartya dt{font-weight:700;color:var(--tinta)}
+.kapcsolat-kartya dd{margin:0}
+.kapcsolat-kartya dd a{color:var(--piros);font-weight:700}
+.gomb-vonal{border-color:var(--piros);color:var(--piros);background:#fff}
+.gomb-vonal:hover{background:var(--ko)}
 
 /* lábléc */
 footer{background:var(--tinta);color:#BCC6D1;padding:64px var(--szel) 90px;font-size:15px}
@@ -240,9 +258,11 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
   .pipak{grid-template-columns:minmax(0,1fr)}
   .urlap{position:static;padding:26px 20px}
   .minta-racs{grid-template-columns:minmax(0,1fr)}
-  .kapcsolat{grid-template-columns:minmax(0,1fr)}
-  .kapcsolat-adat{padding:60px 20px}
-  .kapcsolat iframe{min-height:320px}
+  .kapcsolat{min-height:0;display:flex;flex-direction:column}
+  .kapcsolat iframe{position:relative;left:0;width:100%;height:320px;order:2}
+  .kapcsolat-kartya{top:0;margin:0;width:auto;border-radius:0;box-shadow:none;padding:56px 20px 36px;order:1}
+  .szin-fej{flex-direction:column;align-items:flex-start;gap:22px}
+  .muhely{grid-template-columns:minmax(0,1fr)}
   .lab{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:760px){
@@ -254,8 +274,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
 @media (max-width:560px){
   .szolg{grid-template-columns:minmax(0,1fr)}
   .kartya img{aspect-ratio:16/9}
-  .kartya .ikon{aspect-ratio:auto;height:96px}
-  .kartya .ikon svg{width:48px;height:48px}
   .festek{height:96px}
 }
 </style>
@@ -388,11 +406,11 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
         <div><h3>Karosszériajavítás</h3><p>Márkafüggetlen karosszériajavítás: horpadás, sérült elemek javítása vagy cseréje.</p></div>
       </article>
       <article class="kartya">
-        <div class="ikon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M14 28h26v10H14z"/><path d="M40 31h8l4-6"/><path d="M22 38v12h8V38"/><path d="M18 22c4-6 8-6 12 0"/><circle cx="54" cy="20" r="2" fill="currentColor"/><circle cx="58" cy="14" r="1.6" fill="currentColor"/><circle cx="50" cy="13" r="1.4" fill="currentColor"/></svg></div>
+        <img src="kepek/munka-fenyezes.webp" width="1200" height="900" loading="lazy" alt="Fényező szórópisztollyal festi egy autó kék karosszériaelemét">
         <div><h3>Autófényezés</h3><p data-minta>Teljes és részleges fényezés, a gyári szín pontos keverésével – a nehéz, többrétegű színekre is.</p></div>
       </article>
       <article class="kartya">
-        <div class="ikon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M18 8h22l8 8v40H18z"/><path d="M40 8v8h8"/><path d="M25 30h16M25 38h16M25 46h10"/></svg></div>
+        <img src="kepek/munka-karambol.webp" width="1200" height="800" loading="lazy" alt="Ütközésben összetört autó eleje: behorpadt motorháztető, törött fényszóró">
         <div><h3>Karambolos javítás kárügyintézéssel</h3><p>Teljes körű biztosítási ügyintézés: a biztosítóval a kapcsolatot mi tartjuk.</p></div>
       </article>
       <article class="kartya">
@@ -404,31 +422,33 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
 </section>
 
 <section class="szakasz szinek" id="velemenyek" aria-labelledby="vel-cim">
-  <div class="fej">
-    <h2 id="vel-cim">A legnehezebb színeket is eltalálják</h2>
-    <p>Az ügyfelek a Google-on leginkább ezt emelik ki: a fényezés olyan, mintha gyárilag jött volna.</p>
+  <div class="szin-fej">
+    <div>
+      <h2 id="vel-cim">A legnehezebb színeket is eltalálják</h2>
+      <p>Az ügyfelek a Google-on leginkább ezt emelik ki: a fényezés olyan, mintha gyárilag jött volna.</p>
+    </div>
+    <div class="osszesito"><b>4,9</b><span><span class="csillag" aria-hidden="true">★★★★★</span><br>75 Google-vélemény</span></div>
   </div>
   <div class="minta-racs">
     <figure class="szin">
-      <div class="festek f1" role="img" aria-label="Mélyvörös metálfény színminta"></div>
-      <div class="szoveg"><blockquote>„Zseni munkát végeztek” – egy Mazda híresen nehéz „soul red” színén.</blockquote><cite>Google-vélemény, egy hónapja</cite></div>
+      <div class="festek f1" role="img" aria-label="Mélyvörös metálfény színminta"><small>Mazda „soul red”</small></div>
+      <div class="szoveg"><div><blockquote>Zseni munkát végeztek.</blockquote><p class="kontextus">Egy Mazda híresen nehéz „soul red” színén.</p></div><cite><span>Google-vélemény · egy hónapja</span><span class="csillag" aria-hidden="true">★★★★★</span></cite></div>
     </figure>
     <figure class="szin">
-      <div class="festek f2" role="img" aria-label="Gyöngyházfehér metál színminta"></div>
-      <div class="szoveg"><blockquote>„Ár-érték arányban egyértelműen ti bizonyultatok a legjobbnak.” Öt pécsi karosszérialakatos közül választott; a gyöngyházfehér metál hibátlan lett.</blockquote><cite>Google-vélemény, 5 hónapja</cite></div>
+      <div class="festek f2" role="img" aria-label="Gyöngyházfehér metál színminta"><small>Gyöngyházfehér metál</small></div>
+      <div class="szoveg"><div><blockquote>Ár-érték arányban egyértelműen ti bizonyultatok a legjobbnak.</blockquote><p class="kontextus">Öt pécsi karosszérialakatos közül választott; a gyöngyházfehér metál hibátlan lett.</p></div><cite><span>Google-vélemény · 5 hónapja</span><span class="csillag" aria-hidden="true">★★★★★</span></cite></div>
     </figure>
     <figure class="szin">
-      <div class="festek f3" role="img" aria-label="Grafitszürke színminta"></div>
-      <div class="szoveg"><blockquote>„Amilyen munkát kiadnak a kezük közül, az valami bámulatos!”</blockquote><cite>Google-vélemény, 7 hónapja</cite></div>
+      <div class="festek f3" role="img" aria-label="Grafitszürke színminta"><small>Bármilyen gyári szín</small></div>
+      <div class="szoveg"><div><blockquote>Amilyen munkát kiadnak a kezük közül, az valami bámulatos!</blockquote></div><cite><span>Google-vélemény · 7 hónapja</span><span class="csillag" aria-hidden="true">★★★★★</span></cite></div>
     </figure>
   </div>
-  <div class="ertekeles"><b>4,9</b><span><span class="csillag" aria-hidden="true">★★★★★</span><br>75 vélemény a Google-on</span></div>
 </section>
 
 <section class="szakasz" id="muhely" aria-labelledby="muhely-cim">
   <div class="belso muhely">
     <figure>
-      <img src="kepek/facebook-munkak.webp" width="960" height="540" loading="lazy" alt="Kollázs a műhelyben javított autókról: BMW, Range Rover, Honda és több sérült, szétszedett autó az emelőn">
+      <button class="nagyit" type="button" id="nagyit-gomb" aria-label="A kollázs megnyitása nagyban"><img src="kepek/facebook-munkak.webp" width="960" height="540" loading="lazy" alt="Kollázs a műhelyben javított autókról: BMW, Range Rover, Honda és több sérült, szétszedett autó az emelőn"><span class="jel" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4M11 8v6M8 11h6"/></svg>Nagyítás</span></button>
       <figcaption>Javított autók a műhelyből – a cég Facebook-oldaláról.</figcaption>
     </figure>
     <div>
@@ -457,23 +477,25 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
 </section>
 
 <section class="kapcsolat" id="kapcsolat" aria-labelledby="kapcs-cim">
-  <div class="kapcsolat-adat">
+  <iframe title="Térkép: Inera-autókarosszéria Kft., Pécs, Álmos u. 3." src="https://maps.google.com/maps?q=Inera-aut%C3%B3karossz%C3%A9ria%20Kft.%2C%20P%C3%A9cs%2C%20%C3%81lmos%20u.%203.&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="kapcsolat-kartya">
     <h2 id="kapcs-cim">Kapcsolat</h2>
-    <p>Inera-autókarosszéria Kft. – karosszériajavítás, autófényezés, kárügyintézés.</p>
+    <p>Pécs, Álmos utca 3. – a műhelyben várjuk.</p>
     <dl>
-      <dt>Cím</dt><dd>7630 Pécs, Álmos u. 3.</dd>
       <dt>Mobil</dt><dd><a href="tel:+36309578258">+36 30 957 8258</a></dd>
       <dt>Vezetékes</dt><dd><a href="tel:+3672700800">(72) 700 800</a></dd>
       <dt>E-mail</dt><dd><a href="mailto:ineraauto@gmail.com">ineraauto@gmail.com</a></dd>
-      <dt>Nyitvatartás</dt><dd>H–P 8:00–12:00 és 13:00–16:30<br>Szombat, vasárnap zárva</dd>
+      <dt>Cím</dt><dd>7630 Pécs, Álmos u. 3.</dd>
+      <dt>Nyitva</dt><dd>H–P 8:00–12:00, 13:00–16:30<br>Hétvégén zárva</dd>
     </dl>
     <div class="gombok">
-      <a class="gomb gomb-piros" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pécs+Álmos+u.+3." target="_blank" rel="noopener">Útvonaltervezés</a>
+      <a class="gomb gomb-piros" href="#ajanlat">Visszahívást kérek</a>
+      <a class="gomb gomb-vonal" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pécs+Álmos+u.+3." target="_blank" rel="noopener">Útvonaltervezés</a>
     </div>
   </div>
-  <iframe title="Térkép: Inera-autókarosszéria Kft., Pécs, Álmos u. 3." src="https://maps.google.com/maps?q=Inera-aut%C3%B3karossz%C3%A9ria%20Kft.%2C%20P%C3%A9cs%2C%20%C3%81lmos%20u.%203.&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </section>
 </main>
+<dialog class="kepnezo" id="kepnezo" aria-label="Javított autók a műhelyből"><button type="button" aria-label="Bezárás" id="kepnezo-zar">×</button><img src="kepek/facebook-munkak.webp" width="960" height="540" alt="Kollázs a műhelyben javított autókról, nagyítva"></dialog>
 
 <footer>
   <div class="lab">
@@ -520,6 +542,11 @@ body.minta-lathato [data-minta]{outline:2px dashed #E9B800;outline-offset:3px;ba
 
   var f=document.getElementById('ajanlat');
   f.addEventListener('submit',function(e){e.preventDefault();f.querySelector('.allapot').textContent='Köszönjük! Ez egy bemutató oldal, ezért a visszahíváskérés nem lett elküldve – élesben itt jelezné az oldal, hogy hamarosan visszahívjuk.'});
+
+  var kn=document.getElementById('kepnezo');
+  document.getElementById('nagyit-gomb').addEventListener('click',function(){kn.showModal()});
+  document.getElementById('kepnezo-zar').addEventListener('click',function(){kn.close()});
+  kn.addEventListener('click',function(e){if(e.target===kn)kn.close()});
 
   var k=document.getElementById('minta-kapcsolo');
   function minta(be){document.body.classList.toggle('minta-lathato',be);k.setAttribute('aria-pressed',be?'true':'false')}
