@@ -133,6 +133,12 @@ nav a:hover{color:var(--piros)}
 .fej-blokk p{font-size:18.5px;color:var(--acel);margin-top:14px}
 
 /* témák */
+.vel-sav{background:var(--grafit);color:#fff}
+.vel-sav h2{color:#fff}
+.vel-sav .fej-blokk p{color:#b9c1c8}
+.vel-sav .tema{background:var(--grafit-2)}
+.vel-sav .tema blockquote{color:#e3e7ea}
+.vel-sav .tema small,.vel-alap{color:#a9b2b9;font-size:15px}
 .temak{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .tema{margin:0;background:var(--panel);border-radius:20px;padding:32px 30px;position:relative}
 .tema h3{font-size:26px;font-weight:800;margin-bottom:14px}
@@ -181,7 +187,7 @@ details p{padding:0 22px 20px;margin:0;color:var(--grafit-2)}
 
 /* kapcsolat */
 .kapcsolat{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
-.kap-adat{padding-top:80px;padding-bottom:80px;padding-left:var(--szel);padding-right:56px;background:#fff}
+.kap-adat{padding-top:80px;padding-bottom:80px;padding-left:max(20px,calc((100vw - var(--max))/2 + 20px));padding-right:56px;background:#fff}
 .kap-adat h2{margin-bottom:18px}
 .kap-sor{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--vonal)}
 .kap-sor svg{width:22px;height:22px;color:var(--piros);flex:none;margin-top:3px}
@@ -221,7 +227,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .nyito-szoveg{padding-top:3em;padding-bottom:2em}
  .temak,.szolg-racs,.lepesek{grid-template-columns:1fr}
  .muhely,.gyik-racs,.kapcsolat{grid-template-columns:1fr;gap:34px}
- .kap-adat{padding:64px var(--szel)}
+ .kap-adat{padding:64px 20px}
  .kapcsolat iframe{min-height:340px;height:340px}
  .szakasz{padding-top:72px;padding-bottom:72px}
  .lab-racs{grid-template-columns:1fr 1fr}
@@ -257,9 +263,9 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <a class="marka" href="#tartalom" aria-label="Praktistar Autószerviz – az oldal teteje"><i aria-hidden="true">P</i><span><b>Praktistar</b><small>Autószerviz · Pécs</small></span></a>
   <nav id="menu" aria-label="Fő menü">
    <ul>
-    <li><a href="#velemenyek">Vélemények</a></li>
     <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
     <li><a href="#muhely">A műhely</a></li>
+    <li><a href="#velemenyek">Vélemények</a></li>
     <li><a href="#gyik">Kérdések</a></li>
     <li><a href="#kapcsolat">Kapcsolat</a></li>
    </ul>
@@ -313,18 +319,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v12H4zM8 20h8M12 16v4"/></svg><p style="margin:0"><b>Q-Service műhely</b><span>a hálózat tábláját viseli</span></p></div>
  </div>
 
- <section class="szakasz belso" id="velemenyek" aria-labelledby="vel-cim">
-  <div class="fej-blokk">
-   <h2 id="vel-cim">Amit az ügyfelek újra és újra kiemelnek</h2>
-   <p>Három téma, ami a Google-véleményekben visszajön – a vásárlók saját szavaival.</p>
-  </div>
-  <div class="temak">
-   <figure class="tema"><h3>Igényes, jól felszerelt műhely</h3><blockquote>„Remek szerelők! Igazán igényes műhely. Laikus szemmel nagyon jól felszerelt.”</blockquote><small>Google-vélemény</small></figure>
-   <figure class="tema"><h3>Korrekt árak</h3><blockquote>„Korrekt árak! Gyors és kiváló munka!!!”</blockquote><small>Google-vélemény</small></figure>
-   <figure class="tema"><h3>Visszatérő ügyfelek</h3><blockquote>„Az autóm minden alkalommal kifogástalan állapotban kerül vissza hozzám.”</blockquote><small>Google-vélemény egy régóta visszajáró ügyféltől</small></figure>
-  </div>
-  <div class="ertekeles"><b>4,7</b><div><span class="csillagok" aria-hidden="true">★★★★★</span><br><span style="color:var(--acel);font-size:15px">59 Google-vélemény alapján</span></div></div>
- </section>
 
  <section class="szolg szakasz belso" id="szolgaltatasok" aria-labelledby="szolg-cim">
   <div class="fej-blokk">
@@ -368,6 +362,19 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   </div>
  </section>
 
+ <section class="vel-sav szakasz belso" id="velemenyek" aria-labelledby="vel-cim">
+  <div class="fej-blokk">
+   <h2 id="vel-cim">Amit az ügyfelek újra és újra kiemelnek</h2>
+   <p>Három téma, ami a Google-véleményekben visszajön – a vásárlók saját szavaival.</p>
+  </div>
+  <div class="temak">
+   <figure class="tema"><h3>Igényes, jól felszerelt műhely</h3><blockquote>„Remek szerelők! Igazán igényes műhely. Laikus szemmel nagyon jól felszerelt.”</blockquote><small>Google-vélemény</small></figure>
+   <figure class="tema"><h3>Korrekt árak</h3><blockquote>„Korrekt árak! Gyors és kiváló munka!!!”</blockquote><small>Google-vélemény</small></figure>
+   <figure class="tema"><h3>Visszatérő ügyfelek</h3><blockquote>„Az autóm minden alkalommal kifogástalan állapotban kerül vissza hozzám.”</blockquote><small>Google-vélemény egy régóta visszajáró ügyféltől</small></figure>
+  </div>
+  <div class="ertekeles"><b>4,7</b><div><span class="csillagok" aria-hidden="true">★★★★★</span><br><span class="vel-alap">59 Google-vélemény alapján</span></div></div>
+ </section>
+
  <section class="gyik szakasz belso" id="gyik" aria-labelledby="gyik-cim">
   <div class="gyik-racs">
    <div><h2 id="gyik-cim">Gyakori kérdések</h2><p style="margin-top:14px;color:var(--acel)">Más kérdés? Hívjon nyitvatartási időben: <a href="tel:+36306420645">+36 30 642 0645</a>.</p></div>
@@ -401,7 +408,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <div><h3>Praktistar Autószerviz</h3><p>Autójavítás és szerviz Pécsen, az Iparszigeten. 4,7 csillag 59 Google-vélemény alapján.</p></div>
   <div><h3>Elérhetőség</h3><ul><li>7630 Pécs, Iparsziget u. 15.</li><li><a href="tel:+36306420645">+36 30 642 0645</a></li><li><a href="mailto:praktistarszervizkft@gmail.com">praktistarszervizkft@gmail.com</a></li></ul></div>
   <div><h3>Nyitvatartás</h3><ul><li>Hétfő–péntek: 8:00–16:30</li><li>Hétvégén zárva</li></ul></div>
-  <div><h3>Oldal</h3><ul><li><a href="#velemenyek">Vélemények</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#muhely">A műhely</a></li><li><a href="https://www.facebook.com/praktistarszerviz" target="_blank" rel="noopener">Facebook</a></li></ul></div>
+  <div><h3>Oldal</h3><ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#muhely">A műhely</a></li><li><a href="#velemenyek">Vélemények</a></li><li><a href="https://www.facebook.com/praktistarszerviz" target="_blank" rel="noopener">Facebook</a></li></ul></div>
  </div>
  <div class="lab-also">© 2026 Praktistar Szerviz Kft. · Nyitókép: Sten Rademaker / Unsplash (mintakép) · A csarnok fotója a cég Facebook-oldaláról.</div>
 </footer>
