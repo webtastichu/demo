@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="kepek/hero.webp" media="(min-width: 761px)" fetchpriority="high">
-<link rel="preload" as="image" href="kepek/hero-mobil.webp" media="(max-width: 760px)" fetchpriority="high">
+<link rel="preload" as="image" href="kepek/hero.webp" media="(min-width: 761px)">
+<link rel="preload" as="image" href="kepek/hero-mobil.webp" media="(max-width: 760px)">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"AutoBodyShop","name":"Mol-Car Kft.","url":"https://bemutato.webtastic.hu/molcar/","image":"https://bemutato.webtastic.hu/molcar/kepek/hero.webp","logo":"https://bemutato.webtastic.hu/molcar/kepek/molcar-logo.webp","telephone":"+3672238338","email":"molcar@molcar.hu","foundingDate":"1993-10-01","founder":{"@type":"Person","name":"Molnár János"},"address":{"@type":"PostalAddress","streetAddress":"Szent Borbála u. 31.","postalCode":"7628","addressLocality":"Pécs","addressCountry":"HU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"07:00","closes":"15:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"15:00"}],"areaServed":"Baranya","description":"Teljeskörű autókarosszéria-javítás, karosszérialakatos és fényezési munkák, helyszíni kárfelvétel és biztosítási kárügyintézés Pécsen."}
 </script>
@@ -32,521 +32,404 @@
 ]}
 </script>
 <style>
-:root{--grafit:#1E1F23;--grafit2:#2B2D33;--piros:#D9141B;--piros-s:#AE0F15;--kek:#2236D6;--acel:#EEF0F2;--acel2:#E2E5E9;--szoveg:#1B1C20;--halk:#5D626C;--vonal:#D9DDE2;--max:1200px;--szel:max(20px,calc((100% - var(--max))/2 + 20px));--fej:76px}
+:root{
+ --grafit:#1E1F23; --grafit-2:#2B2D33; --halk:#5D626C; --panel:#EEF0F2; --vonal:#D9DDE2; --piros:#D9141B; --piros-sotet:#AE0F15; --kek:#2236D6;
+ --max:1200px; --szel:max(20px,calc((100% - var(--max))/2 + 20px));
+ --cim:'Sora',system-ui,sans-serif; --test:'Instrument Sans',system-ui,sans-serif;
+}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;font-family:'Instrument Sans',system-ui,sans-serif;font-size:18px;line-height:1.6;color:var(--szoveg);background:#fff}
+body{margin:0;font-family:var(--test);color:var(--grafit);background:#fff;font-size:17.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-a{color:var(--kek)}
-h1,h2,h3{font-family:'Sora',sans-serif;line-height:1.13;margin:0;font-weight:700;letter-spacing:-.025em;color:var(--grafit)}
-h2{font-size:clamp(31px,3.9vw,45px)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--cim);font-weight:700;line-height:1.1;margin:0;letter-spacing:-.025em}
+h2{font-size:45px}
 h3{font-size:21px;letter-spacing:-.015em}
-p{margin:0}
-:focus-visible{outline:3px solid var(--kek);outline-offset:3px;border-radius:6px}
-.ugras{position:absolute;left:-999px;top:8px;background:#fff;padding:10px 16px;z-index:100}
+p{margin:0 0 1em}
+.ugras{position:absolute;left:-9999px;top:8px;background:#fff;color:var(--grafit);padding:10px 14px;border-radius:8px;z-index:100}
 .ugras:focus{left:12px}
-section[id]{scroll-margin-top:var(--fej)}
-.sav{padding-left:var(--szel);padding-right:var(--szel)}
-.szakasz{padding-top:104px;padding-bottom:104px}
-.gomb{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 26px;border-radius:14px;font:600 17px/1 'Instrument Sans',sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;width:max-content}
-.gomb svg{width:20px;height:20px;flex:none}
-.gomb-fo{background:var(--piros);color:#fff}
-.gomb-fo:hover{background:var(--piros-s)}
-.gomb-keret{border-color:var(--vonal);color:var(--grafit);background:#fff}
-.gomb-keret:hover{border-color:var(--grafit)}
+:focus-visible{outline:3px solid var(--kek);outline-offset:3px}
+section[id]{scroll-margin-top:80px}
+.belso{padding-left:var(--szel);padding-right:var(--szel)}
+.gomb{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 17px/1 var(--test);padding:17px 24px;border-radius:14px;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;width:max-content;transition:background .2s}
+.gomb svg{width:18px;height:18px;flex:none}
+.gomb-piros{background:var(--piros);color:#fff}
+.gomb-piros:hover{background:var(--piros-sotet)}
+.gomb-keret{border-color:currentColor;background:transparent}
 
-/* fejléc */
-header{position:sticky;top:0;z-index:50;background:var(--grafit);padding:0 var(--szel);box-shadow:0 1px 0 rgba(255,255,255,.06)}
-.fej-sor{display:flex;align-items:center;justify-content:space-between;height:var(--fej);gap:20px}
-.marka{display:flex;flex-direction:column;text-decoration:none;color:#fff}
-.marka img{width:178px;height:auto}
-.marka small{font-size:12.5px;color:#B9BDC6;margin-top:2px;white-space:nowrap;padding-left:30px}
-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:28px}
-nav a{color:#E9EBEF;text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap}
+/* fejléc: grafit, a logó ezen a háttéren született; alul logópiros vonal választja el a sötét nyitóképtől */
+header{position:sticky;top:0;z-index:50;background:var(--grafit);border-bottom:3px solid var(--piros);box-shadow:0 8px 24px rgba(0,0,0,.18);padding-left:var(--szel);padding-right:var(--szel)}
+.fejsor{display:flex;align-items:center;gap:30px;height:74px}
+.marka{display:flex;flex-direction:column;text-decoration:none;color:#fff;margin-right:auto}
+.marka img{width:172px;height:auto}
+.marka small{font-size:12.5px;color:#B9BDC6;margin-top:2px;white-space:nowrap;padding-left:29px}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap;color:#E9EBEF}
 nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
-.fej-jobb{display:flex;align-items:center;gap:20px}
-.fej-hivas{min-height:46px;padding:0 18px;font-size:16px;border-radius:12px}
-.menu-gomb{display:none;background:none;border:1px solid #474A52;border-radius:12px;width:46px;height:46px;cursor:pointer;color:#fff}
+.fej-tel{display:inline-flex;align-items:center;gap:9px;background:var(--piros);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:12px;white-space:nowrap}
+.fej-tel svg{width:17px;height:17px}
+.menu-gomb{display:none;background:none;border:1px solid #474A52;color:#fff;border-radius:10px;width:46px;height:46px;cursor:pointer;align-items:center;justify-content:center}
 .menu-gomb svg{width:22px;height:22px}
 
 /* nyitókép */
-.nyito{position:relative;height:min(56vh,450px);background:#3a3d42;overflow:hidden}
-.nyito picture{position:absolute;inset:0}
-.nyito picture img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:saturate(.8) contrast(1.05)}
-.nyito::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,31,35,.35) 0%,rgba(30,31,35,0) 30%,rgba(30,31,35,.15) 100%),linear-gradient(90deg,rgba(30,31,35,.35),rgba(30,31,35,0) 55%)}
-.nyito-kartya-hely{position:relative;z-index:3;padding:0 var(--szel);margin-top:-200px;display:grid;grid-template-columns:minmax(0,700px) minmax(0,1fr);gap:56px;align-items:end}
-.nyito-kartya{background:#fff;border-radius:22px;padding:44px 52px 40px;box-shadow:0 40px 80px -40px rgba(20,22,26,.55)}
-.nyito-kartya .ota{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--halk);font-size:16px;margin-bottom:14px}
-.nyito-kartya .ota i{display:inline-block;width:28px;height:3px;background:var(--piros);border-radius:2px}
-.nyito h1,.nyito-kartya h1{font-size:clamp(36px,4.3vw,58px)}
-.nyito-lead{font-size:19.5px;color:#41454D;margin-top:18px;max-width:34em}
-.nyito-gombok{display:flex;gap:14px;margin-top:24px;flex-wrap:wrap}
-.nyito-also{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px;padding-top:22px;border-top:1px solid var(--acel2);font-size:16px;color:var(--halk)}
-.nyito-also b{color:var(--grafit)}
-.csillag{color:#F2A900;letter-spacing:1px}
+.nyito{position:relative;min-height:min(81vh,690px);color:#fff;display:grid;grid-template-columns:1.2fr minmax(0,420px);gap:56px;align-items:center;background:var(--grafit);overflow:hidden}
+.nyito picture,.nyito picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:55% 45%}
+.nyito picture img{filter:saturate(.85) contrast(1.05)}
+.nyito::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,25,29,.9) 0%,rgba(24,25,29,.66) 42%,rgba(24,25,29,.12) 72%,rgba(24,25,29,.3) 100%),linear-gradient(0deg,rgba(24,25,29,.6),rgba(24,25,29,0) 40%)}
+.nyito>div{position:relative;z-index:2}
+.nyito-szoveg{padding-top:4.5em;padding-bottom:4.5em}
+.nyito .hely{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.nyito .hely svg{width:16px;height:16px;color:#ff7a7f}
+.nyito h1{font-size:58px;max-width:640px}
+.nyito .bev{font-size:19px;color:#dfe2e7;max-width:560px;margin:20px 0 28px}
+.nyito .gombok{display:flex;gap:12px;flex-wrap:wrap}
+.nyito .gomb-keret{color:#fff}
+.nyito .gomb-keret:hover{background:rgba(255,255,255,.1)}
 
-/* előnyök a kártya mellett */
-.elonyok{display:grid;gap:26px;padding-bottom:8px}
-.elony{border-top:3px solid var(--grafit);padding-top:18px}
-.elony h3{font-size:19px}
-.elony p{color:var(--halk);font-size:16.5px;margin-top:8px}
+/* visszahívás-jegy */
+.jegy{background:#fff;color:var(--grafit);border-radius:20px;padding:28px 28px 24px;box-shadow:0 30px 70px rgba(0,0,0,.35);border-top:6px solid var(--piros)}
+.jegy h2{font-size:27px;margin-bottom:4px}
+.jegy .al{font-size:15px;color:var(--halk);margin-bottom:16px}
+.felirat{display:block;font-weight:700;font-size:14.5px;margin-bottom:8px}
+.csempek{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 14px;border:0;padding:0}
+.csempek legend{padding:0;margin-bottom:8px;font-weight:700;font-size:14.5px}
+.csempek label{display:flex;align-items:center;min-height:52px;border:2px solid var(--vonal);border-radius:12px;padding:8px 12px;font-weight:600;font-size:15px;cursor:pointer;line-height:1.2}
+.csempek input{position:absolute;opacity:0;pointer-events:none}
+.csempek label:has(input:checked){border-color:var(--piros);background:#FDECEC;color:var(--piros-sotet)}
+.csempek label:has(input:focus-visible){outline:3px solid var(--kek);outline-offset:2px}
+.jegy input[type=text],.jegy input[type=tel]{width:100%;font:500 16.5px var(--test);padding:13px 14px;border:2px solid var(--vonal);border-radius:12px;margin-bottom:10px;color:var(--grafit);min-height:48px}
+.jegy input:focus{outline:none;border-color:var(--kek)}
+.jegy .gomb{width:100%;margin-top:4px}
+.halk{font-size:13px;color:var(--halk);margin:10px 0 0}
+.uzenet{font-weight:700;color:var(--piros-sotet);font-size:14.5px;margin:6px 0 0}
 
-/* húzóelem: mit kap */
-.kap{background:var(--acel)}
-.kap-racs{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:48px;align-items:start}
-.kap-lead{color:var(--halk);font-size:19px;margin-top:14px;max-width:36em}
-.valassz{font-weight:700;font-size:15px;color:var(--grafit);margin:30px 0 12px}
-.esetek{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.eset{min-height:64px;padding:10px 14px;border-radius:12px;border:1.5px solid var(--vonal);background:#fff;font:600 16px/1.3 'Instrument Sans',sans-serif;color:var(--grafit);cursor:pointer;text-align:left}
-.eset:hover{border-color:var(--grafit)}
-.eset[aria-pressed="true"]{background:var(--grafit);border-color:var(--grafit);color:#fff}
-.eredmeny{margin-top:18px;background:#fff;border-radius:18px;padding:30px 32px;border:1px solid var(--vonal)}
-.eredmeny h3{font-size:24px}
-.eredmeny .fo-elony{font-family:'Sora',sans-serif;font-size:clamp(26px,3vw,34px);font-weight:700;color:var(--piros);letter-spacing:-.02em;margin-top:14px;line-height:1.15}
-.eredmeny p.leiras{color:var(--halk);margin-top:10px}
-.eredmeny ul{margin:16px 0 0;padding-left:22px}
-.eredmeny li{margin-bottom:6px}
-.szamolo{margin-top:22px;padding:20px;border-radius:14px;background:var(--acel)}
-.szamolo label{font-weight:700;font-size:15px;display:block;margin-bottom:8px}
-.szamolo input[type=range]{width:100%;accent-color:var(--piros)}
-.szamolo-sor{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:17px}
-.szamolo-sor b{font-family:'Sora',sans-serif;font-size:22px;color:var(--grafit)}
-.apro{font-size:14.5px;color:var(--halk);margin-top:14px}
-[hidden]{display:none!important}
+/* tények */
+.tenyek{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--vonal)}
+.tenyek div{padding:26px 22px;border-left:1px solid var(--vonal);display:flex;gap:14px;align-items:center}
+.tenyek div:first-child{border-left:0;padding-left:0}
+.tenyek svg{width:30px;height:30px;color:var(--piros);flex:none}
+.tenyek b{display:block;font:700 18px/1.2 var(--cim);letter-spacing:-.01em}
+.tenyek span{font-size:14.5px;color:var(--halk);line-height:1.35;display:block}
 
-.urlap-kartya{position:sticky;top:calc(var(--fej) + 24px);background:var(--grafit);color:#fff;border-radius:22px;padding:34px}
-.urlap-kartya h2{color:#fff;font-size:clamp(27px,2.8vw,34px)}
-.urlap-kartya .bev{color:#C3C7CF;margin:10px 0 22px;font-size:17px}
-.urlap-kartya form{display:grid;gap:16px}
-label{display:block;font-size:14px;font-weight:700;margin-bottom:6px}
-.urlap-kartya label{color:#fff}
-input,select{width:100%;min-height:54px;border:1.5px solid var(--vonal);border-radius:12px;padding:12px 14px;font:500 17px 'Instrument Sans',sans-serif;color:var(--szoveg);background:#fff}
-input:focus,select:focus{outline:none;border-color:var(--kek);box-shadow:0 0 0 3px rgba(34,54,214,.25)}
-.urlap-kartya .gomb{width:100%}
-.halk-jel{font-size:13.5px;color:#A6ABB5}
-.uzenet{font-size:15px;color:#fff;font-weight:600;background:rgba(255,255,255,.08);border-radius:10px;padding:10px 12px}
-.uzenet:empty{display:none}
+.szakasz{padding-top:100px;padding-bottom:100px}
+.fej-blokk{margin-bottom:44px;max-width:1100px}
+.fej-blokk p{font-size:18.5px;color:var(--halk);margin-top:14px}
 
-/* kárügyintézés menete */
-.menet{background:var(--grafit);color:#fff}
-.menet h2{color:#fff}
-.menet-racs{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:64px;align-items:start}
-.menet-lead{color:#C3C7CF;font-size:19px;margin-top:14px}
-.lepesek{list-style:none;margin:36px 0 0;padding:0;counter-reset:l}
-.lepesek li{counter-increment:l;position:relative;padding:0 0 26px 62px}
-.lepesek li::before{content:counter(l);position:absolute;left:0;top:-2px;width:40px;height:40px;border-radius:50%;border:2px solid #4A4D55;display:grid;place-items:center;font:700 16px 'Sora',sans-serif;color:#fff}
-.lepesek li::after{content:"";position:absolute;left:20px;top:42px;bottom:4px;width:2px;background:#3A3D44}
-.lepesek li:last-child::after{display:none}
-.lepesek li:last-child::before{background:var(--piros);border-color:var(--piros)}
-.lepesek strong{display:block;font-family:'Sora',sans-serif;font-weight:600;font-size:18px;color:#fff}
-.lepesek span{color:#BFC3CB;font-size:16.5px}
-.iratok{background:#fff;color:var(--szoveg);border-radius:20px;padding:30px}
-.iratok h3{font-size:22px}
-.iratok p.al{color:var(--halk);font-size:16px;margin-top:6px}
-.iratok ul{list-style:none;margin:18px 0 0;padding:0}
-.iratok li{border-top:1px solid var(--acel2)}
-.iratok label{display:flex;gap:14px;align-items:flex-start;font-weight:500;font-size:16.5px;padding:12px 0;margin:0;cursor:pointer;color:var(--szoveg)}
-.iratok input{width:22px;height:22px;min-height:0;flex:none;margin-top:2px;accent-color:var(--piros)}
-.iratok .feltetel{display:block;font-size:14px;color:var(--halk)}
-.allas{display:flex;align-items:center;gap:14px;margin-top:16px;font-weight:600}
-.allas-sav{flex:1;height:8px;background:var(--acel2);border-radius:4px;overflow:hidden}
-.allas-sav i{display:block;height:100%;width:0;background:var(--piros)}
+/* szolgáltatások + kárügyintézés */
+.szolg{background:var(--panel)}
+.szolg-racs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.szk{background:#fff;border-radius:18px;padding:28px 26px;box-shadow:0 1px 2px rgba(30,31,35,.06)}
+.szk svg{width:34px;height:34px;color:var(--piros);margin-bottom:16px}
+.szk h3{margin-bottom:8px}
+.szk p{color:var(--halk);font-size:15.5px;margin:0}
+.menet-cim{margin-top:72px;font-size:30px}
+.lepesek{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 16px;margin-top:28px;counter-reset:l}
+.lepes{border-top:2px solid #C7CCD3;padding-top:22px}
+.lepes h3{font-size:19px;margin-bottom:6px}
+.lepes h3::before{counter-increment:l;content:counter(l);display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--piros);color:#fff;font-size:15px;margin-right:10px;vertical-align:2px}
+.lepes p{color:var(--halk);font-size:15.5px;margin:0}
+.szolg .gombok{margin-top:44px;display:flex;gap:12px;flex-wrap:wrap}
+.szolg .gomb-keret{color:var(--grafit)}
+.szolg .gomb-keret:hover{background:var(--grafit);color:#fff}
 
-/* szolgáltatások */
-.szolg-racs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:44px}
-.szolg{margin:0;border-radius:18px;overflow:hidden;background:var(--acel)}
-.szolg img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.szolg div{padding:20px 20px 24px}
-.szolg p{color:var(--halk);font-size:16px;margin-top:6px;line-height:1.5}
-.fejresz p{color:var(--halk);margin-top:14px;font-size:19px}
-.teljes-lista{margin-top:40px;display:grid;grid-template-columns:minmax(0,.6fr) minmax(0,1.4fr);gap:40px;padding-top:34px;border-top:1px solid var(--vonal)}
-.teljes-lista ul{columns:2;column-gap:40px;margin:0;padding:0;list-style:none}
-.teljes-lista li{break-inside:avoid;padding:6px 0 6px 26px;position:relative}
-.teljes-lista li::before{content:"";position:absolute;left:0;top:15px;width:12px;height:3px;background:var(--piros);border-radius:2px}
+/* kedvezmények */
+.muhely{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:center}
+.muhely figure{margin:0}
+.muhely figure img{border-radius:20px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.muhely figcaption{font-size:14px;color:var(--halk);margin-top:10px}
+.muhely ul{list-style:none;padding:0;margin:22px 0 0}
+.muhely li{padding:14px 0 14px 34px;border-top:1px solid var(--vonal);position:relative}
+.muhely li b{font-family:var(--cim);font-weight:700;letter-spacing:-.01em}
+.muhely li::before{content:"";position:absolute;left:4px;top:22px;width:14px;height:8px;border-left:3px solid var(--piros);border-bottom:3px solid var(--piros);transform:rotate(-45deg)}
+.muhely .apro{font-size:14.5px;color:var(--halk);margin-top:14px}
 
-/* mester */
-.mester{background:var(--acel)}
-.mester-racs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:start}
-.mester blockquote{margin:0;font-family:'Sora',sans-serif;font-size:clamp(25px,2.6vw,32px);line-height:1.3;font-weight:600;letter-spacing:-.02em;color:var(--grafit)}
-.mester .ki{margin-top:18px;color:var(--halk)}
-.mester-szoveg p{margin-bottom:16px}
-.biztositok{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
-.biztositok span{background:#fff;border:1px solid var(--vonal);border-radius:10px;padding:8px 14px;font-weight:600;font-size:16px}
-.ertekeles{display:flex;gap:22px;align-items:center;margin-top:30px;padding:22px 24px;background:#fff;border-radius:16px}
-.ertekeles .szam{font-family:'Sora',sans-serif;font-size:52px;font-weight:700;color:var(--grafit);line-height:1}
-.ertekeles p{font-size:16.5px;color:var(--halk)}
+/* rólunk és vélemények */
+.vel-sav{background:var(--grafit);color:#fff}
+.vel-sav h2{color:#fff}
+.vel-sav .fej-blokk p{color:#BFC3CB}
+.filozofia{margin:22px 0 0;padding-left:20px;border-left:3px solid var(--piros);font-family:var(--cim);font-size:24px;line-height:1.35;font-weight:600;letter-spacing:-.015em;color:#fff;max-width:900px}
+.filozofia+.ki{margin-top:10px;font-size:15px;color:#A6ABB5}
+.temak{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tema{margin:0;background:var(--grafit-2);border-radius:20px;padding:32px 30px;position:relative}
+.tema h3{font-size:24px;margin-bottom:14px;color:#fff}
+.tema p{margin:0;font-size:17px;color:#E1E3E7}
+.tema small{display:block;margin-top:14px;color:#A6ABB5;font-size:14px}
+.tema::before{content:"";position:absolute;left:30px;top:0;width:44px;height:5px;background:var(--piros);border-radius:0 0 4px 4px}
+.biztositok{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.biztositok span{background:rgba(255,255,255,.08);border:1px solid #474A52;border-radius:10px;padding:6px 12px;font-weight:600;font-size:15px;color:#fff}
+.ertekeles{display:flex;align-items:center;gap:18px;margin-top:26px;flex-wrap:wrap}
+.ertekeles b{font:700 48px/1 var(--cim)}
+.csillagok{color:#F2A900;font-size:20px;letter-spacing:2px}
+.vel-alap{color:#A6ABB5;font-size:15px}
 
 /* GYIK */
-.gyik-racs{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:60px}
-details{border-bottom:1px solid var(--vonal)}
-details:first-child{border-top:1px solid var(--vonal)}
-summary{cursor:pointer;list-style:none;padding:22px 50px 22px 0;font-family:'Sora',sans-serif;font-weight:600;font-size:18.5px;color:var(--grafit);position:relative}
+.gyik{background:var(--panel)}
+.gyik-racs{display:grid;grid-template-columns:1fr 1.6fr;gap:56px}
+details{background:#fff;border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;list-style:none;padding:20px 52px 20px 22px;font-weight:700;font-size:17.5px;position:relative}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:28px;font-weight:400;color:var(--piros)}
+summary::after{content:"+";position:absolute;right:20px;top:13px;font-size:28px;font-weight:500;color:var(--piros)}
 details[open] summary::after{content:"–"}
-details p{padding:0 0 22px;color:var(--halk);max-width:44em}
+details p{padding:0 22px 20px;margin:0;color:var(--grafit-2)}
 
 /* kapcsolat */
-.kapcs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--acel)}
-.kapcs-adatok{padding:96px 48px 96px max(20px,calc(100% - var(--max)/2 + 20px))}
-.adat-lista{list-style:none;margin:26px 0 0;padding:0;display:grid;gap:18px}
-.adat-lista li{display:flex;gap:14px}
-.adat-lista svg{width:24px;height:24px;color:var(--piros);flex:none;margin-top:3px}
-.adat-lista strong{display:block;color:var(--grafit)}
-.adat-lista a{font-weight:600}
-.nyitva{margin-top:28px}
-.nyitva table{border-collapse:collapse;font-size:17px;min-width:300px}
-.nyitva td{padding:5px 0}
-.nyitva td+td{text-align:right;font-weight:700;padding-left:40px}
-.kapcs iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
+.kapcsolat{display:grid;grid-template-columns:1fr 1fr;min-height:520px}
+.kap-adat{padding-top:80px;padding-bottom:80px;padding-left:max(20px,calc((100vw - var(--max))/2 + 20px));padding-right:56px;background:#fff}
+.kap-adat h2{margin-bottom:18px}
+.kap-sor{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--vonal)}
+.kap-sor svg{width:22px;height:22px;color:var(--piros);flex:none;margin-top:3px}
+.kap-sor p{margin:0}
+.kap-sor a{color:var(--kek);font-weight:600}
+.kap-adat .gombok{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.kap-adat .gomb-keret{color:var(--grafit)}
+.kapcsolat iframe{width:100%;height:100%;min-height:520px;border:0;display:block}
 
-footer{background:var(--grafit);color:#BFC3CB;padding-top:64px;padding-bottom:90px;font-size:16px}
+footer{background:var(--grafit);color:#BFC3CB;padding-top:60px;padding-bottom:80px}
 .lab-racs{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
-footer h3{color:#fff;font-size:16px;margin-bottom:14px}
-footer a{color:#fff;text-decoration:none}
+footer h3{color:#fff;font-size:17px;margin-bottom:12px}
+footer p,footer li{font-size:15px;margin:0 0 8px}
+footer ul{list-style:none;margin:0;padding:0}
+footer a{text-decoration:none;color:#fff}
 footer a:hover{text-decoration:underline}
-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-footer .lab-logo{width:170px;margin-bottom:14px}
-.lab-also{margin-top:46px;padding-top:22px;border-top:1px solid #34373E;font-size:14px;color:#8E939D;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.lab-logo{width:170px;margin-bottom:14px}
+.lab-also{border-top:1px solid #34373E;margin-top:40px;padding-top:20px;font-size:13.5px;color:#8E939D}
 
-.bemutato{position:fixed;left:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:8px;background:rgba(30,31,35,.94);color:#fff;font-size:12.5px;padding:6px 8px 6px 12px;border-radius:8px;max-height:36px}
-.bemutato button{font:600 12px 'Instrument Sans',sans-serif;background:#fff;color:var(--grafit);border:0;border-radius:6px;padding:4px 8px;cursor:pointer}
-.bemutato button[aria-pressed="true"]{background:#FFD24A}
-body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;background-color:rgba(255,210,74,.14)}
+.bemutato{position:fixed;left:12px;bottom:12px;z-index:60;background:var(--grafit);color:#fff;font-size:12.5px;border-radius:999px;padding:6px 6px 6px 14px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3);max-height:38px;border:1px solid #3b3e45}
+.bemutato button{font:600 12px var(--test);background:#fff;color:var(--grafit);border:0;border-radius:999px;padding:5px 10px;cursor:pointer}
+.bemutato button[aria-pressed=true]{background:#FFD24A}
+body.minta-lathato [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;background-color:rgba(255,210,74,.16)}
 
 @media (max-width:1080px){
-  .menu-gomb{display:inline-flex;align-items:center;justify-content:center}
-  nav{display:none;position:absolute;left:0;right:0;top:var(--fej);background:#fff;padding:10px var(--szel) 20px;box-shadow:0 20px 30px -20px rgba(0,0,0,.35)}
-  nav.lenyitva{display:block}
-  nav ul{flex-direction:column;gap:0}
-  nav a{display:block;padding:14px 0;font-size:18px;color:var(--grafit);border-bottom:1px solid var(--acel)}
-  .esetek{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .szolg-racs{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .lab-racs{grid-template-columns:1fr 1fr}
+ nav{display:none;position:absolute;left:0;right:0;top:77px;background:#fff;border-bottom:1px solid var(--vonal);padding:8px var(--szel) 18px;box-shadow:0 14px 30px rgba(0,0,0,.1)}
+ nav.lenyitva{display:block}
+ nav ul{flex-direction:column;gap:0}
+ nav a{display:block;padding:14px 0;border-bottom:1px solid var(--vonal);font-size:17px;color:var(--grafit)}
+ .menu-gomb{display:inline-flex}
+ .nyito{grid-template-columns:1fr minmax(0,380px);gap:36px}
+ .nyito h1{font-size:48px}
+ .tenyek{grid-template-columns:1fr 1fr}
+ .tenyek div:nth-child(3){border-left:0;padding-left:0}
+ .tenyek div:nth-child(n+3){border-top:1px solid var(--vonal)}
 }
 @media (max-width:900px){
-  .nyito-kartya-hely{grid-template-columns:minmax(0,1fr);gap:40px}
-  .kap-racs,.menet-racs,.mester-racs,.gyik-racs,.teljes-lista{grid-template-columns:minmax(0,1fr);gap:40px}
-  .urlap-kartya{position:static}
-  .kapcs{grid-template-columns:minmax(0,1fr)}
-  .kapcs-adatok{padding:72px 20px}
-  .kapcs iframe{min-height:340px}
+ .nyito{grid-template-columns:1fr;gap:0;padding-bottom:40px;align-items:start}
+ .nyito::after{background:linear-gradient(180deg,rgba(24,25,29,.92) 0%,rgba(24,25,29,.82) 45%,rgba(24,25,29,.55) 100%)}
+ .nyito-szoveg{padding-top:3em;padding-bottom:2em}
+ .temak,.szolg-racs,.lepesek{grid-template-columns:1fr}
+ .muhely,.gyik-racs,.kapcsolat{grid-template-columns:1fr;gap:34px}
+ .kap-adat{padding:64px 20px}
+ .kapcsolat iframe{min-height:340px;height:340px}
+ .szakasz{padding-top:72px;padding-bottom:72px}
+ .lab-racs{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
-  body{font-size:17px}
-  :root{--fej:66px}
-  .marka img{width:142px}
-  .marka small{padding-left:24px;font-size:11.5px}
-  .fej-hivas{width:46px;padding:0}
-  .fej-hivas span{display:none}
-  .fej-jobb{gap:10px}
-  h2{font-size:clamp(27px,8vw,31px)}
-  .nyito{height:260px}
-  .nyito-kartya-hely{margin-top:-46px;padding:0 12px}
-  .nyito-kartya{padding:34px 22px 28px;border-radius:18px}
-  .nyito-kartya h1{font-size:clamp(28px,8.4vw,36px)}
-  .nyito-lead{font-size:17.5px}
-  .nyito-gombok .gomb{width:100%}
-  .elonyok{padding-top:20px}
-  .szakasz{padding-top:72px;padding-bottom:72px}
-  .esetek{grid-template-columns:minmax(0,1fr)}
-  .eredmeny{padding:24px 20px}
-  .urlap-kartya{padding:26px 20px}
-  .szolg-racs{grid-template-columns:minmax(0,1fr)}
-  .teljes-lista ul{columns:1}
-  .lepesek li{padding-left:56px}
-  .iratok{padding:24px 18px}
-  .ertekeles{flex-direction:column;align-items:flex-start}
-  .nyitva table{min-width:0;width:100%}
-  .lab-racs{grid-template-columns:1fr}
+ body{font-size:16.5px}
+ .fejsor{height:66px;gap:10px}
+ nav{top:69px}
+ .marka img{width:138px}
+ .marka small{font-size:11.5px;padding-left:23px}
+ .fej-tel span{display:none}
+ .fej-tel{padding:0;width:46px;height:46px;justify-content:center}
+ .nyito h1{font-size:clamp(31px,9vw,38px)}
+ .nyito .bev{font-size:17px}
+ h2{font-size:31px}
+ .menet-cim{font-size:26px;margin-top:56px}
+ .filozofia{font-size:20px}
+ .jegy{padding:24px 18px 20px}
+ .jegy h2{font-size:24px}
+ .tenyek{grid-template-columns:1fr}
+ .tenyek div,.tenyek div:nth-child(3){border-left:0;padding:18px 0}
+ .tenyek div+div{border-top:1px solid var(--vonal)}
+ .lab-racs{grid-template-columns:1fr}
+ .gomb{padding:16px 20px}
 }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 <script data-goatcounter="https://webtastic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 <body>
 <a class="ugras" href="#tartalom">Ugrás a tartalomhoz</a>
 <header>
-  <div class="fej-sor">
-    <a class="marka" href="#" aria-label="Mol-Car Kft. – az oldal teteje">
-      <img src="kepek/molcar-logo.webp" alt="Mol-Car Kft. logó" width="568" height="98">
-      <small>Karosszériajavítás és fényezés · Pécs</small>
-    </a>
-    <nav id="fomenu" aria-label="Fő menü">
-      <ul>
-        <li><a href="#mit-kap">Kedvezmények</a></li>
-        <li><a href="#karugyintezes">Kárügyintézés</a></li>
-        <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
-        <li><a href="#rolunk">Rólunk</a></li>
-        <li><a href="#kapcsolat">Kapcsolat</a></li>
-      </ul>
-    </nav>
-    <div class="fej-jobb">
-      <a class="gomb gomb-fo fej-hivas" href="tel:+36302982126" aria-label="Hívás: 30/298-2126"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>30/298-2126</span></a>
-      <button class="menu-gomb" type="button" aria-controls="fomenu" aria-expanded="false" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-    </div>
-  </div>
+ <div class="fejsor">
+  <a class="marka" href="#tartalom" aria-label="Mol-Car Kft. – az oldal teteje"><img src="kepek/molcar-logo.webp" alt="Mol-Car Kft. logó" width="568" height="98"><small>Karosszériajavítás és fényezés · Pécs</small></a>
+  <nav id="menu" aria-label="Fő menü">
+   <ul>
+    <li><a href="#szolgaltatasok">Szolgáltatások</a></li>
+    <li><a href="#kedvezmenyek">Kedvezmények</a></li>
+    <li><a href="#rolunk">Rólunk</a></li>
+    <li><a href="#gyik">Kérdések</a></li>
+    <li><a href="#kapcsolat">Kapcsolat</a></li>
+   </ul>
+  </nav>
+  <a class="fej-tel" href="tel:+3672238338" aria-label="Hívás: 72/238-338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>72/238-338</span></a>
+  <button class="menu-gomb" aria-controls="menu" aria-expanded="false" aria-label="Menü megnyitása"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+ </div>
 </header>
 
 <main id="tartalom">
-<div class="nyito">
+ <section class="nyito belso" aria-labelledby="fo-cim">
   <picture>
-    <source media="(max-width: 760px)" srcset="kepek/hero-mobil.webp">
-    <img src="kepek/hero.webp" alt="Karosszérialakatos ponthegesztéssel javít egy autókarosszériát a műhelyben" width="1920" height="1282" fetchpriority="high">
+   <source media="(max-width:760px)" srcset="kepek/hero-mobil.webp">
+   <img src="kepek/hero.webp" width="1920" height="1282" alt="Karosszérialakatos ponthegesztéssel javít egy autókarosszériát a műhelyben (mintakép)" fetchpriority="high">
   </picture>
-</div>
-<div class="nyito-kartya-hely">
-  <div class="nyito-kartya">
-    <p class="ota"><i aria-hidden="true"></i>Karosszérialakatos mester vezetésével, 1990 óta</p>
-    <h1>Karosszériajavítás és fényezés Pécsen, teljes körű kárügyintézéssel</h1>
-    <p class="nyito-lead">Kárfelvétel a telephelyünkön, javítás és fényezés egy helyen – a biztosítóval mi intézünk mindent.</p>
-    <div class="nyito-gombok">
-      <a class="gomb gomb-fo" href="#visszahivas">Visszahívást kérek</a>
-      <a class="gomb gomb-keret" href="tel:+3672238338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>72/238-338</a>
-    </div>
-    <div class="nyito-also">
-      <span><span class="csillag" aria-hidden="true">★★★★★</span> <b>4,7</b> – 36 Google-vélemény</span>
-      <span>H–Cs 7:00–15:30 · P 7:00–15:00</span>
-    </div>
+  <div class="nyito-szoveg">
+   <span class="hely"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Pécs, Szent Borbála u. 31.</span>
+   <h1 id="fo-cim">Karosszériajavítás és fényezés Pécsen</h1>
+   <p class="bev">Karosszérialakatos mester vezetésével, 1990 óta. Kárfelvétel a telephelyen, javítás és fényezés egy helyen, a biztosítóval mi intézünk mindent.</p>
+   <div class="gombok">
+    <a class="gomb gomb-piros" href="tel:+3672238338"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>72/238-338</a>
+    <a class="gomb gomb-keret" href="#kapcsolat">Útvonal a műhelyhez</a>
+   </div>
   </div>
-  <div class="elonyok" aria-label="Amit minden ügyfelünknek nyújtunk">
-  <div class="elony"><h3>Kárfelvétel a telephelyen</h3><p><span data-minta>Nem kell külön kárszakértőhöz mennie:</span> a kárfelvétel nálunk történik, a javítási kalkulációt mi készítjük el.</p></div>
-  <div class="elony"><h3>Díjtalan beszállítás Baranyában</h3><p>Baranya megyén belül a sérült autó telephelyünkre szállítása díjtalan.</p></div>
-  <div class="elony"><h3>Szélvédőcsere önrész nélkül</h3><p>A szélvédő és az oldalüvegek cseréje önrész nélkül.</p></div>
-</div>
-</div>
-
-
-<section class="kap szakasz sav" id="mit-kap" aria-labelledby="kap-cim" style="margin-top:96px">
-  <div class="kap-racs">
-    <div>
-      <h2 id="kap-cim">Mit kap, ha nálunk javíttat?</h2>
-      <p class="kap-lead">A kedvezmény attól függ, ki fizeti a javítást. Válassza ki az esetét, és megmutatjuk, mire számíthat.</p>
-      <p class="valassz" id="eset-felirat">Válasszon egyet:</p>
-      <div class="esetek" role="group" aria-labelledby="eset-felirat">
-        <button class="eset" type="button" aria-pressed="true" data-eset="kgfb">Nekem jöttek (kötelező biztosítás)</button>
-        <button class="eset" type="button" aria-pressed="false" data-eset="casco">CASCO-s kár</button>
-        <button class="eset" type="button" aria-pressed="false" data-eset="flotta">Céges autó, flotta</button>
-        <button class="eset" type="button" aria-pressed="false" data-eset="uveg">Törött szélvédő</button>
-      </div>
-      <div class="eredmeny" aria-live="polite">
-        <div data-panel="kgfb">
-          <h3>A másik fél biztosítója fizet</h3>
-          <p class="fo-elony">A javítási összeg 10%-át Önnek adjuk</p>
-          <p class="leiras">…vagy egy plusz elem javítását vállaljuk, a kárösszegtől függően. Alkatrészavulást nem kell fizetnie.</p>
-          <div class="szamolo">
-            <label for="osszeg">A javítás várható összege</label>
-            <input type="range" id="osszeg" min="100000" max="2000000" step="50000" value="600000">
-            <div class="szamolo-sor"><span>Javítás: <b id="osszeg-ki">600 000 Ft</b></span><span>Ebből Önnek: <b id="tiz-ki">60 000 Ft</b></span></div>
-          </div>
-        </div>
-        <div data-panel="casco" hidden>
-          <h3>Saját CASCO-ra javíttat</h3>
-          <p class="fo-elony">Önrészfizetési kedvezmény, legfeljebb 100 000 Ft-ig</p>
-          <p class="leiras">A kedvezmény a kárösszeg nagyságától és a szerződésben vállalt önrész összegétől függ. Alkatrészavulást nem kell fizetnie.</p>
-        </div>
-        <div data-panel="flotta" hidden>
-          <h3>Cégeknek</h3>
-          <p class="fo-elony">15% autóflotta-kedvezmény a javítás munkadíjából</p>
-          <p class="leiras">Céges autóknál biztosítási kár esetén a javítás után csak a kedvezményes önrészt vagy az esetleges avulást, valamint az áfát kell kifizetni.</p>
-        </div>
-        <div data-panel="uveg" hidden>
-          <h3>Szélvédő és oldalüveg</h3>
-          <p class="fo-elony">Csere önrész nélkül</p>
-          <p class="leiras">A szélvédő és az oldalüvegek cseréjét önrész nélkül végezzük.</p>
-        </div>
-        <p class="apro">A részletekért érdeklődjön elérhetőségeinken.</p>
-      </div>
-    </div>
-    <aside class="urlap-kartya" id="visszahivas" aria-labelledby="urlap-cim">
-      <h2 id="urlap-cim">Kérjen visszahívást</h2>
-      <p class="bev" data-minta>Munkaidőben visszahívjuk, megbeszéljük a kárfelvétel időpontját, és elmondjuk, mit hozzon magával.</p>
-      <form class="urlap" novalidate>
-        <div><label for="u-ugy">Milyen ügyben?</label>
-          <select id="u-ugy" name="ugy">
-            <option value="kgfb">Nekem jöttek (kötelező biztosítás)</option>
-            <option value="casco">CASCO-s kár</option>
-            <option value="flotta">Céges autó, flotta</option>
-            <option value="uveg">Törött szélvédő</option>
-            <option value="egyeb">Javítás, fényezés saját költségre</option>
-          </select></div>
-        <div><label for="u-nev">Név</label><input id="u-nev" name="nev" autocomplete="name"></div>
-        <div><label for="u-tel">Telefonszám</label><input id="u-tel" name="tel" type="tel" autocomplete="tel" placeholder="06 30 123 4567"></div>
-        <button class="gomb gomb-fo" type="submit">Visszahívást kérek</button>
-        <p class="halk-jel">Ez egy bemutató oldal: az űrlap most nem küld üzenetet.</p>
-        <p class="uzenet" role="status" aria-live="polite"></p>
-      </form>
-    </aside>
+  <div>
+   <form class="jegy" id="visszahivas" novalidate aria-labelledby="jegy-cim">
+    <h2 id="jegy-cim">Visszahívást kérek</h2>
+    <p class="al" data-minta>Hagyja meg a számát: munkaidőben visszahívjuk, és megbeszéljük a kárfelvételt.</p>
+    <fieldset class="csempek">
+     <legend>Válasszon egyet: milyen ügyben?</legend>
+     <label><input type="radio" name="ugy" value="kgfb">Nekem jöttek</label>
+     <label><input type="radio" name="ugy" value="casco">CASCO-s kár</label>
+     <label><input type="radio" name="ugy" value="uveg">Törött szélvédő</label>
+     <label><input type="radio" name="ugy" value="sajat">Saját költségre</label>
+    </fieldset>
+    <label class="felirat" for="nev">Név</label>
+    <input type="text" id="nev" name="nev" autocomplete="name" required>
+    <label class="felirat" for="tel">Telefonszám</label>
+    <input type="tel" id="tel" name="tel" autocomplete="tel" required>
+    <button class="gomb gomb-piros" type="submit">Visszahívást kérek</button>
+    <p class="halk">Ez egy bemutató oldal: az űrlap nem küld adatot.</p>
+    <p class="uzenet" role="status" aria-live="polite"></p>
+   </form>
   </div>
-</section>
+ </section>
 
-<section class="menet szakasz sav" id="karugyintezes" aria-labelledby="menet-cim">
-  <div class="menet-racs">
-    <div>
-      <h2 id="menet-cim">Így intézzük el a kárt</h2>
-      <p class="menet-lead">Levesszük a válláról a bürokratikus és anyagi terheket.</p>
-      <ol class="lepesek">
-        <li><strong>Kárfelvétel a telephelyen</strong><span>Az autót megnézzük, és felvesszük a kárt.</span></li>
-        <li><strong>Meghatalmazás</strong><span data-minta>Kitölt egy meghatalmazást, hogy a biztosítóval mi tárgyalhassunk.</span></li>
-        <li><strong>Javítási kalkuláció</strong><span>A kárfelvételi jegyzőkönyv alapján, a minden biztosító által elfogadott Audatex, AudaShare rendszerrel.</span></li>
-        <li><strong>Banki engedély, ha hitel van az autón</strong><span>Megkérjük a banktól. Feltétele, hogy ne legyen díjelmaradás.</span></li>
-        <li><strong>Alkatrész és javítás</strong><span>A jogalap tisztázása után, Önnel egyeztetve beszerezzük az alkatrészeket, és megkezdjük a javítást.</span></li>
-        <li><strong>Átvétel</strong><span>Csak a kedvezményes önrészt vagy az esetleges avulást fizeti (cégek az áfát), és a telephelyen átveszi a kulcsrakész autót.</span></li>
-      </ol>
-    </div>
-    <div class="iratok">
-      <h3>Mit hozzon a kárbejelentéshez?</h3>
-      <p class="al">Pipálja ki, ami már megvan, hogy semmi ne maradjon otthon.</p>
-      <ul id="iratlista">
-        <li><label><input type="checkbox">Baleseti bejelentő (kék-sárga)</label></li>
-        <li><label><input type="checkbox">Jogosítvány</label></li>
-        <li><label><input type="checkbox">Személyi igazolvány</label></li>
-        <li><label><input type="checkbox">Forgalmi engedély</label></li>
-        <li><label><input type="checkbox">Gépjármű-kárbejelentési adatlap</label></li>
-        <li><label><input type="checkbox"><span>Aláírási címpéldány<span class="feltetel">ha a vállalkozásé az autó</span></span></label></li>
-        <li><label><input type="checkbox"><span>A hitelintézet neve<span class="feltetel">ha hitel, lízing vagy banki terhelés van az autón</span></span></label></li>
-      </ul>
-      <div class="allas"><span id="allas-szoveg">0 / 7 megvan</span><span class="allas-sav" aria-hidden="true"><i id="allas-csik"></i></span></div>
-    </div>
-  </div>
-</section>
+ <div class="tenyek belso">
+  <div><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg><p style="margin:0"><b>4,7 csillag</b><span>36 Google-vélemény</span></p></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p style="margin:0"><b>H–Cs 7:00–15:30</b><span>pénteken 7:00–15:00</span></p></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 14 7 22l5-3 5 3-1.5-8"/></svg><p style="margin:0"><b>1990 óta</b><span>karosszérialakatos mester vezeti</span></p></div>
+  <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 16V6h13v10M14 9h4l4 4v3h-8"/><circle cx="6" cy="17.5" r="2"/><circle cx="17" cy="17.5" r="2"/></svg><p style="margin:0"><b>Díjtalan beszállítás</b><span>Baranya megyén belül</span></p></div>
+ </div>
 
-<section class="szakasz sav" id="szolgaltatasok" aria-labelledby="szolg-cim">
-  <div class="fejresz">
-    <h2 id="szolg-cim">Teljes körű karosszériajavítás egy helyen</h2>
-    <p data-minta>Karosszérialakatos és fényezési munkák a kis horpadástól a karambolos autóig.</p>
+ <section class="szolg szakasz belso" id="szolgaltatasok" aria-labelledby="szolg-cim">
+  <div class="fej-blokk">
+   <h2 id="szolg-cim">Teljes körű karosszériajavítás egy helyen</h2>
+   <p data-minta>A kis horpadástól a karambolos autóig: lakatosmunka, fényezés és a biztosítási ügyintézés egy kézben.</p>
   </div>
   <div class="szolg-racs">
-    <figure class="szolg"><img src="kepek/karfelvetel.webp" alt="Javítás alatt álló autók egy karosszériaműhelyben" width="900" height="675" loading="lazy"><div><h3>Karambolos javítás</h3><p data-minta>Kárfelvételtől a kész autóig, biztosítási ügyintézéssel.</p></div></figure>
-    <figure class="szolg"><img src="kepek/karosszeria.webp" alt="Két szerelő egy autó karosszériáján dolgozik a műhelyben" width="900" height="675" loading="lazy"><div><h3>Karosszériajavítás, húzópad</h3><p data-minta>Húzópados helyreállítás, karosszériaelemek javítása és cseréje.</p></div></figure>
-    <figure class="szolg"><img src="kepek/fenyezes.webp" alt="Fényező leragasztott autót készít elő a fényezőkabinban" width="900" height="675" loading="lazy"><div><h3>Teljes és javító fényezés</h3><p data-minta>Egy elem vagy az egész autó, a gyári színhez igazítva.</p></div></figure>
-    <figure class="szolg"><img src="kepek/polirozas.webp" alt="Szakember polírozógéppel dolgozik egy autó oldalán" width="900" height="675" loading="lazy"><div><h3>Polírozás</h3><p data-minta>A fényét vesztett, karcos fényezés felfrissítése.</p></div></figure>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 16l2-6a2 2 0 0 1 1.9-1.4h8.2A2 2 0 0 1 18 10l2 6v3h-2.5M4 16v3h2.5M4 16h16"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="16.5" cy="18.5" r="1.5"/><path d="M15 3l-2 3 3 0-2 3"/></svg><h3>Karambolos javítás</h3><p>Kárfelvétel a telephelyen, javítás a kész autóig, biztosítási ügyintézéssel.</p></article>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 20h18M6 20V9l6-5 6 5v11"/><path d="M9 20v-6h6v6"/></svg><h3>Karosszéria és húzópad</h3><p>Karosszériajavítás és -átalakítás, húzópados helyreállítás, bérhúzás.</p></article>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l1 4H6z"/><path d="M8 7v4a2 2 0 0 0 2 2h1v8h2v-8h1a2 2 0 0 0 2-2V7"/></svg><h3>Fényezés és polírozás</h3><p>Teljes és javító fényezés, a fényét vesztett felület polírozása.</p></article>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16l-2 11H6z"/><path d="M8 7l1-3h6l1 3"/><path d="M9 11l6 4M15 11l-6 4"/></svg><h3>Szélvédő önrész nélkül</h3><p>A szélvédő és az oldalüvegek cseréje önrész nélkül.</p></article>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 15a4 4 0 0 1 .6-8 5 5 0 0 1 9.6 1.5A3.5 3.5 0 0 1 17 15"/><path d="M9 18v.01M12 20v.01M15 18v.01"/></svg><h3>Jégkár és műanyag</h3><p>Jégkárjavítás, műanyag elemek javítása és hegesztése.</p></article>
+   <article class="szk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><h3>Alkatrészbeszerzés</h3><p>Gyári, utángyártott vagy bontott alkatrész, igény szerint.</p></article>
   </div>
-  <div class="teljes-lista">
-    <h3>Minden szolgáltatásunk</h3>
+  <h3 class="menet-cim" id="karugyintezes">Így intézzük el a kárt</h3>
+  <div class="lepesek">
+   <div class="lepes"><h3>Kárfelvétel</h3><p>Az autót a telephelyünkön megnézzük, és felvesszük a kárt.</p></div>
+   <div class="lepes"><h3>Meghatalmazás</h3><p data-minta>Kitölt egy meghatalmazást, hogy a biztosítóval mi tárgyalhassunk.</p></div>
+   <div class="lepes"><h3>Kalkuláció</h3><p>A kárfelvételi jegyzőkönyv alapján, a minden biztosító által elfogadott Audatex, AudaShare rendszerrel.</p></div>
+   <div class="lepes"><h3>Banki engedély</h3><p>Ha hitel van az autón, megkérjük a banktól. Feltétele, hogy ne legyen díjelmaradás.</p></div>
+   <div class="lepes"><h3>Javítás</h3><p>A jogalap tisztázása után, Önnel egyeztetve beszerezzük az alkatrészeket, és javítunk.</p></div>
+   <div class="lepes"><h3>Átvétel</h3><p>Csak a kedvezményes önrészt vagy az esetleges avulást fizeti (cégek az áfát), és átveszi a kulcsrakész autót.</p></div>
+  </div>
+  <div class="gombok">
+   <a class="gomb gomb-piros" href="#visszahivas">Visszahívást kérek</a>
+   <a class="gomb gomb-keret" href="tel:+36302982126">Mobil: 30/298-2126</a>
+  </div>
+ </section>
+
+ <section class="szakasz belso" id="kedvezmenyek" aria-labelledby="kedv-cim">
+  <div class="muhely">
+   <figure>
+    <img src="kepek/karfelvetel.webp" width="900" height="675" loading="lazy" alt="Javítás alatt álló autók egy karosszériaműhelyben (mintakép)">
+    <figcaption>Mintakép – az éles oldalra a műhely saját fotói kerülnek.</figcaption>
+   </figure>
+   <div>
+    <h2 id="kedv-cim">Mit kap, ha nálunk javíttat?</h2>
+    <p style="margin-top:16px;font-size:18px;color:var(--halk)">A kedvezmény attól függ, ki fizeti a javítást. Alkatrészavulást egyik esetben sem kell fizetnie.</p>
     <ul>
-      <li>Telephelyen történő kárfelvétel</li>
-      <li>Karambolos javítás</li>
-      <li>Karosszériajavítás, átalakítás</li>
-      <li>Jégkár javítás</li>
-      <li>Húzópados helyreállítás, bérhúzás</li>
-      <li>Alkatrészbeszerzés – gyári, utángyártott, bontott, igény szerint</li>
-      <li>Műanyagjavítás és -hegesztés</li>
-      <li>Szélvédő és oldalüvegek cseréje önrész nélkül</li>
-      <li>Teljes és javító fényezés</li>
-      <li>Polírozás</li>
-      <li>Baranya megyén belül díjtalan telephelyre szállítás</li>
+     <li><b>Nekem jöttek (kötelező biztosítás):</b> a javítási összeg 10%-át Önnek adjuk, vagy egy plusz elem javítását vállaljuk.</li>
+     <li><b>CASCO-s kár:</b> önrészfizetési kedvezmény, legfeljebb 100 000 Ft-ig.</li>
+     <li><b>Céges autó, flotta:</b> 15% kedvezmény a javítás munkadíjából.</li>
+     <li><b>Törött szélvédő:</b> a csere önrész nélkül.</li>
     </ul>
+    <p class="apro">A részletekért érdeklődjön elérhetőségeinken.</p>
+   </div>
   </div>
-</section>
+ </section>
 
-<section class="mester szakasz sav" id="rolunk" aria-labelledby="rolunk-cim">
-  <div class="mester-racs">
-    <div>
-      <h2 id="rolunk-cim" style="margin-bottom:30px">1990 óta, mesteri kézben</h2>
-      <blockquote>„Magas szakmai színvonalon, minőségi anyagokkal, rövid határidővel dolgozni.”</blockquote>
-      <p class="ki">Üzleti filozófiánk – Molnár János karosszérialakatos mester</p>
-      <div class="ertekeles">
-        <span class="szam">4,7</span>
-        <p><span class="csillag" aria-hidden="true">★★★★★</span><br>36 értékelés a Google-on. Ügyfeleink a gyors, szép munkát, a felkészült szakembereket és a gyors ügyintézést emelik ki – van, aki szerint egy egyedi, ritka munka is „meglepően olcsón” készült el.</p>
-      </div>
-    </div>
-    <div class="mester-szoveg">
-      <p>Molnár János karosszérialakatos mester 1990-ben egyéni vállalkozóként kezdte a munkát. Átalakulás után, 1993. október 1. óta Mol-Car Kft. néven áll szakszervizünk az ügyfelek rendelkezésére.</p>
-      <p>Profilunk a teljes körű autókarosszéria-javítás, a karosszérialakatos és a fényezési munka, a biztosítási kárügyintézéssel együtt.</p>
-      <h3 style="margin-top:30px">Szerződéses biztosítóink</h3>
-      <div class="biztositok"><span>Allianz Hungária</span><span>Generali-Providencia</span><span>Groupama-Garancia</span></div>
-      <p style="margin-top:14px;color:var(--halk)">Korrekt üzleti kapcsolatot alakítottunk ki az összes Magyarországon működő biztosítótársasággal is.</p>
-    </div>
+ <section class="vel-sav szakasz belso" id="rolunk" aria-labelledby="rolunk-cim">
+  <div class="fej-blokk">
+   <h2 id="rolunk-cim">1990 óta, mesteri kézben</h2>
+   <p>Molnár János karosszérialakatos mester 1990-ben egyéni vállalkozóként kezdte a munkát; 1993. október 1. óta Mol-Car Kft. néven áll az ügyfelek rendelkezésére.</p>
+   <p class="filozofia">„Magas szakmai színvonalon, minőségi anyagokkal, rövid határidővel dolgozni.”</p>
+   <p class="ki">Üzleti filozófiánk</p>
   </div>
-</section>
+  <div class="temak">
+   <figure class="tema"><h3>Gyors, szép munka</h3><p>Egy egyedi, ritka munka is gyorsan és szépen, „meglepően olcsón” készült el.</p><small>A Google-vélemények alapján</small></figure>
+   <figure class="tema"><h3>Gyors ügyintézés</h3><p>Felkészült szakemberek, és a CASCO-s kár intézése is gyorsan ment.</p><small>A Google-vélemények alapján</small></figure>
+   <figure class="tema"><h3>Szerződéses biztosítók</h3><div class="biztositok"><span>Allianz Hungária</span><span>Generali-Providencia</span><span>Groupama-Garancia</span></div><small>És korrekt kapcsolat az összes hazai biztosítóval.</small></figure>
+  </div>
+  <div class="ertekeles"><b>4,7</b><div><span class="csillagok" aria-hidden="true">★★★★★</span><br><span class="vel-alap">36 Google-vélemény alapján</span></div></div>
+ </section>
 
-<section class="szakasz sav" id="gyik" aria-labelledby="gyik-cim">
+ <section class="gyik szakasz belso" id="gyik" aria-labelledby="gyik-cim">
   <div class="gyik-racs">
-    <div class="fejresz"><h2 id="gyik-cim">Gyakori kérdések</h2><p>Ha nem találja a választ, hívjon minket.</p></div>
-    <div>
-      <details><summary>Mely biztosítókkal állnak szerződésben?</summary><p>Szerződésünk van az Allianz Hungária, a Generali-Providencia és a Groupama-Garancia biztosítóval, és korrekt kapcsolatot ápolunk az összes Magyarországon működő biztosítótársasággal.</p></details>
-      <details><summary>Mit hozzak a kárbejelentéshez?</summary><p>Baleseti bejelentőt (kék-sárga), jogosítványt, személyi igazolványt, forgalmi engedélyt és a gépjármű-kárbejelentési adatlapot. Vállalkozás esetén aláírási címpéldányt, hitel, lízing vagy banki terhelés esetén a hitelintézet nevét.</p></details>
-      <details><summary>Mennyit kell fizetnem a javítás után?</summary><p>Biztosítási kárnál a javítás után csak a kedvezményes önrészt vagy az esetleges avulást kell kifizetnie, cégek esetében az áfát. Utána a kulcsrakész autót a telephelyünkön átveheti.</p></details>
-      <details><summary>Hogyan jut el a sérült autó a műhelyhez?</summary><p>Baranya megyén belül a telephelyünkre szállítás díjtalan.</p></details>
-      <details><summary>Mikor vannak nyitva?</summary><p>Hétfőtől csütörtökig 7:00 és 15:30, pénteken 7:00 és 15:00 között.</p></details>
-    </div>
+   <div><h2 id="gyik-cim">Gyakori kérdések</h2><p style="margin-top:14px;color:var(--halk)">Más kérdés? Hívjon nyitvatartási időben: <a href="tel:+3672238338">72/238-338</a>.</p></div>
+   <div>
+    <details><summary>Mely biztosítókkal állnak szerződésben?</summary><p>Szerződésünk van az Allianz Hungária, a Generali-Providencia és a Groupama-Garancia biztosítóval, és korrekt kapcsolatot ápolunk az összes Magyarországon működő biztosítótársasággal.</p></details>
+    <details><summary>Mit hozzak a kárbejelentéshez?</summary><p>Baleseti bejelentőt (kék-sárga), jogosítványt, személyi igazolványt, forgalmi engedélyt és a gépjármű-kárbejelentési adatlapot. Vállalkozás esetén aláírási címpéldányt, hitel, lízing vagy banki terhelés esetén a hitelintézet nevét.</p></details>
+    <details><summary>Mennyit kell fizetnem a javítás után?</summary><p>Biztosítási kárnál a javítás után csak a kedvezményes önrészt vagy az esetleges avulást kell kifizetnie, cégek esetében az áfát. Utána a kulcsrakész autót a telephelyünkön átveheti.</p></details>
+    <details><summary>Hogyan jut el a sérült autó a műhelyhez?</summary><p>Baranya megyén belül a telephelyünkre szállítás díjtalan.</p></details>
+    <details><summary>Mikor vannak nyitva?</summary><p>Hétfőtől csütörtökig 7:00 és 15:30, pénteken 7:00 és 15:00 között.</p></details>
+   </div>
   </div>
-</section>
+ </section>
 
-<section class="kapcs" id="kapcsolat" aria-labelledby="kapcs-cim">
-  <div class="kapcs-adatok">
-    <h2 id="kapcs-cim">Kapcsolat</h2>
-    <ul class="adat-lista">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>7628 Pécs, Szent Borbála u. 31.</strong><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mol-Car+Kft.%2C+P%C3%A9cs%2C+Szent+Borb%C3%A1la+u.+31" target="_blank" rel="noopener">Útvonaltervezés</a></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><div><strong>Telefon és fax</strong><a href="tel:+3672238338">72/238-338</a></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg><div><strong>Mobil</strong><a href="tel:+36302982126">30/298-2126</a></div></li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><div><strong>E-mail</strong><a href="mailto:molcar@molcar.hu">molcar@molcar.hu</a></div></li>
-    </ul>
-    <div class="nyitva">
-      <h3>Nyitvatartás</h3>
-      <table><tbody>
-        <tr><td>Hétfő–csütörtök</td><td>7:00–15:30</td></tr>
-        <tr><td>Péntek</td><td>7:00–15:00</td></tr>
-        <tr><td>Szombat–vasárnap</td><td>zárva</td></tr>
-      </tbody></table>
-    </div>
+ <section class="kapcsolat" id="kapcsolat" aria-labelledby="kap-cim">
+  <div class="kap-adat">
+   <h2 id="kap-cim">Kapcsolat</h2>
+   <div class="kap-sor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><p><b>Mol-Car Kft.</b><br>7628 Pécs, Szent Borbála u. 31.</p></div>
+   <div class="kap-sor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><p>Telefon és fax: <a href="tel:+3672238338">72/238-338</a><br>Mobil: <a href="tel:+36302982126">30/298-2126</a></p></div>
+   <div class="kap-sor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><p><a href="mailto:molcar@molcar.hu">molcar@molcar.hu</a></p></div>
+   <div class="kap-sor"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><p>Hétfő–csütörtök: 7:00–15:30<br>Péntek: 7:00–15:00<br>Szombat–vasárnap: zárva</p></div>
+   <div class="gombok">
+    <a class="gomb gomb-piros" href="tel:+3672238338">Hívás most</a>
+    <a class="gomb gomb-keret" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mol-Car%20Kft.%2C%20P%C3%A9cs%2C%20Szent%20Borb%C3%A1la%20u.%2031" target="_blank" rel="noopener">Útvonaltervezés</a>
+   </div>
   </div>
-  <iframe title="A Mol-Car Kft. helye a térképen: Pécs, Szent Borbála u. 31." src="https://maps.google.com/maps?q=Mol-Car%20Kft.%2C%20P%C3%A9cs%2C%20Szent%20Borb%C3%A1la%20u.%2031.&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+  <iframe title="A Mol-Car Kft. a térképen – Pécs, Szent Borbála u. 31." src="https://maps.google.com/maps?q=Mol-Car%20Kft.%2C%20P%C3%A9cs%2C%20Szent%20Borb%C3%A1la%20u.%2031.&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </section>
 </main>
 
-<footer class="sav">
-  <div class="lab-racs">
-    <div>
-      <img class="lab-logo" src="kepek/molcar-logo.webp" alt="Mol-Car Kft." width="568" height="98" loading="lazy">
-      <p>Karosszériajavítás, fényezés és teljes körű biztosítási kárügyintézés Pécsen, 1990 óta.</p>
-    </div>
-    <div><h3>Elérhetőség</h3><ul><li>7628 Pécs, Szent Borbála u. 31.</li><li><a href="tel:+3672238338">72/238-338</a></li><li><a href="tel:+36302982126">30/298-2126</a></li><li><a href="mailto:molcar@molcar.hu">molcar@molcar.hu</a></li></ul></div>
-    <div><h3>Nyitvatartás</h3><ul><li>Hétfő–csütörtök: 7:00–15:30</li><li>Péntek: 7:00–15:00</li></ul></div>
-    <div><h3>Oldal</h3><ul><li><a href="#mit-kap">Kedvezmények</a></li><li><a href="#karugyintezes">Kárügyintézés</a></li><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#rolunk">Rólunk</a></li><li><a href="#gyik">Kérdések</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul></div>
-  </div>
-  <div class="lab-also">
-    <span>© 2026 Mol-Car Kft.</span>
-    <span>Fotók (mintaképek, az Unsplash licencével): Erik Mclean, Winston Chen, Mehmet Talha Onuk, Clarity Coat. A végleges oldalra a műhely saját képei kerülnek.</span>
-  </div>
+<footer class="belso">
+ <div class="lab-racs">
+  <div><img class="lab-logo" src="kepek/molcar-logo.webp" alt="Mol-Car Kft." width="568" height="98" loading="lazy"><p>Karosszériajavítás, fényezés és teljes körű biztosítási kárügyintézés Pécsen, 1990 óta.</p></div>
+  <div><h3>Elérhetőség</h3><ul><li>7628 Pécs, Szent Borbála u. 31.</li><li><a href="tel:+3672238338">72/238-338</a></li><li><a href="tel:+36302982126">30/298-2126</a></li><li><a href="mailto:molcar@molcar.hu">molcar@molcar.hu</a></li></ul></div>
+  <div><h3>Nyitvatartás</h3><ul><li>Hétfő–csütörtök: 7:00–15:30</li><li>Péntek: 7:00–15:00</li><li>Hétvégén zárva</li></ul></div>
+  <div><h3>Oldal</h3><ul><li><a href="#szolgaltatasok">Szolgáltatások</a></li><li><a href="#karugyintezes">Kárügyintézés</a></li><li><a href="#kedvezmenyek">Kedvezmények</a></li><li><a href="#rolunk">Rólunk</a></li><li><a href="#gyik">Kérdések</a></li></ul></div>
+ </div>
+ <div class="lab-also">© 2026 Mol-Car Kft. · Fotók: Unsplash-mintaképek (Erik Mclean és mások); az éles oldalra a műhely saját képei kerülnek.</div>
 </footer>
 
-<div class="bemutato" role="note">Bemutató terv – Webtastic <button type="button" id="minta-kapcs" aria-pressed="false">Mintatartalom</button></div>
+<div class="bemutato">Bemutató terv – Webtastic <button type="button" id="minta-gomb" aria-pressed="false">Mintatartalom</button></div>
 
 <script>
 (function(){
-  var gomb=document.querySelector('.menu-gomb'),nav=document.getElementById('fomenu');
-  function zar(){nav.classList.remove('lenyitva');gomb.setAttribute('aria-expanded','false');}
-  gomb.addEventListener('click',function(e){e.stopPropagation();var ny=nav.classList.toggle('lenyitva');gomb.setAttribute('aria-expanded',ny?'true':'false');});
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',zar);});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')zar();});
-  document.addEventListener('click',function(e){if(!nav.contains(e.target)&&e.target!==gomb)zar();});
-
-  document.querySelectorAll('form.urlap').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();
-    f.querySelector('.uzenet').textContent='Köszönjük! Ez egy bemutató oldal, ezért a kérés most nem ment el. Az éles oldalon munkaidőben visszahívjuk.';});});
-
-  // esetválasztó
-  var ugy=document.getElementById('u-ugy');
-  document.querySelectorAll('.eset').forEach(function(b){b.addEventListener('click',function(){
-    document.querySelectorAll('.eset').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
-    document.querySelectorAll('[data-panel]').forEach(function(p){p.hidden=p.dataset.panel!==b.dataset.eset;});
-    ugy.value=b.dataset.eset;});});
-  var ft=function(n){return n.toLocaleString('hu-HU').replace(/ /g,' ')+' Ft';};
-  var r=document.getElementById('osszeg');
-  function szamol(){var v=+r.value;document.getElementById('osszeg-ki').textContent=ft(v);document.getElementById('tiz-ki').textContent=ft(Math.round(v/10));}
-  r.addEventListener('input',szamol);szamol();
-
-  // iratlista
-  var dobozok=document.querySelectorAll('#iratlista input');
-  function allas(){var n=Array.prototype.filter.call(dobozok,function(d){return d.checked;}).length;
-    document.getElementById('allas-szoveg').textContent=n+' / '+dobozok.length+' megvan';document.getElementById('allas-csik').style.width=(n/dobozok.length*100)+'%';}
-  dobozok.forEach(function(d){d.addEventListener('change',allas);});
-
-  var mk=document.getElementById('minta-kapcs');
-  function minta(be){document.body.classList.toggle('minta-be',be);mk.setAttribute('aria-pressed',be?'true':'false');}
-  mk.addEventListener('click',function(){minta(mk.getAttribute('aria-pressed')!=='true');});
-  if(/[?&]minta/.test(location.search))minta(true);
+ const g=document.querySelector('.menu-gomb'),m=document.getElementById('menu');
+ const zar=()=>{m.classList.remove('lenyitva');g.setAttribute('aria-expanded','false')};
+ g.addEventListener('click',e=>{e.stopPropagation();const ny=m.classList.toggle('lenyitva');g.setAttribute('aria-expanded',ny)});
+ m.querySelectorAll('a').forEach(a=>a.addEventListener('click',zar));
+ document.addEventListener('click',e=>{if(!m.contains(e.target))zar()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')zar()});
+ const f=document.getElementById('visszahivas');
+ f.addEventListener('submit',e=>{e.preventDefault();const st=f.querySelector('.uzenet');
+  if(!f.nev.value.trim()||!f.tel.value.trim()){st.textContent='Kérjük, adja meg a nevét és a telefonszámát.';return}
+  st.textContent='Köszönjük! Ez egy bemutató oldal, ezért az adatok nem kerültek elküldésre.'});
+ const mg=document.getElementById('minta-gomb');
+ const kap=on=>{document.body.classList.toggle('minta-lathato',on);mg.setAttribute('aria-pressed',on)};
+ mg.addEventListener('click',()=>kap(mg.getAttribute('aria-pressed')!=='true'));
+ if(new URLSearchParams(location.search).has('minta'))kap(true);
 })();
 </script>
 </body>
