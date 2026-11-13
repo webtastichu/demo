@@ -49,7 +49,10 @@
   {"@type":"Question","name":"Mikor rendel a Dr. Lucius Dental?","acceptedAnswer":{"@type":"Answer","text":"Hétfőn, szerdán és pénteken 7:00–12:00, kedden és csütörtökön 13:00–18:00. Hétvégén zárva."}},
   {"@type":"Question","name":"Hogyan kérhetek időpontot?","acceptedAnswer":{"@type":"Answer","text":"Telefonon a (06 69) 300 750-es számon, rendelési időben, vagy az oldalon visszahívást kérhet."}},
   {"@type":"Question","name":"Nagyon félek a fogorvostól. Mire számíthatok?","acceptedAnswer":{"@type":"Answer","text":"A páciensek visszatérő tapasztalata, hogy itt mindenkire jut idő: elmagyarázzák, mi a baj, hogyan és miképpen oldják meg, és a kezelés alatt is folyamatos a párbeszéd. Egyikük szavaival: „Ő az, akitől nem kell félni!”"}},
-  {"@type":"Question","name":"Lánycsókról is ide járhatok?","acceptedAnswer":{"@type":"Answer","text":"Lánycsók község honlapja Dr. Lucius Gábort a település fogorvosaként tünteti fel."}},
+  {"@type":"Question","name":"Kik tartoznak a körzetbe?","acceptedAnswer":{"@type":"Answer","text":"A körzeti (TB-s) ellátás a rendelő körzetéhez tartozó lakcímeknek szól. Lánycsók község honlapja Dr. Lucius Gábort a település fogorvosaként tünteti fel. Ha nem tudja, ide tartozik-e, kérdezze telefonon."}},
+  {"@type":"Question","name":"Mi ingyenes, és mi térítéses?","acceptedAnswer":{"@type":"Answer","text":"A TB-s alapellátás kezelései TAJ-kártyával térítésmentesek; a fogpótlások egy része térítéses. Kezelés előtt mindig elmondjuk, mibe kerül."}},
+  {"@type":"Question","name":"Mit tegyek, ha hétvégén fáj a fogam?","acceptedAnswer":{"@type":"Answer","text":"Hétvégén és ünnepnapon fogorvosi ügyelet működik. Hogy épp hol, arról az egységes ügyeleti számon, az 1830-on kaphat tájékoztatást. Életveszélyben hívja a 112-t."}},
+  {"@type":"Question","name":"Kell beutaló?","acceptedAnswer":{"@type":"Answer","text":"Nem, fogorvoshoz beutaló nélkül jöhet."}},
   {"@type":"Question","name":"Hol van a rendelő?","acceptedAnswer":{"@type":"Answer","text":"Mohácson, a Perényi u. 8. szám alatt (7700)."}}
  ]
 }
@@ -116,13 +119,13 @@ nav a:hover{color:var(--barack)}
 .ma-kartya b{display:block;color:var(--tinta)}
 .ma-kartya span{color:var(--halvany)}
 /* visszahívás: egy lépés */
-.visszahivas{background:#fff}
+.visszahivas{background:var(--kod)}
 .vh-racs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:64px;align-items:center}
 .vh-bev .bevezeto{margin-bottom:22px}
 .vh-ido{color:var(--szoveg);font-size:17px;padding-left:16px;border-left:3px solid var(--barack)}
 .nw{white-space:nowrap}
 .vh-felos{color:var(--halvany);font-size:16px;margin:0}
-.vh-kartya{background:var(--kod);border:1px solid var(--vonal);border-radius:20px;padding:32px;box-shadow:0 18px 44px rgba(21,49,75,.08)}
+.vh-kartya{background:#fff;border:1px solid var(--vonal);border-radius:20px;padding:32px;box-shadow:0 18px 44px rgba(21,49,75,.08)}
 .vh-kartya .gomb{width:100%;margin-top:6px}
 .mezo{margin-bottom:16px}
 .mezo label{display:block;font-weight:600;font-size:14.5px;color:var(--tinta);margin-bottom:6px}
@@ -143,20 +146,16 @@ nav a:hover{color:var(--barack)}
 .kez p{color:var(--halvany);font-size:15.5px;line-height:1.55;margin:0}
 .kez-also{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding:20px 24px;border-radius:16px;background:var(--eg)}
 .kez-also p{margin:0;font-weight:500;color:var(--tinta)}
-.orvosok{background:var(--kod)}
-.orvosok .orvos{background:#fff}
+.orvosok{background:#fff}
+/* első alkalom */
+.elso{background:var(--kod)}
+.lepesek{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:l}
+.lepes{background:#fff;border:1px solid var(--vonal);border-radius:18px;padding:26px 24px;counter-increment:l}
+.lepes::before{content:counter(l);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--barack);color:var(--tinta);font:700 18px var(--font);margin-bottom:16px}
+.lepes h3{font-size:19px;margin-bottom:6px}
+.lepes p{color:var(--halvany);font-size:15.5px;line-height:1.55;margin:0}
+.elso .gombok{margin-top:28px}
 .halk{font-size:13px;color:var(--halvany);margin:10px 0 0}
-/* segítünk */
-.segitunk{background:var(--kod)}
-.seg-racs{display:grid;grid-template-columns:minmax(0,1fr) 440px;gap:56px;align-items:start;margin-top:34px}
-.teruletek{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
-.terulet{padding:22px 0;border-top:1px solid var(--vonal)}
-.terulet h3{margin-bottom:6px}
-.terulet p{color:var(--halvany);font-size:16px;margin:0}
-.seg-kep{border-radius:20px;overflow:hidden}
-.seg-kep img{width:100%;aspect-ratio:4/3;object-fit:cover}
-.seg-kep figcaption{font-size:13px;color:var(--halvany);padding:8px 2px 0}
-.seg-kep{margin:0}
 /* orvosok */
 .orvos-racs{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:34px}
 .orvos{display:flex;gap:20px;align-items:flex-start;border:1px solid var(--vonal);border-radius:20px;padding:28px}
@@ -219,8 +218,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .vh-racs{grid-template-columns:minmax(0,1fr);gap:32px}
  .vh-kartya{max-width:560px}
  .kez-racs{grid-template-columns:repeat(2,minmax(0,1fr))}
- .seg-racs{grid-template-columns:minmax(0,1fr)}
- .seg-kep{max-width:560px}
  .gyik-racs{grid-template-columns:minmax(0,1fr);gap:10px}
  .lab-racs{grid-template-columns:1fr 1fr}
 }
@@ -232,7 +229,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .nyito picture{position:relative;width:100%;height:300px;display:block}
  .nyito picture::after{background:linear-gradient(180deg,var(--eg) 0%,rgba(233,240,247,0) 30%)}
  .ma-kartya{position:relative;right:auto;bottom:auto;margin:-36px var(--szel) 28px;max-width:none}
- .vel-racs,.orvos-racs,.kapcs-sor{grid-template-columns:minmax(0,1fr)}
+ .vel-racs,.orvos-racs,.kapcs-sor,.lepesek{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:760px){
  body{font-size:16.5px}
@@ -252,10 +249,10 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .kez h3{font-size:18px;margin-bottom:2px}
  .kez-also{padding:18px 20px}
  .kez-also .gomb{width:100%}
- .teruletek{grid-template-columns:minmax(0,1fr)}
  .orvos{padding:22px;flex-direction:column}
  .lab-racs{grid-template-columns:minmax(0,1fr)}
  .terkep{height:340px}
+ .elso .gombok .gomb{width:100%}
 }
 </style>
 <script data-goatcounter="https://webtastic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
@@ -268,10 +265,11 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <a class="marka" href="#nyito" aria-label="Dr. Lucius Dental – az oldal teteje"><i aria-hidden="true">L</i><span><b>Dr. Lucius Dental</b><span>Fogorvosi rendelő, Mohács</span></span></a>
   <nav id="menu" aria-label="Fő menü">
    <ul>
-    <li><a href="#visszahivas">Időpontkérés</a></li>
     <li><a href="#kezelesek">Kezeléseink</a></li>
+    <li><a href="#elso-alkalom">Első alkalom</a></li>
     <li><a href="#orvosok">Orvosaink</a></li>
-    <li><a href="#velemenyek">Vélemények</a></li>
+    <li><a href="#gyik">Kérdések</a></li>
+    <li><a href="#visszahivas">Időpontkérés</a></li>
     <li><a href="#kapcsolat">Rendelési idő</a></li>
    </ul>
   </nav>
@@ -296,6 +294,73 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
    <div class="ertekeles"><b>4,6</b><span><span class="csillag" aria-hidden="true">★★★★★</span><br>20 Google-vélemény</span></div>
   </div>
   <div class="ma-kartya" id="ma-kartya"><i></i><div><b id="ma-cim">Rendelési idő</b><span id="ma-al">H, Sze, P 7–12 · K, Cs 13–18</span></div></div>
+ </section>
+
+ <section class="kezelesek szakasz belso" id="kezelesek">
+  <h2>Kezeléseink</h2>
+  <p class="bevezeto" data-minta>Az általános fogorvosi ellátás alapkezelései egy helyen, Mohácson.</p>
+  <ul class="kez-racs" data-minta>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><circle cx="12" cy="9" r="2.2" class="tele"/></svg></i><h3>Fogtömés</h3><p>A szuvas vagy letört fog helyreállítása, hogy újra rendesen rághasson vele.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M9 7.5v6.5M15 7.5v6.5"/></svg></i><h3>Gyökérkezelés</h3><p>Ha a fog belseje begyulladt: kitisztítjuk és lezárjuk a gyökércsatornákat, így a fog megmaradhat.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 9.5C6.3 9.5 5 10.8 5 12.6c0 1.7.7 2.7 1.1 4 .5 1.4.5 3.2 1 4.7.2.9.6 1.6 1.2 1.6.9 0 1.1-1.3 1.4-2.8.2-1 .6-1.7 1.3-1.7s1.1.7 1.3 1.7c.3 1.5.5 2.8 1.4 2.8.6 0 1-.7 1.2-1.6.5-1.5.5-3.3 1-4.7.4-1.3 1.1-2.3 1.1-4 0-1.8-1.3-3.1-3-3.1-1.4 0-2.2.7-3.5.7S9.4 9.5 8 9.5z"/><path d="M12 6.5V1.8M9.6 4.1 12 1.7l2.4 2.4"/></svg></i><h3>Foghúzás</h3><p>Ha egy fog már nem menthető, érzéstelenítésben, kíméletesen távolítjuk el.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 13.8 9l5.7 1.8-5.7 1.8L12 18.1l-1.8-5.5-5.7-1.8L10.2 9z"/><path d="M19 3v3.5M17.3 4.7h3.5M5 17v3M3.5 18.5h3"/></svg></i><h3>Fogkő-eltávolítás</h3><p>A fogkő és a lerakódások eltávolítása, ami az ínyt is védi a gyulladástól.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 8.5 7.5 12 12 5.5l4.5 6.5 4-3.5-1.8 9.5H5.3z"/><path d="M5.3 20.5h13.4"/></svg></i><h3>Korona és híd</h3><p>A megviselt fogat korona védi, a hiányzó fogat híd pótolja.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9c2.5 7 15.5 7 18 0"/><path d="M3 9c3 2.2 15 2.2 18 0"/><path d="M7.6 11.2v2.6M12 11.7v3.2M16.4 11.2v2.6"/></svg></i><h3>Kivehető fogsor</h3><p>Ha több fog hiányzik: részleges vagy teljes fogsor, amelyet könnyen tisztán tarthat.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2.5-5.5 4 11L16 12h5"/></svg></i><h3>Fogfájás, panasz</h3><p>Fáj, érzékeny vagy bedagadt? Hívja a rendelőt, és megnézzük, mi okozza.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 5.2 5.2M7.8 10.6l2 2 3.6-3.8"/></svg></i><h3>Ellenőrzés</h3><p>Évente egyszer érdemes átnézetni a fogakat: így a kis gond kicsi marad.</p></li>
+  </ul>
+  <div class="kez-also"><p data-minta>Nem tudja, melyik kell? Nem baj: mondja el, mi a gond, és megmondjuk.</p><a class="gomb gomb-tinta" href="#visszahivas">Visszahívást kérek</a></div>
+ </section>
+
+ <section class="elso szakasz belso" id="elso-alkalom">
+  <h2>Első alkalommal jön?</h2>
+  <p class="bevezeto">Három egyszerű lépés, és nem ér meglepetés.</p>
+  <ol class="lepesek">
+   <li class="lepes"><h3>Hívjon, vagy kérjen visszahívást</h3><p>Rendelési időben a <a href="tel:+3669300750">(06 69) 300 750</a>-es számon, vagy hagyja meg a számát, és visszahívjuk.</p></li>
+   <li class="lepes"><h3>Hozza a TAJ-kártyáját</h3><p data-minta>A TB-s ellátáshoz a TAJ-kártya és a személyi igazolvány kell. Ha rendszeresen szed gyógyszert, írja fel a nevüket.</p></li>
+   <li class="lepes"><h3>Előbb beszélgetünk</h3><p><span data-minta>Mielőtt bármi történik, elmondjuk, mi a baj, mit javaslunk, és ha a kezelés térítéses, mennyibe kerül.</span> A páciensek szerint itt mindenkire jut idő, és a kezelés alatt is folyamatos a párbeszéd.</p></li>
+  </ol>
+  <div class="gombok">
+   <a class="gomb gomb-tinta" href="#visszahivas">Visszahívást kérek</a>
+   <a class="gomb gomb-keret" href="tel:+3669300750">Hívás: (06 69) 300 750</a>
+  </div>
+ </section>
+
+ <section class="orvosok szakasz belso" id="orvosok">
+  <h2>Orvosaink</h2>
+  <p class="bevezeto">Családi vállalkozás: a Dr. Lucius Dental Kft. rendelője a Perényi u. 8.-ban.</p>
+  <div class="orvos-racs">
+   <div class="orvos"><i aria-hidden="true">LG</i><div><h3>Dr. Lucius Gábor</h3><p>Fogszakorvos. Lánycsók község honlapja a település fogorvosaként tünteti fel.</p></div></div>
+   <div class="orvos"><i aria-hidden="true">LA</i><div><h3>Dr. Lucius András</h3><p>A konzerváló fogászat és fogpótlástan szakorvosa: a fogak megtartása, tömése, gyökérkezelése és pótlása.</p></div></div>
+  </div>
+ </section>
+
+ <section class="velemeny szakasz belso" id="velemenyek">
+  <p class="vel-nagy">„Ő az, akitől nem kell félni!”</p>
+  <p class="vel-nagy-al">Egy páciens a Doktor Úrról, a Google-on</p>
+  <h2 class="vh">Amit a páciensek írnak</h2>
+  <div class="vel-racs">
+   <figure><blockquote>„Legtöbb ember retteg a fogorvosi beavatkozástól. Én még náluk is jobban… mindenkire jut idejük elmagyarázni, hogy mi a baj, hogyan és miképpen oldják meg. Folyamatos a párbeszéd. Udvariasak, türelmesek.”</blockquote><figcaption>Google-vélemény</figcaption></figure>
+   <figure><blockquote>„Kedvesen, figyelmesen oldja meg a gondot. Köszönet neki, és a Kollégáinak, az ismerőseim körében is ez a jó vélemény róluk!”</blockquote><figcaption>Google-vélemény</figcaption></figure>
+   <figure><blockquote>„Rendkívül kedves és segítőkész volt mindenki. A Doktor Úr nagyon profi, csak ajánlani tudom.”</blockquote><figcaption>Google-vélemény</figcaption></figure>
+  </div>
+  <div class="vel-szam"><b>4,6</b><span><span class="csillag" aria-hidden="true">★★★★★</span><br>20 Google-vélemény alapján</span></div>
+ </section>
+
+ <section class="szakasz belso" id="gyik">
+  <div class="gyik-racs">
+   <div><h2>Gyakori kérdések</h2><p class="bevezeto">Más kérdése van? Hívja a rendelőt rendelési időben: <a href="tel:+3669300750">(06 69) 300 750</a>.</p></div>
+   <div>
+    <details><summary>Mikor rendel a Dr. Lucius Dental?</summary><p>Hétfőn, szerdán és pénteken 7:00–12:00, kedden és csütörtökön 13:00–18:00. Hétvégén zárva.</p></details>
+    <details><summary>Hogyan kérhetek időpontot?</summary><p>Telefonon a (06 69) 300 750-es számon, rendelési időben, vagy az oldalon visszahívást kérhet.</p></details>
+    <details><summary>Nagyon félek a fogorvostól. Mire számíthatok?</summary><p>A páciensek visszatérő tapasztalata, hogy itt mindenkire jut idő: elmagyarázzák, mi a baj, hogyan és miképpen oldják meg, és a kezelés alatt is folyamatos a párbeszéd. Egyikük szavaival: „Ő az, akitől nem kell félni!”</p></details>
+    <details><summary>Kik tartoznak a körzetbe?</summary><p><span data-minta>A körzeti (TB-s) ellátás a rendelő körzetéhez tartozó lakcímeknek szól.</span> Lánycsók község honlapja Dr. Lucius Gábort a település fogorvosaként tünteti fel. Ha nem tudja, ide tartozik-e, kérdezze telefonon.</p></details>
+    <details><summary>Mi ingyenes, és mi térítéses?</summary><p data-minta>A TB-s alapellátás kezelései TAJ-kártyával térítésmentesek; a fogpótlások egy része térítéses. Kezelés előtt mindig elmondjuk, mibe kerül.</p></details>
+    <details><summary>Mit tegyek, ha hétvégén fáj a fogam?</summary><p data-minta>Hétvégén és ünnepnapon fogorvosi ügyelet működik. Hogy épp hol, arról az egységes ügyeleti számon, az 1830-on kaphat tájékoztatást. Életveszélyben hívja a 112-t.</p></details>
+    <details><summary>Kell beutaló?</summary><p>Nem, fogorvoshoz beutaló nélkül jöhet.</p></details>
+    <details><summary>Hol van a rendelő?</summary><p>Mohácson, a Perényi u. 8. szám alatt (7700).</p></details>
+   </div>
+  </div>
  </section>
 
  <section class="visszahivas szakasz belso" id="visszahivas">
@@ -327,73 +392,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   </div>
  </section>
 
- <section class="segitunk szakasz belso" id="segitunk">
-  <h2>Amiben segítünk</h2>
-  <p class="bevezeto">Körzeti fogorvosi ellátás Mohácson, két fogorvossal, egy családi rendelőben.</p>
-  <div class="seg-racs">
-   <div class="teruletek">
-    <div class="terulet"><h3>Körzeti fogászat</h3><p>TB-s fogorvosi ellátás. Lánycsók község honlapja is a település fogorvosaként sorolja fel Dr. Lucius Gábort.</p></div>
-    <div class="terulet"><h3>Szakorvosi kezelés</h3><p>Dr. Lucius András a konzerváló fogászat és fogpótlástan szakorvosa: <span data-minta>a saját fog megmentése és a pótlás egy rendelőben.</span></p></div>
-    <div class="terulet"><h3>Félős pácienseknek</h3><p>A vélemények szerint itt mindenkire jut idő elmagyarázni, mi a baj, és hogyan oldják meg. A kezelés alatt is folyamatos a párbeszéd.</p></div>
-    <div class="terulet"><h3>Délelőtt és délután is</h3><p>Hétfőn, szerdán és pénteken 7 és 12, kedden és csütörtökön 13 és 18 óra között rendelünk.</p></div>
-   </div>
-   <figure class="seg-kep">
-    <img src="kepek/kezeles.webp" width="900" height="600" loading="lazy" alt="Fogorvosnő a kezelőlámpát igazítja a páciens feje fölött">
-    <figcaption>Mintakép</figcaption>
-   </figure>
-  </div>
- </section>
-
- <section class="kezelesek szakasz belso" id="kezelesek">
-  <h2>Kezeléseink</h2>
-  <p class="bevezeto" data-minta>Az általános fogorvosi ellátás alapkezelései egy helyen, Mohácson.</p>
-  <ul class="kez-racs" data-minta>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><circle cx="12" cy="9" r="2.2" class="tele"/></svg></i><h3>Fogtömés</h3><p>A szuvas vagy letört fog helyreállítása, hogy újra rendesen rághasson vele.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M9 7.5v6.5M15 7.5v6.5"/></svg></i><h3>Gyökérkezelés</h3><p>Ha a fog belseje begyulladt: kitisztítjuk és lezárjuk a gyökércsatornákat, így a fog megmaradhat.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 9.5C6.3 9.5 5 10.8 5 12.6c0 1.7.7 2.7 1.1 4 .5 1.4.5 3.2 1 4.7.2.9.6 1.6 1.2 1.6.9 0 1.1-1.3 1.4-2.8.2-1 .6-1.7 1.3-1.7s1.1.7 1.3 1.7c.3 1.5.5 2.8 1.4 2.8.6 0 1-.7 1.2-1.6.5-1.5.5-3.3 1-4.7.4-1.3 1.1-2.3 1.1-4 0-1.8-1.3-3.1-3-3.1-1.4 0-2.2.7-3.5.7S9.4 9.5 8 9.5z"/><path d="M12 6.5V1.8M9.6 4.1 12 1.7l2.4 2.4"/></svg></i><h3>Foghúzás</h3><p>Ha egy fog már nem menthető, érzéstelenítésben, kíméletesen távolítjuk el.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 13.8 9l5.7 1.8-5.7 1.8L12 18.1l-1.8-5.5-5.7-1.8L10.2 9z"/><path d="M19 3v3.5M17.3 4.7h3.5M5 17v3M3.5 18.5h3"/></svg></i><h3>Fogkő-eltávolítás</h3><p>A fogkő és a lerakódások eltávolítása, ami az ínyt is védi a gyulladástól.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 8.5 7.5 12 12 5.5l4.5 6.5 4-3.5-1.8 9.5H5.3z"/><path d="M5.3 20.5h13.4"/></svg></i><h3>Korona és híd</h3><p>A megviselt fogat korona védi, a hiányzó fogat híd pótolja.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9c2.5 7 15.5 7 18 0"/><path d="M3 9c3 2.2 15 2.2 18 0"/><path d="M7.6 11.2v2.6M12 11.7v3.2M16.4 11.2v2.6"/></svg></i><h3>Kivehető fogsor</h3><p>Ha több fog hiányzik: részleges vagy teljes fogsor, amelyet könnyen tisztán tarthat.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2.5-5.5 4 11L16 12h5"/></svg></i><h3>Fogfájás, panasz</h3><p>Fáj, érzékeny vagy bedagadt? Hívja a rendelőt, és megnézzük, mi okozza.</p></li>
-   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 5.2 5.2M7.8 10.6l2 2 3.6-3.8"/></svg></i><h3>Ellenőrzés</h3><p>Évente egyszer érdemes átnézetni a fogakat: így a kis gond kicsi marad.</p></li>
-  </ul>
-  <div class="kez-also"><p data-minta>Nem tudja, melyik kell? Nem baj: mondja el, mi a gond, és megmondjuk.</p><a class="gomb gomb-tinta" href="#visszahivas">Visszahívást kérek</a></div>
- </section>
-
- <section class="orvosok szakasz belso" id="orvosok">
-  <h2>Két Lucius doktor, egy rendelő</h2>
-  <p class="bevezeto">Családi vállalkozás: a Dr. Lucius Dental Kft. rendelője a Perényi u. 8.-ban.</p>
-  <div class="orvos-racs">
-   <div class="orvos"><i aria-hidden="true">LG</i><div><h3>Dr. Lucius Gábor</h3><p>Fogszakorvos. Lánycsók község honlapja a település fogorvosaként tünteti fel.</p></div></div>
-   <div class="orvos"><i aria-hidden="true">LA</i><div><h3>Dr. Lucius András</h3><p>A konzerváló fogászat és fogpótlástan szakorvosa: a fogak megtartása, tömése, gyökérkezelése és pótlása.</p></div></div>
-  </div>
- </section>
-
- <section class="velemeny szakasz belso" id="velemenyek">
-  <p class="vel-nagy">„Ő az, akitől nem kell félni!”</p>
-  <p class="vel-nagy-al">Egy páciens a Doktor Úrról, a Google-on</p>
-  <h2 class="vh">Amit a páciensek írnak</h2>
-  <div class="vel-racs">
-   <figure><blockquote>„Legtöbb ember retteg a fogorvosi beavatkozástól. Én még náluk is jobban… mindenkire jut idejük elmagyarázni, hogy mi a baj, hogyan és miképpen oldják meg. Folyamatos a párbeszéd. Udvariasak, türelmesek.”</blockquote><figcaption>Google-vélemény</figcaption></figure>
-   <figure><blockquote>„Kedvesen, figyelmesen oldja meg a gondot. Köszönet neki, és a Kollégáinak, az ismerőseim körében is ez a jó vélemény róluk!”</blockquote><figcaption>Google-vélemény</figcaption></figure>
-   <figure><blockquote>„Rendkívül kedves és segítőkész volt mindenki. A Doktor Úr nagyon profi, csak ajánlani tudom.”</blockquote><figcaption>Google-vélemény</figcaption></figure>
-  </div>
-  <div class="vel-szam"><b>4,6</b><span><span class="csillag" aria-hidden="true">★★★★★</span><br>20 Google-vélemény alapján</span></div>
- </section>
-
- <section class="szakasz belso" id="gyik">
-  <div class="gyik-racs">
-   <div><h2>Gyakori kérdések</h2><p class="bevezeto">Más kérdése van? Hívja a rendelőt rendelési időben: <a href="tel:+3669300750">(06 69) 300 750</a>.</p></div>
-   <div>
-    <details><summary>Mikor rendel a Dr. Lucius Dental?</summary><p>Hétfőn, szerdán és pénteken 7:00–12:00, kedden és csütörtökön 13:00–18:00. Hétvégén zárva.</p></details>
-    <details><summary>Hogyan kérhetek időpontot?</summary><p>Telefonon a (06 69) 300 750-es számon, rendelési időben, vagy az oldalon visszahívást kérhet.</p></details>
-    <details><summary>Nagyon félek a fogorvostól. Mire számíthatok?</summary><p>A páciensek visszatérő tapasztalata, hogy itt mindenkire jut idő: elmagyarázzák, mi a baj, hogyan és miképpen oldják meg, és a kezelés alatt is folyamatos a párbeszéd. Egyikük szavaival: „Ő az, akitől nem kell félni!”</p></details>
-    <details><summary>Lánycsókról is ide járhatok?</summary><p>Lánycsók község honlapja Dr. Lucius Gábort a település fogorvosaként tünteti fel.</p></details>
-    <details><summary>Hol van a rendelő?</summary><p>Mohácson, a Perényi u. 8. szám alatt (7700).</p></details>
-   </div>
-  </div>
- </section>
-
  <section class="kapcsolat" id="kapcsolat">
   <div class="belso">
    <h2>Rendelési idő és elérhetőség</h2>
@@ -416,9 +414,9 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <div><h3>Dr. Lucius Dental Kft.</h3><p>Fogorvosi rendelő Mohácson, Dr. Lucius Gábor és Dr. Lucius András rendelője: körzeti fogászat, konzerváló fogászat, fogpótlás.</p></div>
   <div><h3>Elérhetőség</h3><ul><li>7700 Mohács, Perényi u. 8.</li><li><a href="tel:+3669300750">(06 69) 300 750</a></li><li><a href="mailto:lucius.gabor@gmail.com">lucius.gabor@gmail.com</a></li></ul></div>
   <div><h3>Rendelés</h3><ul><li>H, Sze, P: 7:00–12:00</li><li>K, Cs: 13:00–18:00</li><li>Hétvégén zárva</li></ul></div>
-  <div><h3>Oldalak</h3><ul><li><a href="#visszahivas">Időpontkérés</a></li><li><a href="#segitunk">Amiben segítünk</a></li><li><a href="#kezelesek">Kezeléseink</a></li><li><a href="#orvosok">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li></ul></div>
+  <div><h3>Oldalak</h3><ul><li><a href="#kezelesek">Kezeléseink</a></li><li><a href="#elso-alkalom">Első alkalom</a></li><li><a href="#orvosok">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li><li><a href="#visszahivas">Időpontkérés</a></li></ul></div>
  </div>
- <div class="lab-also">© 2026 Dr. Lucius Dental Kft. · Mintaképek (Unsplash): Harold Hisona, SoyBreno. A rendelő saját fotói élesítés előtt kerülnek a helyükre.</div>
+ <div class="lab-also">© 2026 Dr. Lucius Dental Kft. · Mintakép (Unsplash): Harold Hisona. A rendelő saját fotói élesítés előtt kerülnek a helyükre.</div>
 </footer>
 
 <div class="bemutato">Bemutató terv – Webtastic <button type="button" id="minta-gomb" aria-pressed="false">Mintatartalom</button></div>
