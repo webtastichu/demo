@@ -80,6 +80,7 @@ nav a:hover{color:#fff;text-decoration:underline;text-underline-offset:6px}
 .nyito picture img{filter:saturate(.8) contrast(1.05)}
 .nyito::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(30,31,35,.88) 0%,rgba(30,31,35,.62) 42%,rgba(30,31,35,.1) 72%,rgba(30,31,35,.25) 100%)}
 .nyito>div{position:relative;z-index:2}
+.nyito>div:last-child{padding-top:40px;padding-bottom:40px}
 .nyito-szoveg{padding-top:4.5em;padding-bottom:4.5em;color:#fff}
 .nyito .ota{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:#D5D8DE;font-size:16px;margin:0 0 16px}
 .nyito .ota i{display:inline-block;width:28px;height:3px;background:var(--piros);border-radius:2px}
@@ -217,6 +218,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;ba
 }
 @media (max-width:900px){
  .nyito{grid-template-columns:1fr;gap:0;padding-bottom:40px;align-items:start}
+ .nyito>div:last-child{padding-top:0;padding-bottom:0}
  .nyito::after{background:linear-gradient(180deg,rgba(30,31,35,.9) 0%,rgba(30,31,35,.8) 45%,rgba(30,31,35,.55) 100%)}
  .nyito-szoveg{padding-top:3em;padding-bottom:2em}
  .temak,.szk-racs,.lepesek{grid-template-columns:1fr}
