@@ -115,34 +115,36 @@ nav a:hover{color:var(--barack)}
 .ma-kartya.nyitva i{background:#2FAE64;box-shadow:0 0 0 5px rgba(47,174,100,.18)}
 .ma-kartya b{display:block;color:var(--tinta)}
 .ma-kartya span{color:var(--halvany)}
-/* húzóelem: visszahívás */
+/* visszahívás: egy lépés */
 .visszahivas{background:#fff}
-.lepesek{display:grid;grid-template-columns:1.05fr 1.2fr .9fr;margin-top:34px;border:1px solid var(--vonal);border-radius:20px;overflow:hidden;box-shadow:0 18px 44px rgba(21,49,75,.08)}
-.lepes{padding:30px 28px 32px;min-width:0}
-.lepes+.lepes{border-left:1px solid var(--vonal)}
-.lepes:last-child{background:var(--kod)}
-.lepes h3{display:flex;gap:12px;align-items:center;font-size:19px;margin-bottom:6px}
-.lepes h3 em{font-style:normal;width:32px;height:32px;border-radius:50%;background:var(--tinta);color:#fff;display:grid;place-items:center;font-size:15px;flex:none}
-.lepes .seg{color:var(--halvany);font-size:15px;margin-bottom:16px}
-.valaszt{display:flex;flex-wrap:wrap;gap:8px}
-.valaszt button{font:500 15px var(--font);color:var(--tinta);background:#fff;border:2px solid var(--vonal);border-radius:10px;padding:10px 14px;cursor:pointer;text-align:left}
-.valaszt button:hover{border-color:#9DB6CD}
-.valaszt button[aria-pressed=true]{border-color:var(--tinta);background:var(--tinta);color:#fff}
-.szuro{display:flex;gap:6px;margin-bottom:14px;background:var(--eg);padding:4px;border-radius:12px;width:max-content;max-width:100%;flex-wrap:wrap}
-.szuro button{font:600 14px var(--font);border:0;background:none;color:var(--tinta);padding:8px 14px;border-radius:9px;cursor:pointer}
-.szuro button[aria-pressed=true]{background:#fff;box-shadow:0 2px 6px rgba(21,49,75,.14)}
-.alkalmak{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.alkalom{font:inherit;text-align:left;background:#fff;border:2px solid var(--vonal);border-radius:12px;padding:10px 12px;cursor:pointer;color:var(--szoveg);line-height:1.3}
-.alkalom b{display:block;color:var(--tinta);font-size:15.5px}
-.alkalom span{font-size:14px;color:var(--halvany)}
-.alkalom small{display:block;font-size:12.5px;color:var(--kek);font-weight:600;margin-top:3px}
-.alkalom[aria-pressed=true]{border-color:var(--barack-s);background:#FDF1E8}
-.mezo{margin-bottom:14px}
+.vh-racs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:64px;align-items:center}
+.vh-bev .bevezeto{margin-bottom:22px}
+.vh-ido{color:var(--szoveg);font-size:17px;padding-left:16px;border-left:3px solid var(--barack)}
+.nw{white-space:nowrap}
+.vh-felos{color:var(--halvany);font-size:16px;margin:0}
+.vh-kartya{background:var(--kod);border:1px solid var(--vonal);border-radius:20px;padding:32px;box-shadow:0 18px 44px rgba(21,49,75,.08)}
+.vh-kartya .gomb{width:100%;margin-top:6px}
+.mezo{margin-bottom:16px}
 .mezo label{display:block;font-weight:600;font-size:14.5px;color:var(--tinta);margin-bottom:6px}
-.mezo input{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--vonal);border-radius:10px;background:#fff;min-height:50px;color:var(--szoveg)}
-.mezo input:focus{border-color:var(--kek);outline:none}
-.osszefog{font-size:14.5px;color:var(--tinta);background:#fff;border-radius:10px;padding:10px 12px;margin:0 0 14px;border:1px dashed #A9BED1}
+.mezo label small{font-weight:400;color:var(--halvany);font-size:13.5px}
+.mezo input,.mezo select{width:100%;font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--vonal);border-radius:10px;background:#fff;min-height:50px;color:var(--szoveg)}
+.mezo select{appearance:none;-webkit-appearance:none;padding-right:44px;cursor:pointer;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m6 9 6 6 6-6' fill='none' stroke='%2315314B' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 14px center/18px}
+.mezo input:focus,.mezo select:focus{border-color:var(--kek);outline:none}
 .uzenet{font-weight:600;color:var(--tinta);margin:12px 0 0;min-height:1.2em;font-size:15px}
+.uzenet:empty{margin:0}
+/* kezeléseink */
+.kezelesek{background:#fff}
+.kez-racs{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.kez{border:1px solid var(--vonal);border-radius:18px;padding:24px 22px 22px;background:#fff;min-width:0}
+.kez i{width:50px;height:50px;border-radius:14px;background:var(--eg);color:var(--tinta);display:grid;place-items:center;margin-bottom:16px}
+.kez svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.kez svg .tele{fill:var(--barack-s);stroke:none}
+.kez h3{font-size:19px;margin-bottom:6px}
+.kez p{color:var(--halvany);font-size:15.5px;line-height:1.55;margin:0}
+.kez-also{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:28px;padding:20px 24px;border-radius:16px;background:var(--eg)}
+.kez-also p{margin:0;font-weight:500;color:var(--tinta)}
+.orvosok{background:var(--kod)}
+.orvosok .orvos{background:#fff}
 .halk{font-size:13px;color:var(--halvany);margin:10px 0 0}
 /* segítünk */
 .segitunk{background:var(--kod)}
@@ -214,8 +216,9 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  nav a{display:block;padding:13px 0;border-bottom:1px solid var(--vonal);font-size:17px;color:var(--tinta)}
  .menu-gomb{display:inline-flex;align-items:center;justify-content:center}
  .fej-sor{gap:12px}
- .lepesek{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
- .lepes:last-child{grid-column:1/-1;border-left:0;border-top:1px solid var(--vonal)}
+ .vh-racs{grid-template-columns:minmax(0,1fr);gap:32px}
+ .vh-kartya{max-width:560px}
+ .kez-racs{grid-template-columns:repeat(2,minmax(0,1fr))}
  .seg-racs{grid-template-columns:minmax(0,1fr)}
  .seg-kep{max-width:560px}
  .gyik-racs{grid-template-columns:minmax(0,1fr);gap:10px}
@@ -242,16 +245,18 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .nyito .lead{font-size:17px}
  h2{font-size:clamp(27px,7.6vw,31px)}
  .bevezeto{font-size:17px}
- .lepesek{grid-template-columns:minmax(0,1fr)}
- .lepes+.lepes{border-left:0;border-top:1px solid var(--vonal)}
- .lepes{padding:24px 20px}
+ .vh-kartya{padding:24px 20px}
+ .kez-racs{grid-template-columns:minmax(0,1fr);gap:12px}
+ .kez{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;padding:18px}
+ .kez i{width:44px;height:44px;margin:0;grid-row:span 2}
+ .kez h3{font-size:18px;margin-bottom:2px}
+ .kez-also{padding:18px 20px}
+ .kez-also .gomb{width:100%}
  .teruletek{grid-template-columns:minmax(0,1fr)}
  .orvos{padding:22px;flex-direction:column}
  .lab-racs{grid-template-columns:minmax(0,1fr)}
  .terkep{height:340px}
 }
-@media (max-width:340px){.alkalmak{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:760px){.alkalom{padding:9px 10px}.alkalom small{font-size:12px}}
 </style>
 <script data-goatcounter="https://webtastic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
@@ -264,7 +269,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <nav id="menu" aria-label="Fő menü">
    <ul>
     <li><a href="#visszahivas">Időpontkérés</a></li>
-    <li><a href="#segitunk">Amiben segítünk</a></li>
+    <li><a href="#kezelesek">Kezeléseink</a></li>
     <li><a href="#orvosok">Orvosaink</a></li>
     <li><a href="#velemenyek">Vélemények</a></li>
     <li><a href="#kapcsolat">Rendelési idő</a></li>
@@ -294,41 +299,32 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  </section>
 
  <section class="visszahivas szakasz belso" id="visszahivas">
-  <h2>Kérjen visszahívást három lépésben</h2>
-  <p class="bevezeto">Hétfőn, szerdán és pénteken reggel 7-től, kedden és csütörtökön este 6-ig rendelünk, így munka előtt vagy után is be tud jönni. Válassza ki, mikor lenne jó, és <span data-minta>rendelési időben visszahívjuk egy pontos időpontért.</span></p>
-  <form class="lepesek" id="urlap" novalidate>
-   <div class="lepes">
-    <h3><em>1</em>Miben segíthetünk?</h3>
-    <p class="seg">Válasszon egyet:</p>
-    <div class="valaszt" id="panasz">
-     <button type="button" aria-pressed="false">Fáj vagy érzékeny a fogam</button>
-     <button type="button" aria-pressed="false">Letört a fogam, kiesett a tömés</button>
-     <button type="button" aria-pressed="false">Fogpótlás: korona, híd, fogsor</button>
-     <button type="button" aria-pressed="false">Ellenőrzés</button>
-     <button type="button" aria-pressed="false">Félek, előbb beszélnék az orvossal</button>
-     <button type="button" aria-pressed="false">Más</button>
-    </div>
+  <div class="vh-racs">
+   <div class="vh-bev">
+    <h2>Kérjen visszahívást</h2>
+    <p class="bevezeto">Elég a neve és a telefonszáma. <span data-minta>Rendelési időben visszahívjuk, és megbeszéljük, mikor tud jönni.</span></p>
+    <p class="vh-ido">Hétfőn, szerdán és pénteken <span class="nw">reggel 7-től</span>, kedden és csütörtökön <span class="nw">este 6-ig</span> rendelünk, így munka előtt vagy után is be tud jönni.</p>
+    <p class="vh-felos" data-minta>Ha izgul, azt is mondja el nyugodtan: kezelés előtt beszélhet az orvossal, és mindent elmagyarázunk.</p>
    </div>
-   <div class="lepes">
-    <h3><em>2</em>Mikor tudna jönni?</h3>
-    <p class="seg">A következő rendelési napok:</p>
-    <div class="szuro" id="szuro">
-     <button type="button" data-sz="mind" aria-pressed="true">Bármikor</button>
-     <button type="button" data-sz="de" aria-pressed="false">Délelőtt</button>
-     <button type="button" data-sz="du" aria-pressed="false">Délután</button>
-    </div>
-    <div class="alkalmak" id="alkalmak"></div>
-   </div>
-   <div class="lepes">
-    <h3><em>3</em>Kit hívjunk vissza?</h3>
-    <p class="osszefog" id="osszefog">Válasszon az 1. és 2. lépésben, vagy írja be csak a nevét és a számát.</p>
+   <form class="vh-kartya" id="urlap" novalidate>
     <div class="mezo"><label for="nev">Név</label><input type="text" id="nev" name="nev" autocomplete="name"></div>
     <div class="mezo"><label for="tel">Telefonszám</label><input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="06 30 123 4567"></div>
+    <div class="mezo"><label for="miben">Miben segíthetünk? <small>(nem kötelező)</small></label>
+     <select id="miben" name="miben">
+      <option value="">Válasszon, ha szeretne</option>
+      <option>Fáj vagy érzékeny a fogam</option>
+      <option>Letört a fogam, kiesett a tömés</option>
+      <option>Fogpótlás: korona, híd, fogsor</option>
+      <option>Ellenőrzés, fogkő-eltávolítás</option>
+      <option>Félek, előbb beszélnék az orvossal</option>
+      <option>Más</option>
+     </select>
+    </div>
     <button class="gomb gomb-barack" type="submit">Visszahívást kérek</button>
     <p class="uzenet" role="status"></p>
     <p class="halk">Ez egy bemutató oldal: az űrlap nem küld adatot.</p>
-   </div>
-  </form>
+   </form>
+  </div>
  </section>
 
  <section class="segitunk szakasz belso" id="segitunk">
@@ -337,9 +333,9 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <div class="seg-racs">
    <div class="teruletek">
     <div class="terulet"><h3>Körzeti fogászat</h3><p>TB-s fogorvosi ellátás. Lánycsók község honlapja is a település fogorvosaként sorolja fel Dr. Lucius Gábort.</p></div>
-    <div class="terulet"><h3>Konzerváló fogászat</h3><p data-minta>A saját fog megmentése: tömés, gyökérkezelés. Dr. Lucius András ennek szakorvosa.</p></div>
-    <div class="terulet"><h3>Fogpótlás</h3><p data-minta>Ha egy fog már nem menthető: korona, híd vagy kivehető fogsor. Dr. Lucius András fogpótlástan szakorvos is.</p></div>
+    <div class="terulet"><h3>Szakorvosi kezelés</h3><p>Dr. Lucius András a konzerváló fogászat és fogpótlástan szakorvosa: <span data-minta>a saját fog megmentése és a pótlás egy rendelőben.</span></p></div>
     <div class="terulet"><h3>Félős pácienseknek</h3><p>A vélemények szerint itt mindenkire jut idő elmagyarázni, mi a baj, és hogyan oldják meg. A kezelés alatt is folyamatos a párbeszéd.</p></div>
+    <div class="terulet"><h3>Délelőtt és délután is</h3><p>Hétfőn, szerdán és pénteken 7 és 12, kedden és csütörtökön 13 és 18 óra között rendelünk.</p></div>
    </div>
    <figure class="seg-kep">
     <img src="kepek/kezeles.webp" width="900" height="600" loading="lazy" alt="Fogorvosnő a kezelőlámpát igazítja a páciens feje fölött">
@@ -348,7 +344,23 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   </div>
  </section>
 
- <section class="szakasz belso" id="orvosok">
+ <section class="kezelesek szakasz belso" id="kezelesek">
+  <h2>Kezeléseink</h2>
+  <p class="bevezeto" data-minta>Az általános fogorvosi ellátás alapkezelései egy helyen, Mohácson.</p>
+  <ul class="kez-racs" data-minta>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><circle cx="12" cy="9" r="2.2" class="tele"/></svg></i><h3>Fogtömés</h3><p>A szuvas vagy letört fog helyreállítása, hogy újra rendesen rághasson vele.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M9 7.5v6.5M15 7.5v6.5"/></svg></i><h3>Gyökérkezelés</h3><p>Ha a fog belseje begyulladt: kitisztítjuk és lezárjuk a gyökércsatornákat, így a fog megmaradhat.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 9.5C6.3 9.5 5 10.8 5 12.6c0 1.7.7 2.7 1.1 4 .5 1.4.5 3.2 1 4.7.2.9.6 1.6 1.2 1.6.9 0 1.1-1.3 1.4-2.8.2-1 .6-1.7 1.3-1.7s1.1.7 1.3 1.7c.3 1.5.5 2.8 1.4 2.8.6 0 1-.7 1.2-1.6.5-1.5.5-3.3 1-4.7.4-1.3 1.1-2.3 1.1-4 0-1.8-1.3-3.1-3-3.1-1.4 0-2.2.7-3.5.7S9.4 9.5 8 9.5z"/><path d="M12 6.5V1.8M9.6 4.1 12 1.7l2.4 2.4"/></svg></i><h3>Foghúzás</h3><p>Ha egy fog már nem menthető, érzéstelenítésben, kíméletesen távolítjuk el.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.5 13.8 9l5.7 1.8-5.7 1.8L12 18.1l-1.8-5.5-5.7-1.8L10.2 9z"/><path d="M19 3v3.5M17.3 4.7h3.5M5 17v3M3.5 18.5h3"/></svg></i><h3>Fogkő-eltávolítás</h3><p>A fogkő és a lerakódások eltávolítása, ami az ínyt is védi a gyulladástól.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 8.5 7.5 12 12 5.5l4.5 6.5 4-3.5-1.8 9.5H5.3z"/><path d="M5.3 20.5h13.4"/></svg></i><h3>Korona és híd</h3><p>A megviselt fogat korona védi, a hiányzó fogat híd pótolja.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9c2.5 7 15.5 7 18 0"/><path d="M3 9c3 2.2 15 2.2 18 0"/><path d="M7.6 11.2v2.6M12 11.7v3.2M16.4 11.2v2.6"/></svg></i><h3>Kivehető fogsor</h3><p>Ha több fog hiányzik: részleges vagy teljes fogsor, amelyet könnyen tisztán tarthat.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2.5-5.5 4 11L16 12h5"/></svg></i><h3>Fogfájás, panasz</h3><p>Fáj, érzékeny vagy bedagadt? Hívja a rendelőt, és megnézzük, mi okozza.</p></li>
+   <li class="kez"><i aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 5.2 5.2M7.8 10.6l2 2 3.6-3.8"/></svg></i><h3>Ellenőrzés</h3><p>Évente egyszer érdemes átnézetni a fogakat: így a kis gond kicsi marad.</p></li>
+  </ul>
+  <div class="kez-also"><p data-minta>Nem tudja, melyik kell? Nem baj: mondja el, mi a gond, és megmondjuk.</p><a class="gomb gomb-tinta" href="#visszahivas">Visszahívást kérek</a></div>
+ </section>
+
+ <section class="orvosok szakasz belso" id="orvosok">
   <h2>Két Lucius doktor, egy rendelő</h2>
   <p class="bevezeto">Családi vállalkozás: a Dr. Lucius Dental Kft. rendelője a Perényi u. 8.-ban.</p>
   <div class="orvos-racs">
@@ -404,7 +416,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
   <div><h3>Dr. Lucius Dental Kft.</h3><p>Fogorvosi rendelő Mohácson, Dr. Lucius Gábor és Dr. Lucius András rendelője: körzeti fogászat, konzerváló fogászat, fogpótlás.</p></div>
   <div><h3>Elérhetőség</h3><ul><li>7700 Mohács, Perényi u. 8.</li><li><a href="tel:+3669300750">(06 69) 300 750</a></li><li><a href="mailto:lucius.gabor@gmail.com">lucius.gabor@gmail.com</a></li></ul></div>
   <div><h3>Rendelés</h3><ul><li>H, Sze, P: 7:00–12:00</li><li>K, Cs: 13:00–18:00</li><li>Hétvégén zárva</li></ul></div>
-  <div><h3>Oldalak</h3><ul><li><a href="#visszahivas">Időpontkérés</a></li><li><a href="#segitunk">Amiben segítünk</a></li><li><a href="#orvosok">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li></ul></div>
+  <div><h3>Oldalak</h3><ul><li><a href="#visszahivas">Időpontkérés</a></li><li><a href="#segitunk">Amiben segítünk</a></li><li><a href="#kezelesek">Kezeléseink</a></li><li><a href="#orvosok">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li></ul></div>
  </div>
  <div class="lab-also">© 2026 Dr. Lucius Dental Kft. · Mintaképek (Unsplash): Harold Hisona, SoyBreno. A rendelő saját fotói élesítés előtt kerülnek a helyükre.</div>
 </footer>
@@ -424,7 +436,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  // rendelési idő: [nyit, zár] a hét napjaira (0 = vasárnap)
  const IDO=[null,[7,12],[13,18],[7,12],[13,18],[7,12],null];
  const NAP=['vasárnap','hétfő','kedd','szerda','csütörtök','péntek','szombat'];
- const HO=['jan.','febr.','márc.','ápr.','máj.','jún.','júl.','aug.','szept.','okt.','nov.','dec.'];
  const most=new Date(),ora=most.getHours()+most.getMinutes()/60,ma=most.getDay();
  // élő állapot a nyitóképen
  const mk=document.getElementById('ma-kartya'),mc=document.getElementById('ma-cim'),ma2=document.getElementById('ma-al');
@@ -435,22 +446,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  // mai sor a táblázatban
  if(ma>=1&&ma<=5)document.querySelectorAll('#idotabla tr')[ma-1].classList.add('ma');
 
- // következő rendelési alkalmak
- const alk=[];let d=new Date(most);d.setHours(0,0,0,0);
- if(!(t&&ora<t[1]-1))d.setDate(d.getDate()+1);
- while(alk.length<6){const n=IDO[d.getDay()];if(n)alk.push({d:new Date(d),n});d.setDate(d.getDate()+1)}
- const ak=document.getElementById('alkalmak');
- ak.innerHTML=alk.map((a,i)=>{const de=a.n[0]<12;return `<button type="button" class="alkalom" aria-pressed="false" data-sz="${de?'de':'du'}" data-i="${i}"><b>${NAP[a.d.getDay()][0].toUpperCase()+NAP[a.d.getDay()].slice(1)}, ${HO[a.d.getMonth()]} ${a.d.getDate()}.</b><span>${a.n[0]}:00–${a.n[1]}:00</span><small>${de?'reggel 7-től, munka előtt':'délután, este 6-ig'}</small></button>`}).join('');
- const sz=document.getElementById('szuro');
- sz.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;sz.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));
-  ak.querySelectorAll('.alkalom').forEach(a=>{a.hidden=b.dataset.sz!=='mind'&&a.dataset.sz!==b.dataset.sz})});
- // választás
- const egyet=(kont,sel)=>kont.addEventListener('click',e=>{const b=e.target.closest(sel);if(!b)return;const uj=b.getAttribute('aria-pressed')!=='true';kont.querySelectorAll(sel).forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed',uj);osszefog()});
- const pz=document.getElementById('panasz');egyet(pz,'button');egyet(ak,'.alkalom');
- const of=document.getElementById('osszefog');
- function osszefog(){const p=pz.querySelector('[aria-pressed=true]'),a=ak.querySelector('[aria-pressed=true]');
-  if(!p&&!a){of.textContent='Válasszon az 1. és 2. lépésben, vagy írja be csak a nevét és a számát.';return}
-  of.textContent=(p?p.textContent:'Időpont')+(a?' – '+a.querySelector('b').textContent+' '+a.querySelector('span').textContent:'')}
  // űrlap
  const f=document.getElementById('urlap');
  f.addEventListener('submit',e=>{e.preventDefault();const st=f.querySelector('.uzenet');

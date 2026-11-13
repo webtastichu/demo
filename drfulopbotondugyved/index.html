@@ -74,11 +74,13 @@ nav a.nyelv{border:1.5px solid var(--vonal);border-radius:8px;padding:5px 10px;f
 .menu-gomb svg{width:22px;height:22px}
 
 /* nyitókép */
-.nyito{position:relative;min-height:min(81vh,690px);display:grid;grid-template-columns:minmax(0,42%) minmax(0,1fr);background:var(--grafit);color:#fff;overflow:hidden}
-.nyito picture{position:absolute;left:0;top:0;bottom:0;width:46%}
+.nyito{position:relative;min-height:min(81vh,690px);display:grid;grid-template-columns:minmax(0,1fr);background:var(--grafit);color:#fff;overflow:hidden}
+.nyito picture{position:absolute;right:0;top:0;bottom:0;width:44%}
 .nyito picture img{width:100%;height:100%;object-fit:cover;object-position:62% 18%;filter:saturate(.9) contrast(1.03)}
-.nyito picture::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(28,30,34,0) 55%,rgba(28,30,34,.75) 85%,var(--grafit) 100%),linear-gradient(0deg,rgba(28,30,34,.35),rgba(28,30,34,0) 35%)}
-.nyito-tart{grid-column:2;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:4.5em var(--szel) 4.5em 56px}
+/* átmenet a fotó bal (szöveg felőli) szélén, px-ben, hogy minden szélességen takarja a határt */
+.nyito picture::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--grafit) 0,rgba(28,30,34,.82) 70px,rgba(28,30,34,.35) 170px,rgba(28,30,34,0) 280px),linear-gradient(0deg,rgba(28,30,34,.35),rgba(28,30,34,0) 35%)}
+/* a szöveg a teljes sávon fut, így a var(--szel) a lap vonalához igazít; jobbról a fotó szélessége + rés */
+.nyito-tart{grid-column:1/-1;position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;padding:4.5em calc(44% + 40px) 4.5em var(--szel)}
 .motto{font-family:var(--serif);font-style:italic;font-size:19px;color:#F0A68C}
 .motto span{color:#B9BEC7;font-style:normal;font-family:'Figtree',sans-serif;font-size:15.5px;margin-left:8px}
 .nyito h1{color:#fff;font-size:clamp(38px,4.3vw,58px);max-width:12em;margin-top:18px}
