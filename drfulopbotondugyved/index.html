@@ -8,7 +8,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://bemutato.webtastic.hu/drfulopbotondugyved/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dr. Fülöp Botond ügyvéd, Rechtsanwalt – Komló">
+<meta property="og:title" content="Dr. Fülöp Botond ügyvéd – Komló">
 <meta property="og:description" content="Ügyvédi szolgáltatások magyar, német és francia nyelven Komlón, az Európai Unió Bíróságán szerzett gyakorlattal.">
 <meta property="og:url" content="https://bemutato.webtastic.hu/drfulopbotondugyved/">
 <meta property="og:image" content="https://bemutato.webtastic.hu/drfulopbotondugyved/kepek/portre.webp">
@@ -20,7 +20,7 @@
 <link rel="preload" as="image" href="kepek/portre.webp" media="(min-width: 761px)" fetchpriority="high">
 <link rel="preload" as="image" href="kepek/portre-mobil.webp" media="(max-width: 760px)" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Attorney","name":"Dr. Fülöp Botond ügyvéd","alternateName":"Dr. Fülöp Botond Rechtsanwalt","url":"https://bemutato.webtastic.hu/drfulopbotondugyved/","image":"https://bemutato.webtastic.hu/drfulopbotondugyved/kepek/portre.webp","telephone":"+36705927517","faxNumber":"+3672281299","email":"drfulopbotond@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Pécsi út 1. (Tröszt irodaház), 1. em. 18.","postalCode":"7300","addressLocality":"Komló","addressCountry":"HU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"13:00"}],"areaServed":["Komló","Pécs","Baranya"],"availableLanguage":["hu","de","fr"],"knowsAbout":["Polgári jog","Családi és öröklési jog","Társasági jog","Fogyasztóvédelmi jog","Munkajog","Követelésbehajtás","Büntetőjog","Európai uniós jog","Közigazgatási jog","Kártérítés"],"sameAs":["https://www.facebook.com/drfulopbotond/","https://www.fulopugyved.com/"],"founder":{"@type":"Person","name":"Dr. Fülöp Botond","jobTitle":"ügyvéd","memberOf":{"@type":"Organization","name":"Pécsi Ügyvédi Kamara"},"knowsLanguage":["hu","de","fr","en"]},"description":"Ügyvédi szolgáltatások magyar, német és francia nyelven Komlón, az Európai Unió Bíróságán szerzett gyakorlattal."}
+{"@context":"https://schema.org","@type":"Attorney","name":"Dr. Fülöp Botond ügyvéd","url":"https://bemutato.webtastic.hu/drfulopbotondugyved/","image":"https://bemutato.webtastic.hu/drfulopbotondugyved/kepek/portre.webp","telephone":"+36705927517","faxNumber":"+3672281299","email":"drfulopbotond@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Pécsi út 1. (Tröszt irodaház), 1. em. 18.","postalCode":"7300","addressLocality":"Komló","addressCountry":"HU"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"13:00"}],"areaServed":["Komló","Pécs","Baranya"],"availableLanguage":["hu","de","fr"],"knowsAbout":["Polgári jog","Családi és öröklési jog","Társasági jog","Fogyasztóvédelmi jog","Munkajog","Követelésbehajtás","Büntetőjog","Európai uniós jog","Közigazgatási jog","Kártérítés"],"sameAs":["https://www.facebook.com/drfulopbotond/","https://www.fulopugyved.com/"],"founder":{"@type":"Person","name":"Dr. Fülöp Botond","jobTitle":"ügyvéd","memberOf":{"@type":"Organization","name":"Pécsi Ügyvédi Kamara"},"knowsLanguage":["hu","de","fr","en"]},"description":"Ügyvédi szolgáltatások magyar, német és francia nyelven Komlón, az Európai Unió Bíróságán szerzett gyakorlattal."}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -67,11 +67,19 @@ header{position:sticky;top:0;z-index:50;background:#fff;padding:0 var(--szel);bo
 nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px;align-items:center}
 nav a{color:var(--grafit);text-decoration:none;font-weight:600;font-size:16px;white-space:nowrap}
 nav a:hover{color:var(--cin)}
-nav a.nyelv{border:1.5px solid var(--vonal);border-radius:8px;padding:5px 10px;font-size:14.5px}
 .fej-jobb{display:flex;align-items:center;gap:20px}
 .fej-hivas{min-height:46px;padding:0 18px;font-size:16px;box-shadow:none}
 .menu-gomb{display:none;background:none;border:1px solid var(--vonal);border-radius:12px;width:46px;height:46px;cursor:pointer;color:var(--grafit)}
 .menu-gomb svg{width:22px;height:22px}
+
+/* nyelvválasztó */
+.nyelvvalaszto{position:relative;display:inline-flex;border:1.5px solid var(--vonal);border-radius:10px;padding:3px;gap:2px;background:#fff}
+.nyelvvalaszto button{font:700 14px 'Figtree',sans-serif;min-width:38px;min-height:34px;border:0;border-radius:7px;background:transparent;color:var(--halk);cursor:pointer;letter-spacing:.03em}
+.nyelvvalaszto button:hover{color:var(--grafit);background:var(--kod)}
+.nyelvvalaszto button[aria-pressed="true"]{background:var(--grafit);color:#fff}
+.nyelv-uzenet{position:absolute;right:0;top:calc(100% + 10px);width:270px;background:var(--grafit);color:#fff;font-size:14px;line-height:1.4;padding:10px 12px;border-radius:10px;box-shadow:0 14px 30px -12px rgba(0,0,0,.45);z-index:70}
+.nyelv-uzenet:empty{display:none}
+.nv-mobil{display:none}
 
 /* nyitókép */
 .nyito{position:relative;min-height:min(81vh,690px);display:grid;grid-template-columns:minmax(0,1fr);background:var(--grafit);color:#fff;overflow:hidden}
@@ -173,19 +181,6 @@ input[type=range]{width:100%;min-height:0;padding:0;border:0;margin-top:14px;acc
 .ido span{color:var(--halk);font-size:16.5px;line-height:1.5}
 .ido strong{color:var(--grafit);font-weight:600}
 
-/* deutsch */
-.deutsch{background:var(--grafit);color:#fff}
-.de-racs{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:60px;align-items:center}
-.deutsch h2{color:#fff}
-.deutsch p{color:#D3D6DC;margin-top:16px;max-width:36em}
-.de-lista{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:10px}
-.de-lista li{display:flex;gap:12px;color:#E7E9ED}
-.de-lista svg{width:22px;height:22px;color:var(--cin-v);flex:none;margin-top:3px}
-.de-kartya{border:1px solid #3A3E46;border-radius:20px;padding:30px;background:var(--grafit2)}
-.de-kartya h3{color:#fff;font-size:22px}
-.de-kartya p{font-size:16.5px}
-.de-kartya .gomb{margin-top:22px}
-
 /* visszahívás */
 .hivas-racs{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:60px;align-items:start}
 .hivas-bev p{color:var(--halk);margin-top:14px;font-size:19px}
@@ -266,12 +261,11 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   nav.lenyitva{display:block}
   nav ul{flex-direction:column;gap:0;align-items:stretch}
   nav a{display:block;padding:14px 0;font-size:18px;border-bottom:1px solid var(--kod)}
-  nav a.nyelv{border:0;border-bottom:1px solid var(--kod);border-radius:0;padding:14px 0;font-size:18px}
   .bizalom ul{grid-template-columns:repeat(2,minmax(0,1fr))}
   .lab-racs{grid-template-columns:1fr 1fr}
 }
 @media (max-width:960px){
-  .ter-racs,.kf-racs,.dij-racs,.rolam-racs,.de-racs,.hivas-racs,.gyik-racs{grid-template-columns:minmax(0,1fr);gap:40px}
+  .ter-racs,.kf-racs,.dij-racs,.rolam-racs,.hivas-racs,.gyik-racs{grid-template-columns:minmax(0,1fr);gap:40px}
   .ter-bev,.akta{position:static}
   .nyito{display:flex;flex-direction:column;min-height:0}
   .nyito-tart{order:1;padding:56px var(--szel) 0}
@@ -280,6 +274,12 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   .nyito picture img{object-position:60% 20%}
 }
 @media (max-width:760px){
+  .nv-fej{display:none}
+  .nv-mobil{display:inline-flex;align-self:flex-start;margin-bottom:22px;border-color:#3B3F47;background:transparent}
+  .nv-mobil button{color:#C9CDD4}
+  .nv-mobil button:hover{background:rgba(255,255,255,.08);color:#fff}
+  .nv-mobil button[aria-pressed="true"]{background:#fff;color:var(--grafit)}
+  .nv-mobil .nyelv-uzenet{left:0;right:auto;width:min(280px,calc(100vw - 40px));background:#fff;color:var(--grafit)}
   body{font-size:17px}
   :root{--fej:66px}
   .marka-jel{width:36px;height:36px}
@@ -297,8 +297,8 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   .bizalom ul{grid-template-columns:minmax(0,1fr);gap:18px}
   .szakasz{padding-top:72px;padding-bottom:72px}
   .ter-lista{grid-template-columns:minmax(0,1fr)}
-  .akta,.kalk,.urlap-kartya,.de-kartya{padding:26px 20px}
-  .akta .gomb,.kalk .gomb,.urlap-kartya .gomb,.de-kartya .gomb{width:100%;white-space:normal;text-align:center;line-height:1.2}
+  .akta,.kalk,.urlap-kartya{padding:26px 20px}
+  .akta .gomb,.kalk .gomb,.urlap-kartya .gomb{width:100%;white-space:normal;text-align:center;line-height:1.2}
   .akta-fej{flex-direction:column;gap:4px}
   .eredmeny b{font-size:34px}
   .ket{grid-template-columns:1fr}
@@ -317,7 +317,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   <div class="fej-sor">
     <a class="marka" href="#" aria-label="Dr. Fülöp Botond ügyvéd – az oldal teteje">
       <svg class="marka-jel" viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="10" fill="#1C1E22"/><path d="M12 10h17v4H17v5h10v4H17v9h-5z" fill="#E0562B"/></svg>
-      <span><b>Dr. Fülöp Botond</b><small>ügyvéd · Rechtsanwalt · Komló</small></span>
+      <span><b>Dr. Fülöp Botond</b><small>ügyvéd · Komló</small></span>
     </a>
     <nav id="fomenu" aria-label="Fő menü">
       <ul>
@@ -326,10 +326,13 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
         <li><a href="#munkadij">Munkadíj</a></li>
         <li><a href="#rolam">Rólam</a></li>
         <li><a href="#kapcsolat">Kapcsolat</a></li>
-        <li><a class="nyelv" href="#deutsch" lang="de">Deutsch</a></li>
       </ul>
     </nav>
     <div class="fej-jobb">
+      <div class="nyelvvalaszto nv-fej" role="group" aria-label="Az oldal nyelve">
+        <button type="button" aria-pressed="true" aria-label="Magyar nyelv">HU</button><button type="button" aria-pressed="false" data-nyelv="német" aria-label="Német nyelv">DE</button><button type="button" aria-pressed="false" data-nyelv="francia" aria-label="Francia nyelv">FR</button>
+        <span class="nyelv-uzenet" role="status" aria-live="polite"></span>
+      </div>
       <a class="gomb gomb-fo fej-hivas" href="tel:+36705927517" aria-label="Hívás: 06 70 592 7517"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span>06 70 592 7517</span></a>
       <button class="menu-gomb" type="button" aria-controls="fomenu" aria-expanded="false" aria-label="Menü"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
     </div>
@@ -340,9 +343,13 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
 <section class="nyito" aria-labelledby="fo-cim">
   <picture>
     <source media="(max-width: 960px)" srcset="kepek/portre-mobil.webp">
-    <img src="kepek/portre.webp" alt="Dr. Fülöp Botond ügyvéd az irodájában, könyvespolc előtt" width="912" height="1060" fetchpriority="high">
+    <img src="kepek/portre.webp" alt="Dr. Fülöp Botond ügyvéd talárban, az irodájában" width="1000" height="1096" fetchpriority="high">
   </picture>
   <div class="nyito-tart">
+    <div class="nyelvvalaszto nv-mobil" role="group" aria-label="Az oldal nyelve">
+        <button type="button" aria-pressed="true" aria-label="Magyar nyelv">HU</button><button type="button" aria-pressed="false" data-nyelv="német" aria-label="Német nyelv">DE</button><button type="button" aria-pressed="false" data-nyelv="francia" aria-label="Francia nyelv">FR</button>
+        <span class="nyelv-uzenet" role="status" aria-live="polite"></span>
+      </div>
     <p class="motto" lang="la">Ubi jus, ibi remedium <span lang="hu">– ahol a jog, ott az orvoslat</span></p>
     <h1 id="fo-cim">Ügyvéd Komlón, magyar, német és francia nyelven</h1>
     <p class="nyito-lead">Hat évig dolgoztam az Európai Unió Bíróságán Luxembourgban, 2013 óta vagyok ügyvéd. Irodám Komló központjában, a Tröszt irodaházban található.</p>
@@ -391,7 +398,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   <div class="kf-racs">
     <div>
       <h2 id="kf-cim">Külföldön dolgozott, és nem fizették ki?</h2>
-      <p class="kf-lead">Német nyelvtudással és uniós jogi ismeretekkel vállalom a német nyelvterületen honos cégekkel és magánszemélyekkel szembeni követelések érvényesítését – a felszólító levéltől a külföldi bíróság előtti képviseletig.</p>
+      <p class="kf-lead">Német nyelvtudással és uniós jogi ismeretekkel vállalom a német nyelvterületen honos cégekkel és magánszemélyekkel szembeni követelések érvényesítését – a felszólító levéltől a külföldi bíróság előtti képviseletig. Szerepelek a Németországi Szövetségi Köztársaság nagykövetségének ügyvédlistáján.</p>
       <div class="csoport">
         <h3 id="cs-hol">Hol dolgozott vagy kivel szerződött?</h3>
         <p class="valassz">Válasszon egyet:</p>
@@ -473,25 +480,6 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
       </figure>
       <p class="hitvallas">„Vallom, hogy jogállam csak ott lehet, ahol a polgárok […] a mindennapokban érvényesülő, kézzelfogható valóságnak tartják: <em>ahol a jog, ott az orvoslat</em>.”</p>
       <p class="hitvallas-al">Dr. Fülöp Botond</p>
-    </div>
-  </div>
-</section>
-
-<section class="deutsch szakasz sav" id="deutsch" aria-labelledby="de-cim" lang="de">
-  <div class="de-racs">
-    <div>
-      <h2 id="de-cim">Deutschsprachiger Rechtsanwalt in Ungarn, in Komló</h2>
-      <p>Mit am Gerichtshof der Europäischen Union erworbener Berufserfahrung. Tätigkeitsschwerpunkt: Europarecht.</p>
-      <ul class="de-lista">
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Auf die Anwaltsliste der Botschaft der Bundesrepublik Deutschland aufgenommen</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Sechs Jahre am Gerichtshof der Europäischen Union in Luxemburg</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Beratung auch per Skype oder Zoom</li>
-      </ul>
-    </div>
-    <div class="de-kartya">
-      <h3>Rückruf anfordern</h3>
-      <p data-minta>Hinterlassen Sie Ihren Namen und Ihre Telefonnummer – ich rufe Sie zurück und wir besprechen Ihr Anliegen auf Deutsch.</p>
-      <a class="gomb gomb-feher" href="#visszahivas" id="de-kuld">Rückruf auf Deutsch</a>
     </div>
   </div>
 </section>
@@ -600,7 +588,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   <div class="lab-racs">
     <div>
       <p class="lab-nev">Dr. Fülöp Botond</p>
-      <p>Ügyvéd, Rechtsanwalt Komlón. Ügyvédi szolgáltatások magyar, német és francia nyelven, az Európai Unió Bíróságán szerzett gyakorlattal.</p>
+      <p>Ügyvéd Komlón. Ügyvédi szolgáltatások magyar, német és francia nyelven, az Európai Unió Bíróságán szerzett gyakorlattal.</p>
     </div>
     <div>
       <h3>Elérhetőség</h3>
@@ -612,12 +600,12 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
     </div>
     <div>
       <h3>Oldal</h3>
-      <ul><li><a href="#szakteruletek">Szakterületek</a></li><li><a href="#kulfoldi-koveteles">Külföldi követelés</a></li><li><a href="#munkadij">Munkadíj</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#deutsch" lang="de">Deutsch</a></li></ul>
+      <ul><li><a href="#szakteruletek">Szakterületek</a></li><li><a href="#kulfoldi-koveteles">Külföldi követelés</a></li><li><a href="#munkadij">Munkadíj</a></li><li><a href="#rolam">Rólam</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul>
     </div>
   </div>
   <div class="lab-also">
     <span>© 2026 Dr. Fülöp Botond ügyvéd</span>
-    <span>A fotók a jelenlegi fulopugyved.com oldalról valók.</span>
+    <span>Portré: Nyéki Martin / Magyar Hang (Dr. Fülöp Botond Facebook-oldaláról). A luxembourgi fotó a fulopugyved.com oldalról való.</span>
   </div>
 </footer>
 
@@ -671,7 +659,16 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
   document.getElementById('k-kuld').addEventListener('click',function(){var r=szamol();ugySel.value='Ingatlan-adásvétel, szerződés';leiras.value='Ingatlanügylet, vételár: '+ft(r.v)+(r.l?', ügyvédi letétkezeléssel':'')+'.';});
   szamol();
 
-  document.getElementById('de-kuld').addEventListener('click',function(){document.getElementById('ny-de').checked=true;});
+
+  // nyelvválasztó: a bemutatóban csak magyar változat van
+  document.querySelectorAll('.nyelvvalaszto').forEach(function(v){
+    var u=v.querySelector('.nyelv-uzenet'),t;
+    v.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;
+      if(!b.dataset.nyelv){u.textContent='';return;}
+      u.textContent='A '+b.dataset.nyelv+' nyelvű változat a teljes weboldalon készül el. Ez a bemutató magyarul mutatja az oldalt.';
+      clearTimeout(t);t=setTimeout(function(){u.textContent='';},5000);});
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.nyelv-uzenet').forEach(function(u){u.textContent='';});});
 
   // mintatartalom
   var mk=document.getElementById('minta-kapcs');
