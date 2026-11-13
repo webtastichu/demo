@@ -108,10 +108,8 @@ input:focus,select:focus,textarea:focus{border-color:var(--kobalt);outline:none;
 .szolg img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .szolg div{padding:20px 20px 24px}
 .szolg p{color:var(--halk);font-size:16.5px;margin-top:8px;line-height:1.5}
-.partner{margin-top:30px;padding:18px 22px;border-radius:12px;background:var(--kod);font-size:17px;color:var(--tinta);display:flex;gap:14px;align-items:flex-start}
-.partner svg{width:24px;height:24px;flex:none;color:var(--kobalt);margin-top:2px}
 
-/* hibanapló */
+/* alkatrészkereső */
 .naplo{background:var(--kobalt);color:#fff}
 .naplo h2{color:#fff}
 .naplo-racs{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:start}
@@ -129,6 +127,11 @@ input:focus,select:focus,textarea:focus{border-color:var(--kobalt);outline:none;
 .jegyzet-szoveg.ures{color:var(--halk);font-style:italic}
 .jegyzet ul{margin:16px 0 0;padding-left:20px;color:var(--halk);font-size:15.5px}
 .jegyzet .gomb{margin-top:20px}
+.alk-mezok{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,.6fr);gap:12px}
+.alk-mezok.alk-egy{grid-template-columns:minmax(0,1fr);margin-top:16px}
+.alk-mezok label{display:block;font-size:15px;font-weight:600;color:#DCE4FF;margin-bottom:6px}
+.alk-mezok input{width:100%;min-height:48px;padding:0 14px;border-radius:10px;border:1.5px solid rgba(255,255,255,.45);background:#fff;color:var(--tinta);font:500 17px 'Hanken Grotesk',sans-serif}
+.alk-mezok input::placeholder{color:#7A8494}
 
 /* vélemények */
 .velemeny-racs{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:60px;align-items:start}
@@ -251,7 +254,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
     <nav id="fomenu" aria-label="Fő menü">
       <ul>
         <li><a href="#szolgaltatasok">Amiben segítünk</a></li>
-        <li><a href="#hibanaplo">Hibanapló</a></li>
+        <li><a href="#alkatresz">Alkatrész</a></li>
         <li><a href="#velemenyek">Vélemények</a></li>
         <li><a href="#gyik">Kérdések</a></li>
         <li><a href="#kapcsolat">Kapcsolat</a></li>
@@ -325,54 +328,49 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
       <div><h3>Nehezen beszerezhető alkatrész</h3><p data-minta>Ha az alkatrészt már nem gyártják, kapcsolatainkon keresztül bontottat is felkutatunk.</p></div>
     </figure>
   </div>
-  <p class="partner"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span data-minta>Ha a hiba nem a mi szakterületünk (például bonyolult elektronikai hiba), őszintén megmondjuk, és ajánlunk egy szakembert, akiben megbízunk.</span></p>
 </section>
 
-<section class="naplo szakasz sav" id="hibanaplo" aria-labelledby="naplo-cim">
+<section class="naplo szakasz sav" id="alkatresz" aria-labelledby="alk-cim">
   <div class="naplo-racs">
     <div>
-      <h2 id="naplo-cim">Mit vett észre az autón?</h2>
-      <p class="naplo-lead" data-minta>A hibát gyorsabban megtaláljuk, ha tudjuk, mikor jelentkezik. Kattintson arra, ami igaz, és a jegyzetet elküldheti a visszahívás-kéréssel.</p>
+      <h2 id="alk-cim">Nehezen beszerezhető alkatrész? Megkeressük.</h2>
+      <p class="naplo-lead" data-minta>Ha az alkatrészt már nem gyártják, vagy sehol sem kapja, bontottat is felkutatunk. Adja meg az autót és azt, ami kell; a kérést elküldheti a visszahívás-kéréssel.</p>
       <div class="csoport">
-        <h3>Mit tapasztal?</h3>
+        <h3>Melyik autóhoz?</h3>
+        <div class="alk-mezok">
+          <div><label for="a-marka">Márka</label><input id="a-marka" placeholder="pl. Opel" autocomplete="off"></div>
+          <div><label for="a-tipus">Típus</label><input id="a-tipus" placeholder="pl. Astra H" autocomplete="off"></div>
+          <div><label for="a-ev">Évjárat</label><input id="a-ev" inputmode="numeric" maxlength="4" placeholder="2008" autocomplete="off"></div>
+        </div>
+      </div>
+      <div class="csoport">
+        <h3>Milyen alkatrész kell?</h3>
         <p class="valassz">Válasszon, akár többet is:</p>
         <div class="chipek" data-csoport="mi">
-          <button class="chip" type="button" aria-pressed="false" data-szo="furcsa hangot ad">Furcsa hang</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="világít egy figyelmeztető lámpa">Világít egy lámpa</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="rángat vagy nem húz rendesen">Rángat, nem húz</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="nehezen indul">Nehezen indul</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="folyadékot veszít (folt van alatta)">Folt van alatta</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="húz egy irányba vagy rezeg a kormány">Húz, rezeg a kormány</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="a fék másképp viselkedik">Fék</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="motoralkatrész">Motoralkatrész</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="váltóalkatrész">Váltó</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="futómű-alkatrész">Futómű</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="fényszóró vagy lámpa">Lámpa</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="karosszériaelem">Karosszériaelem</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="vezérlőegység">Vezérlőegység</button>
         </div>
+        <div class="alk-mezok alk-egy"><div><label for="a-pontos">Pontosan mi kell? (ha tudja)</label><input id="a-pontos" placeholder="pl. bal első fényszóró" autocomplete="off"></div></div>
       </div>
       <div class="csoport">
-        <h3>Mikor jelentkezik?</h3>
-        <div class="chipek" data-csoport="mikor">
-          <button class="chip" type="button" aria-pressed="false" data-szo="hidegindításkor">Hidegen</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="bemelegedve">Melegen</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="gyorsításkor">Gyorsításkor</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="fékezéskor">Fékezéskor</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="kanyarban">Kanyarban</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="folyamatosan">Folyamatosan</button>
-        </div>
-      </div>
-      <div class="csoport">
-        <h3>Mióta?</h3>
-        <div class="chipek" data-csoport="miota" data-egy>
-          <button class="chip" type="button" aria-pressed="false" data-szo="pár napja">Pár napja</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="néhány hete">Néhány hete</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="hónapok óta">Hónapok óta</button>
-          <button class="chip" type="button" aria-pressed="false" data-szo="évek óta, máshol sem találták meg">Évek óta</button>
+        <h3>Bontott is jó?</h3>
+        <div class="chipek" data-csoport="allapot" data-egy>
+          <button class="chip" type="button" aria-pressed="false" data-szo="bontott is jó">Bontott is jó</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="csak új">Csak új</button>
+          <button class="chip" type="button" aria-pressed="false" data-szo="ami olcsóbb">Ami olcsóbb</button>
         </div>
       </div>
     </div>
     <aside class="jegyzet" aria-labelledby="jegyzet-cim">
-      <h3 id="jegyzet-cim">Az Ön jegyzete a szerelőnek</h3>
-      <p class="jegyzet-szoveg ures" id="jegyzet" aria-live="polite">Kattintson a bal oldali gombokra, és itt összeáll a hiba leírása.</p>
+      <h3 id="jegyzet-cim">Az Ön alkatrészkérése</h3>
+      <p class="jegyzet-szoveg ures" id="jegyzet" aria-live="polite">Adja meg az autót és az alkatrészt, és itt összeáll a kérés.</p>
       <ul data-minta>
-        <li>Ha lámpa világít, készítsen róla egy fotót, és hívásnál mondja el, milyen színű.</li>
-        <li>Ha a hang csak bizonyos sebességnél jön, jegyezze fel, melyiknél.</li>
+        <li>Ha kéznél van a forgalmi, írja fel az alvázszámot (E rovat): azzal pontosan beazonosítjuk az alkatrészt.</li>
+        <li>Ha megvan a régi alkatrész, hozza be: így biztosan ugyanazt keressük.</li>
       </ul>
       <a class="gomb gomb-fo" href="#urlap" id="jegyzet-kuld">Visszahívást kérek ezzel</a>
     </aside>
@@ -479,7 +477,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
     </div>
     <div>
       <h3>Oldal</h3>
-      <ul><li><a href="#szolgaltatasok">Amiben segítünk</a></li><li><a href="#hibanaplo">Hibanapló</a></li><li><a href="#velemenyek">Vélemények</a></li><li><a href="#gyik">Kérdések</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul>
+      <ul><li><a href="#szolgaltatasok">Amiben segítünk</a></li><li><a href="#alkatresz">Alkatrész</a></li><li><a href="#velemenyek">Vélemények</a></li><li><a href="#gyik">Kérdések</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul>
     </div>
   </div>
   <div class="lab-also">
@@ -504,17 +502,19 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
       u.textContent='Köszönjük! Ez egy bemutató oldal, ezért az üzenet most nem ment el. Az éles oldalon munkaidőben visszahívjuk.';});
   });
 
-  // hibanapló
+  // alkatrészkereső
   var jegyzet=document.getElementById('jegyzet');
   function valasztott(cs){return Array.prototype.map.call(document.querySelectorAll('[data-csoport="'+cs+'"] .chip[aria-pressed="true"]'),function(b){return b.dataset.szo;});}
   function felsorol(t){if(t.length<2)return t.join('');return t.slice(0,-1).join(', ')+' és '+t[t.length-1];}
   function epit(){
-    var mi=valasztott('mi'),mikor=valasztott('mikor'),miota=valasztott('miota');
-    if(!mi.length&&!mikor.length&&!miota.length){jegyzet.textContent='Kattintson a bal oldali gombokra, és itt összeáll a hiba leírása.';jegyzet.classList.add('ures');return '';}
-    var s='Az autóm '+(mi.length?felsorol(mi):'furcsán viselkedik');
-    if(mikor.length)s+=', '+felsorol(mikor);
-    if(miota.length)s+=' – '+miota[0];
+    var ert=function(id){return document.getElementById(id).value.trim();};
+    var auto=[ert('a-marka'),ert('a-tipus')].filter(Boolean).join(' '),ev=ert('a-ev'),pontos=ert('a-pontos'),mi=valasztott('mi'),all=valasztott('allapot');
+    if(!auto&&!ev&&!pontos&&!mi.length&&!all.length){jegyzet.textContent='Adja meg az autót és az alkatrészt, és itt összeáll a kérés.';jegyzet.classList.add('ures');return '';}
+    var mit=pontos||(mi.length?felsorol(mi):'egy alkatrész');
+    var s='Alkatrészt keresek: '+mit;
+    if(all.length)s+=' – '+all[0];
     s+='.';
+    if(auto||ev)s+=' Autó: '+[auto,ev].filter(Boolean).join(', ')+'.';
     jegyzet.textContent=s;jegyzet.classList.remove('ures');return s;
   }
   document.querySelectorAll('.chipek').forEach(function(sor){
@@ -523,6 +523,7 @@ body.minta-be [data-minta]{outline:2px dashed #E0A800;outline-offset:3px;backgro
       if(sor.hasAttribute('data-egy'))sor.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed','false');});
       b.setAttribute('aria-pressed',be?'true':'false');epit();});
   });
+  ['a-marka','a-tipus','a-ev','a-pontos'].forEach(function(id){document.getElementById(id).addEventListener('input',epit);});
   document.getElementById('jegyzet-kuld').addEventListener('click',function(){var s=epit();if(s)document.getElementById('u-leiras').value=s;});
 
   // mai nap kiemelése
