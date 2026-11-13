@@ -149,6 +149,8 @@ nav a:hover{color:var(--zold)}
 .megallo b{font:600 19px/1.2 var(--cim);color:var(--erdo)}
 .megallo .t{display:flex;flex-direction:column;align-items:center;gap:2px}
 .megallo small{font-size:14.5px;color:var(--halvany)}
+.megallo .br.ikon::before{display:none}
+.megallo .br svg{width:28px;height:28px;fill:none;stroke:var(--erdo);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .megallo:hover .br{border-color:var(--zold)}
 .megallo[aria-pressed=true] .br{border-color:var(--zold);background:var(--nap);box-shadow:0 0 0 6px var(--nap-h)}
 .megallo[aria-pressed=true] .br::before{background:var(--erdo)}
@@ -308,6 +310,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  .megallo[aria-pressed=true]{border-color:var(--zold)}
  .megallo .br{width:36px;height:36px;border-radius:10px;flex:none}
  .megallo .br::before{width:14px;height:5px}
+ .megallo .br svg{width:22px;height:22px}
  .megallo .t{align-items:flex-start}
  .megallo small{margin-top:0;font-size:13.5px}
  .megallo b{font-size:17px}
@@ -349,7 +352,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
  <section class="nyito" id="nyito">
   <div class="nyito-szoveg">
    <h1>Fogászat gyerekeknek és felnőtteknek Pécsen</h1>
-   <p class="lead">Dr. Torbó Eszter rendelője a Megyeri úton: körzeti fogászat és fogszabályozás egy helyen. A páciensek szerint kedves a doktornő, és szép, tiszta, modern a rendelő.</p>
+   <p class="lead">Dr. Torbó Eszter rendelője a Megyeri úton: körzeti fogászat és fogszabályozás egy helyen.</p>
    <div class="gombok">
     <a class="gomb gomb-zold" href="#idopont">Időpontot kérek</a>
     <a class="gomb gomb-keret" href="tel:+36703172061"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>06 70 317 2061</a>
@@ -589,19 +592,19 @@ body.minta-lathato [data-minta]{outline:2px dashed #E1B400;outline-offset:3px;ba
    return (k===0?'ma':k===1?'holnap':NEV[d.getDay()])+', '+HO[d.getMonth()]+' '+d.getDate()+'., '+fmt(t[0])+'–'+fmt(t[1])}
   return ''};
  const SEG=[
-  {k:'Fáj a fogam',a:'fogfájás, duzzanat',cim:'Fogfájással a fogászati rendelésre jöjjön',fsz:false,
+  {k:'Fáj a fogam',ikon:'<path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M12.6 6.5 10.4 10h3.2l-2.2 3.5"/>',a:'fogfájás, duzzanat',cim:'Fogfájással a fogászati rendelésre jöjjön',fsz:false,
    j:['Hívja a rendelőt rendelési időben, és megbeszéljük, mikor jöhet.','Ha az arca is bedagadt, ezt mondja el telefonon.','Hétvégén és ünnepnapon ügyeleti ellátás működik.']},
-  {k:'Letört a fogam',a:'vagy kiesett a tömés',cim:'Letört fog, kiesett tömés',fsz:false,
+  {k:'Letört a fogam',ikon:'<path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M10.5 4.2 12.5 7l-2 2 2 2.6"/>',a:'vagy kiesett a tömés',cim:'Letört fog, kiesett tömés',fsz:false,
    j:['Akkor is érdemes hamar jönni, ha nem fáj, mielőtt tovább törik.','A fogat tömés vagy pótlás állítja helyre.']},
-  {k:'Ellenőrzés',a:'fogkő, átnézés',cim:'Ellenőrzés és fogkő-eltávolítás',fsz:false,
+  {k:'Ellenőrzés',ikon:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.3 15.3 5.2 5.2M7.8 10.6l2 2 3.6-3.8"/>',a:'fogkő, átnézés',cim:'Ellenőrzés és fogkő-eltávolítás',fsz:false,
    j:['Évente legalább egyszer érdemes átnézetni a fogakat.','A fogkő eltávolítása megvédi az ínyt.']},
-  {k:'A gyerek fogai',a:'tejfogak, maradó fogak',cim:'Gyermekfogászat',fsz:false,
+  {k:'A gyerek fogai',ikon:'<path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M9.6 10.2c1.3 1.2 3.5 1.2 4.8 0"/><path d="M9.5 7.6h.01M14.5 7.6h.01" stroke-width="2.4"/>',a:'tejfogak, maradó fogak',cim:'Gyermekfogászat',fsz:false,
    j:['Vegyes körzet: gyerekeket és felnőtteket is ellátunk.','Tejfogak és maradó fogak kezelése, türelemmel.']},
-  {k:'Fogszabályozás',a:'gyereknek, felnőttnek',cim:'Fogszabályozás magánrendelésben',fsz:true,
+  {k:'Fogszabályozás',ikon:'<path d="M7 3C4.8 3 3 4.8 3 7.2c0 2.3.9 3.6 1.5 5.3.6 1.8.7 4.2 1.3 6.3.3 1.3.9 2.2 1.7 2.2 1.2 0 1.4-1.8 1.8-3.7.3-1.4.8-2.3 1.7-2.3s1.4.9 1.7 2.3c.4 1.9.6 3.7 1.8 3.7.8 0 1.4-.9 1.7-2.2.6-2.1.7-4.5 1.3-6.3.6-1.7 1.5-3 1.5-5.3C21 4.8 19.2 3 17 3c-1.9 0-3 1-5 1S8.9 3 7 3z"/><path d="M3.6 10.4h16.8"/><rect x="6.3" y="8.8" width="3.2" height="3.2" rx=".6"/><rect x="14.5" y="8.8" width="3.2" height="3.2" rx=".6"/>',a:'gyereknek, felnőttnek',cim:'Fogszabályozás magánrendelésben',fsz:true,
    j:['Gyerekeknek és felnőtteknek is, előzetes egyeztetéssel.','Sok fogszabályzó szakorvos 7 éves kor körül javasol egy első vizsgálatot.']}
  ];
  const mg0=document.getElementById('megallok');
- mg0.innerHTML=SEG.map((x,i)=>`<button type="button" class="megallo" aria-pressed="false" data-i="${i}"><span class="br" aria-hidden="true"></span><span class="t"><b>${x.k}</b><small>${x.a}</small></span></button>`).join('');
+ mg0.innerHTML=SEG.map((x,i)=>`<button type="button" class="megallo" aria-pressed="false" data-i="${i}"><span class="br ikon" aria-hidden="true"><svg viewBox="0 0 24 24">${x.ikon}</svg></span><span class="t"><b>${x.k}</b><small>${x.a}</small></span></button>`).join('');
  let aktiv=0;
  const kc=document.getElementById('kor-cim'),kj=document.getElementById('kor-jelek'),kv=document.getElementById('kov'),kt=document.getElementById('kov-tipus'),km=document.getElementById('kov-megj'),at=document.getElementById('atvisz');
  const mutat=i=>{aktiv=i;const x=SEG[i];
