@@ -160,7 +160,7 @@ header.fejlec{position:sticky;top:0;z-index:50;background:#fff;height:var(--fej)
 }
 
 /* felkészülés – húzóelem */
-.felk{background:var(--hideg);padding-top:72px;padding-bottom:96px}
+.felk{background:#fff;padding-top:72px;padding-bottom:96px}
 .felk-fej{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
 .felk-fej .bevezeto{max-width:620px}
 .felk-racs{display:grid;grid-template-columns:minmax(0,370px) minmax(0,1fr);gap:28px;margin-top:40px;align-items:start}
@@ -373,8 +373,8 @@ body.minta-mutat [data-minta]{outline:2px dashed #E3B200;outline-offset:3px;back
   <a href="#ellatas">Ellátás</a>
   <a href="#surgos">Sürgős eset</a>
   <a href="#rendelo">Rendelő</a>
-  <a href="#gyik">GYIK</a>
   <a href="#felkeszules">Időpont</a>
+  <a href="#gyik">GYIK</a>
   <a href="#kapcsolat">Kapcsolat</a>
  </nav>
  <div class="fej-jobb">
@@ -502,32 +502,6 @@ body.minta-mutat [data-minta]{outline:2px dashed #E3B200;outline-offset:3px;back
  </div>
 </section>
 
-<section class="gyik sav" id="gyik" aria-labelledby="gyik-cim">
- <h2 id="gyik-cim">Gyakori kérdések</h2>
- <div class="gyik-racs">
-  <div>
-   <details open><summary>Kell időpontot foglalni?</summary><p>Oltásra, kontrollvizsgálatra, varratszedésre, útlevél-kiállításra, vérvételre és exotikus kisállat vizsgálatára online is foglalhat időpontot. Sürgős esetben ne foglaljon, hanem hívja a rendelőt: <a href="tel:+3672411211">06 72 411 211</a>.</p></details>
-   <details><summary>Mikor van nyitva a rendelő?</summary><p>Hétfőtől péntekig 9:00 és 19:00 között, szombaton 9:00 és 12:00 között. Vasárnap zárva.</p></details>
-   <details><summary>Milyen állatokat látnak el?</summary><p>Kutyák és macskák mellett rágcsálók, madarak és hüllők teljes körű belgyógyászati, lágyszervi- és csontsebészeti, szülészeti ellátásával foglalkozunk.</p></details>
-   <details><summary>Mit tegyek hétvégén vagy ünnepnapon, ha baj van?</summary><p>Hétvégén és ünnepnapokon a sürgősségi ügyelet száma: <a href="tel:+36309705419">+36 30 970 5419</a>.</p></details>
-   <details><summary>Mennyibe kerül egy általános vizsgálat?</summary><p>A 2025. május 5-től érvényes árlista szerint az első általános klinikai vizsgálat kutyánál 9000 Ft, macskánál 7000 Ft; utókezelésnél 7000 Ft, illetve 5000 Ft.</p></details>
-   <details><summary>Mire figyeljek vérvétel előtt?</summary><p>Vérvétel előtt 12 órával ne egyen a páciens.</p></details>
-   <details><summary>Hol lehet parkolni, és hogyan jutok el a rendelőhöz?</summary><p>A rendelő előtt parkolási lehetőség van. Busszal a 3-as és a 60-as helyi járattal, az Árnyas út megállótól kb. 50 méterre.</p></details>
-  </div>
-  <aside class="kisokos" aria-labelledby="kis-cim">
-   <h3 id="kis-cim">Kisokos</h3>
-   <p>Állatorvosaink cikkei a leggyakoribb gazdikérdésekről.</p>
-   <ul>
-    <li><a href="https://mecsekdoki.hu/vedooltasok/" target="_blank" rel="noopener"><b>Védőoltások</b><span>Kutyák, macskák, vadászgörények és nyulak oltási rendje</span></a></li>
-    <li><a href="https://mecsekdoki.hu/toklaszveszely/" target="_blank" rel="noopener"><b>Toklászveszély</b><span>Május végétől kb. két hónapig: tünetek és megelőzés</span></a></li>
-    <li><a href="https://mecsekdoki.hu/ha-mutetre-kerul-a-sor/" target="_blank" rel="noopener"><b>Ha műtétre kerül a sor…</b><span>Koplaltatás előtte, etetés és gallér utána</span></a></li>
-    <li><a href="https://mecsekdoki.hu/ivartalanitas/" target="_blank" rel="noopener"><b>Ivartalanítás</b><span>Milyen betegségeket előz meg</span></a></li>
-    <li><a href="https://mecsekdoki.hu/a-bolhassag/" target="_blank" rel="noopener"><b>A bolhásság</b><span>Miért kell a környezetet is kezelni</span></a></li>
-   </ul>
-  </aside>
- </div>
-</section>
-
 <section class="felk sav" id="felkeszules" aria-labelledby="felk-cim">
  <div class="felk-fej">
   <div>
@@ -578,6 +552,32 @@ body.minta-mutat [data-minta]{outline:2px dashed #E3B200;outline-offset:3px;back
  </div>
 </section>
 
+<section class="gyik sav" id="gyik" aria-labelledby="gyik-cim">
+ <h2 id="gyik-cim">Gyakori kérdések</h2>
+ <div class="gyik-racs">
+  <div>
+   <details open><summary>Kell időpontot foglalni?</summary><p>Oltásra, kontrollvizsgálatra, varratszedésre, útlevél-kiállításra, vérvételre és exotikus kisállat vizsgálatára online is foglalhat időpontot. Sürgős esetben ne foglaljon, hanem hívja a rendelőt: <a href="tel:+3672411211">06 72 411 211</a>.</p></details>
+   <details><summary>Mikor van nyitva a rendelő?</summary><p>Hétfőtől péntekig 9:00 és 19:00 között, szombaton 9:00 és 12:00 között. Vasárnap zárva.</p></details>
+   <details><summary>Milyen állatokat látnak el?</summary><p>Kutyák és macskák mellett rágcsálók, madarak és hüllők teljes körű belgyógyászati, lágyszervi- és csontsebészeti, szülészeti ellátásával foglalkozunk.</p></details>
+   <details><summary>Mit tegyek hétvégén vagy ünnepnapon, ha baj van?</summary><p>Hétvégén és ünnepnapokon a sürgősségi ügyelet száma: <a href="tel:+36309705419">+36 30 970 5419</a>.</p></details>
+   <details><summary>Mennyibe kerül egy általános vizsgálat?</summary><p>A 2025. május 5-től érvényes árlista szerint az első általános klinikai vizsgálat kutyánál 9000 Ft, macskánál 7000 Ft; utókezelésnél 7000 Ft, illetve 5000 Ft.</p></details>
+   <details><summary>Mire figyeljek vérvétel előtt?</summary><p>Vérvétel előtt 12 órával ne egyen a páciens.</p></details>
+   <details><summary>Hol lehet parkolni, és hogyan jutok el a rendelőhöz?</summary><p>A rendelő előtt parkolási lehetőség van. Busszal a 3-as és a 60-as helyi járattal, az Árnyas út megállótól kb. 50 méterre.</p></details>
+  </div>
+  <aside class="kisokos" aria-labelledby="kis-cim">
+   <h3 id="kis-cim">Kisokos</h3>
+   <p>Állatorvosaink cikkei a leggyakoribb gazdikérdésekről.</p>
+   <ul>
+    <li><a href="https://mecsekdoki.hu/vedooltasok/" target="_blank" rel="noopener"><b>Védőoltások</b><span>Kutyák, macskák, vadászgörények és nyulak oltási rendje</span></a></li>
+    <li><a href="https://mecsekdoki.hu/toklaszveszely/" target="_blank" rel="noopener"><b>Toklászveszély</b><span>Május végétől kb. két hónapig: tünetek és megelőzés</span></a></li>
+    <li><a href="https://mecsekdoki.hu/ha-mutetre-kerul-a-sor/" target="_blank" rel="noopener"><b>Ha műtétre kerül a sor…</b><span>Koplaltatás előtte, etetés és gallér utána</span></a></li>
+    <li><a href="https://mecsekdoki.hu/ivartalanitas/" target="_blank" rel="noopener"><b>Ivartalanítás</b><span>Milyen betegségeket előz meg</span></a></li>
+    <li><a href="https://mecsekdoki.hu/a-bolhassag/" target="_blank" rel="noopener"><b>A bolhásság</b><span>Miért kell a környezetet is kezelni</span></a></li>
+   </ul>
+  </aside>
+ </div>
+</section>
+
 <section class="kapcsolat" id="kapcsolat" aria-labelledby="kap-cim">
  <div class="kap-adat">
   <h2 id="kap-cim">Kapcsolat</h2>
@@ -606,7 +606,7 @@ body.minta-mutat [data-minta]{outline:2px dashed #E3B200;outline-offset:3px;back
   </div>
   <div><h3>Elérhetőség</h3><ul><li>7632 Pécs, Táncsics Mihály u. 58.</li><li><a href="tel:+3672411211">06 72 411 211</a></li><li><a href="mailto:info@mecsekdoki.hu">info@mecsekdoki.hu</a></li><li><a href="https://www.facebook.com/100063622179657" target="_blank" rel="noopener">Facebook</a></li></ul></div>
   <div><h3>Nyitvatartás</h3><ul><li>Hétfő–péntek: 9–19</li><li>Szombat: 9–12</li><li>Vasárnap: zárva</li><li>Ügyelet hétvégén: <a href="tel:+36309705419">+36 30 970 5419</a></li></ul></div>
-  <div><h3>Az oldalon</h3><ul><li><a href="#ellatas">Kezeléseink</a></li><li><a href="#rendelo">A rendelő</a></li><li><a href="#gyik">GYIK</a></li><li><a href="#felkeszules">Időpontfoglalás</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul></div>
+  <div><h3>Az oldalon</h3><ul><li><a href="#ellatas">Kezeléseink</a></li><li><a href="#rendelo">A rendelő</a></li><li><a href="#felkeszules">Időpontfoglalás</a></li><li><a href="#gyik">GYIK</a></li><li><a href="#kapcsolat">Kapcsolat</a></li></ul></div>
  </div>
  <div class="lab-also">
   <span>© 2026 Mecsek Állategészségügyi Centrum</span>
