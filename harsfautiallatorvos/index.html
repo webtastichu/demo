@@ -169,11 +169,11 @@ nav.menu a:hover{background:var(--zsalya-halvany)}
 }
 
 /* ki rendel */
-.kirendel{background:#FCEADF}
+.kirendel{background:#fff}
 .kr-racs{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}
 .kirendel h2{color:var(--erdo)}
 .kr-bal p.bev{margin-top:14px;font-size:18px;color:#1F332B}
-.statusz{margin-top:24px;background:rgba(255,255,255,.55);border-radius:var(--r);padding:16px 18px;display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
+.statusz{margin-top:24px;background:var(--zsalya-halvany);border-radius:var(--r);padding:16px 18px;display:flex;gap:12px;align-items:flex-start;font-size:16.5px}
 .statusz .potty{margin-top:8px}
 .statusz strong{display:block;font-size:18px}
 .napvalaszto-cim{margin:26px 0 10px;font-weight:600}
@@ -222,9 +222,8 @@ button.sor[aria-pressed="true"] .sav{background:var(--erdo);box-shadow:0 0 0 3px
 
 /* kezelések */
 .kez-racs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
-.kez{border-radius:var(--r-nagy);overflow:hidden;display:flex;flex-direction:column;background:var(--zsalya-halvany)}
-.kez:nth-child(3n+2){background:var(--rozsa-halvany)}
-.kez:nth-child(3n){background:var(--bezs)}
+.kezeleseink{background:#F1F6F3}
+.kez{border-radius:var(--r-nagy);overflow:hidden;display:flex;flex-direction:column;background:#fff;box-shadow:0 14px 30px -22px rgba(30,54,45,.35)}
 .kez img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .kez-test{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
 .kez-test p{color:#3B4943;font-size:16px}
@@ -462,7 +461,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
   </div>
 </section>
 
-<section class="szakasz belso" id="kezeleseink" aria-labelledby="kez-cim">
+<section class="kezeleseink szakasz belso" id="kezeleseink" aria-labelledby="kez-cim">
   <div class="fej">
     <h2 id="kez-cim">Kezeléseink</h2>
     <p>A kezdetektől kifejezetten kutyák és macskák gyógyításával, betegségeik megelőzésével foglalkozunk. Az árak a rendelő aktuális árlistájából valók.</p>
