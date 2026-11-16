@@ -361,16 +361,16 @@ header.fejlec{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blu
 nav.menu a{font-weight:600;font-size:16px}
 /* nyitókép: szélről szélre fotó, tervezett sötétítés, chevron nélkül */
 .nyito{background:var(--ej);min-height:min(81vh,690px);align-items:center}
-.nyito-kep{left:auto;width:52%}
+.nyito-kep{left:auto;width:47%}
 .nyito-kep::before{display:none}
 .nyito-kep picture{clip-path:none}
 .nyito-kep img{object-position:70% 55%;filter:saturate(.85) contrast(1.05)}
 .nyito-kep picture::after{background:linear-gradient(90deg,var(--ej) 0%,rgba(17,20,24,.6) 14%,rgba(17,20,24,0) 38%),linear-gradient(0deg,rgba(17,20,24,.55) 0%,rgba(17,20,24,0) 30%)}
 .nyito-szoveg{padding:4.5em 0 calc(4.5em + 70px) var(--szel)}
-.nyito-szoveg .belul{max-width:calc(48vw - max(20px, (100vw - 1200px) / 2 + 20px) - 40px)}
+.nyito-szoveg .belul{max-width:calc(53vw - max(20px, (100vw - 1200px) / 2 + 20px) - 30px)}
 .hely{font-size:15px;font-weight:600;letter-spacing:.01em;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px 7px 10px;width:max-content;max-width:100%;backdrop-filter:blur(6px)}
 .rombusz{width:8px;height:8px;border-radius:50%;transform:none;box-shadow:0 0 0 4px rgba(255,138,31,.25)}
-.nyito h1{font-size:62px;line-height:1.02}
+.nyito h1{font-size:60px;line-height:1.03}
 .nyito .bev{color:#D5DAE1}
 .gomb-keret{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
 .bizalom{color:#C9CFD8}
@@ -402,7 +402,7 @@ form.urlap{border-radius:24px;box-shadow:0 30px 60px -28px rgba(17,20,24,.35)}
 .urlap input,.tipus{border-color:var(--vonal);border-radius:14px}
 .tipus[aria-pressed="true"]{background:var(--ej);border-color:var(--ej);color:#fff}
 summary::after{border-color:var(--narancs-mely)}
-@media (max-width:1180px){.nyito h1{font-size:52px}}
+@media (max-width:1180px){.nyito h1{font-size:50px}}
 @media (max-width:760px){
   h2{font-size:31px}
   .nyito{align-items:stretch}
@@ -410,7 +410,7 @@ summary::after{border-color:var(--narancs-mely)}
   .nyito-szoveg .belul{max-width:none}
   .nyito-szoveg{padding:44px 20px 18px}
   .hely{border-radius:14px;font-size:14px}
-  .nyito h1{font-size:clamp(32px,9.6vw,38px)}
+  .nyito h1{font-size:clamp(28px,8.4vw,38px)}
   .nyito-kep picture{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
   .nyito-kep picture::after{background:none}
 }
@@ -449,7 +449,6 @@ summary::after{border-color:var(--narancs-mely)}
   </div>
   <div class="nyito-szoveg">
     <div class="belul">
-      <p class="hely"><span class="rombusz" aria-hidden="true"></span>Családi vállalkozás 1993 óta · Pécs, Rácvárosi út 68.</p>
       <h1 id="fo-cim">Autószerviz Pécsen, személyautótól <em>teherautóig</em></h1>
       <p class="bev">Javítás, karbantartás, komputeres diagnosztika, futómű, klíma, gumi és műszaki vizsga egy helyen – magánszemélyeknek és cégeknek.</p>
       <div class="gombok">
