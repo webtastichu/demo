@@ -430,7 +430,6 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     </div>
     <div class="nyito-tenyek">
       <span class="csillag"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z"/></svg>4,8 a Google-on, 637 vélemény</span>
-      <a class="ma-chip" href="#ki-rendel" id="ma-chip"><span class="potty" id="ma-potty"></span><span id="ma-szoveg">Nézze meg, ki rendel ma</span></a>
     </div>
   </div>
   <div class="nyito-foto">
@@ -883,7 +882,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     b.addEventListener('click',function(){kivNap=i;kivOrv=null;[].forEach.call(napokEl.children,function(c,j){c.setAttribute('aria-pressed',j===i?'true':'false')});rajz();});
     napokEl.appendChild(b);});
   function bent(iv,t){return iv&&iv.some(function(a){return t>=a[0]&&t<a[1]})}
-  function statusz(){var p=document.getElementById('st-potty'),c=document.getElementById('st-cim'),s=document.getElementById('st-szoveg'),chip=document.getElementById('ma-szoveg'),mp=document.getElementById('ma-potty');
+  function statusz(){var p=document.getElementById('st-potty'),c=document.getElementById('st-cim'),s=document.getElementById('st-szoveg'),chip=document.getElementById('ma-szoveg')||{},mp=document.getElementById('ma-potty')||{};
     var ny=bent(NYIT[maNap],oraMost);
     var rendelnek=ORV.filter(function(o){return bent(o.n[maNap],oraMost)}).map(function(o){return o.nev});
     var maiak=ORV.filter(function(o){return o.n[maNap]}).map(function(o){return o.nev.replace('Dr. ','')});
