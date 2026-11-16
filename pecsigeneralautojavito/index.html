@@ -360,14 +360,14 @@ header.fejlec{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blu
 .marka b{font-weight:800;letter-spacing:-.02em}
 nav.menu a{font-weight:600;font-size:16px}
 /* nyitókép: szélről szélre fotó, tervezett sötétítés, chevron nélkül */
-.nyito{background:var(--ej);min-height:min(84vh,720px);align-items:flex-end}
-.nyito-kep{left:0;width:auto}
+.nyito{background:var(--ej);min-height:min(81vh,690px);align-items:center}
+.nyito-kep{left:auto;width:52%}
 .nyito-kep::before{display:none}
 .nyito-kep picture{clip-path:none}
 .nyito-kep img{object-position:70% 55%;filter:saturate(.85) contrast(1.05)}
-.nyito-kep picture::after{background:linear-gradient(90deg,rgba(17,20,24,.94) 0%,rgba(17,20,24,.82) 32%,rgba(17,20,24,.25) 62%,rgba(17,20,24,.05) 100%),linear-gradient(0deg,rgba(17,20,24,.75) 0%,rgba(17,20,24,0) 40%)}
+.nyito-kep picture::after{background:linear-gradient(90deg,var(--ej) 0%,rgba(17,20,24,.6) 14%,rgba(17,20,24,0) 38%),linear-gradient(0deg,rgba(17,20,24,.55) 0%,rgba(17,20,24,0) 30%)}
 .nyito-szoveg{padding:4.5em 0 calc(4.5em + 70px) var(--szel)}
-.nyito-szoveg .belul{max-width:640px}
+.nyito-szoveg .belul{max-width:calc(48vw - max(20px, (100vw - 1200px) / 2 + 20px) - 40px)}
 .hely{font-size:15px;font-weight:600;letter-spacing:.01em;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px 7px 10px;width:max-content;max-width:100%;backdrop-filter:blur(6px)}
 .rombusz{width:8px;height:8px;border-radius:50%;transform:none;box-shadow:0 0 0 4px rgba(255,138,31,.25)}
 .nyito h1{font-size:62px;line-height:1.02}
@@ -390,8 +390,14 @@ nav.menu a{font-weight:600;font-size:16px}
 /* flotta: grafit */
 .idezet{border-left-color:var(--narancs)}
 /* visszahívás: halvány narancs, nem tömör */
-.visszahivas{background:var(--narancs-halvany)}
-.csalas{background:#fff;border:1px solid #F6D9B8}
+.visszahivas{background:var(--ej);color:#fff;border-top:4px solid var(--narancs)}
+.visszahivas h2{color:#fff}
+.visszahivas .bev{color:#D5DAE1}
+.szamok a{color:#fff}
+.szamok a span{color:#AEB5C0}
+.csalas{background:var(--ej2);border:0;border-left:4px solid var(--narancs);border-radius:12px;color:#D5DAE1}
+.csalas b{color:#fff}
+form.urlap{color:var(--szoveg)}
 form.urlap{border-radius:24px;box-shadow:0 30px 60px -28px rgba(17,20,24,.35)}
 .urlap input,.tipus{border-color:var(--vonal);border-radius:14px}
 .tipus[aria-pressed="true"]{background:var(--ej);border-color:var(--ej);color:#fff}
@@ -400,7 +406,8 @@ summary::after{border-color:var(--narancs-mely)}
 @media (max-width:760px){
   h2{font-size:31px}
   .nyito{align-items:stretch}
-  .nyito-kep{left:auto}
+  .nyito-kep{left:auto;width:auto}
+  .nyito-szoveg .belul{max-width:none}
   .nyito-szoveg{padding:44px 20px 18px}
   .hely{border-radius:14px;font-size:14px}
   .nyito h1{font-size:clamp(32px,9.6vw,38px)}
@@ -443,7 +450,7 @@ summary::after{border-color:var(--narancs-mely)}
   <div class="nyito-szoveg">
     <div class="belul">
       <p class="hely"><span class="rombusz" aria-hidden="true"></span>Családi vállalkozás 1993 óta · Pécs, Rácvárosi út 68.</p>
-      <h1 id="fo-cim">Családi autószerviz Pécsen, személyautótól <em>teherautóig</em></h1>
+      <h1 id="fo-cim">Autószerviz Pécsen, személyautótól <em>teherautóig</em></h1>
       <p class="bev">Javítás, karbantartás, komputeres diagnosztika, futómű, klíma, gumi és műszaki vizsga egy helyen – magánszemélyeknek és cégeknek.</p>
       <div class="gombok">
         <a class="gomb gomb-fo" href="#visszahivas">Visszahívást kérek</a>
@@ -451,7 +458,6 @@ summary::after{border-color:var(--narancs-mely)}
       </div>
       <div class="bizalom">
         <span><span class="csillag" aria-hidden="true">★★★★★</span> <b>4,8</b> · 150 Google-vélemény</span>
-        <span class="allapot" id="allapot"><i aria-hidden="true"></i><span>H–P 7:00–15:30</span></span>
       </div>
     </div>
   </div>
