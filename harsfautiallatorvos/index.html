@@ -17,8 +17,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="kepek/nyito-corgi.webp" media="(min-width: 861px)">
-<link rel="preload" as="image" href="kepek/nyito-corgi-mobil.webp" media="(max-width: 860px)">
+<link rel="preload" as="image" href="kepek/nyito-kutya-macska.webp" media="(min-width: 861px)">
+<link rel="preload" as="image" href="kepek/nyito-kutya-macska-mobil.webp" media="(max-width: 860px)">
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -133,13 +133,18 @@ nav.menu a:hover{background:var(--zsalya-halvany)}
 }
 
 /* nyitókép */
-.nyito{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,45%);min-height:min(81vh,690px);background:var(--zsalya-halvany);overflow:hidden}
+.nyito{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,45%);min-height:min(81vh,690px);background:var(--zsalya);overflow:hidden}
 .nyito-szoveg{position:relative;z-index:2;padding:4.5em 48px 4.5em max(20px, calc((100vw - var(--max)) / 2 + 20px));display:flex;flex-direction:column;justify-content:center}
-.helyek{font-weight:600;color:var(--zsalya-mely);font-size:16px;margin-bottom:18px}
+.helyek{display:flex;flex-wrap:wrap;gap:6px 22px;font-weight:600;color:var(--erdo);font-size:16px;margin-bottom:18px}
+.helyek span{display:inline-flex;align-items:center;gap:7px}
+.helyek svg{width:18px;height:18px;flex:none}
 .nyito h1{font-size:clamp(38px,4.6vw,60px);color:var(--erdo);max-width:13.5em}
-.nyito .bevezeto{margin-top:20px;font-size:19px;max-width:34em;color:#33443D}
+.nyito .bevezeto{margin-top:20px;font-size:19px;max-width:34em;color:#1F332B}
 .nyito-gombok{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-.nyito-tenyek{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:28px;font-size:15.5px;color:var(--szurke)}
+.nyito-tenyek{display:flex;flex-wrap:wrap;align-items:center;gap:10px 22px;margin-top:28px;font-size:15.5px;color:#1F332B}
+.nyito .gomb-fo{background:var(--erdo)}
+.nyito .gomb-fo:hover{background:#12241D}
+.nyito .gomb-ker{border-color:#fff}
 .csillag{display:inline-flex;align-items:center;gap:8px;color:var(--tinta);font-weight:600}
 .csillag svg{width:18px;height:18px;color:#E2A23B}
 .ma-chip{display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--erdo);background:#fff;border:1px solid var(--vonal);padding:7px 14px;border-radius:999px;font-weight:500}
@@ -147,22 +152,24 @@ nav.menu a:hover{background:var(--zsalya-halvany)}
 .potty{width:9px;height:9px;border-radius:50%;background:var(--zsalya);flex:none}
 .potty.nyitva{background:#2F9E5B;box-shadow:0 0 0 4px rgba(47,158,91,.18)}
 .nyito-foto{position:relative}
-.nyito-foto picture,.nyito-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.nyito-foto::before{content:"";position:absolute;inset:0 auto 0 0;width:90px;background:linear-gradient(90deg,var(--zsalya-halvany),rgba(235,242,238,0));z-index:1}
+.nyito-foto picture{position:absolute;inset:7% 5% 0 2%;z-index:1}
+.nyito-foto img{width:100%;height:100%;object-fit:contain;object-position:50% 100%}
+.nyito-foto::before{content:"";position:absolute;left:50%;top:52%;width:min(600px,96%);aspect-ratio:1;border-radius:50%;background:#FBE5D6;transform:translate(-50%,-50%)}
 .pluszok{position:absolute;z-index:3;pointer-events:none}
 .pluszok svg{position:absolute}
 @media (max-width:860px){
   .nyito{grid-template-columns:1fr;min-height:0}
   .nyito-szoveg{padding:44px var(--szel) 36px}
   .nyito-foto{height:clamp(260px,62vw,420px)}
-  .nyito-foto::before{inset:0 0 auto 0;width:auto;height:70px;background:linear-gradient(180deg,var(--zsalya-halvany),rgba(235,242,238,0))}
+  .nyito-foto::before{width:min(400px,86%)}
+  .nyito-foto picture{inset:4% 6% 0 6%}
   .nyito h1{font-size:clamp(31px,9.4vw,38px)}
   .nyito .bevezeto{font-size:17.5px}
   .pluszok{display:none}
 }
 
 /* ki rendel */
-.kirendel{background:var(--zsalya)}
+.kirendel{background:#FCEADF}
 .kr-racs{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start}
 .kirendel h2{color:var(--erdo)}
 .kr-bal p.bev{margin-top:14px;font-size:18px;color:#1F332B}
@@ -391,7 +398,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     <a class="logo" href="#tartalom" aria-label="Hársfa úti Állatorvosi Rendelő – az oldal teteje"><img src="kepek/logo.webp" width="440" height="92" alt="Hársfa úti Állatorvosi Rendelő logó"></a>
     <button class="menu-gomb" type="button" aria-controls="fomenu" aria-expanded="false" aria-label="Menü"><span></span></button>
     <nav class="menu" id="fomenu" aria-label="Fő menü">
-      <a href="#ki-rendel">Ki rendel ma?</a>
+      <a href="#ki-rendel">Ki mikor rendel?</a>
       <a href="#kezeleseink">Kezeléseink</a>
       <a href="#arlista">Árlista</a>
       <a href="#orvosaink">Orvosaink</a>
@@ -407,8 +414,8 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
 <main id="tartalom">
 <section class="nyito" aria-labelledby="fo-cim">
   <div class="nyito-szoveg">
-    <p class="helyek">Pécs, Hársfa út 27. // Hosszúhetény, Fő u. 109.</p>
-    <h1 id="fo-cim">Kutyák és macskák állatorvosa Pécsen, 2009 óta</h1>
+    <p class="helyek"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Pécs, Hársfa út 27.</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hosszúhetény, Fő u. 109.</span></p>
+    <h1 id="fo-cim">Állatorvosi rendelő Pécsen és Hosszúhetényben</h1>
     <p class="bevezeto">Négy állatorvos, röntgen, ultrahang és helyben végezhető labor a Hársfa úton, hétfőnként Hosszúhetényben is. Ígérjük, hogy úgy bánunk kedvencével, mint a sajátjainkkal.</p>
     <div class="nyito-gombok">
       <a class="gomb gomb-fo" href="https://harsfautiallatorvosirendelo.booked4.us" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Időpontot foglalok online</a>
@@ -421,13 +428,13 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
   </div>
   <div class="nyito-foto">
     <picture>
-      <source media="(max-width: 860px)" srcset="kepek/nyito-corgi-mobil.webp">
-      <img src="kepek/nyito-corgi.webp" width="1100" height="1195" alt="Corgi kölyök a vizsgálóasztalon a Hársfa úti rendelőben, a gazdája tartja" fetchpriority="high">
+      <source media="(max-width: 860px)" srcset="kepek/nyito-kutya-macska-mobil.webp">
+      <img src="kepek/nyito-kutya-macska.webp" width="1000" height="902" alt="Rodéziai ridgeback kutya és szürke cica" fetchpriority="high">
     </picture>
   </div>
   <div class="pluszok" aria-hidden="true" style="left:calc(55% - 46px);top:0;bottom:0;width:92px">
     <svg width="34" height="34" viewBox="0 0 34 34" style="top:14%;left:10px"><path d="M12 2h10v10h10v10H22v10H12V22H2V12h10z" fill="#F2B2A6"/></svg>
-    <svg width="22" height="22" viewBox="0 0 34 34" style="top:44%;left:56px"><path d="M12 2h10v10h10v10H22v10H12V22H2V12h10z" fill="#8BB3A0"/></svg>
+    <svg width="22" height="22" viewBox="0 0 34 34" style="top:44%;left:56px"><path d="M12 2h10v10h10v10H22v10H12V22H2V12h10z" fill="#fff"/></svg>
     <svg width="28" height="28" viewBox="0 0 34 34" style="bottom:16%;left:20px"><path d="M12 2h10v10h10v10H22v10H12V22H2V12h10z" fill="#D7373F"/></svg>
   </div>
 </section>
@@ -435,8 +442,8 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
 <section class="kirendel szakasz belso" id="ki-rendel" aria-labelledby="kr-cim">
   <div class="kr-racs">
     <div class="kr-bal">
-      <h2 id="kr-cim">Ki rendel ma?</h2>
-      <p class="bev" data-minta>Négy orvosunk más-más napokon és órákban rendel. Válasszon napot, és látja, ki van bent, mikor nyit a rendelő, és kihez kérhet időpontot.</p>
+      <h2 id="kr-cim">Ki melyik nap rendel?</h2>
+      <p class="bev" data-minta>Négy orvosunk más-más napokon és órákban rendel. Válasszon egy napot a héten, és látja, ki van bent, mikor van nyitva a rendelő, és kihez kérhet időpontot.</p>
       <div class="statusz" role="status" aria-live="polite"><span class="potty" id="st-potty"></span><div><strong id="st-cim">A rendelési idő betöltése…</strong><span id="st-szoveg"></span></div></div>
       <p class="napvalaszto-cim" id="nap-felirat">Válasszon napot:</p>
       <div class="napok" id="napok" role="group" aria-labelledby="nap-felirat"></div>
@@ -759,7 +766,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
 
 <section class="kapcsolat" id="kapcsolat" aria-labelledby="kap-cim">
   <div class="kap-bal">
-    <h2 id="kap-cim">Két rendelő, két telefonszám</h2>
+    <h2 id="kap-cim">Pécsen és Hosszúhetényben is várjuk</h2>
     <div class="helyszin">
       <h3>Hársfa úti állatorvosi rendelő, Pécs</h3>
       <p>7627 Pécs, Hársfa út 27., a Torda utca betorkollásánál. Díjtalan parkolás a rendelő előtt és a Torda utcában.</p>
@@ -804,7 +811,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     </div>
     <div>
       <h3>Az oldalon</h3>
-      <ul><li><a href="#ki-rendel">Ki rendel ma?</a></li><li><a href="#kezeleseink">Kezeléseink</a></li><li><a href="#ivartalanitas">Ivartalanítás</a></li><li><a href="#arlista">Árlista</a></li><li><a href="#orvosaink">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li><li><a href="https://harsfautiallatorvosirendelo.booked4.us" target="_blank" rel="noopener">Online időpontfoglalás</a></li></ul>
+      <ul><li><a href="#ki-rendel">Ki mikor rendel?</a></li><li><a href="#kezeleseink">Kezeléseink</a></li><li><a href="#ivartalanitas">Ivartalanítás</a></li><li><a href="#arlista">Árlista</a></li><li><a href="#orvosaink">Orvosaink</a></li><li><a href="#gyik">Gyakori kérdések</a></li><li><a href="https://harsfautiallatorvosirendelo.booked4.us" target="_blank" rel="noopener">Online időpontfoglalás</a></li></ul>
     </div>
   </div>
   <div class="lab-also">
@@ -860,13 +867,12 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
   function ido(x){var h=Math.floor(x),m=Math.round((x-h)*60);return h+(m?':'+(m<10?'0':'')+m:'');}
   function sav(iv){return iv.map(function(a){return ido(a[0])+'–'+ido(a[1])}).join(' és ');}
   var most=new Date(), maNap=most.getDay(), oraMost=most.getHours()+most.getMinutes()/60;
-  var napokEl=document.getElementById('napok'), kivNap=0, kivOrv=null, napLista=[];
-  var eltol=[];for(var i=0;napLista.length<8;i++){var d=new Date(most);d.setDate(most.getDate()+i);if(d.getDay()!==0){napLista.push(d);eltol.push(i);}}
-  function datum(d){return (d.getMonth()+1)+'. '+d.getDate()+'.';}
-  function napNev(i){return eltol[i]===0?'ma':eltol[i]===1?'holnap':NAP[napLista[i].getDay()];}
-  napLista.forEach(function(d,i){var b=document.createElement('button');b.type='button';b.className='nap';b.setAttribute('aria-pressed',i===0?'true':'false');
-    b.innerHTML='<b>'+(eltol[i]===0?'Ma':eltol[i]===1?'Holnap':ROV[d.getDay()])+'</b>'+(eltol[i]<2?ROV[d.getDay()]+' ':'')+datum(d);
-    b.setAttribute('aria-label',napNev(i)+', '+NAP[d.getDay()]+' '+datum(d));
+  var napokEl=document.getElementById('napok'), kivOrv=null, napLista=[1,2,3,4,5,6,0];
+  var kivNap=napLista.indexOf(maNap);
+  function nagy(x){return x.charAt(0).toUpperCase()+x.slice(1);}
+  napLista.forEach(function(dn,i){var b=document.createElement('button');b.type='button';b.className='nap';b.setAttribute('aria-pressed',i===kivNap?'true':'false');
+    b.innerHTML='<b>'+nagy(NAP[dn])+'</b>'+(dn===maNap?'ma':'');
+    b.setAttribute('aria-label',nagy(NAP[dn])+(dn===maNap?', ma':''));
     b.addEventListener('click',function(){kivNap=i;kivOrv=null;[].forEach.call(napokEl.children,function(c,j){c.setAttribute('aria-pressed',j===i?'true':'false')});rajz();});
     napokEl.appendChild(b);});
   function bent(iv,t){return iv&&iv.some(function(a){return t>=a[0]&&t<a[1]})}
@@ -887,8 +893,8 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     iv.forEach(function(a){var l=(a[0]-8)*10,w=(a[1]-a[0])*10;h+='<span class="sav '+(osztaly||'')+'" style="left:'+l+'%;width:'+w+'%">'+sav([a])+'</span>';});
     el.innerHTML=h+'</span>';return el;}
   var plusz='<span class="ikon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 34 34"><path d="M12 2h10v10h10v10H22v10H12V22H2V12h10z" fill="#2E5A49"/></svg></span>';
-  function rajz(){var d=napLista[kivNap],dn=d.getDay(),box=document.getElementById('idosav');box.innerHTML='';
-    var cim=(eltol[kivNap]<2?(eltol[kivNap]===0?'Ma, ':'Holnap, '):'')+NAP[dn]+' ('+datum(d)+')';document.getElementById('kr-nap-cim').textContent=cim.charAt(0).toUpperCase()+cim.slice(1);
+  function rajz(){var dn=napLista[kivNap],box=document.getElementById('idosav');box.innerHTML='';
+    document.getElementById('kr-nap-cim').textContent=nagy(NAP[dn])+(dn===maNap?' (ma)':'');
     var nem=document.getElementById('kr-nemrendel');nem.textContent='';
     var al=document.getElementById('kr-alcim');
     if(!NYIT[dn]){al.textContent='Vasárnap a rendelők zárva vannak.';
@@ -902,15 +908,15 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     else al.textContent='Kattintson egy orvosra, és hozzá kérhet időpontot.';
     aznap.forEach(function(o){box.appendChild(sor('<img src="'+o.kep+'" alt="" width="34" height="34">'+o.nev.replace('Dr. ','Dr.&nbsp;'),o.n[dn],'',true,o.id));});
     if(dn===1)box.appendChild(sor(plusz+'<span>Hosszúhetény<small style="display:block;font-weight:500;color:#52615A">16:30–18</small></span>',[[16.5,18]],'heteny rovid'));
-    if(eltol[kivNap]===0&&oraMost>=8&&oraMost<18){var m=document.createElement('div');m.className='most';m.style.left='calc(var(--nevsz) + (100% - var(--nevsz)) * '+((oraMost-8)/10)+')';box.style.setProperty('--nevsz',innerWidth<=560?'96px':'150px');box.appendChild(m);}
+    if(dn===maNap&&oraMost>=8&&oraMost<18){var m=document.createElement('div');m.className='most';m.style.left='calc(var(--nevsz) + (100% - var(--nevsz)) * '+((oraMost-8)/10)+')';box.style.setProperty('--nevsz',innerWidth<=560?'96px':'150px');box.appendChild(m);}
     var nemR=ORV.filter(function(o){return !o.n[dn]}).map(function(o){return o.nev});
     if(dn!==6&&nemR.length)nem.textContent='Ezen a napon nem rendel: '+nemR.join(', ')+'.';
     box.querySelectorAll('button.sor').forEach(function(b){b.addEventListener('click',function(){var on=b.getAttribute('aria-pressed')!=='true';box.querySelectorAll('button.sor').forEach(function(x){x.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed',on?'true':'false');kivOrv=on?b.dataset.orv:null;frissitGomb();});});
     frissitGomb();}
-  function frissitGomb(){var g=document.getElementById('kr-vh'),d=napLista[kivNap],o=ORV.filter(function(x){return x.id===kivOrv})[0];
-    g.textContent=o?'Visszahívást kérek: '+o.nev+', '+NAP[d.getDay()]+' '+datum(d):'Visszahívást kérek';}
-  document.getElementById('kr-vh').addEventListener('click',function(e){e.preventDefault();var d=napLista[kivNap],o=ORV.filter(function(x){return x.id===kivOrv})[0];
-    beallit('Időpont: '+(o?o.nev+', ':'')+NAP[d.getDay()]+' ('+datum(d)+')','Időpontot kérek');ugras();});
+  function frissitGomb(){var g=document.getElementById('kr-vh'),dn=napLista[kivNap],o=ORV.filter(function(x){return x.id===kivOrv})[0];
+    g.textContent=o?'Visszahívást kérek: '+o.nev+', '+NAP[dn]:'Visszahívást kérek';}
+  document.getElementById('kr-vh').addEventListener('click',function(e){e.preventDefault();var dn=napLista[kivNap],o=ORV.filter(function(x){return x.id===kivOrv})[0];
+    beallit('Időpont: '+(o?o.nev+', ':'')+NAP[dn],'Időpontot kérek');ugras();});
   window.addEventListener('resize',function(){var b=document.getElementById('idosav');if(b)b.style.setProperty('--nevsz',innerWidth<=560?'96px':'150px')});
   statusz();rajz();
 
