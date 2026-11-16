@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 2 62 32 32 62 2 32z' fill='%2353404B'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23FF9213'%3EPG%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="kepek/nyito-futomu.webp" media="(min-width: 761px)">
 <link rel="preload" as="image" href="kepek/nyito-futomu-mobil.webp" media="(max-width: 760px)">
 <script type="application/ld+json">
@@ -63,16 +63,16 @@
 </script>
 <style>
 :root{
-  --narancs:#FF9213; --narancs-mely:#B85C00; --narancs-halvany:#FFF1E0;
-  --szilva:#53404B; --ej:#2A2026; --ej2:#3A2E35;
-  --vilagos:#F3F1F2; --vonal:#E3DEE1; --szoveg:#2A2026; --halk:#62555C;
+  --narancs:#FF8A1F; --narancs-mely:#C2600A; --narancs-halvany:#FFF3E6;
+  --szilva:#3A4350; --ej:#111418; --ej2:#1B2027;
+  --vilagos:#F4F5F7; --vonal:#E4E6EA; --szoveg:#111418; --halk:#5A6370;
   --max:1200px; --szel:max(20px, calc((100% - var(--max)) / 2 + 20px));
   --r:16px;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
-body{margin:0;font-family:'Barlow',system-ui,sans-serif;font-size:18px;line-height:1.55;color:var(--szoveg);background:#fff}
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;font-size:18px;line-height:1.55;color:var(--szoveg);background:#fff}
 img{max-width:100%;height:auto;display:block}
 figure{margin:0}
 a{color:inherit}
@@ -88,7 +88,7 @@ section[id]{scroll-margin-top:84px}
 .szakasz{padding-top:96px;padding-bottom:96px}
 .fej{max-width:760px;margin-bottom:40px}
 .fej p{margin-top:14px;color:var(--halk);font-size:19px}
-.gomb{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font:600 18px/1 'Barlow',sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;width:max-content;transition:background .15s,color .15s,border-color .15s}
+.gomb{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font:600 18px/1 'Manrope',sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;white-space:nowrap;width:max-content;transition:background .15s,color .15s,border-color .15s}
 .gomb svg{width:20px;height:20px;flex:none}
 .gomb-fo{background:var(--narancs);color:var(--ej)}
 .gomb-fo:hover{background:#ffa53f}
@@ -297,7 +297,7 @@ footer a:hover{color:var(--narancs)}
 
 /* bemutató jelzés */
 .bemutato{position:fixed;left:12px;bottom:12px;z-index:60;display:flex;align-items:center;gap:8px;background:rgba(42,32,38,.92);color:#fff;font-size:13px;line-height:1;padding:6px 6px 6px 12px;border-radius:999px;height:34px}
-.bemutato button{font:600 12.5px/1 'Barlow',sans-serif;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 10px;cursor:pointer;height:24px}
+.bemutato button{font:600 12.5px/1 'Manrope',sans-serif;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 10px;cursor:pointer;height:24px}
 .bemutato button[aria-pressed="true"]{background:#FFE14D;color:#222;border-color:#FFE14D}
 body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;background:rgba(255,225,77,.18)}
 
@@ -347,6 +347,65 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
   form.urlap{padding:22px 18px}
   .ertekeles .szam{font-size:52px}
   .gombok .gomb{width:100%}
+}
+
+/* modern réteg (2026-11-16, Tas: „nem elég modern”) */
+body{letter-spacing:-.005em}
+h1,h2,h3{font-weight:800;letter-spacing:-.025em}
+h2{font-size:44px}
+.gomb{border-radius:999px;font-weight:700;font-size:17px;padding:0 26px}
+.gomb-fo{color:#111418}
+.hivas{border-radius:999px;font-size:16px}
+header.fejlec{background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom-color:rgba(17,20,24,.06)}
+.marka b{font-weight:800;letter-spacing:-.02em}
+nav.menu a{font-weight:600;font-size:16px}
+/* nyitókép: szélről szélre fotó, tervezett sötétítés, chevron nélkül */
+.nyito{background:var(--ej);min-height:min(84vh,720px);align-items:flex-end}
+.nyito-kep{left:0;width:auto}
+.nyito-kep::before{display:none}
+.nyito-kep picture{clip-path:none}
+.nyito-kep img{object-position:70% 55%;filter:saturate(.85) contrast(1.05)}
+.nyito-kep picture::after{background:linear-gradient(90deg,rgba(17,20,24,.94) 0%,rgba(17,20,24,.82) 32%,rgba(17,20,24,.25) 62%,rgba(17,20,24,.05) 100%),linear-gradient(0deg,rgba(17,20,24,.75) 0%,rgba(17,20,24,0) 40%)}
+.nyito-szoveg{padding:4.5em 0 calc(4.5em + 70px) var(--szel)}
+.nyito-szoveg .belul{max-width:640px}
+.hely{font-size:15px;font-weight:600;letter-spacing:.01em;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 14px 7px 10px;width:max-content;max-width:100%;backdrop-filter:blur(6px)}
+.rombusz{width:8px;height:8px;border-radius:50%;transform:none;box-shadow:0 0 0 4px rgba(255,138,31,.25)}
+.nyito h1{font-size:62px;line-height:1.02}
+.nyito .bev{color:#D5DAE1}
+.gomb-keret{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.06);backdrop-filter:blur(6px)}
+.bizalom{color:#C9CFD8}
+/* járműválasztó */
+.valaszto-kartya{border-radius:24px;box-shadow:0 30px 60px -20px rgba(17,20,24,.35);padding:22px}
+.csempe{background:#fff;border:1.5px solid var(--vonal);border-radius:16px}
+.csempe:hover{border-color:#C9CDD3}
+.csempe svg{color:var(--szilva)}
+.csempe[aria-pressed="true"]{background:var(--ej);border-color:var(--ej);color:#fff}
+.csempe[aria-pressed="true"] small{color:#C9CFD8}
+.csempe[aria-pressed="true"] svg{color:var(--narancs)}
+.pipalista li::before{width:8px;height:8px;border-radius:50%;transform:none;top:9px}
+.tudnivalo{border-left:0;border-radius:16px;box-shadow:0 10px 30px -18px rgba(17,20,24,.3)}
+.panel-kep,.kartya,.vel,.teny{border-radius:20px}
+.kartya{border:0;box-shadow:0 1px 0 rgba(17,20,24,.04),0 18px 40px -26px rgba(17,20,24,.35)}
+.cimke{background:#fff;border:1px solid var(--vonal)}
+/* flotta: grafit */
+.idezet{border-left-color:var(--narancs)}
+/* visszahívás: halvány narancs, nem tömör */
+.visszahivas{background:var(--narancs-halvany)}
+.csalas{background:#fff;border:1px solid #F6D9B8}
+form.urlap{border-radius:24px;box-shadow:0 30px 60px -28px rgba(17,20,24,.35)}
+.urlap input,.tipus{border-color:var(--vonal);border-radius:14px}
+.tipus[aria-pressed="true"]{background:var(--ej);border-color:var(--ej);color:#fff}
+summary::after{border-color:var(--narancs-mely)}
+@media (max-width:1180px){.nyito h1{font-size:52px}}
+@media (max-width:760px){
+  h2{font-size:31px}
+  .nyito{align-items:stretch}
+  .nyito-kep{left:auto}
+  .nyito-szoveg{padding:44px 20px 18px}
+  .hely{border-radius:14px;font-size:14px}
+  .nyito h1{font-size:clamp(32px,9.6vw,38px)}
+  .nyito-kep picture{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
+  .nyito-kep picture::after{background:none}
 }
 </style>
 <script data-goatcounter="https://webtastic.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
