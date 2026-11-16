@@ -133,7 +133,7 @@ nav.menu a:hover{background:var(--zsalya-halvany)}
 }
 
 /* nyitókép */
-.nyito{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,45%);min-height:min(81vh,690px);background:var(--zsalya);overflow:hidden}
+.nyito{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,45%);min-height:min(81vh,690px);background:#A9C9BA;overflow:hidden}
 .nyito-szoveg{position:relative;z-index:2;padding:4.5em 48px 4.5em max(20px, calc((100vw - var(--max)) / 2 + 20px));display:flex;flex-direction:column;justify-content:center}
 .helyek{display:flex;flex-wrap:wrap;gap:6px 22px;font-weight:600;color:var(--erdo);font-size:16px;margin-bottom:18px}
 .helyek span{display:inline-flex;align-items:center;gap:7px}
@@ -152,17 +152,17 @@ nav.menu a:hover{background:var(--zsalya-halvany)}
 .potty{width:9px;height:9px;border-radius:50%;background:var(--zsalya);flex:none}
 .potty.nyitva{background:#2F9E5B;box-shadow:0 0 0 4px rgba(47,158,91,.18)}
 .nyito-foto{position:relative}
-.nyito-foto picture{position:absolute;inset:7% 5% 0 2%;z-index:1}
+.nyito-foto picture{position:absolute;inset:12% 6% 4% 4%;z-index:1}
 .nyito-foto img{width:100%;height:100%;object-fit:contain;object-position:50% 100%}
-.nyito-foto::before{content:"";position:absolute;left:50%;top:52%;width:min(600px,96%);aspect-ratio:1;border-radius:50%;background:#FBE5D6;transform:translate(-50%,-50%)}
+.nyito-foto::after{content:"";position:absolute;right:5%;top:7%;width:150px;height:110px;z-index:2;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M12 2h10v10h10v10H22v10H12V22H2V12h10z' fill='%23FFFFFF'/%3E%3C/svg%3E") 0 40px/34px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M12 2h10v10h10v10H22v10H12V22H2V12h10z' fill='%23F2B2A6'/%3E%3C/svg%3E") 70px 0/26px no-repeat,url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 34'%3E%3Cpath d='M12 2h10v10h10v10H22v10H12V22H2V12h10z' fill='%23E8D6C6'/%3E%3C/svg%3E") 112px 70px/28px no-repeat}
 .pluszok{position:absolute;z-index:3;pointer-events:none}
 .pluszok svg{position:absolute}
 @media (max-width:860px){
   .nyito{grid-template-columns:1fr;min-height:0}
   .nyito-szoveg{padding:44px var(--szel) 36px}
   .nyito-foto{height:clamp(260px,62vw,420px)}
-  .nyito-foto::before{width:min(400px,86%)}
-  .nyito-foto picture{inset:4% 6% 0 6%}
+  .nyito-foto::after{display:none}
+  .nyito-foto picture{inset:6% 10% 0 10%}
   .nyito h1{font-size:clamp(31px,9.4vw,38px)}
   .nyito .bevezeto{font-size:17.5px}
   .pluszok{display:none}
@@ -419,7 +419,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
     <p class="bevezeto">Négy állatorvos, röntgen, ultrahang és helyben végezhető labor a Hársfa úton, hétfőnként Hosszúhetényben is. Ígérjük, hogy úgy bánunk kedvencével, mint a sajátjainkkal.</p>
     <div class="nyito-gombok">
       <a class="gomb gomb-fo" href="https://harsfautiallatorvosirendelo.booked4.us" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Időpontot foglalok online</a>
-      <a class="gomb gomb-ker" href="tel:+3672222951">Pécsi rendelő: 72/222-951</a>
+      <a class="gomb gomb-ker" href="#arlista">Árlista</a>
     </div>
     <div class="nyito-tenyek">
       <span class="csillag"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.5 2.9 6 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.2 1.3-6.6L2.5 9.3l6.6-.8z"/></svg>4,8 a Google-on, 637 vélemény</span>
@@ -429,7 +429,7 @@ body.minta-lathato [data-minta]{outline:2px dashed #E0B400;outline-offset:3px;ba
   <div class="nyito-foto">
     <picture>
       <source media="(max-width: 860px)" srcset="kepek/nyito-kutya-macska-mobil.webp">
-      <img src="kepek/nyito-kutya-macska.webp" width="1000" height="902" alt="Rodéziai ridgeback kutya és szürke cica" fetchpriority="high">
+      <img src="kepek/nyito-kutya-macska.webp" width="1000" height="901" alt="Rodéziai ridgeback kutya és szürke cica" fetchpriority="high">
     </picture>
   </div>
   <div class="pluszok" aria-hidden="true" style="left:calc(55% - 46px);top:0;bottom:0;width:92px">
